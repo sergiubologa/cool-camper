@@ -2,10 +2,14 @@
     "name": "cool-camper",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
+        "dev": "node server.js",
+        "build": "next build",
+        "start": "cross-env NODE_ENV=production node server.js",
         "test": "echo \"Warn: no test specified\" && exit 0",
         "lint": "echo \"Warn: no lint specified\" && exit 0",
+        "analyze": "cross-env ANALYZE=1 next build",
         "prettify-staged": "pretty-quick --staged"
     },
     "repository": {
@@ -30,6 +34,14 @@
         "eslint-plugin-react": "^7.11.1",
         "pre-commit": "^1.2.2",
         "prettier": "^1.15.2",
-        "pretty-quick": "^1.8.0"
+        "pretty-quick": "^1.8.0",
+        "webpack-bundle-analyzer": "^3.0.3"
+    },
+    "dependencies": {
+        "cross-env": "^5.2.0",
+        "express": "^4.16.4",
+        "next": "^7.0.2",
+        "react": "^16.6.3",
+        "react-dom": "^16.6.3"
     }
 }
