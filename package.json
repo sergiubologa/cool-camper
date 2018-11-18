@@ -12,8 +12,7 @@
     "build": "react-scripts build",
     "now-build": "npm run build && mv build dist",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "precommit": "lint-staged"
+    "eject": "react-scripts eject"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css,scss}": [
@@ -36,5 +35,10 @@
     "husky": "^1.1.4",
     "lint-staged": "^8.0.5",
     "prettier": "^1.15.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
