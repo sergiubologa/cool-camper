@@ -1,11 +1,7 @@
 {
-    "version": 2,
-    "name": "cool-camper",
-    "alias": ["coolcamper.ro", "www.coolcamper.ro"],
-    "builds": [
-      {"src": "package.json", "use": "@now/static-build"}
-    ],
-    "routes": [
-      {"src": "^/static/(.*)", "dest": "/static/$1"}
-    ]
-  }
+  "version": 2,
+  "name": "cool-camper",
+  "alias": ["coolcamper.ro", "www.coolcamper.ro"],
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }],
+  "routes": [{ "src": "^/static/(.*)", "dest": "/static/$1" }]
+}
