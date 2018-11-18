@@ -1,6 +1,7 @@
 {
     "version": 2,
-    "name": "cra",
+    "name": "cool-camper",
+    "alias": ["coolcamper.ro", "www.coolcamper.ro"],
     "builds": [
       {"src": "package.json", "use": "@now/static-build"}
     ],
