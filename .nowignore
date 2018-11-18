@@ -2,6 +2,7 @@
 /out
 /dist
 /build
+/coverage
 .gitignore
 .git
 .cache
