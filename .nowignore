@@ -1,8 +1,11 @@
-node_modules
-out
-dist
+/node_modules
+/out
+/dist
+/build
 .gitignore
 .git
 .cache
+.eslintrc
 yarn.lock
 package-lock.json
+README.md
