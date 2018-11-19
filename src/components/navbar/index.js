@@ -1,6 +1,7 @@
 import React from "react";
 import { refHasClassName } from "../../common/utils";
 import BurgerMenuSVG from "../svg/burger-menu";
+import ScrollListener from "../scroll-listener";
 
 // Height in px for navbar
 const navbarHeight = 60;
@@ -9,9 +10,9 @@ export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.navBarRef = React.createRef();
-    this.handleScroll = this.handleScroll.bind(this);
     this.renderLinks = this.renderLinks.bind(this);
     this.toggleBurgerMenu = this.toggleBurgerMenu.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
 
     this.state = {
       mobileMenuOpened: false,
@@ -22,15 +23,7 @@ export default class Navbar extends React.Component {
     };
   }
 
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  handleScroll(event) {
+  handleScroll() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > navbarHeight) {
@@ -50,8 +43,8 @@ export default class Navbar extends React.Component {
   renderLinks() {
     return (
       <ul>
-        {this.state.navLinks.map(link => (
-          <li>
+        {this.state.navLinks.map((link, index) => (
+          <li key={index}>
             <a href={link.url}>{link.title}</a>
           </li>
         ))}
@@ -66,25 +59,27 @@ export default class Navbar extends React.Component {
     };
 
     return (
-      <div ref={this.navBarRef} className="navbar navbar--extended">
-        <nav class="nav__mobile" style={mobileMenuStyle}>
-          {this.renderLinks()}
-        </nav>
+      <ScrollListener handleScroll={this.handleScroll}>
+        <div ref={this.navBarRef} className="navbar navbar--extended">
+          <nav className="nav__mobile" style={mobileMenuStyle}>
+            {this.renderLinks()}
+          </nav>
 
-        <div className="container">
-          <div className="navbar__inner">
-            <a href="index.html" className="navbar__logo">
-              Logo
-            </a>
-            <nav className="navbar__menu">{this.renderLinks()}</nav>
-            <div className="navbar__menu-mob">
-              <a href="#" onClick={this.toggleBurgerMenu} id="toggle">
-                <BurgerMenuSVG color="currentColor" />
+          <div className="container">
+            <div className="navbar__inner">
+              <a href="index.html" className="navbar__logo">
+                Logo
               </a>
+              <nav className="navbar__menu">{this.renderLinks()}</nav>
+              <div className="navbar__menu-mob">
+                <a href="#" onClick={this.toggleBurgerMenu} id="toggle">
+                  <BurgerMenuSVG color="currentColor" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </ScrollListener>
     );
   }
 }
