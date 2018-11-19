@@ -629,7 +629,15 @@ select::-ms-expand {
   color: #ffffff;
 }
 
-/*! responsive-nav.js 1.0.39 by @viljamis */
+.nav__mobile {
+  transition: max-height 284ms ease 0s;
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
 .nav__mobile ul {
   margin: 0;
   padding: 0;
@@ -650,19 +658,6 @@ select::-ms-expand {
 }
 .nav__mobile li:last-child {
   border-bottom: none;
-}
-
-.js .nav__mobile {
-  clip: rect(0 0 0 0);
-  max-height: 0;
-  position: absolute;
-  display: block;
-  overflow: hidden;
-  zoom: 1;
-}
-
-.nav__mobile.opened {
-  max-height: 9999px;
 }
 
 .nav-toggle {
