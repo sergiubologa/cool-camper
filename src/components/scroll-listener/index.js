@@ -2,11 +2,11 @@ import React from "react";
 
 export default class ScrollListener extends React.Component {
   componentDidMount() {
-    window.addEventListener("scroll", this.props.handleScroll);
+    window.addEventListener("scroll", this.props.onScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.props.handleScroll);
+    window.removeEventListener("scroll", this.props.onScroll);
   }
 
   render() {

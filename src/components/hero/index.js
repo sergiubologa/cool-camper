@@ -29,6 +29,6 @@ export default props => (
         </div>
       </div>
     </div>
-    {props.withSub && <HeroSub />}
+    {props.withSub && <HeroSub scrollByElementHeight=".hero" />}
   </React.Fragment>
 );

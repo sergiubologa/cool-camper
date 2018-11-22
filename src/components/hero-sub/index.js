@@ -7,6 +7,7 @@ export default class HeroSub extends React.Component {
   constructor(props) {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
+    this.onSubClick = this.onSubClick.bind(this);
     this.heroSubRef = React.createRef();
   }
 
@@ -19,11 +20,23 @@ export default class HeroSub extends React.Component {
     }
   }
 
+  onSubClick() {
+    const { scrollByElementHeight } = this.props;
+
+    if (scrollByElementHeight) {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const elementHeight = document.querySelector(scrollByElementHeight)
+        .scrollHeight;
+      window.scrollBy({ top: elementHeight - scrollTop, behavior: "smooth" });
+    }
+  }
+
   render() {
     return (
-      <ScrollListener handleScroll={this.handleScroll}>
+      <ScrollListener onScroll={this.handleScroll}>
         <div className="hero__sub">
-          <span id="scrollToNext" ref={this.heroSubRef}>
+          <span ref={this.heroSubRef} onClick={this.onSubClick}>
             <Caret className="hero__sub__down" />
           </span>
         </div>

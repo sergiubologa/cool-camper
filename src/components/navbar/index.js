@@ -59,7 +59,7 @@ export default class Navbar extends React.Component {
     };
 
     return (
-      <ScrollListener handleScroll={this.handleScroll}>
+      <ScrollListener onScroll={this.handleScroll}>
         <div ref={this.navBarRef} className="navbar navbar--extended">
           <nav className="nav__mobile" style={mobileMenuStyle}>
             {this.renderLinks()}
