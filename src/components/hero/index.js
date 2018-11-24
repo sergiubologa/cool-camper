@@ -1,5 +1,5 @@
 import React from "react";
-import HeroSub from "../hero-sub";
+import HeroSub from "./components/hero-sub";
 
 export default props => (
   <React.Fragment>

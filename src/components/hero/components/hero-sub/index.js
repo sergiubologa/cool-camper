@@ -1,7 +1,7 @@
 import React from "react";
-import Caret from "../svg/caret";
-import ScrollListener from "../scroll-listener";
-import { refHasClassName } from "../../common/utils";
+import Caret from "../../../svg/caret";
+import ScrollListener from "../../../scroll-listener";
+import { refHasClassName } from "../../../../common/utils";
 
 export default class HeroSub extends React.Component {
   constructor(props) {

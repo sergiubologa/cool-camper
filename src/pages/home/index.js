@@ -1,19 +1,17 @@
 import React, { Component } from "react";
-import "./app.css";
 import UndrawDesigner from "../../assets/img/undraw_designer.svg";
 import UndrawResponsive from "../../assets/img/undraw_responsive.svg";
 import UndrawCreation from "../../assets/img/undraw_creation.svg";
 import UndrawBrowser from "../../assets/img/undraw_browser.svg";
 import UndrawFrameworks from "../../assets/img/undraw_frameworks.svg";
 import UndrawTogether from "../../assets/img/together.svg";
-import Navbar from "../../components/navbar";
 import Hero from "../../components/hero";
+import TransparentNavbarLayout from "../layouts/transparent-navbar-layout";
 
-class IndexPage extends Component {
+class Home extends Component {
   render() {
     return (
-      <React.Fragment>
-        <Navbar />
+      <TransparentNavbarLayout>
         <Hero withSub />
         <div className="steps landing__section">
           <div className="container">
@@ -137,107 +135,9 @@ class IndexPage extends Component {
             </div>
           </div>
         </div>
-
-        <div className="footer footer--dark">
-          <div className="container">
-            <div className="footer__inner">
-              <a href="index.html" className="footer__textLogo">
-                Evie theme
-              </a>
-              <div className="footer__data">
-                <div className="footer__data__item">
-                  <div className="footer__row">
-                    Created by{" "}
-                    <a
-                      href="https://twitter.com/ninalimpi"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="footer__link"
-                    >
-                      Katerina Limpitsouni
-                    </a>
-                  </div>
-                  <div className="footer__row">
-                    Code/design by{" "}
-                    <a
-                      href="https://twitter.com/anges244"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="footer__link"
-                    >
-                      Aggelos Gesoulis
-                    </a>
-                  </div>
-                </div>
-                <div className="footer__data__item">
-                  <div className="footer__row">
-                    Created for{" "}
-                    <a
-                      href="https://undraw.co"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="footer__link"
-                    >
-                      unDraw
-                    </a>
-                  </div>
-                  <div className="footer__row">
-                    Special thx to{" "}
-                    <a
-                      href="https://shareboost.co"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="footer__link"
-                    >
-                      ShareBoost
-                    </a>{" "}
-                    for the support
-                  </div>
-                </div>
-                <div className="footer__data__item">
-                  <div className="footer__row">
-                    <a
-                      href="https://github.com/anges244/evie"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="footer__link"
-                    >
-                      GitHub
-                    </a>
-                  </div>
-                  <div className="footer__row">
-                    <a
-                      href="https://twitter.com/undraw_co"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="footer__link"
-                    >
-                      Twitter
-                    </a>
-                  </div>
-                  <div className="footer__row">
-                    <a
-                      href="https://www.facebook.com/undraw.co/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="footer__link"
-                    >
-                      Facebook
-                    </a>
-                  </div>
-                  <div className="footer__row">
-                    <a href="./additional.html" className="footer__link">
-                      MIT license
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </React.Fragment>
+      </TransparentNavbarLayout>
     );
   }
 }
 
-export default IndexPage;
+export default Home;

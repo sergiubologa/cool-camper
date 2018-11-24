@@ -738,7 +738,7 @@ select::-ms-expand {
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 50px);
-  padding: calc(92px) 0;
+  padding: 92px 0;
   overflow: auto;
 }
 .hero__content__inner {
@@ -987,6 +987,17 @@ select::-ms-expand {
 @media (min-width: 600px) {
   .footer__inner {
     flex-direction: row;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 600px) {
+  .footer__logo {
+    margin-bottom: 0;
+    flex-basis: 30%;
+    margin-right: 7rem;
   }
 }
 

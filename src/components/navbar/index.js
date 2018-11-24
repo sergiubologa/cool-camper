@@ -2,11 +2,12 @@ import React from "react";
 import { refHasClassName } from "../../common/utils";
 import BurgerMenuSVG from "../svg/burger-menu";
 import ScrollListener from "../scroll-listener";
+import { Link } from "react-router-dom";
 
 // Height in px for navbar
 const navbarHeight = 60;
 
-export default class Navbar extends React.Component {
+export default class extends React.Component {
   constructor(props) {
     super(props);
     this.navBarRef = React.createRef();
@@ -17,8 +18,8 @@ export default class Navbar extends React.Component {
     this.state = {
       mobileMenuOpened: false,
       navLinks: [
-        { title: "Option 1", url: "#" },
-        { title: "Option 2", url: "#" }
+        { title: "T&C", url: "termeni-si-conditii" },
+        { title: "Privacy", url: "politica-de-confidentialitate" }
       ]
     };
   }
@@ -45,7 +46,7 @@ export default class Navbar extends React.Component {
       <ul>
         {this.state.navLinks.map((link, index) => (
           <li key={index}>
-            <a href={link.url}>{link.title}</a>
+            <Link to={link.url}>{link.title}</Link>
           </li>
         ))}
       </ul>
@@ -53,33 +54,43 @@ export default class Navbar extends React.Component {
   }
 
   render() {
+    const { withTransparentBackground = true } = this.props;
     const { mobileMenuOpened } = this.state;
     const mobileMenuStyle = {
       maxHeight: mobileMenuOpened ? 136 : 0
     };
 
-    return (
-      <ScrollListener onScroll={this.handleScroll}>
-        <div ref={this.navBarRef} className="navbar navbar--extended">
-          <nav className="nav__mobile" style={mobileMenuStyle}>
-            {this.renderLinks()}
-          </nav>
+    const navbarClasses = ["navbar"];
+    if (withTransparentBackground === true) {
+      navbarClasses.push("navbar--extended");
+    }
 
-          <div className="container">
-            <div className="navbar__inner">
-              <a href="index.html" className="navbar__logo">
-                Logo
+    const Navbar = (
+      <div ref={this.navBarRef} className={navbarClasses.join(" ")}>
+        <nav className="nav__mobile" style={mobileMenuStyle}>
+          {this.renderLinks()}
+        </nav>
+
+        <div className="container">
+          <div className="navbar__inner">
+            <Link to="/" className="navbar__logo">
+              CoolCamper
+            </Link>
+            <nav className="navbar__menu">{this.renderLinks()}</nav>
+            <div className="navbar__menu-mob">
+              <a href="#" onClick={this.toggleBurgerMenu} id="toggle">
+                <BurgerMenuSVG color="currentColor" />
               </a>
-              <nav className="navbar__menu">{this.renderLinks()}</nav>
-              <div className="navbar__menu-mob">
-                <a href="#" onClick={this.toggleBurgerMenu} id="toggle">
-                  <BurgerMenuSVG color="currentColor" />
-                </a>
-              </div>
             </div>
           </div>
         </div>
-      </ScrollListener>
+      </div>
+    );
+
+    return withTransparentBackground ? (
+      <ScrollListener onScroll={this.handleScroll}>{Navbar}</ScrollListener>
+    ) : (
+      Navbar
     );
   }
 }
