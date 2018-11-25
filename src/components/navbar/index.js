@@ -3,6 +3,7 @@ import { refHasClassName } from "../../common/utils";
 import BurgerMenuSVG from "../svg/burger-menu";
 import ScrollListener from "../scroll-listener";
 import { Link } from "react-router-dom";
+import IconButton from "../inputs/icon-button";
 
 // Height in px for navbar
 const navbarHeight = 60;
@@ -14,6 +15,9 @@ export default class extends React.Component {
     this.renderLinks = this.renderLinks.bind(this);
     this.toggleBurgerMenu = this.toggleBurgerMenu.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
+    this.toggleNavbarBackgroundColor = this.toggleNavbarBackgroundColor.bind(
+      this
+    );
 
     this.state = {
       mobileMenuOpened: false,
@@ -25,20 +29,35 @@ export default class extends React.Component {
   }
 
   handleScroll() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > navbarHeight) {
-      this.navBarRef.current.classList.remove("navbar--extended");
-    } else if (!refHasClassName(this.navBarRef, "navbar--extended")) {
-      this.navBarRef.current.classList.add("navbar--extended");
-    }
+    this.toggleNavbarBackgroundColor();
   }
 
-  toggleBurgerMenu(event) {
-    event.preventDefault();
-    this.setState({
-      mobileMenuOpened: !this.state.mobileMenuOpened
-    });
+  toggleBurgerMenu() {
+    this.setState(
+      {
+        mobileMenuOpened: !this.state.mobileMenuOpened
+      },
+      this.toggleNavbarBackgroundColor
+    );
+  }
+
+  toggleNavbarBackgroundColor() {
+    // If the navbar is rendered without transparent background
+    // there's no need to toggle it's background color
+    if (this.props.withTransparentBackground !== false) {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const { mobileMenuOpened } = this.state;
+      const hasClassName = refHasClassName(this.navBarRef, "navbar--extended");
+
+      if (scrollTop > navbarHeight || mobileMenuOpened) {
+        if (hasClassName) {
+          this.navBarRef.current.classList.remove("navbar--extended");
+        }
+      } else if (!hasClassName) {
+        this.navBarRef.current.classList.add("navbar--extended");
+      }
+    }
   }
 
   renderLinks() {
@@ -78,9 +97,9 @@ export default class extends React.Component {
             </Link>
             <nav className="navbar__menu">{this.renderLinks()}</nav>
             <div className="navbar__menu-mob">
-              <a href="#" onClick={this.toggleBurgerMenu} id="toggle">
+              <IconButton onClick={this.toggleBurgerMenu}>
                 <BurgerMenuSVG color="currentColor" />
-              </a>
+              </IconButton>
             </div>
           </div>
         </div>

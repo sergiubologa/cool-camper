@@ -161,7 +161,6 @@ a {
   }
 }
 
-button,
 .button {
   display: inline-block;
   padding: 6pt 20pt;
@@ -186,7 +185,6 @@ button:focus,
   outline: 0;
 }
 @media (min-width: 992px) {
-  button:hover,
   .button:hover {
     border-color: #463aff;
     color: #463aff;
@@ -244,6 +242,18 @@ button:focus,
 
 .button--fixed2 {
   width: 220px;
+}
+
+/* Icon button */
+.icon-button {
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+}
+.icon-button svg {
+  height: 1.2em;
+  width: 1.2em;
+  vertical-align: middle;
 }
 
 form {
@@ -682,12 +692,6 @@ select::-ms-expand {
   }
 }
 
-#toggle svg {
-  height: 1.2em;
-  width: 1.2em;
-  vertical-align: middle;
-}
-
 .hero {
   position: relative;
   width: 100%;
@@ -821,6 +825,11 @@ select::-ms-expand {
     justify-content: space-around;
   }
 }
+@media (min-width: 1025px) {
+  .steps__inner {
+    flex-wrap: wrap;
+  }
+}
 
 .step {
   padding: 16pt 0;
@@ -917,7 +926,7 @@ select::-ms-expand {
 }
 @media (min-width: 992px) {
   .expanded:nth-child(even) .expanded__media {
-    order: 1;
+    order: unset;
   }
 }
 

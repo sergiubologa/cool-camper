@@ -1,5 +1,6 @@
 import React from "react";
 import HeroSub from "./components/hero-sub";
+import Button from "../inputs/button";
 
 export default props => (
   <React.Fragment>
@@ -18,12 +19,8 @@ export default props => (
                 guide to build websites faster. It is extemely lightweight,
                 customizable and works perfectly on modern browsers.
               </p>
-              <a href="#" className="button button__accent">
-                Download Evie
-              </a>
-              <a href="#" className="button hero__button">
-                Learn more
-              </a>
+              <Button type="accent">Download Evie</Button>
+              <Button className="hero__button">Learn more</Button>
             </div>
           </div>
         </div>
