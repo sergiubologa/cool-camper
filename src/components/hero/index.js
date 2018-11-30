@@ -12,15 +12,17 @@ export default props => (
           <div className="hero__content">
             <div className="hero__content__inner" id="navConverter">
               <h1 className="hero__title">
-                A production-ready theme for your projects
+                Ia-ți familia în vacanța mult visată!
               </h1>
               <p className="hero__text">
-                Evie is an MIT licensed template bundled with a minimal style
-                guide to build websites faster. It is extemely lightweight,
-                customizable and works perfectly on modern browsers.
+                Închiriază o autorulotă modernă, adună-ți prietenii sau familia
+                și bucură-te de vacanța mult visată! Noi îți punem la dispoziție
+                o <a href="#">autorulotă modernă</a>, un{" "}
+                <a href="#">itinerariu complet</a> și toate{" "}
+                <a href="#">asigurările</a> de care ai putea să ai nevoie.
               </p>
-              <Button type="accent">Download Evie</Button>
-              <Button className="hero__button">Learn more</Button>
+              <Button type="accent">Rezerva acum</Button>
+              <Button className="hero__button">Vezi preturi</Button>
             </div>
           </div>
         </div>

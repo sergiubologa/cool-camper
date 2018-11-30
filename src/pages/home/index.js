@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import UndrawDesigner from "../../assets/img/undraw_designer.svg";
-import UndrawResponsive from "../../assets/img/undraw_responsive.svg";
-import UndrawCreation from "../../assets/img/undraw_creation.svg";
 import UndrawBrowser from "../../assets/img/undraw_browser.svg";
 import UndrawFrameworks from "../../assets/img/undraw_frameworks.svg";
 import UndrawTogether from "../../assets/img/together.svg";
+
+import Motorhome from "../../assets/img/motorhome.svg";
+import MapLight from "../../assets/img/map_light.svg";
+import Support from "../../assets/img/support.svg";
+
 import Hero from "../../components/hero";
 import TransparentNavbarLayout from "../layouts/transparent-navbar-layout";
 import StepsContainer, {
@@ -12,7 +14,9 @@ import StepsContainer, {
   Steps,
   Step,
   StepMedia,
-  StepText
+  StepText,
+  StepsMoreInfo,
+  StepsInfo
 } from "../../components/steps";
 import FullSection, {
   SectionMedia,
@@ -34,38 +38,45 @@ class Home extends Component {
 
         <StepsContainer>
           <StepsHeader>
-            <h2>Who can use Evie?</h2>
+            <h2>De ce CoolCamper?</h2>
             <p>
-              Here's who we can think of, but surely creative people will
-              surprise us.
+              câteva motive pentru care ar trebui să închiriezi o autorulotă de
+              la noi
             </p>
           </StepsHeader>
           <Steps>
             <Step>
-              <StepMedia src={UndrawDesigner} />
-              <h4>Programmers</h4>
+              <StepMedia src={Motorhome} />
+              <h4>Autorulote noi</h4>
               <StepText>
-                A landing page for your open source projects. Present your
-                solution, easily create docs.
+                Rulotele noastre sunt modele 2018+ cu toate dotările necesare
+                pentru o vancanță de neuitat!
               </StepText>
             </Step>
             <Step>
-              <StepMedia src={UndrawResponsive} />
-              <h4>Designers</h4>
+              <StepMedia src={MapLight} />
+              <h4>Itinerarii pe rute populare</h4>
               <StepText>
-                A website for your own freebies. Let the world download and use
-                your artwork.
+                Ca să îți facem viața mai ușoară ți-am pregătit si itinerarii pe
+                cele mai populare rute.
               </StepText>
             </Step>
             <Step>
-              <StepMedia src={UndrawCreation} />
-              <h4>Makers</h4>
+              <StepMedia src={Support} />
+              <h4>Suport 24/24</h4>
               <StepText>
-                A great starting point for your web application. Focus on your
-                idea and execution.
+                Ne poți contacta 24/24 pentru a ne cere ajutorul cu absolut
+                orice problemă întâmpini.
               </StepText>
             </Step>
           </Steps>
+          <StepsMoreInfo text="vezi toate avantajele">
+            <StepsInfo text="Pick-up direct de la aeroport" />
+            <StepsInfo text="Multipli șoferi, fără taxe suplimentare" />
+            <StepsInfo text="Parcare asigurată pentru mașina ta pe parcursul închirierii autorulotei" />
+            <StepsInfo text="Asigurare RCA și full CASCO în toată Europa" />
+            <StepsInfo text="Fără limită de kilometri" />
+          </StepsMoreInfo>
         </StepsContainer>
 
         <FullSection>

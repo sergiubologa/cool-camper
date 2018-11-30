@@ -168,7 +168,6 @@ a {
   border: 1px solid #6c63ff;
   color: #6c63ff;
   font-weight: 400;
-  transition: 0.7s;
   white-space: nowrap;
   cursor: pointer;
   background-color: transparent;
@@ -695,13 +694,19 @@ select::-ms-expand {
 .hero {
   position: relative;
   width: 100%;
-  background-image: url("../assets/img/evie_default_bg.jpeg");
+  background-image: url("../assets/img/motorhome-background.jpg");
   box-shadow: 0 4px 11px rgba(124, 146, 169, 0.5);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   color: #ffffff;
 }
+@media (min-width: 1200px) {
+  .hero {
+    background-position: bottom center;
+  }
+}
+
 .hero__inner {
   position: relative;
   z-index: 3;
@@ -711,7 +716,7 @@ select::-ms-expand {
   position: absolute;
   height: 100%;
   width: 100%;
-  opacity: 0.96;
+  opacity: 0.86;
   z-index: 1;
   background-color: #6c63ff;
 }
@@ -752,9 +757,14 @@ select::-ms-expand {
 }
 
 /*--- CONTENT STYLING ---*/
-.hero__title {
+.hero__title,
+.hero__subTitle {
   color: inherit;
   margin-bottom: 1.25em;
+}
+
+.hero__subTitle {
+  margin-bottom: 0.5em;
 }
 
 .hero__text {
@@ -762,6 +772,10 @@ select::-ms-expand {
   line-height: 1.7;
   text-align: left;
   font-size: 1.1em;
+}
+
+.hero a {
+  border-bottom: 1px dotted #fff;
 }
 
 .hero .button {
@@ -793,10 +807,35 @@ select::-ms-expand {
   color: #666;
   transition: 0.7s;
   cursor: pointer;
+  /* animation: pulse 3s ease-in-out infinite; */
+  animation: bounce 2s linear infinite;
+  border-radius: 50%;
 }
 @media (min-width: 992px) {
   .hero__sub__down:hover {
     color: #6c63ff;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  70% {
+    box-shadow: 0px 0px 0px 0px rgba(108, 99, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 50px rgba(108, 99, 255, 0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+  40% {
+    transform: translateY(0);
   }
 }
 
@@ -878,6 +917,64 @@ select::-ms-expand {
   text-align: left;
   margin-left: auto;
   margin-right: auto;
+}
+
+.steps__more__info > .button > span {
+  min-width: 20px;
+  display: inline-block;
+}
+
+.steps__more__info__content {
+  transition: max-height 500ms ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 36ch;
+  margin: 0 auto;
+}
+@media (min-width: 600px) {
+  .steps__more__info__content {
+    max-width: 70ch;
+  }
+}
+@media (min-width: 992px) {
+  .steps__more__info__content {
+    max-width: none;
+  }
+}
+
+.steps__more__info__content.content__expanded {
+  max-height: 1000px;
+}
+
+.steps__more__info__content .reason {
+  width: 100%;
+  text-align: left;
+  padding: 7pt 3pt;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.8;
+}
+@media (min-width: 600px) {
+  .steps__more__info__content .reason {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .steps__more__info__content .reason {
+    width: 33.33%;
+  }
+}
+
+.steps__more__info__content .reason > div:first-child {
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.steps__more__info__content .reason > span:nth-child(2) {
+  line-height: 1.3;
+  color: #666;
 }
 
 .expanded {
