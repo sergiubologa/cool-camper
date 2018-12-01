@@ -18,7 +18,7 @@ export default () => (
             a CoolCamper.ro.
           </small>{" "}
           <br />
-          <small>Toate drepturile rezervate ©2018. CoolCamper.ro</small>
+          <small>Toate drepturile rezervate CoolCamper.ro ©2018</small>
         </div>
 
         <div className="footer__data">

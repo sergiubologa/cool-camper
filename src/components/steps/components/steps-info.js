@@ -1,9 +1,4 @@
 import React from "react";
-import Check from "../../svg/check";
+import IconLabel from "../../icon-label";
 
-export default props => (
-  <div className="reason">
-    <Check color="#6c63ff" />
-    <span>{props.text}</span>
-  </div>
-);
+export default props => <IconLabel text={props.text} className="reason" />;

@@ -535,6 +535,22 @@ select::-ms-expand {
   border-bottom: 2px solid #eee;
 }
 
+.icon__label {
+  text-align: left;
+  padding: 7pt 3pt;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.8;
+}
+.icon__label > div:first-child {
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.icon__label > span:nth-child(2) {
+  line-height: 1.3;
+  color: #666;
+}
+
 .landing__section {
   padding: 24pt 0;
 }
@@ -950,11 +966,6 @@ select::-ms-expand {
 
 .steps__more__info__content .reason {
   width: 100%;
-  text-align: left;
-  padding: 7pt 3pt;
-  display: flex;
-  align-items: flex-start;
-  line-height: 1.8;
 }
 @media (min-width: 600px) {
   .steps__more__info__content .reason {
@@ -965,16 +976,6 @@ select::-ms-expand {
   .steps__more__info__content .reason {
     width: 33.33%;
   }
-}
-
-.steps__more__info__content .reason > div:first-child {
-  margin-right: 10px;
-  flex-shrink: 0;
-}
-
-.steps__more__info__content .reason > span:nth-child(2) {
-  line-height: 1.3;
-  color: #666;
 }
 
 .expanded {
@@ -1492,5 +1493,17 @@ select::-ms-expand {
     border-bottom: 1px solid #6c63ff;
     transform: none;
     transition: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .itinerary__content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .itinerary__content > .icon__label {
+    width: 50%;
+    padding: 7pt 10pt 7pt 0;
   }
 }

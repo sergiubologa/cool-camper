@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../inputs/button";
 
 export default class extends React.Component {
   constructor(props) {
@@ -26,9 +27,9 @@ export default class extends React.Component {
 
     return (
       <div className="container steps__more__info">
-        <button className="button" onClick={this.handleMoreInfoClick}>
+        <Button onClick={this.handleMoreInfoClick}>
           <span>{moreInfoExpanded ? "-" : "+"}</span> {text}
-        </button>
+        </Button>
         <div className={contentClasses.join(" ")}>{children}</div>
       </div>
     );
