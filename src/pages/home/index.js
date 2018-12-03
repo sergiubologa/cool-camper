@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import UndrawBrowser from "../../assets/img/undraw_browser.svg";
 import UndrawTogether from "../../assets/img/together.svg";
 
 import Motorhome from "../../assets/img/motorhome.svg";
@@ -23,7 +22,8 @@ import FullSection, {
   SectionMedia,
   SectionContent,
   SectionText,
-  SectionTitle
+  SectionTitle,
+  SectionMediaItinerary
 } from "../../components/full-section";
 import CTAFullSection, {
   CTATitle,
@@ -79,12 +79,12 @@ class Home extends Component {
             <StepsInfo text="Asigurare RCA și full CASCO în toată Europa" />
             <StepsInfo text="Parcare asigurată pentru mașina ta pe parcursul închirierii autorulotei" />
             <StepsInfo text="Fără limită de kilometri" />
-            <StepsInfo text="Suntem prietenoși, happy și dornici să te ajutăm să experimentezi cea mai tare aventură" />
+            <StepsInfo text="Suntem prietenoși, happy și dornici să te ajutăm să trăiești cea mai tare aventură" />
           </StepsMoreInfo>
         </StepsContainer>
 
         <FullSection>
-          <SectionMedia src={UndrawBrowser} />
+          <SectionMediaItinerary />
           <SectionContent>
             <SectionTitle>Itinerarii</SectionTitle>
             <SectionText>
@@ -96,7 +96,7 @@ class Home extends Component {
               Vei primi pe email un document cu toate detaliile traseului pe
               care l-ai ales, dar vei găsi și un pliant printat în rulotă.
             </SectionText>
-            <SectionText>Ce conține un itinerariu?</SectionText>
+            <h4>Ce conține un itinerariu?</h4>
             <div className="container itinerary__content">
               <IconLabel text="traseul complet recomandat de noi" />
               <IconLabel text="cele mai frumoase destinații de pe traseu" />

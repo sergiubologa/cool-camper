@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "flag-icon-css": "^3.2.1",
     "normalize.css": "^8.0.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
+    "react-slick": "^0.23.2",
     "react-topbar-progress-indicator": "^2.0.0",
     "smoothscroll-polyfill": "^0.4.3"
   },
@@ -30,9 +32,9 @@
   "devDependencies": {
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "husky": "^1.1.4",
-    "lint-staged": "^8.0.5",
-    "prettier": "^1.15.2",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3",
     "pretty-quick": "^1.8.0"
   },
   "husky": {
