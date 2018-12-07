@@ -11,6 +11,7 @@
     "react-scripts": "2.1.1",
     "react-slick": "^0.23.2",
     "react-topbar-progress-indicator": "^2.0.0",
+    "slick-carousel": "^1.8.1",
     "smoothscroll-polyfill": "^0.4.3"
   },
   "scripts": {
