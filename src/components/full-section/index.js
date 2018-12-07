@@ -1,6 +1,7 @@
 import React from "react";
 import SectionContent from "./components/section-content";
 import SectionMedia from "./components/section-media";
+import SectionMediaSlider from "./components/section-media-slider";
 import SectionTitle from "./components/section-title";
 import SectionText from "./components/section-text";
 import SectionMediaItinerary from "./components/section-media-itinerary";
@@ -16,6 +17,7 @@ export default props => (
 export {
   SectionContent,
   SectionMedia,
+  SectionMediaSlider,
   SectionTitle,
   SectionText,
   SectionMediaItinerary

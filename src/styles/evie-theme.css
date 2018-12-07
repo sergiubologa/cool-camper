@@ -1496,12 +1496,14 @@ select::-ms-expand {
   }
 }
 
-.itinerary {
+.expanded__media__slider {
   width: 100%;
+  margin-bottom: 20px;
 }
 @media (min-width: 992px) {
-  .itinerary {
+  .expanded__media__slider {
     width: 50%;
+    margin-bottom: 0;
   }
 }
 
@@ -1518,6 +1520,7 @@ select::-ms-expand {
 }
 
 .itinerary__header {
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;

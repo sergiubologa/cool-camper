@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "../../../../styles/image-carousel.css";
+import "../../../styles/image-carousel.css";
 
 export default class extends React.Component {
   constructor(props) {
@@ -19,21 +19,27 @@ export default class extends React.Component {
   // }
 
   render() {
-    const { images } = this.props;
+    const { images, className, header } = this.props;
     const sliderSettings = {
       dots: true,
       swipeToSlide: true,
       initialSlide: 0
     };
+    const classes = ["expanded__media", "expanded__media__slider"];
+    if (className) classes.push(className);
+
     return (
-      <div className="slider__container">
-        <Slider ref={this.sliderRef} {...sliderSettings}>
-          {images.map((img, imgIndex) => (
-            <div key={imgIndex}>
-              <img src={img.src} alt="" />
-            </div>
-          ))}
-        </Slider>
+      <div className={classes.join(" ")}>
+        {header && header}
+        <div className="slider__container">
+          <Slider ref={this.sliderRef} {...sliderSettings}>
+            {images.map((img, imgIndex) => (
+              <div key={imgIndex}>
+                <img src={img.src} alt={img.alt} />
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
     );
   }

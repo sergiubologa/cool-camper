@@ -20,6 +20,7 @@ import StepsContainer, {
 } from "../../components/steps";
 import FullSection, {
   SectionMedia,
+  SectionMediaSlider,
   SectionContent,
   SectionText,
   SectionTitle,
@@ -34,6 +35,24 @@ import IconLabel from "../../components/icon-label";
 
 class Home extends Component {
   render() {
+    const motorhomeImages = [
+      {
+        src: "http://placekitten.com/873/600",
+        alt: "Alt text"
+      },
+      {
+        src: "http://placekitten.com/g/873/600",
+        alt: "Alt text"
+      },
+      {
+        src: "http://placekitten.com/g/873/600",
+        alt: "Alt text"
+      },
+      {
+        src: "http://placekitten.com/g/873/600",
+        alt: "Alt text"
+      }
+    ];
     return (
       <TransparentNavbarLayout>
         <Hero withSub />
@@ -84,7 +103,14 @@ class Home extends Component {
         </StepsContainer>
 
         <FullSection>
-          <SectionMediaItinerary />
+          <SectionMediaSlider images={motorhomeImages} />
+          <SectionContent>
+            <SectionTitle>Autorulotele noastre</SectionTitle>
+            <SectionText>Avem autorulote noi, ultimul model!</SectionText>
+          </SectionContent>
+        </FullSection>
+
+        <FullSection>
           <SectionContent>
             <SectionTitle>Itinerarii</SectionTitle>
             <SectionText>
@@ -104,6 +130,7 @@ class Home extends Component {
               <IconLabel text="locurile de campare și prețurile aferente" />
             </div>
           </SectionContent>
+          <SectionMediaItinerary />
         </FullSection>
 
         <FullSection>

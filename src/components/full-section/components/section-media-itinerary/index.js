@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./itinerary-header";
-import ImagesSlider from "./itinerary-image-slider";
+import SectionMediaSlider from "../section-media-slider";
 import itineraries from "./itineraries.conf";
 
 export default class extends React.Component {
@@ -23,10 +23,10 @@ export default class extends React.Component {
     const images = Object.values(itineraries).find(it => it.name === itinerary)
       .images;
     return (
-      <div className="expanded__media itinerary">
-        <Header onItineraryClick={this.onItineraryClick} />
-        <ImagesSlider images={images} />
-      </div>
+      <SectionMediaSlider
+        images={images}
+        header={<Header onItineraryClick={this.onItineraryClick} />}
+      />
     );
   }
 }
