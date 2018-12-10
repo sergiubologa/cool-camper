@@ -6,6 +6,7 @@ import MapLight from "../../assets/img/map_light.svg";
 import Support from "../../assets/img/support.svg";
 import Payment from "../../assets/img/payment.svg";
 import Chatting from "../../assets/img/chatting.svg";
+import Questions from "../../assets/img/questions.svg";
 
 import Hero from "../../components/hero";
 import TransparentNavbarLayout from "../layouts/transparent-navbar-layout";
@@ -30,6 +31,8 @@ import CTAFullSection, {
   CTATitle,
   CTAMessage
 } from "../../components/cta-full-section";
+import FAQs from "../../components/faqs";
+import faqQuestions from "../../static-data/faq-questions";
 import Button from "../../components/inputs/button";
 import IconLabel from "../../components/icon-label";
 
@@ -161,14 +164,9 @@ class Home extends Component {
         <FullSection>
           <SectionContent>
             <SectionTitle>Întrebări frecvente</SectionTitle>
-            <SectionText>
-              Landing, authentication and a few other pages to select from,
-              despite the small size. Tested on production at unDraw with
-              amazing speeds and unopinionated on how to structure your project.
-              We really hope you'll find it awesome and useful!
-            </SectionText>
+            <FAQs questions={faqQuestions} />
           </SectionContent>
-          <SectionMedia src={UndrawTogether} />
+          <SectionMedia src={Questions} />
         </FullSection>
 
         <FullSection>

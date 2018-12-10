@@ -18,7 +18,8 @@ export default props => {
       break;
   }
   const caretStyle = {
-    transform: `rotate(${rotation}deg)`
+    transform: `rotate(${rotation}deg)`,
+    transition: "all 250ms ease-in-out"
   };
 
   return (
