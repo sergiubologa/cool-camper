@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import UndrawTogether from "../../assets/img/together.svg";
 
 import Motorhome from "../../assets/img/motorhome.svg";
 import MapLight from "../../assets/img/map_light.svg";
@@ -149,16 +148,23 @@ class Home extends Component {
         </FullSection>
 
         <FullSection>
-          <SectionMedia src={UndrawTogether} />
-          <SectionContent>
-            <SectionTitle>Ce spun clienții noștri despre noi?</SectionTitle>
-            <SectionText>
-              Landing, authentication and a few other pages to select from,
-              despite the small size. Tested on production at unDraw with
-              amazing speeds and unopinionated on how to structure your project.
-              We really hope you'll find it awesome and useful!
-            </SectionText>
-          </SectionContent>
+          <div
+            className="trustpilot-widget"
+            data-locale="en-US"
+            data-template-id="5419b6a8b0d04a076446a9ad"
+            data-businessunit-id="5c1873b116ae040001e02a75"
+            data-style-height="24px"
+            data-style-width="100%"
+            data-theme="light"
+          >
+            <a
+              href="https://www.trustpilot.com/review/coolcamper.ro"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CoolCamper pe Trustpilot
+            </a>
+          </div>
         </FullSection>
 
         <FullSection>

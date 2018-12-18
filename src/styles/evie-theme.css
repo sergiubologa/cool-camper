@@ -1594,3 +1594,7 @@ select::-ms-expand {
   margin-bottom: 10px;
   font-size: 1.1em;
 }
+
+.trustpilot-widget {
+  margin: 0 auto;
+}
