@@ -35,3 +35,14 @@
 .slick-dots li.slick-active button:before {
   color: #6c63ff;
 }
+@media (max-width: 600px) {
+  .slick-dots li {
+    margin: 0;
+    width: 17px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .slick-dots li {
+    margin: 0;
+  }
+}

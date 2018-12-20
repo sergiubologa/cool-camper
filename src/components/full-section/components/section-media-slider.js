@@ -23,7 +23,8 @@ export default class extends React.Component {
     const sliderSettings = {
       dots: true,
       swipeToSlide: true,
-      initialSlide: 0
+      initialSlide: 0,
+      lazyLoad: true
     };
     const classes = ["expanded__media", "expanded__media__slider"];
     if (className) classes.push(className);

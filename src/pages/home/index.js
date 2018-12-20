@@ -32,29 +32,12 @@ import CTAFullSection, {
 } from "../../components/cta-full-section";
 import FAQs from "../../components/faqs";
 import faqQuestions from "../../static-data/faq-questions";
+import motorhomeImages from "../../static-data/motorhome-images";
 import Button from "../../components/inputs/button";
 import IconLabel from "../../components/icon-label";
 
 class Home extends Component {
   render() {
-    const motorhomeImages = [
-      {
-        src: "http://placekitten.com/873/600",
-        alt: "Alt text"
-      },
-      {
-        src: "http://placekitten.com/g/873/600",
-        alt: "Alt text"
-      },
-      {
-        src: "http://placekitten.com/g/873/600",
-        alt: "Alt text"
-      },
-      {
-        src: "http://placekitten.com/g/873/600",
-        alt: "Alt text"
-      }
-    ];
     return (
       <TransparentNavbarLayout>
         <Hero withSub />
