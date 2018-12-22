@@ -4,8 +4,9 @@ import Motorhome from "../../assets/img/motorhome.svg";
 import MapLight from "../../assets/img/map_light.svg";
 import Support from "../../assets/img/support.svg";
 import Payment from "../../assets/img/payment.svg";
-import Chatting from "../../assets/img/chatting.svg";
 import Questions from "../../assets/img/questions.svg";
+import Android from "../../assets/img/android.svg";
+import Inbox from "../../assets/img/inbox.svg";
 
 import Hero from "../../components/hero";
 import TransparentNavbarLayout from "../layouts/transparent-navbar-layout";
@@ -35,6 +36,7 @@ import faqQuestions from "../../static-data/faq-questions";
 import motorhomeImages from "../../static-data/motorhome-images";
 import Button from "../../components/inputs/button";
 import IconLabel from "../../components/icon-label";
+import SmartphoneIcon from "../../components/svg/smartphone";
 
 class Home extends Component {
   render() {
@@ -158,18 +160,84 @@ class Home extends Component {
           <SectionMedia src={Questions} />
         </FullSection>
 
-        <FullSection>
-          <SectionMedia src={Chatting} />
-          <SectionContent>
-            <SectionTitle>Contactează-ne!</SectionTitle>
-            <SectionText>
-              Landing, authentication and a few other pages to select from,
-              despite the small size. Tested on production at unDraw with
-              amazing speeds and unopinionated on how to structure your project.
-              We really hope you'll find it awesome and useful!
-            </SectionText>
-          </SectionContent>
-        </FullSection>
+        <StepsContainer>
+          <StepsHeader>
+            <h2>Contacteaza-ne!</h2>
+            <p>
+              Nu ezita sa ne contactezi pentru orice problema sau nelamurire
+              intampini. Suntem aici ca sa te ajutam!
+            </p>
+          </StepsHeader>
+
+          <Steps className="contact__container">
+            <Step>
+              <StepMedia src={Inbox} />
+              <h4>Email</h4>
+              <StepText>
+                Scrie-ne un email orice ai vrea sa stii dar nu ai gasit pe site.
+              </StepText>
+
+              <a
+                href="mailto:contact@coolcamper.ro"
+                title="Email CoolCamper.ro"
+                className="contact__email"
+              >
+                contact@coolcamper.ro
+              </a>
+            </Step>
+            <Step>
+              <StepMedia src={Android} />
+              <h4>Telefon</h4>
+              <StepText>
+                Suna-ne pentru orice urgenta sau problema pe care o intampini!
+              </StepText>
+              <Button
+                type="accent"
+                className="contact__phone"
+                onClick={() => window.open("tel:+40742291018", "_self")}
+                renderIcon={() => <SmartphoneIcon color="#fff" width="20" />}
+              >
+                0742-291.018
+              </Button>
+
+              <div>
+                <small>disponibil 24/7</small>
+              </div>
+            </Step>
+
+            <Step>
+              <h4>Scrie-ne un mesaj</h4>
+              <form
+                method="post"
+                action="/api/message"
+                autocompelete="on"
+                className="form"
+              >
+                <label htmlFor="name">Nume</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Numele complet..."
+                />
+                <label htmlFor="email">Email</label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="you@example.com"
+                />
+                <label htmlFor="message">Mesaj</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Mesajul pe care vrei sa ni-l trimiti..."
+                />
+                <Button formType="submit">Trimite mesajul</Button>
+              </form>
+            </Step>
+          </Steps>
+        </StepsContainer>
 
         <CTAFullSection>
           <CTATitle>Rezervă acum o autorulotă!</CTATitle>

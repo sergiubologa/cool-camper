@@ -162,7 +162,8 @@ a {
 }
 
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding: 6pt 20pt;
   line-height: 1.7;
   border: 1px solid #6c63ff;
@@ -188,6 +189,10 @@ button:focus,
     border-color: #463aff;
     color: #463aff;
   }
+}
+
+.button > svg:first-child {
+  margin-right: 15px;
 }
 
 .button__primary {
@@ -1597,4 +1602,51 @@ select::-ms-expand {
 
 .trustpilot-widget {
   margin: 0 auto;
+}
+
+.contact__phone {
+  font-size: "120%";
+}
+.contact__phone:hover svg {
+  animation: ring 2s infinite ease-in-out;
+}
+.contact__email {
+  font-size: 120%;
+  color: #6c63ff;
+  border-bottom: 1px dotted #6c63ff;
+  padding-bottom: 1pt;
+  transition: 0.7s;
+}
+@media (min-width: 992px) {
+  .contact__container .steps__inner .step {
+    width: 31%;
+  }
+  .contact__phone {
+    margin: 2em 0 0.2em 0;
+  }
+  .contact__email {
+    line-height: 100px;
+  }
+}
+
+@keyframes ring {
+  /* start from original */
+  0% {
+  }
+  /* rotate right */
+  20% {
+    transform: rotate(10deg);
+  }
+  /* rotate left */
+  40% {
+    transform: rotate(-10deg);
+  }
+  /* rotate right */
+  60% {
+    transform: rotate(10deg);
+  }
+  /* return center */
+  80% {
+    transform: rotate(0deg);
+  }
 }

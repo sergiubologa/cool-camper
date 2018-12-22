@@ -3,6 +3,12 @@
   flex-direction: column;
   max-width: 60ch;
 }
+@media (min-width: 992px) {
+  .faq__container {
+    max-height: 405px;
+    overflow-y: scroll;
+  }
+}
 .faq__card {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
   margin: 0 0 12px;
