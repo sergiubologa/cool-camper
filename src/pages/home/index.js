@@ -4,7 +4,6 @@ import Motorhome from "../../assets/img/motorhome.svg";
 import MapLight from "../../assets/img/map_light.svg";
 import Support from "../../assets/img/support.svg";
 import Payment from "../../assets/img/payment.svg";
-import Questions from "../../assets/img/questions.svg";
 import Android from "../../assets/img/android.svg";
 import Inbox from "../../assets/img/inbox.svg";
 
@@ -152,12 +151,9 @@ class Home extends Component {
           </div>
         </FullSection>
 
-        <FullSection>
-          <SectionContent>
-            <SectionTitle>Întrebări frecvente</SectionTitle>
-            <FAQs questions={faqQuestions} />
-          </SectionContent>
-          <SectionMedia src={Questions} />
+        <FullSection oneCol={true}>
+          <SectionTitle>Întrebări frecvente</SectionTitle>
+          <FAQs questions={faqQuestions} />
         </FullSection>
 
         <StepsContainer>

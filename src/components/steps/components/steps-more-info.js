@@ -27,10 +27,10 @@ export default class extends React.Component {
 
     return (
       <div className="container steps__more__info">
+        <div className={contentClasses.join(" ")}>{children}</div>
         <Button onClick={this.handleMoreInfoClick}>
           <span>{moreInfoExpanded ? "-" : "+"}</span> {text}
         </Button>
-        <div className={contentClasses.join(" ")}>{children}</div>
       </div>
     );
   }

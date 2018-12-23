@@ -23,7 +23,7 @@ export default class extends React.Component {
     return (
       <div className={cardClasses.join(" ")}>
         <p className="faq__question" onClick={this.onQuestionClick}>
-          {question}
+          <span>{question}</span>
           <CaretIcon
             direction={iconDirection}
             className="faq__question_caret"

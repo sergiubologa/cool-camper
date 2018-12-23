@@ -16,8 +16,8 @@ export default [
     Autorulotele sunt pe deplin functionale atat in modul camping (conectate la surse de utilitati, in camping) , cat si in modul off camping (pe plaja sau in varf de munte, fara curent electric sau apa/gaz).`
   },
   {
-    question:
-      "Vreau sa fac un circuit european, insa nu stiu de unde sa o iau. Ma puteti ajuta cu informatii?",
+    question: `Vreau sa fac un circuit european, insa nu stiu de unde sa o iau.
+      Ma puteti ajuta cu informatii?`,
     answer: `Categoric. Incercam sa fim mai mult decat un serviciu de inchirieri de autorulote. Vrem sa fim prietenul tau de nadejede pe toata perioada calatoriei cu autorulota si de ce nu, poate chiar si dupa :)
       De aceea pe langa autorulota noi iti vom sugera diferite itinerarii.
        Odata decisa perioada inchirierii si ruta pe care vrei sa o faci alaturi de cei prieteni sau de familie, noi iti vom trimite pe email toate detaliile calatoriei tale. 

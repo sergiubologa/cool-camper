@@ -952,7 +952,7 @@ select::-ms-expand {
   display: flex;
   flex-wrap: wrap;
   max-width: 36ch;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 @media (min-width: 600px) {
   .steps__more__info__content {
@@ -997,6 +997,9 @@ select::-ms-expand {
 @media (min-width: 992px) {
   .expanded__inner {
     flex-direction: row;
+  }
+  .expanded__inner.expanded__inner__one_col {
+    flex-direction: column;
   }
 }
 
