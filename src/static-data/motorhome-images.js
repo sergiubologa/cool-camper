@@ -1,6 +1,5 @@
-import Outside1 from "../assets/img/motorhome/outside_1.jpg";
-import Outside2 from "../assets/img/motorhome/outside_2.jpg";
 import Outside3 from "../assets/img/motorhome/outside_3.jpg";
+import Outside4 from "../assets/img/motorhome/outside_4.jpg";
 import Inside1 from "../assets/img/motorhome/inside_view_front.jpg";
 import Inside2 from "../assets/img/motorhome/inside_view_back.jpg";
 import Inside3 from "../assets/img/motorhome/inside_view_back_2.jpg";
@@ -16,9 +15,6 @@ import Shower1 from "../assets/img/motorhome/shower_1.jpg";
 import Shower2 from "../assets/img/motorhome/shower_2.jpg";
 
 export default [
-  { src: Outside1, alt: "Alt text" },
-  { src: Outside2, alt: "Alt text" },
-  { src: Outside3, alt: "Alt text" },
   { src: Inside1, alt: "Alt text" },
   { src: Inside2, alt: "Alt text" },
   { src: Inside3, alt: "Alt text" },
@@ -31,5 +27,7 @@ export default [
   { src: Kitchen3, alt: "Alt text" },
   { src: Kitchen4, alt: "Alt text" },
   { src: Shower1, alt: "Alt text" },
-  { src: Shower2, alt: "Alt text" }
+  { src: Shower2, alt: "Alt text" },
+  { src: Outside4, alt: "Alt text" },
+  { src: Outside3, alt: "Alt text" }
 ];

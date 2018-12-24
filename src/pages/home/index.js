@@ -107,12 +107,16 @@ class Home extends Component {
           </div>
         </FullSection>
 
-        <FullSection>
-          <SectionMediaSlider images={motorhomeImages} />
-          <SectionContent>
-            <SectionTitle>Autorulotele noastre</SectionTitle>
-            <SectionText>Avem autorulote noi, ultimul model!</SectionText>
-          </SectionContent>
+        <FullSection oneCol={true}>
+          <SectionTitle>Autorulotele noastre</SectionTitle>
+          <SectionText style={{ marginTop: 0 }}>
+            Avem autorulote noi, ultimul model!
+          </SectionText>
+          <SectionMediaSlider
+            images={motorhomeImages}
+            fullWidth={true}
+            style={{ maxWidth: 873 }}
+          />
         </FullSection>
 
         <FullSection>

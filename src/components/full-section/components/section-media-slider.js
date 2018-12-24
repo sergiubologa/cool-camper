@@ -19,18 +19,19 @@ export default class extends React.Component {
   // }
 
   render() {
-    const { images, className, header } = this.props;
+    const { images, className, header, fullWidth, ...rest } = this.props;
     const sliderSettings = {
       dots: true,
       swipeToSlide: true,
       initialSlide: 0,
-      lazyLoad: true
+      lazyLoad: false
     };
     const classes = ["expanded__media", "expanded__media__slider"];
+    if (fullWidth) classes.push("expanded__media__slider__full__width");
     if (className) classes.push(className);
 
     return (
-      <div className={classes.join(" ")}>
+      <div className={classes.join(" ")} {...rest}>
         {header && header}
         <div className="slider__container">
           <Slider ref={this.sliderRef} {...sliderSettings}>

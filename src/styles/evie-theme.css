@@ -737,7 +737,7 @@ select::-ms-expand {
   position: absolute;
   height: 100%;
   width: 100%;
-  opacity: 0.86;
+  opacity: 0.66;
   z-index: 1;
   background-color: #6c63ff;
 }
@@ -1513,6 +1513,10 @@ select::-ms-expand {
     width: 50%;
     margin-bottom: 0;
   }
+}
+
+.expanded__media__slider__full__width {
+  width: 100%;
 }
 
 @media (min-width: 1200px) {
