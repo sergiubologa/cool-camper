@@ -1,0 +1,70 @@
+.prices__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 600px) {
+  .prices__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.price__card {
+  margin-top: 40px;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 6px 0 hsl(0, 0%, 0%, 0.2);
+}
+@media (min-width: 600px) {
+  .price__card {
+    width: 45%;
+  }
+}
+
+.price__card__header {
+  display: flex;
+  align-items: center;
+}
+.price__card__header .price__card__title {
+  margin: 0 0 0 20px;
+  flex-grow: 1;
+}
+.price__card__header .price__card__title > h4 {
+  margin: 0;
+}
+.price__card__header .price__card__title > h4 {
+  font-weight: bold;
+}
+
+.price__card__content {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.price__card__content h1 small {
+  color: hsl(0, 0%, 40%);
+}
+
+.price__card__footer {
+  display: flex;
+  flex-direction: column;
+  background: hsl(220, 12%, 97.5%);
+  margin: 0 -20px -20px -20px;
+  padding: 20px;
+}
+.price__card__footer .discounts {
+  flex-grow: 1;
+}
+.price__card__footer button {
+  align-self: center;
+  margin: 10px;
+}
+@media (min-width: 1200px) {
+  .price__card__footer {
+    flex-direction: row;
+  }
+}

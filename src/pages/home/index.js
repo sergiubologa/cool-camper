@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import Motorhome from "../../assets/img/motorhome.svg";
 import MapLight from "../../assets/img/map_light.svg";
 import Support from "../../assets/img/support.svg";
-import Payment from "../../assets/img/payment.svg";
 import Android from "../../assets/img/android.svg";
 import Inbox from "../../assets/img/inbox.svg";
 
@@ -19,7 +18,6 @@ import StepsContainer, {
   StepsInfo
 } from "../../components/steps";
 import FullSection, {
-  SectionMedia,
   SectionMediaSlider,
   SectionContent,
   SectionText,
@@ -31,6 +29,7 @@ import CTAFullSection, {
   CTAMessage
 } from "../../components/cta-full-section";
 import FAQs from "../../components/faqs";
+import Prices from "../../components/prices";
 import faqQuestions from "../../static-data/faq-questions";
 import motorhomeImages from "../../static-data/motorhome-images";
 import Button from "../../components/inputs/button";
@@ -89,6 +88,26 @@ class Home extends Component {
         </StepsContainer>
 
         <FullSection>
+          <div
+            className="trustpilot-widget"
+            data-locale="en-US"
+            data-template-id="5419b6a8b0d04a076446a9ad"
+            data-businessunit-id="5c1873b116ae040001e02a75"
+            data-style-height="24px"
+            data-style-width="100%"
+            data-theme="light"
+          >
+            <a
+              href="https://www.trustpilot.com/review/coolcamper.ro"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CoolCamper pe Trustpilot
+            </a>
+          </div>
+        </FullSection>
+
+        <FullSection>
           <SectionMediaSlider images={motorhomeImages} />
           <SectionContent>
             <SectionTitle>Autorulotele noastre</SectionTitle>
@@ -119,36 +138,9 @@ class Home extends Component {
           <SectionMediaItinerary />
         </FullSection>
 
-        <FullSection>
-          <SectionContent>
-            <SectionTitle>Preturi</SectionTitle>
-            <SectionText>
-              Evie has zero dependencies and uses vanilla JavaScript for a few
-              functions with minimal footprint. You can use React, Vue, Angular,
-              jQuery or whatever you prefer.
-            </SectionText>
-          </SectionContent>
-          <SectionMedia src={Payment} />
-        </FullSection>
-
-        <FullSection>
-          <div
-            className="trustpilot-widget"
-            data-locale="en-US"
-            data-template-id="5419b6a8b0d04a076446a9ad"
-            data-businessunit-id="5c1873b116ae040001e02a75"
-            data-style-height="24px"
-            data-style-width="100%"
-            data-theme="light"
-          >
-            <a
-              href="https://www.trustpilot.com/review/coolcamper.ro"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              CoolCamper pe Trustpilot
-            </a>
-          </div>
+        <FullSection oneCol={true}>
+          <SectionTitle>Preturi</SectionTitle>
+          <Prices />
         </FullSection>
 
         <FullSection oneCol={true}>
