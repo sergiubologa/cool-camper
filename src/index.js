@@ -1,6 +1,8 @@
 /**
  * Polyfils
  */
+import "core-js/fn/object/values";
+import "core-js/fn/object/entries";
 import "core-js/es6/map";
 import "core-js/es6/set";
 // Source: https://github.com/chrisdickinson/raf
