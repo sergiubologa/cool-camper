@@ -8,7 +8,8 @@ const SimpleLayout = props => (
     <Navbar withTransparentBackground={false} />
     <div
       style={{
-        paddingTop: 60
+        paddingTop: 60,
+        flexGrow: 1
       }}
     >
       {props.children}

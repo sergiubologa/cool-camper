@@ -2,12 +2,25 @@
 html {
   box-sizing: border-box;
   background-color: #ffffff;
+  height: 100%;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .invisible {
@@ -1049,11 +1062,11 @@ select::-ms-expand {
 }
 
 .expanded__title {
-  max-width: 550px;
+  max-width: 70ch;
 }
 
 .expanded__text {
-  max-width: 60ch;
+  max-width: 70ch;
 }
 
 .cta {

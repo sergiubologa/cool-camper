@@ -1,3 +1,13 @@
+/**
+ * Polyfils
+ */
+import "core-js/es6/map";
+import "core-js/es6/set";
+// Source: https://github.com/chrisdickinson/raf
+import "raf/polyfill";
+// Source: https://github.com/iamdustan/smoothscroll
+import smoothscroll from "smoothscroll-polyfill";
+
 import React from "react";
 import ReactDOM from "react-dom";
 import "normalize.css";
@@ -10,11 +20,7 @@ import NotFound from "./pages/not-found";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-/**
- * Polyfils
- */
-// https://github.com/iamdustan/smoothscroll
-import smoothscroll from "smoothscroll-polyfill";
+// Run polyfills
 smoothscroll.polyfill();
 
 ReactDOM.render(
