@@ -12,7 +12,7 @@ const SimpleLayout = props => (
         flexGrow: 1
       }}
     >
-      {props.children}
+      <div className="container">{props.children}</div>
     </div>
     <Footer />
   </React.Fragment>

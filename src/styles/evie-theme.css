@@ -808,7 +808,7 @@ select::-ms-expand {
   font-size: 1.1em;
 }
 
-.hero a {
+.hero p a {
   border-bottom: 1px dotted #fff;
 }
 
@@ -1391,10 +1391,6 @@ select::-ms-expand {
   opacity: 0.85;
   line-height: 1.7;
   text-align: left;
-}
-
-.app {
-  padding: calc(81.33333px) 0;
 }
 
 @media (min-width: 992px) {

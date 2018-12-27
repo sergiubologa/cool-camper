@@ -30,7 +30,7 @@
 }
 .faq__card.opened .faq__question,
 .faq__card.opened .faq__answer {
-  color: hsl(0, 0%, 30%);
+  color: hsl(0, 0%, 5%);
 }
 .faq__question_caret {
   position: absolute;

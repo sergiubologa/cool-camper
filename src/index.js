@@ -15,9 +15,11 @@ import ReactDOM from "react-dom";
 import "normalize.css";
 import "./styles/evie-theme.css";
 import Home from "./pages/home";
+import Booking from "./pages/booking";
+import Contact from "./pages/contact";
 import TermsAndConditions from "./pages/terms";
 import PrivacyPolicy from "./pages/privacy";
-import Contact from "./pages/contact";
+import CancelBooking from "./pages/cancel-booking";
 import NotFound from "./pages/not-found";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -29,7 +31,9 @@ ReactDOM.render(
   <Router>
     <Switch>
       <Route exact path="/" component={Home} />
+      <Route path="/rezervare-autorulota" component={Booking} />
       <Route path="/contact" component={Contact} />
+      <Route path="/anulare-rezervare" component={CancelBooking} />
       <Route path="/termeni-si-conditii" component={TermsAndConditions} />
       <Route path="/politica-de-confidentialitate" component={PrivacyPolicy} />
       <Route component={NotFound} />
