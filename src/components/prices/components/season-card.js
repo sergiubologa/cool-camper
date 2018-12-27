@@ -4,7 +4,7 @@ import Button from "../../inputs/button";
 
 export default () => (
   <PriceCard
-    title="In sezon"
+    title="În sezon"
     subtitle="15 Iunie - 15 Octombrie"
     renderContent={() => (
       <h1>
@@ -14,13 +14,15 @@ export default () => (
     renderFooter={() => (
       <React.Fragment>
         <div className="discounts">
-          <span>Se aplica discount-uri:</span>
+          <span>Se aplică discount-uri:</span>
           <ul>
-            <li>intre 7 si 13 zile - 10% reducere</li>
+            <li>între 7 și 13 zile - 10% reducere</li>
             <li>peste 13 zile - 15% reducere</li>
           </ul>
         </div>
-        <Button type="accent">Rezerva acum</Button>
+        <Button type="accent" to="/rezervare-autorulota">
+          Rezervă acum
+        </Button>
       </React.Fragment>
     )}
   />

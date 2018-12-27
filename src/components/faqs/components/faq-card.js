@@ -15,13 +15,13 @@ export default class extends React.Component {
   }
 
   render() {
-    const { question, answer } = this.props;
+    const { question, answer, ...rest } = this.props;
     const { answerOpened } = this.state;
     const iconDirection = answerOpened ? "up" : "down";
     const cardClasses = ["faq__card"];
     if (answerOpened) cardClasses.push("opened");
     return (
-      <div className={cardClasses.join(" ")}>
+      <div className={cardClasses.join(" ")} {...rest}>
         <p className="faq__question" onClick={this.onQuestionClick}>
           <span>{question}</span>
           <CaretIcon

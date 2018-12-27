@@ -1,10 +1,10 @@
 import React from "react";
-import { Sunny, Rainy } from "../../svg/forecasts";
+import { Sunny, Cloudy } from "../../svg/forecasts";
 
 export default props => {
   const { type, title, subtitle, renderContent, renderFooter } = props;
   let IconComponent = Sunny;
-  if (type === "extra-season") IconComponent = Rainy;
+  if (type === "extra-season") IconComponent = Cloudy;
 
   return (
     <div className="price__card">

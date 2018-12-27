@@ -9,7 +9,7 @@
   width: 60px;
   height: 60px;
   background: #fdf6c6;
-  border: 1px solid #faeb7c;
+  border: 1px solid #fde850;
   border-radius: 50%;
   animation-duration: 1.6s;
   animation-name: fadeIn;
@@ -19,7 +19,7 @@
 .forecast__sunny::after {
   width: 40px;
   height: 40px;
-  background: #faeb7c;
+  background: #fde850;
   border-radius: 50%;
   content: "";
   display: block;

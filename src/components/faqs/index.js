@@ -12,7 +12,12 @@ export default props => {
   return (
     <div className={classes.join(" ")}>
       {questions.map((q, index) => (
-        <FaqCard key={index} question={q.question} answer={q.answer} />
+        <FaqCard
+          key={index}
+          question={q.question}
+          answer={q.answer}
+          id={q.id}
+        />
       ))}
     </div>
   );

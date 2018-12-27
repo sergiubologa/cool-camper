@@ -12,6 +12,8 @@
 }
 
 .price__card {
+  display: flex;
+  flex-direction: column;
   margin-top: 40px;
   border-radius: 5px;
   padding: 20px;
@@ -42,6 +44,7 @@
   display: flex;
   flex-grow: 1;
   justify-content: center;
+  align-items: center;
   padding: 20px 0;
 }
 

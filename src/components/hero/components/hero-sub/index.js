@@ -1,7 +1,10 @@
 import React from "react";
 import Caret from "../../../svg/caret";
 import ScrollListener from "../../../scroll-listener";
-import { refHasClassName } from "../../../../common/utils";
+import {
+  refHasClassName,
+  smoothScrollToSelector
+} from "../../../../common/utils";
 
 export default class HeroSub extends React.Component {
   constructor(props) {
@@ -21,15 +24,8 @@ export default class HeroSub extends React.Component {
   }
 
   onSubClick() {
-    const { scrollByElementHeight } = this.props;
-
-    if (scrollByElementHeight) {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const elementHeight = document.querySelector(scrollByElementHeight)
-        .scrollHeight;
-      window.scrollBy({ top: elementHeight - scrollTop, behavior: "smooth" });
-    }
+    const { scrollTo } = this.props;
+    if (scrollTo) smoothScrollToSelector(scrollTo, 20);
   }
 
   render() {

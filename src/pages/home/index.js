@@ -44,7 +44,7 @@ class Home extends Component {
 
         <StepsContainer>
           <StepsHeader>
-            <h2>De ce CoolCamper?</h2>
+            <h2 id="why-coolcamper">De ce CoolCamper?</h2>
             <p>
               Iată câteva motive pentru care ar trebui să închiriezi o
               autorulotă de la noi
@@ -107,12 +107,18 @@ class Home extends Component {
           </div>
         </FullSection>
 
-        <FullSection>
-          <SectionMediaSlider images={motorhomeImages} />
-          <SectionContent>
-            <SectionTitle>Autorulotele noastre</SectionTitle>
-            <SectionText>Avem autorulote noi, ultimul model!</SectionText>
-          </SectionContent>
+        <FullSection oneCol={true}>
+          <SectionTitle id="motorhome-images">
+            Autorulotele noastre
+          </SectionTitle>
+          <SectionText style={{ marginTop: 0 }}>
+            Avem autorulote noi, ultimul model!
+          </SectionText>
+          <SectionMediaSlider
+            images={motorhomeImages}
+            fullWidth={true}
+            style={{ maxWidth: 873 }}
+          />
         </FullSection>
 
         <FullSection>
@@ -139,7 +145,7 @@ class Home extends Component {
         </FullSection>
 
         <FullSection oneCol={true}>
-          <SectionTitle>Preturi</SectionTitle>
+          <SectionTitle id="prices">Prețuri</SectionTitle>
           <Prices />
         </FullSection>
 
@@ -150,10 +156,10 @@ class Home extends Component {
 
         <StepsContainer>
           <StepsHeader>
-            <h2>Contacteaza-ne!</h2>
+            <h2>Contactează-ne!</h2>
             <p>
-              Nu ezita sa ne contactezi pentru orice problema sau nelamurire
-              intampini. Suntem aici ca sa te ajutam!
+              Nu ezita să ne contactezi pentru orice problemă sau nelămurire
+              întâmpini. Suntem aici ca să te ajutăm!
             </p>
           </StepsHeader>
 
@@ -162,7 +168,8 @@ class Home extends Component {
               <StepMedia src={Inbox} />
               <h4>Email</h4>
               <StepText>
-                Scrie-ne un email orice ai vrea sa stii dar nu ai gasit pe site.
+                Scrie-ne un email cu orice ai vrea să știi dar nu ai găsit pe
+                site.
               </StepText>
 
               <a
@@ -177,7 +184,7 @@ class Home extends Component {
               <StepMedia src={Android} />
               <h4>Telefon</h4>
               <StepText>
-                Suna-ne pentru orice urgenta sau problema pe care o intampini!
+                Sună-ne pentru orice urgență sau problemă pe care o întâmpini!
               </StepText>
               <Button
                 type="accent"
@@ -230,9 +237,11 @@ class Home extends Component {
         <CTAFullSection>
           <CTATitle>Rezervă acum o autorulotă!</CTATitle>
           <CTAMessage>
-            Grab the production version and begin your project instantly.
+            Fă acum o rezervare și trăiește o experiență de neuitat!
           </CTAMessage>
-          <Button type="accent">Rezervă</Button>
+          <Button type="accent" to="/rezervare-autorulota">
+            Verifică disponibilitatea
+          </Button>
         </CTAFullSection>
       </TransparentNavbarLayout>
     );

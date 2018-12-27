@@ -90,6 +90,7 @@ export default [
     answer: `Nu. Va incurajam sa fiti spontani si liberi, bucurati-va de natura si de tot ce va ofera calatoria cu autorulota.`
   },
   {
+    id: "faq-insurance",
     question: "Aveti asigurare?",
     answer: `Da. Avem asigurare RCA si Casco valabila peste tot in Europa.
     Anumite tari nu sunt incluse in polita de asigurare RCA (gen Albania, Bosnia, etc), dar daca va alegeti alt intinerariu decat cele propuse de noi, va putem ajuta sa verificati daca polita de de asigurare acopera si tarile prin care doriti sa calatoriti.

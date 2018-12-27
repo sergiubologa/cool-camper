@@ -2,12 +2,25 @@
 html {
   box-sizing: border-box;
   background-color: #ffffff;
+  height: 100%;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .invisible {
@@ -737,7 +750,7 @@ select::-ms-expand {
   position: absolute;
   height: 100%;
   width: 100%;
-  opacity: 0.86;
+  opacity: 0.66;
   z-index: 1;
   background-color: #6c63ff;
 }
@@ -795,7 +808,7 @@ select::-ms-expand {
   font-size: 1.1em;
 }
 
-.hero a {
+.hero p a {
   border-bottom: 1px dotted #fff;
 }
 
@@ -1049,11 +1062,11 @@ select::-ms-expand {
 }
 
 .expanded__title {
-  max-width: 550px;
+  max-width: 70ch;
 }
 
 .expanded__text {
-  max-width: 60ch;
+  max-width: 70ch;
 }
 
 .cta {
@@ -1380,10 +1393,6 @@ select::-ms-expand {
   text-align: left;
 }
 
-.app {
-  padding: calc(81.33333px) 0;
-}
-
 @media (min-width: 992px) {
   .app__inner {
     -js-display: flex;
@@ -1513,6 +1522,10 @@ select::-ms-expand {
     width: 50%;
     margin-bottom: 0;
   }
+}
+
+.expanded__media__slider__full__width {
+  width: 100%;
 }
 
 @media (min-width: 1200px) {
