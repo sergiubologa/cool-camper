@@ -4,15 +4,15 @@
 
 .booking__header {
   overflow: hidden;
-  background: hsl(0, 0%, 95%);
+  background: hsl(0, 0%, 97%);
 }
 
-.booking__header h3 {
-  margin: 1em 0 0.1rem;
+.booking__header h4 {
+  margin: 1rem 0 0.1rem;
 }
 
 .booking__header p {
-  margin: 0 0 1.3rem;
+  margin: 0 0 1rem;
 }
 
 ol.progtrckr {

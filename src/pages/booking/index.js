@@ -36,7 +36,7 @@ export default class extends React.Component {
         <div className="booking">
           <div className="booking__header">
             <div className="container">
-              <h3>Rezervă o autorulotă</h3>
+              <h4>Rezervă o autorulotă</h4>
               <p>
                 pasul {currentStep + 1} din {noOfSteps} - {currentStepName}
               </p>
