@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "react-router";
 
 export default withRouter(props => {
-  // type options: delete, primary, accent or no type
+  // type options: delete, accent, primary, tertiary or no type
   const {
     type,
     className,
