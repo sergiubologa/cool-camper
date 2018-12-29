@@ -31,8 +31,8 @@ const SimpleLayout = props => (
                   Pagina principala
                 </NavLink>
               </li>
-              {links.map(link => (
-                <li>
+              {links.map((link, index) => (
+                <li key={index}>
                   <NavLink to={link.url} activeClassName="vMenu--active">
                     {link.name}
                   </NavLink>

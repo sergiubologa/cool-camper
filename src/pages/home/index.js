@@ -78,12 +78,12 @@ class Home extends Component {
             </Step>
           </Steps>
           <StepsMoreInfo text="vezi toate avantajele">
-            <StepsInfo text="Pick-up direct de la aeroport" />
-            <StepsInfo text="Multipli șoferi, fără taxe suplimentare" />
+            <StepsInfo text="Pick-up de la aeroport" />
+            <StepsInfo text="Șoferi multipli, fără taxe suplimentare" />
             <StepsInfo text="Asigurare RCA și full CASCO în toată Europa" />
-            <StepsInfo text="Parcare asigurată pentru mașina ta pe parcursul închirierii autorulotei" />
+            <StepsInfo text="Parcare asigurată pentru mașina personală pe parcursul închirierii autorulotei" />
             <StepsInfo text="Fără limită de kilometri" />
-            <StepsInfo text="Suntem prietenoși, happy și dornici să te ajutăm să trăiești cea mai tare aventură" />
+            <StepsInfo text="Suntem prietenoși, voiși și dornici să te ajutăm să trăiești cea mai tare aventură" />
           </StepsMoreInfo>
         </StepsContainer>
 

@@ -1,0 +1,101 @@
+.booking {
+  margin-bottom: 3rem;
+}
+
+.booking__header {
+  overflow: hidden;
+  background: hsl(0, 0%, 95%);
+}
+
+.booking__header h3 {
+  margin: 1em 0 0.1rem;
+}
+
+.booking__header p {
+  margin: 0 0 1.3rem;
+}
+
+ol.progtrckr {
+  display: flex;
+  margin: 0;
+  padding: 0 0 2.2rem;
+  list-style-type: none;
+}
+ol.progtrckr li {
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  line-height: 4.5rem;
+  padding: 0 0.7rem;
+  cursor: pointer;
+}
+@media (max-width: 650px) {
+  .progtrckr li span {
+    display: none;
+  }
+}
+.progtrckr em {
+  display: none;
+}
+@media (max-width: 650px) {
+  .progtrckr em {
+    display: inline;
+  }
+}
+
+ol.progtrckr li.progtrckr-todo {
+  color: silver;
+  border-bottom: 4px solid silver;
+}
+ol.progtrckr li.progtrckr-doing {
+  color: black;
+  border-bottom: 4px solid #33c3f0;
+}
+ol.progtrckr li.progtrckr-done {
+  color: black;
+  border-bottom: 4px solid #33c3f0;
+}
+ol.progtrckr li:before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 1.2em;
+  line-height: 1.2em;
+  border-radius: 50%;
+  bottom: -0.8rem;
+  left: calc(50% - 9px);
+}
+ol.progtrckr li.progtrckr-todo:before {
+  position: absolute;
+  content: "\039F";
+  color: silver;
+  background-color: white;
+  line-height: 1.4em;
+}
+ol.progtrckr li.progtrckr-todo:hover:before {
+  color: #0fa0ce;
+}
+
+ol.progtrckr li.progtrckr-doing:before {
+  content: "\2022";
+  color: white;
+  background-color: #33c3f0;
+}
+ol.progtrckr li.progtrckr-doing:hover:before {
+  color: #0fa0ce;
+}
+
+ol.progtrckr li.progtrckr-done:before {
+  content: "\2713";
+  color: white;
+  background-color: #33c3f0;
+}
+ol.progtrckr li.progtrckr-done:hover:before {
+  color: #0fa0ce;
+}
+
+.progtrckr__buttons {
+  display: flex;
+  justify-content: space-between;
+}

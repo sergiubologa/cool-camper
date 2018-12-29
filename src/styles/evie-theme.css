@@ -187,7 +187,7 @@ a {
   background-color: transparent;
   border-radius: 30px;
   margin-bottom: 1.3em;
-  transition: 0.7s;
+  transition: all 0.7s, visibility 0s;
   text-align: center;
   text-decoration: none;
 }
@@ -218,6 +218,19 @@ button:focus,
     background-color: #463aff;
     border-color: #463aff;
     color: #fff;
+  }
+}
+
+.button__tertiary {
+  background-color: transparent;
+  border-color: transparent;
+  color: #8e8d8d;
+  font-weight: bold;
+}
+@media (min-width: 992px) {
+  .button__tertiary:hover {
+    border-color: transparent;
+    color: #8e8d8d;
   }
 }
 
