@@ -1,3 +1,107 @@
 .DateRangePicker_picker__portal {
   z-index: 200;
 }
+
+.step__one__labels label:first-child {
+  margin-right: 24px;
+}
+
+.DateRangePicker {
+  width: 100%;
+}
+
+.DateInput,
+.step__one__labels label {
+  width: 128px;
+  flex-grow: 1;
+}
+input.DateInput_input {
+  border-radius: 3px;
+  padding: 10px 8px;
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+.DateRangePickerInput {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 400px) {
+  .DateRangePickerInput_arrow {
+    margin: 0 5px;
+  }
+  .DateInput,
+  .step__one__labels label {
+    width: 150px;
+  }
+  .step__one__labels label:first-child {
+    margin-right: 34px;
+  }
+}
+
+@media (min-width: 700px) {
+  .DateRangePicker {
+    width: unset;
+  }
+  .DateRangePickerInput {
+    display: inline-block;
+  }
+  .DateRangePickerInput_arrow {
+    margin: 0 10px;
+  }
+  .DateInput,
+  .step__one__labels label {
+    width: 210px;
+    flex-grow: unset;
+  }
+  .step__one__labels label:first-child {
+    margin-right: 44px;
+  }
+  .DateRangePickerInput_clearDates {
+    right: -50px;
+  }
+}
+
+.CalendarDay {
+  outline: none;
+}
+
+/* // Will edit everything selected including everything between a range of dates
+.CalendarDay__selected_span {
+  background: #948ff7;
+  color: white;
+  border: 1px solid #8a78fb;
+}
+
+/* // Will edit selected date or the endpoints of a range of dates 
+.CalendarDay__selected {
+  background: #6c63ff;
+  color: white;
+  border: 1px double #00a699;
+}
+
+/* // Will edit when hovered over. _span style also has this property 
+.CalendarDay__selected:hover {
+  background: #6c63ff;
+  color: white;
+}
+
+/* // Will edit when the second date (end date) in a range of dates
+// is not yet selected. Edits the dates between your mouse and said date 
+.CalendarDay__hovered_span:hover,
+.CalendarDay__hovered_span {
+  background: #948ff7;
+  color: white;
+  border: 1px solid #8a78fb;
+}
+
+.CalendarDay__selected_span:active,
+.CalendarDay__selected_span:hover {
+  background: #8681f5;
+  border: 1px double #7974d6;
+  color: #fff;
+} */

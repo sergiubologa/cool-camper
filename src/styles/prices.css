@@ -50,6 +50,7 @@
 
 .price__card__content h1 small {
   color: hsl(0, 0%, 40%);
+  font-size: 0.5em;
 }
 
 .price__card__footer {

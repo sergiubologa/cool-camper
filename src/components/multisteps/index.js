@@ -112,14 +112,14 @@ export default class MultiStep extends React.Component {
             style={this.state.showPreviousBtn ? {} : { visibility: "hidden" }}
             onClick={this.previous}
           >
-            Pasul precedent
+            Înapoi
           </Button>
 
           <Button
             style={this.state.showNextBtn ? {} : { visibility: "hidden" }}
             onClick={this.next}
           >
-            Pasul următor
+            Pasul Următor
           </Button>
         </div>
       </div>

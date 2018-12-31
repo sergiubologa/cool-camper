@@ -279,10 +279,9 @@ button:focus,
   color: inherit;
   background-color: transparent;
   border: 0;
+  padding: 0;
 }
 .icon-button svg {
-  height: 1.2em;
-  width: 1.2em;
   vertical-align: middle;
 }
 
@@ -1678,4 +1677,19 @@ select::-ms-expand {
   80% {
     transform: rotate(0deg);
   }
+}
+
+.Popover-body {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  background: hsl(0, 0%, 100%);
+  color: #484848;
+  border-radius: 0.3rem;
+  /* box-shadow: 0 2px 6px 0 hsl(0, 0%, 0%, 0.2); */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
+}
+
+.Popover-tipShape {
+  fill: hsl(0, 0%, 90%);
 }

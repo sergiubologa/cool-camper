@@ -26,7 +26,7 @@ ol.progtrckr li {
   display: flex;
   position: relative;
   justify-content: center;
-  line-height: 4.5rem;
+  line-height: 3.5rem;
   padding: 0 0.7rem;
   cursor: pointer;
 }
@@ -45,16 +45,16 @@ ol.progtrckr li {
 }
 
 ol.progtrckr li.progtrckr-todo {
-  color: silver;
-  border-bottom: 4px solid silver;
+  color: hsl(0, 0%, 80%);
+  border-bottom: 4px solid hsl(0, 0%, 80%);
 }
 ol.progtrckr li.progtrckr-doing {
   color: black;
-  border-bottom: 4px solid #33c3f0;
+  border-bottom: 4px solid #6c63ff;
 }
 ol.progtrckr li.progtrckr-done {
   color: black;
-  border-bottom: 4px solid #33c3f0;
+  border-bottom: 4px solid #6c63ff;
 }
 ol.progtrckr li:before {
   position: absolute;
@@ -74,28 +74,85 @@ ol.progtrckr li.progtrckr-todo:before {
   line-height: 1.4em;
 }
 ol.progtrckr li.progtrckr-todo:hover:before {
-  color: #0fa0ce;
+  color: #6c63ff;
 }
 
 ol.progtrckr li.progtrckr-doing:before {
   content: "\2022";
   color: white;
-  background-color: #33c3f0;
-}
-ol.progtrckr li.progtrckr-doing:hover:before {
-  color: #0fa0ce;
+  background-color: #6c63ff;
 }
 
 ol.progtrckr li.progtrckr-done:before {
   content: "\2713";
   color: white;
-  background-color: #33c3f0;
+  background-color: #6c63ff;
 }
+
+ol.progtrckr li.progtrckr-doing:hover:before,
 ol.progtrckr li.progtrckr-done:hover:before {
-  color: #0fa0ce;
+  color: #97ff65;
 }
 
 .progtrckr__buttons {
   display: flex;
   justify-content: space-between;
+  margin-top: 3em;
+}
+@media (max-width: 320px) {
+  .progtrckr__buttons .button {
+    padding: 5pt 12pt;
+  }
+}
+
+.step__one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.step__one__labels {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.step__one__labels label {
+  padding: 0;
+  font-size: 1.1em;
+}
+
+.step__one__details {
+  width: 100%;
+  margin-top: 6px;
+}
+@media (min-width: 700px) {
+  .step__one__details {
+    max-width: 464px;
+  }
+}
+
+.step__one__details__row {
+  padding: 8px 0;
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+  display: flex;
+}
+.step__one__details__row:last-child {
+  border-bottom: 0 none;
+}
+.step__one__details__row span:first-child {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.step__one__details__row__discount {
+  color: rgb(0, 132, 137);
+}
+
+.step__one__details__row span .popover__button {
+  cursor: pointer;
+  margin-left: 10px;
+}
+.step__one__details__row span .popover__button:hover,
+.step__one__details__row span .popover__button:focus {
+  color: #6c63ff;
 }
