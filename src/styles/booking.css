@@ -4,15 +4,15 @@
 
 .booking__header {
   overflow: hidden;
-  background: hsl(0, 0%, 95%);
+  background: hsl(0, 0%, 97%);
 }
 
-.booking__header h3 {
-  margin: 1em 0 0.1rem;
+.booking__header h4 {
+  margin: 1rem 0 0.1rem;
 }
 
 .booking__header p {
-  margin: 0 0 1.3rem;
+  margin: 0 0 1rem;
 }
 
 ol.progtrckr {
@@ -26,7 +26,7 @@ ol.progtrckr li {
   display: flex;
   position: relative;
   justify-content: center;
-  line-height: 4.5rem;
+  line-height: 3.5rem;
   padding: 0 0.7rem;
   cursor: pointer;
 }
@@ -45,16 +45,16 @@ ol.progtrckr li {
 }
 
 ol.progtrckr li.progtrckr-todo {
-  color: silver;
-  border-bottom: 4px solid silver;
+  color: hsl(0, 0%, 80%);
+  border-bottom: 4px solid hsl(0, 0%, 80%);
 }
 ol.progtrckr li.progtrckr-doing {
   color: black;
-  border-bottom: 4px solid #33c3f0;
+  border-bottom: 4px solid #6c63ff;
 }
 ol.progtrckr li.progtrckr-done {
   color: black;
-  border-bottom: 4px solid #33c3f0;
+  border-bottom: 4px solid #6c63ff;
 }
 ol.progtrckr li:before {
   position: absolute;
@@ -74,28 +74,216 @@ ol.progtrckr li.progtrckr-todo:before {
   line-height: 1.4em;
 }
 ol.progtrckr li.progtrckr-todo:hover:before {
-  color: #0fa0ce;
+  color: #6c63ff;
 }
 
 ol.progtrckr li.progtrckr-doing:before {
   content: "\2022";
   color: white;
-  background-color: #33c3f0;
-}
-ol.progtrckr li.progtrckr-doing:hover:before {
-  color: #0fa0ce;
+  background-color: #6c63ff;
 }
 
 ol.progtrckr li.progtrckr-done:before {
   content: "\2713";
   color: white;
-  background-color: #33c3f0;
+  background-color: #6c63ff;
 }
+
+ol.progtrckr li.progtrckr-doing:hover:before,
 ol.progtrckr li.progtrckr-done:hover:before {
-  color: #0fa0ce;
+  color: #97ff65;
 }
 
 .progtrckr__buttons {
   display: flex;
   justify-content: space-between;
+  margin-top: 3em;
+}
+@media (max-width: 320px) {
+  .progtrckr__buttons .button {
+    padding: 5pt 12pt;
+  }
+}
+
+.step__one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.step__one__labels {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.step__one__labels label {
+  padding: 0;
+  font-size: 1.1em;
+}
+
+.price__details {
+  width: 100%;
+  margin-top: 6px;
+}
+@media (min-width: 700px) {
+  .step__one__priceDetails {
+    max-width: 464px;
+  }
+}
+
+.price__details__row {
+  padding: 8px 0;
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+  display: flex;
+}
+.price__details__row:last-child {
+  border-bottom: 0 none;
+}
+.price__details__row span:first-child {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.price__details__row__discount {
+  color: rgb(0, 132, 137);
+}
+
+.price__details__row span .popover__button {
+  cursor: pointer;
+  margin-left: 10px;
+}
+.price__details__row span .popover__button:hover,
+.price__details__row span .popover__button:focus {
+  color: #6c63ff;
+}
+
+.step__two {
+  display: flex;
+}
+.step__two__inputs,
+.step__two__details {
+  width: 50%;
+}
+.step__two__details {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.step__two__details > img {
+  max-width: 20%;
+}
+
+.step__two__inputs__row {
+  display: flex;
+  flex-grow: 1;
+}
+.step__two__inputs__row__input {
+  flex-grow: 1;
+}
+.step__two__inputs__row__input:nth-child(even) {
+  margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .step__two {
+    flex-direction: column;
+  }
+  .step__two__inputs,
+  .step__two__details {
+    width: unset;
+  }
+  .step__two__details {
+    margin-left: 0;
+  }
+  .step__two__details > img {
+    display: none;
+  }
+}
+
+.step__three {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.step__three__card {
+  flex-grow: 1;
+  margin-top: 1.2em;
+}
+.step__three__card:first-child {
+  margin-top: 0;
+}
+.step__three__card__summaryHeader {
+  display: flex;
+  align-items: center;
+}
+.step__three__card__summaryHeader h4 {
+  margin: 0 0 0 10px;
+}
+.step__three__card > p,
+.step__three__card > .icon__label {
+  margin: 0;
+  padding: 0;
+}
+.step__three__card > .icon__label {
+  padding: 4pt 0;
+}
+.step__three__card > p:first-of-type,
+.step__three__card > .icon__label:nth-child(2),
+.step__three__card > .price__details {
+  margin: 1em 0 0 0;
+}
+
+.step__three__card__paymentMethods {
+  margin: 1em 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.step__three__card__paymentMethods p {
+  margin-bottom: 0;
+  font-size: 0.833em;
+  line-height: 1em;
+}
+.step__three__card__paymentMethods small {
+  display: block;
+}
+@media (min-width: 600px) {
+  .step__three__card__paymentMethods {
+    flex-direction: row;
+  }
+  .step__three__card__paymentMethods--left,
+  .step__three__card__paymentMethods--right {
+    width: 50%;
+  }
+  .step__three__card__paymentMethods--left {
+    margin-right: 10px;
+  }
+  .step__three__card--type,
+  .step__three__card--contactData,
+  .step__three__card--benefits,
+  .step__three__card--price {
+    width: 48%;
+    flex-grow: 0;
+  }
+  .step__three__card--type,
+  .step__three__card--contactData {
+    margin: 0;
+  }
+}
+
+.step__three__card__sendReservation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.step__three__card__sendReservation > small {
+  display: block;
+  margin: 1em 0 2em 0;
+  max-width: 280px;
+}
+.step__three__card__sendReservation a {
+  border-bottom: 1px dotted #666;
 }

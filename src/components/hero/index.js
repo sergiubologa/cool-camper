@@ -6,15 +6,13 @@ import { smoothScrollToSelector } from "../../common/utils";
 export default props => (
   <React.Fragment>
     <div className="hero">
-      <div className="hero__overlay hero__overlay--gradient" />
+      <div className="hero__overlay hero__overlay--gradientVertical" />
       <div className="hero__mask" />
       <div className="hero__inner">
         <div className="container">
           <div className="hero__content">
             <div className="hero__content__inner" id="navConverter">
-              <h1 className="hero__title">
-                Ia-ți familia în vacanța mult visată!
-              </h1>
+              <h1 className="hero__title">Travel Anywhere. Be a CoolCamper!</h1>
               <p className="hero__text">
                 Închiriază o autorulotă modernă, adună-ți prietenii sau familia
                 și bucură-te de vacanța mult visată! Noi îți punem la dispoziție

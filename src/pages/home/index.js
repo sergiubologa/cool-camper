@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Motorhome from "../../assets/img/motorhome.svg";
 import MapLight from "../../assets/img/map_light.svg";
 import Support from "../../assets/img/support.svg";
-import Android from "../../assets/img/android.svg";
+import MobilePhone from "../../assets/img/mobile-phone.svg";
 import Inbox from "../../assets/img/inbox.svg";
 
 import Hero from "../../components/hero";
@@ -69,11 +69,10 @@ class Home extends Component {
             </Step>
             <Step>
               <StepMedia src={Support} />
-              <h4>Suport 24/24</h4>
+              <h4>Suport 24/7</h4>
               <StepText>
-                Ne poți contacta 24/24 pentru a ne cere ajutorul cu absolut
-                orice problemă întâmpini. Prin telefon, email sau
-                videoconferință.
+                Ne poți contacta 24/7 pentru a ne cere ajutorul cu absolut orice
+                problemă întâmpini. Prin telefon, email sau videoconferință.
               </StepText>
             </Step>
           </Steps>
@@ -181,7 +180,7 @@ class Home extends Component {
               </a>
             </Step>
             <Step>
-              <StepMedia src={Android} />
+              <StepMedia src={MobilePhone} />
               <h4>Telefon</h4>
               <StepText>
                 Sună-ne pentru orice urgență sau problemă pe care o întâmpini!

@@ -12,12 +12,7 @@
 }
 
 .price__card {
-  display: flex;
-  flex-direction: column;
   margin-top: 40px;
-  border-radius: 5px;
-  padding: 20px;
-  box-shadow: 0 2px 6px 0 hsl(0, 0%, 0%, 0.2);
 }
 @media (min-width: 600px) {
   .price__card {
@@ -50,6 +45,7 @@
 
 .price__card__content h1 small {
   color: hsl(0, 0%, 40%);
+  font-size: 0.5em;
 }
 
 .price__card__footer {
