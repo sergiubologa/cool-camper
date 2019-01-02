@@ -6,8 +6,8 @@ export default props => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 64 64"
-      width={props.width}
-      height={props.width}
+      width={width}
+      height={width}
       {...rest}
     >
       <circle cx="31.978" cy="50.363" r="2" />

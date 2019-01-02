@@ -121,38 +121,169 @@ ol.progtrckr li.progtrckr-done:hover:before {
   font-size: 1.1em;
 }
 
-.step__one__details {
+.price__details {
   width: 100%;
   margin-top: 6px;
 }
 @media (min-width: 700px) {
-  .step__one__details {
+  .step__one__priceDetails {
     max-width: 464px;
   }
 }
 
-.step__one__details__row {
+.price__details__row {
   padding: 8px 0;
   border-bottom: 1px solid hsl(0, 0%, 90%);
   display: flex;
 }
-.step__one__details__row:last-child {
+.price__details__row:last-child {
   border-bottom: 0 none;
 }
-.step__one__details__row span:first-child {
+.price__details__row span:first-child {
   flex-grow: 1;
   display: flex;
   align-items: center;
 }
-.step__one__details__row__discount {
+.price__details__row__discount {
   color: rgb(0, 132, 137);
 }
 
-.step__one__details__row span .popover__button {
+.price__details__row span .popover__button {
   cursor: pointer;
   margin-left: 10px;
 }
-.step__one__details__row span .popover__button:hover,
-.step__one__details__row span .popover__button:focus {
+.price__details__row span .popover__button:hover,
+.price__details__row span .popover__button:focus {
   color: #6c63ff;
+}
+
+.step__two {
+  display: flex;
+}
+.step__two__inputs,
+.step__two__details {
+  width: 50%;
+}
+.step__two__details {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.step__two__details > img {
+  max-width: 20%;
+}
+
+.step__two__inputs__row {
+  display: flex;
+  flex-grow: 1;
+}
+.step__two__inputs__row__input {
+  flex-grow: 1;
+}
+.step__two__inputs__row__input:nth-child(even) {
+  margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .step__two {
+    flex-direction: column;
+  }
+  .step__two__inputs,
+  .step__two__details {
+    width: unset;
+  }
+  .step__two__details {
+    margin-left: 0;
+  }
+  .step__two__details > img {
+    display: none;
+  }
+}
+
+.step__three {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.step__three__card {
+  flex-grow: 1;
+  margin-top: 1.2em;
+}
+.step__three__card:first-child {
+  margin-top: 0;
+}
+.step__three__card__summaryHeader {
+  display: flex;
+  align-items: center;
+}
+.step__three__card__summaryHeader h4 {
+  margin: 0 0 0 10px;
+}
+.step__three__card > p,
+.step__three__card > .icon__label {
+  margin: 0;
+  padding: 0;
+}
+.step__three__card > .icon__label {
+  padding: 4pt 0;
+}
+.step__three__card > p:first-of-type,
+.step__three__card > .icon__label:nth-child(2),
+.step__three__card > .price__details {
+  margin: 1em 0 0 0;
+}
+
+.step__three__card__paymentMethods {
+  margin: 1em 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.step__three__card__paymentMethods p {
+  margin-bottom: 0;
+  font-size: 0.833em;
+  line-height: 1em;
+}
+.step__three__card__paymentMethods small {
+  display: block;
+}
+@media (min-width: 600px) {
+  .step__three__card__paymentMethods {
+    flex-direction: row;
+  }
+  .step__three__card__paymentMethods--left,
+  .step__three__card__paymentMethods--right {
+    width: 50%;
+  }
+  .step__three__card__paymentMethods--left {
+    margin-right: 10px;
+  }
+  .step__three__card--type,
+  .step__three__card--contactData,
+  .step__three__card--benefits,
+  .step__three__card--price {
+    width: 48%;
+    flex-grow: 0;
+  }
+  .step__three__card--type,
+  .step__three__card--contactData {
+    margin: 0;
+  }
+}
+
+.step__three__card__sendReservation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.step__three__card__sendReservation > small {
+  display: block;
+  margin: 1em 0 2em 0;
+  max-width: 280px;
+}
+.step__three__card__sendReservation a {
+  border-bottom: 1px dotted #666;
 }

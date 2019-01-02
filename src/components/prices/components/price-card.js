@@ -1,5 +1,6 @@
 import React from "react";
 import { Sunny, Cloudy } from "../../svg/forecasts";
+import Card from "../../card";
 
 export default props => {
   const { type, title, subtitle, renderContent, renderFooter } = props;
@@ -7,16 +8,23 @@ export default props => {
   if (type === "extra-season") IconComponent = Cloudy;
 
   return (
-    <div className="price__card">
-      <div className="price__card__header">
-        <IconComponent />
-        <div className="price__card__title">
-          <h4>{title}</h4>
-          <span>{subtitle}</span>
+    <Card
+      className="price__card"
+      renderHeader={() => (
+        <div className="price__card__header">
+          <IconComponent />
+          <div className="price__card__title">
+            <h4>{title}</h4>
+            <span>{subtitle}</span>
+          </div>
         </div>
-      </div>
-      <div className="price__card__content">{renderContent()}</div>
-      <div className="price__card__footer">{renderFooter()}</div>
-    </div>
+      )}
+      renderBody={() => (
+        <div className="price__card__content">{renderContent()}</div>
+      )}
+      renderFooter={() => (
+        <div className="price__card__footer">{renderFooter()}</div>
+      )}
+    />
   );
 };
