@@ -38,7 +38,10 @@ export default class extends React.Component {
   }
 
   onDatesChange({ startDate, endDate }) {
-    this.setState({ startDate, endDate });
+    this.setState({ startDate, endDate }, () => {
+      if (this.props.onDatesChange)
+        this.props.onDatesChange(startDate, endDate);
+    });
   }
 
   render() {
@@ -53,8 +56,8 @@ export default class extends React.Component {
     return (
       <div className="step__one">
         <div className="step__one__labels">
-          <label>De la</label>
-          <label>Până la</label>
+          <label htmlFor="your_unique_start_date_id">De la</label>
+          <label htmlFor="your_unique_end_date_id">Până la</label>
         </div>
         <DateRangePicker
           startDate={this.state.startDate}

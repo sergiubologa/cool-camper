@@ -742,12 +742,17 @@ select::-ms-expand {
 .hero {
   position: relative;
   width: 100%;
-  background-image: url("../assets/img/motorhome.jpg");
+  background-image: url("../assets/img/motorhome-background-small.jpg");
   box-shadow: 0 4px 11px rgba(124, 146, 169, 0.5);
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
   color: #ffffff;
+}
+@media (min-width: 768px) {
+  .hero {
+    background-image: url("../assets/img/motorhome-background-big.jpg");
+  }
 }
 @media (min-width: 1200px) {
   .hero {
@@ -764,7 +769,7 @@ select::-ms-expand {
   position: absolute;
   height: 100%;
   width: 100%;
-  opacity: 0.66;
+  opacity: 0.36;
   z-index: 1;
   background-color: rgba(108, 99, 255, 0.5);
 }
@@ -780,7 +785,7 @@ select::-ms-expand {
 .hero__overlay--gradientVertical {
   background: linear-gradient(
     to bottom,
-    rgba(108, 99, 255, 0.6),
+    rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.8)
   );
 }
@@ -795,6 +800,7 @@ select::-ms-expand {
   background-repeat: no-repeat;
   opacity: 0.66;
   z-index: 2;
+  display: none;
 }
 
 .hero__content {

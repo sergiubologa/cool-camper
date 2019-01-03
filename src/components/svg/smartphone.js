@@ -2,16 +2,12 @@ import React from "react";
 
 export default props => {
   const { width = 18, color, className } = props;
-  const style = {
-    width,
-    height: width
-  };
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 60 60"
       className={className}
-      style={style}
+      width={width}
     >
       <path
         d="M42.595 0h-25.19A4.411 4.411 0 0 0 13 4.405v51.189A4.411 4.411 0 0 0 17.405 60h25.189A4.411 4.411 0 0 0 47 55.595V4.405A4.411 4.411 0 0 0 42.595 0zM15 8h30v38H15V8zm2.405-6h25.189A2.408 2.408 0 0 1 45 4.405V6H15V4.405A2.408 2.408 0 0 1 17.405 2zm25.19 56h-25.19A2.408 2.408 0 0 1 15 55.595V48h30v7.595A2.408 2.408 0 0 1 42.595 58z"

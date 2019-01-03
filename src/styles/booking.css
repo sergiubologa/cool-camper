@@ -282,7 +282,7 @@ ol.progtrckr li.progtrckr-done:hover:before {
 .step__three__card__sendReservation > small {
   display: block;
   margin: 1em 0 2em 0;
-  max-width: 280px;
+  max-width: 395px;
 }
 .step__three__card__sendReservation a {
   border-bottom: 1px dotted #666;

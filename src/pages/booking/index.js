@@ -6,31 +6,65 @@ import StepOne, { Name as StepOneName } from "./components/step-one";
 import StepTwo, { Name as StepTwoName } from "./components/step-two";
 import StepThree, { Name as StepThreeName } from "./components/step-three";
 
-const steps = [
-  { name: StepOneName, component: <StepOne /> },
-  { name: StepTwoName, component: <StepTwo /> },
-  { name: StepThreeName, component: <StepThree /> }
-];
-
 export default class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentStep: 0
+      currentStep: 0,
+      startDate: null,
+      endDate: null,
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: ""
     };
-    this.onStepChange = this.onStepChange.bind(this);
+    this.onStepChanged = this.onStepChanged.bind(this);
+    this.onDatesChange = this.onDatesChange.bind(this);
+
+    this.steps = [
+      {
+        name: StepOneName,
+        component: <StepOne onDatesChange={this.onDatesChange} />
+      },
+      { name: StepTwoName, component: <StepTwo /> },
+      { name: StepThreeName, component: <StepThree /> }
+    ];
   }
 
-  onStepChange(newStepIndex) {
+  onDatesChange(startDate, endDate) {
+    this.setState({
+      startDate,
+      endDate
+    });
+  }
+
+  onStepChanged(newStepIndex) {
     this.setState({
       currentStep: newStepIndex
     });
   }
 
+  canChangeStep(stepIndex) {
+    switch (stepIndex) {
+      case 0:
+        return this.validateStepOne(this.state.startDate, this.state.endDate);
+      case 1:
+        return this.validateStepTwo(this.state.startDate, this.state.endDate);
+      default:
+        return true;
+    }
+  }
+  validateStepOne(startDate, endDate) {
+    return true;
+  }
+  validateStepTwo() {
+    return false;
+  }
+
   render() {
     const { currentStep } = this.state;
-    const noOfSteps = steps.length;
-    const currentStepName = steps[currentStep].name;
+    const noOfSteps = this.steps.length;
+    const currentStepName = this.steps[currentStep].name;
     return (
       <SimpleLayout>
         <div className="booking">
@@ -44,8 +78,9 @@ export default class extends React.Component {
           </div>
           <Multisteps
             showNavigation
-            steps={steps}
-            onStepChange={this.onStepChange}
+            steps={this.steps}
+            canChangeStep={this.canChangeStep}
+            onStepChanged={this.onStepChanged}
           />
         </div>
       </SimpleLayout>

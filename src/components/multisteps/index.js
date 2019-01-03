@@ -38,7 +38,7 @@ export default class MultiStep extends React.Component {
   state = {
     showPreviousBtn: false,
     showNextBtn: true,
-    compState: 0,
+    currentStep: 0,
     navState: getNavStates(0, this.props.steps.length)
   };
 
@@ -49,74 +49,72 @@ export default class MultiStep extends React.Component {
     this.setState(
       {
         navState,
-        compState: next < noOfSteps ? next : this.state.compState,
+        currentStep: next < noOfSteps ? next : this.state.currentStep,
         ...navButtonsState
       },
       () => {
-        if (this.props.onStepChange)
-          this.props.onStepChange(this.state.compState);
+        if (this.props.onStepChanged)
+          this.props.onStepChanged(this.state.currentStep);
       }
     );
   };
 
-  handleOnClick = evt => {
-    if (
-      evt.currentTarget.value === this.props.steps.length - 1 &&
-      this.state.compState === this.props.steps.length - 1
-    ) {
-      this.setNavState(this.props.steps.length);
-    } else {
-      this.setNavState(evt.currentTarget.value);
-    }
+  onHeaderStepClick = evt => {
+    const { currentStep } = this.state;
+    const currentClickedStep = evt.currentTarget.value;
+    const wantsOneStepFurther = currentClickedStep === currentStep + 1;
+    const wantsStepBack = currentClickedStep < currentStep;
+
+    if (wantsStepBack) return true;
+
+    const isStepValidFunc = this.props.canChangeStep;
+    if (wantsOneStepFurther && isStepValidFunc && isStepValidFunc())
+      this.setNavState(currentClickedStep);
   };
 
   next = () => {
-    this.setNavState(this.state.compState + 1);
+    this.setNavState(this.state.currentStep + 1);
   };
 
   previous = () => {
-    if (this.state.compState > 0) {
-      this.setNavState(this.state.compState - 1);
+    if (this.state.currentStep > 0) {
+      this.setNavState(this.state.currentStep - 1);
     }
   };
 
-  getClassName = (className, i) => {
-    return className + "-" + this.state.navState.styles[i];
-  };
-
-  renderSteps = () => {
-    return this.props.steps.map((s, i) => (
-      <li
-        className={this.getClassName("progtrckr", i)}
-        onClick={this.handleOnClick}
-        key={i}
-        value={i}
-      >
-        <em>{i + 1}</em>
-        <span>{this.props.steps[i].name}</span>
-      </li>
-    ));
-  };
-
   render() {
+    const { currentStep, showPreviousBtn, showNextBtn, navState } = this.state;
+    const { steps, showNavigation } = this.props;
     return (
       <div className="container">
-        <ol className="progtrckr">{this.renderSteps()}</ol>
-        {this.props.steps[this.state.compState].component}
+        <ol className="progtrckr">
+          {steps.map((s, i) => (
+            <li
+              className={`progtrckr-${navState.styles[i]}`}
+              onClick={this.onHeaderStepClick}
+              key={i}
+              value={i}
+            >
+              <em>{i + 1}</em>
+              <span>{steps[i].name}</span>
+            </li>
+          ))}
+        </ol>
+        {steps[currentStep].component}
         <div
           className="progtrckr__buttons"
-          style={this.props.showNavigation ? {} : { display: "none" }}
+          style={showNavigation ? {} : { display: "none" }}
         >
           <Button
             type="tertiary"
-            style={this.state.showPreviousBtn ? {} : { visibility: "hidden" }}
+            style={showPreviousBtn ? {} : { visibility: "hidden" }}
             onClick={this.previous}
           >
             Înapoi
           </Button>
 
           <Button
-            style={this.state.showNextBtn ? {} : { visibility: "hidden" }}
+            style={showNextBtn ? {} : { visibility: "hidden" }}
             onClick={this.next}
           >
             Pasul Următor
