@@ -199,7 +199,7 @@ ol.progtrckr li.progtrckr-done:hover:before {
   font-size: 0.9em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .step__two {
     flex-direction: column;
   }
@@ -207,11 +207,17 @@ ol.progtrckr li.progtrckr-done:hover:before {
   .step__two__details {
     width: unset;
   }
+
   .step__two__details {
-    margin-left: 0;
-  }
-  .step__two__details > img {
     display: none;
+  }
+}
+@media (max-width: 500px) {
+  .step__two__inputs__row {
+    flex-direction: column;
+  }
+  .step__two__inputs__row__input:nth-child(even) {
+    margin-left: 0;
   }
 }
 
@@ -299,4 +305,9 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 .step__three__card__sendReservation a {
   border-bottom: 1px dotted #666;
+}
+
+.step__one__error {
+  align-self: flex-start;
+  margin: 10px 0 0 0;
 }

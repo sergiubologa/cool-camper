@@ -36,7 +36,7 @@ export default class extends React.Component {
   }
 
   render() {
-    const { startDate, endDate, onDatesChange } = this.props;
+    const { startDate, endDate, onDatesChange, error } = this.props;
     const isMobile = window.matchMedia("(max-width: 699px)").matches;
     const datePickerOrientation = isMobile
       ? VERTICAL_ORIENTATION
@@ -58,6 +58,7 @@ export default class extends React.Component {
           startDatePlaceholderText="mm/dd/yyyy"
           endDatePlaceholderText="mm/dd/yyyy"
           readOnly
+          required
           showClearDates={!isMobile}
           noBorder
           withFullScreenPortal={isMobile}
@@ -73,6 +74,11 @@ export default class extends React.Component {
             ...DateRangePickerPhrases
           }}
         />
+        {error && noOfDays <= 0 && (
+          <div className="step__one__labels">
+            <small className="error step__one__error">{error}</small>
+          </div>
+        )}
         {noOfDays > 0 && (
           <PriceDetails days={noOfDays} className="step__one__priceDetails" />
         )}

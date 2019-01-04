@@ -24,8 +24,10 @@ export default props => {
             <p>Benimar 340 UP</p>
             <p>5 locuri de dormit + 5 pe scaun</p>
             <p>
-              {noOfDays} zile - {startDate.format("D MMM YYYY")} &rarr;{" "}
-              {endDate.format("D MMM YYYY")}
+              <strong>
+                {noOfDays} zile - {startDate.format("D MMM YYYY")} &rarr;{" "}
+                {endDate.format("D MMM YYYY")}
+              </strong>
             </p>
           </React.Fragment>
         )}

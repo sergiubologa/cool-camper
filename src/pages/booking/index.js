@@ -5,7 +5,10 @@ import "../../styles/booking.css";
 import StepOne, { Name as StepOneName } from "./components/step-one";
 import StepTwo, { Name as StepTwoName } from "./components/step-two";
 import StepThree, { Name as StepThreeName } from "./components/step-three";
-import { isEmailValid, isPhoneValid } from "../../common/utils";
+import {
+  isEmailValid as validateEmail,
+  isPhoneValid as validatePhone
+} from "../../common/utils";
 
 export default class extends React.Component {
   constructor(props) {
@@ -17,7 +20,14 @@ export default class extends React.Component {
       firstName: "",
       lastName: "",
       email: "",
-      phone: ""
+      phone: "",
+      stepOneError: "",
+      stepTwoErrors: {
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: ""
+      }
     };
     this.onStepChanged = this.onStepChanged.bind(this);
     this.onDatesChange = this.onDatesChange.bind(this);
@@ -57,19 +67,30 @@ export default class extends React.Component {
 
   validateStepOne() {
     const { startDate, endDate } = this.state;
-    return startDate && endDate && true;
+    const isValid = startDate && endDate && true;
+    this.setState({
+      stepOneError: isValid ? "" : "Perioada pentru inchiriere este obligatorie"
+    });
+    return isValid;
   }
 
   validateStepTwo() {
     const { firstName, lastName, email, phone } = this.state;
-    return (
-      firstName &&
-      firstName.length > 2 &&
-      lastName &&
-      lastName.length > 2 &&
-      isEmailValid(email.trim()) &&
-      isPhoneValid(phone.trim())
-    );
+    const isFNValid = firstName && firstName.length > 1;
+    const isLNValid = lastName && lastName.length > 1;
+    const isEmailValid = validateEmail(email.trim());
+    const isPhoneValid = validatePhone(phone.trim());
+
+    this.setState({
+      stepTwoErrors: {
+        firstName: isFNValid ? "" : "Prenumele este obligatoriu",
+        lastName: isLNValid ? "" : "Numele este obligatoriu",
+        email: isEmailValid ? "" : "Adresa de email nu este corecta",
+        phone: isPhoneValid ? "" : "Telefonul nu este corect"
+      }
+    });
+
+    return isFNValid && isLNValid && isEmailValid && isPhoneValid;
   }
 
   render() {
@@ -80,7 +101,9 @@ export default class extends React.Component {
       firstName,
       lastName,
       email,
-      phone
+      phone,
+      stepOneError,
+      stepTwoErrors
     } = this.state;
     const stepOneData = { startDate, endDate };
     const stepTwoData = { firstName, lastName, email, phone };
@@ -88,13 +111,21 @@ export default class extends React.Component {
       {
         name: StepOneName,
         component: (
-          <StepOne onDatesChange={this.onDatesChange} {...stepOneData} />
+          <StepOne
+            onDatesChange={this.onDatesChange}
+            {...stepOneData}
+            error={stepOneError}
+          />
         )
       },
       {
         name: StepTwoName,
         component: (
-          <StepTwo onInputChange={this.stepTwoInputChange} {...stepTwoData} />
+          <StepTwo
+            onInputChange={this.stepTwoInputChange}
+            {...stepTwoData}
+            errors={stepTwoErrors}
+          />
         )
       },
       {
