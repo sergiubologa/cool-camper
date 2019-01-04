@@ -6,9 +6,12 @@ import CheckmarkIcon from "../../../components/svg/checkmark";
 import PriceDetails from "./price-details";
 import Button from "../../../components/inputs/button";
 import { Link } from "react-router-dom";
+import { getNoOfDays, formatPhoneForDisplay } from "../../../common/utils";
 
 export const Name = "Sumar";
-export default () => {
+export default props => {
+  const { startDate, endDate, firstName, lastName, email, phone } = props;
+  const noOfDays = getNoOfDays(startDate, endDate);
   return (
     <div className="step__three">
       <Card
@@ -20,7 +23,10 @@ export default () => {
           <React.Fragment>
             <p>Benimar 340 UP</p>
             <p>5 locuri de dormit + 5 pe scaun</p>
-            <p>7 zile - 10 Oct. 2018 &rarr; 17 Oct. 2018</p>
+            <p>
+              {noOfDays} zile - {startDate.format("D MMM YYYY")} &rarr;{" "}
+              {endDate.format("D MMM YYYY")}
+            </p>
           </React.Fragment>
         )}
       />
@@ -29,9 +35,11 @@ export default () => {
         renderHeader={() => <SummaryCardHeader title="Date de contact" />}
         renderBody={() => (
           <React.Fragment>
-            <p>Sergiu Bologa</p>
-            <p>0743-316.632</p>
-            <p>sergiunet@yahoo.com</p>
+            <p>
+              {firstName} {lastName}
+            </p>
+            <p>{formatPhoneForDisplay(phone)}</p>
+            <p>{email}</p>
           </React.Fragment>
         )}
       />
@@ -89,7 +97,7 @@ export default () => {
         renderHeader={() => <SummaryCardHeader title="Preț" />}
         renderBody={() => (
           <React.Fragment>
-            <PriceDetails days={7} />
+            <PriceDetails days={noOfDays} />
             <div className="step__three__card__paymentMethods">
               <div className="step__three__card__paymentMethods--left">
                 <p>

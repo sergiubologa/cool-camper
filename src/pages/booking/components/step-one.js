@@ -10,6 +10,7 @@ import {
 } from "react-dates/constants";
 import { DateRangePickerPhrases } from "react-dates/lib/defaultPhrases";
 import PriceDetails from "./price-details";
+import { getNoOfDays } from "../../../common/utils";
 
 // Initialize moment localization for RO
 moment.locale("ro", {
@@ -30,28 +31,18 @@ export default class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: null,
-      endDate: null,
       focusedInput: null
     };
-    this.onDatesChange = this.onDatesChange.bind(this);
-  }
-
-  onDatesChange({ startDate, endDate }) {
-    this.setState({ startDate, endDate }, () => {
-      if (this.props.onDatesChange)
-        this.props.onDatesChange(startDate, endDate);
-    });
   }
 
   render() {
-    const { startDate, endDate } = this.state;
+    const { startDate, endDate, onDatesChange } = this.props;
     const isMobile = window.matchMedia("(max-width: 699px)").matches;
     const datePickerOrientation = isMobile
       ? VERTICAL_ORIENTATION
       : HORIZONTAL_ORIENTATION;
     const dateFormat = isMobile ? "dd, D MMM" : "dddd, D MMM";
-    const noOfDays = startDate && endDate ? endDate.diff(startDate, "days") : 0;
+    const noOfDays = getNoOfDays(startDate, endDate);
 
     return (
       <div className="step__one">
@@ -60,9 +51,9 @@ export default class extends React.Component {
           <label htmlFor="your_unique_end_date_id">Până la</label>
         </div>
         <DateRangePicker
-          startDate={this.state.startDate}
+          startDate={startDate}
           startDateId="your_unique_start_date_id"
-          endDate={this.state.endDate}
+          endDate={endDate}
           endDateId="your_unique_end_date_id"
           startDatePlaceholderText="mm/dd/yyyy"
           endDatePlaceholderText="mm/dd/yyyy"
@@ -75,7 +66,7 @@ export default class extends React.Component {
           minimumNights={3}
           displayFormat={dateFormat}
           orientation={datePickerOrientation}
-          onDatesChange={this.onDatesChange}
+          onDatesChange={onDatesChange}
           focusedInput={this.state.focusedInput}
           onFocusChange={focusedInput => this.setState({ focusedInput })}
           phrases={{

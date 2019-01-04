@@ -61,19 +61,26 @@ export default class MultiStep extends React.Component {
 
   onHeaderStepClick = evt => {
     const { currentStep } = this.state;
+    const { canChangeStep: isStepValidFunc } = this.props;
     const currentClickedStep = evt.currentTarget.value;
     const wantsOneStepFurther = currentClickedStep === currentStep + 1;
     const wantsStepBack = currentClickedStep < currentStep;
 
-    if (wantsStepBack) return true;
-
-    const isStepValidFunc = this.props.canChangeStep;
-    if (wantsOneStepFurther && isStepValidFunc && isStepValidFunc())
+    if (
+      wantsStepBack ||
+      (wantsOneStepFurther && isStepValidFunc && isStepValidFunc(currentStep))
+    )
       this.setNavState(currentClickedStep);
   };
 
   next = () => {
-    this.setNavState(this.state.currentStep + 1);
+    const { canChangeStep: isStepValidFunc } = this.props;
+    let canChange = true;
+    if (isStepValidFunc) canChange = isStepValidFunc(this.state.currentStep);
+
+    if (canChange) {
+      this.setNavState(this.state.currentStep + 1);
+    }
   };
 
   previous = () => {

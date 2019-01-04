@@ -5,6 +5,7 @@ import "../../styles/booking.css";
 import StepOne, { Name as StepOneName } from "./components/step-one";
 import StepTwo, { Name as StepTwoName } from "./components/step-two";
 import StepThree, { Name as StepThreeName } from "./components/step-three";
+import { isEmailValid, isPhoneValid } from "../../common/utils";
 
 export default class extends React.Component {
   constructor(props) {
@@ -20,21 +21,20 @@ export default class extends React.Component {
     };
     this.onStepChanged = this.onStepChanged.bind(this);
     this.onDatesChange = this.onDatesChange.bind(this);
-
-    this.steps = [
-      {
-        name: StepOneName,
-        component: <StepOne onDatesChange={this.onDatesChange} />
-      },
-      { name: StepTwoName, component: <StepTwo /> },
-      { name: StepThreeName, component: <StepThree /> }
-    ];
+    this.stepTwoInputChange = this.stepTwoInputChange.bind(this);
+    this.canChangeStep = this.canChangeStep.bind(this);
   }
 
-  onDatesChange(startDate, endDate) {
+  onDatesChange({ startDate, endDate }) {
     this.setState({
       startDate,
       endDate
+    });
+  }
+
+  stepTwoInputChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value
     });
   }
 
@@ -47,24 +47,63 @@ export default class extends React.Component {
   canChangeStep(stepIndex) {
     switch (stepIndex) {
       case 0:
-        return this.validateStepOne(this.state.startDate, this.state.endDate);
+        return this.validateStepOne();
       case 1:
-        return this.validateStepTwo(this.state.startDate, this.state.endDate);
+        return this.validateStepTwo();
       default:
         return true;
     }
   }
-  validateStepOne(startDate, endDate) {
-    return true;
+
+  validateStepOne() {
+    const { startDate, endDate } = this.state;
+    return startDate && endDate && true;
   }
+
   validateStepTwo() {
-    return false;
+    const { firstName, lastName, email, phone } = this.state;
+    return (
+      firstName &&
+      firstName.length > 2 &&
+      lastName &&
+      lastName.length > 2 &&
+      isEmailValid(email.trim()) &&
+      isPhoneValid(phone.trim())
+    );
   }
 
   render() {
-    const { currentStep } = this.state;
-    const noOfSteps = this.steps.length;
-    const currentStepName = this.steps[currentStep].name;
+    const {
+      currentStep,
+      startDate,
+      endDate,
+      firstName,
+      lastName,
+      email,
+      phone
+    } = this.state;
+    const stepOneData = { startDate, endDate };
+    const stepTwoData = { firstName, lastName, email, phone };
+    const steps = [
+      {
+        name: StepOneName,
+        component: (
+          <StepOne onDatesChange={this.onDatesChange} {...stepOneData} />
+        )
+      },
+      {
+        name: StepTwoName,
+        component: (
+          <StepTwo onInputChange={this.stepTwoInputChange} {...stepTwoData} />
+        )
+      },
+      {
+        name: StepThreeName,
+        component: <StepThree {...stepOneData} {...stepTwoData} />
+      }
+    ];
+    const noOfSteps = steps.length;
+    const currentStepName = steps[currentStep].name;
     return (
       <SimpleLayout>
         <div className="booking">
@@ -78,7 +117,7 @@ export default class extends React.Component {
           </div>
           <Multisteps
             showNavigation
-            steps={this.steps}
+            steps={steps}
             canChangeStep={this.canChangeStep}
             onStepChanged={this.onStepChanged}
           />

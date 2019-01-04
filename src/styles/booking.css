@@ -185,6 +185,19 @@ ol.progtrckr li.progtrckr-done:hover:before {
 .step__two__inputs__row__input:nth-child(even) {
   margin-left: 10px;
 }
+.step__two__inputs__row__input label[for="phone"] {
+  display: flex;
+}
+.step__two__inputs__row__input label[for="phone"] button {
+  margin: 0 0 0 5px;
+}
+#stepTwoPhoneTooltip .icon__label {
+  padding: 7pt 0 0;
+}
+#stepTwoPhoneTooltip small,
+#stepTwoPhoneTooltip .icon__label {
+  font-size: 0.9em;
+}
 
 @media (max-width: 600px) {
   .step__two {
