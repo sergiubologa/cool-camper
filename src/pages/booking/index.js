@@ -7,7 +7,9 @@ import StepTwo, { Name as StepTwoName } from "./components/step-two";
 import StepThree, { Name as StepThreeName } from "./components/step-three";
 import {
   isEmailValid as validateEmail,
-  isPhoneValid as validatePhone
+  isPhoneValid as validatePhone,
+  isFirstNameValid as validateFirstName,
+  isLastNameValid as validateLastName
 } from "../../common/utils";
 
 export default class extends React.Component {
@@ -23,16 +25,36 @@ export default class extends React.Component {
       phone: "",
       stepOneError: "",
       stepTwoErrors: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: ""
+        firstName: { error: "", isTouched: false },
+        lastName: { error: "", isTouched: false },
+        email: { error: "", isTouched: false },
+        phone: { error: "", isTouched: false }
       }
     };
     this.onStepChanged = this.onStepChanged.bind(this);
     this.onDatesChange = this.onDatesChange.bind(this);
     this.stepTwoInputChange = this.stepTwoInputChange.bind(this);
+    this.stepTwoInputBlur = this.stepTwoInputBlur.bind(this);
     this.canChangeStep = this.canChangeStep.bind(this);
+
+    this.stepTwoValidators = {
+      firstName: firstName =>
+        validateFirstName(firstName)
+          ? { isValid: true, error: "" }
+          : { isValid: false, error: "Prenumele este obligatoriu" },
+      lastName: lastName =>
+        validateLastName(lastName)
+          ? { isValid: true, error: "" }
+          : { isValid: false, error: "Numele este obligatoriu" },
+      email: email =>
+        validateEmail(email)
+          ? { isValid: true, error: "" }
+          : { isValid: false, error: "Adresa de email nu este corecta" },
+      phone: phone =>
+        validatePhone(phone)
+          ? { isValid: true, error: "" }
+          : { isValid: false, error: "Telefonul nu este corect" }
+    };
   }
 
   onDatesChange({ startDate, endDate }) {
@@ -43,8 +65,43 @@ export default class extends React.Component {
   }
 
   stepTwoInputChange(event) {
+    const fieldName = event.target.name;
+    const fieldValue = event.target.value;
+    const fieldValidation = this.stepTwoValidators[fieldName](
+      fieldValue.trim()
+    );
+    const { stepTwoErrors } = this.state;
+    const fieldErrorsProps = stepTwoErrors[fieldName];
+
     this.setState({
-      [event.target.name]: event.target.value
+      [fieldName]: fieldValue,
+      stepTwoErrors: {
+        ...stepTwoErrors,
+        [fieldName]: {
+          ...fieldErrorsProps,
+          error: fieldValidation.error,
+          isTouched: true
+        }
+      }
+    });
+  }
+
+  stepTwoInputBlur(event) {
+    const fieldName = event.target.name;
+    const fieldValue = event.target.value;
+    const { stepTwoErrors } = this.state;
+    const fieldErrorsProps = stepTwoErrors[fieldName];
+    const validation = this.stepTwoValidators[fieldName](fieldValue.trim());
+
+    this.setState({
+      stepTwoErrors: {
+        ...stepTwoErrors,
+        [fieldName]: {
+          ...fieldErrorsProps,
+          error: validation.error,
+          isTouched: true
+        }
+      }
     });
   }
 
@@ -76,21 +133,38 @@ export default class extends React.Component {
 
   validateStepTwo() {
     const { firstName, lastName, email, phone } = this.state;
-    const isFNValid = firstName && firstName.length > 1;
-    const isLNValid = lastName && lastName.length > 1;
-    const isEmailValid = validateEmail(email.trim());
-    const isPhoneValid = validatePhone(phone.trim());
+    const fnValidation = this.stepTwoValidators["firstName"](firstName.trim());
+    const lnValidation = this.stepTwoValidators["lastName"](lastName.trim());
+    const emailValidation = this.stepTwoValidators["email"](email.trim());
+    const phoneValidation = this.stepTwoValidators["phone"](phone.trim());
 
     this.setState({
       stepTwoErrors: {
-        firstName: isFNValid ? "" : "Prenumele este obligatoriu",
-        lastName: isLNValid ? "" : "Numele este obligatoriu",
-        email: isEmailValid ? "" : "Adresa de email nu este corecta",
-        phone: isPhoneValid ? "" : "Telefonul nu este corect"
+        firstName: {
+          error: fnValidation.error,
+          isTouched: true
+        },
+        lastName: {
+          error: lnValidation.error,
+          isTouched: true
+        },
+        email: {
+          error: emailValidation.error,
+          isTouched: true
+        },
+        phone: {
+          error: phoneValidation.error,
+          isTouched: true
+        }
       }
     });
 
-    return isFNValid && isLNValid && isEmailValid && isPhoneValid;
+    return (
+      fnValidation.isValid &&
+      lnValidation.isValid &&
+      emailValidation.isValid &&
+      phoneValidation.isValid
+    );
   }
 
   render() {
@@ -123,6 +197,7 @@ export default class extends React.Component {
         component: (
           <StepTwo
             onInputChange={this.stepTwoInputChange}
+            onInputBlur={this.stepTwoInputBlur}
             {...stepTwoData}
             errors={stepTwoErrors}
           />

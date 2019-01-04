@@ -31,6 +31,9 @@ export const isPhoneValid = phone => {
   return regex.test(phone);
 };
 
+export const isFirstNameValid = firstName => firstName && firstName.length > 1;
+export const isLastNameValid = lastName => lastName && lastName.length > 1;
+
 // TODO - implement function
 export const formatPhoneForDisplay = phone => phone;
 

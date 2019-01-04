@@ -38,22 +38,34 @@ const phoneTooltip = (
 
 export const Name = "Date de contact";
 export default props => {
-  const { onInputChange, firstName, lastName, email, phone, errors } = props;
+  const {
+    onInputChange,
+    onInputBlur,
+    firstName,
+    lastName,
+    email,
+    phone,
+    errors
+  } = props;
   const {
     firstName: fnError,
     lastName: lnError,
     phone: phoneError,
     email: emailError
   } = errors || {};
+  const showFNError = fnError.error && fnError.isTouched;
+  const showLNError = lnError.error && lnError.isTouched;
+  const showEmailError = emailError.error && emailError.isTouched;
+  const showPhoneError = phoneError.error && phoneError.isTouched;
   return (
     <div className="step__two">
       <div className="step__two__inputs">
         <div className="step__two__inputs__row">
           <div className="step__two__inputs__row__input">
-            {!lnError && <label htmlFor="lastName">Nume</label>}
-            {lnError && (
+            {!showLNError && <label htmlFor="lastName">Nume</label>}
+            {showLNError && (
               <label htmlFor="lastName" className="error">
-                {lnError}
+                {lnError.error}
               </label>
             )}
             <input
@@ -61,15 +73,16 @@ export default props => {
               name="lastName"
               id="lastName"
               onChange={onInputChange}
+              onBlur={onInputBlur}
               value={lastName}
-              className={lnError ? "error" : ""}
+              className={showLNError ? "error" : ""}
             />
           </div>
           <div className="step__two__inputs__row__input">
-            {!fnError && <label htmlFor="firstName">Prenume</label>}
-            {fnError && (
+            {!showFNError && <label htmlFor="firstName">Prenume</label>}
+            {showFNError && (
               <label htmlFor="firstName" className="error">
-                {fnError}
+                {fnError.error}
               </label>
             )}
             <input
@@ -77,17 +90,18 @@ export default props => {
               name="firstName"
               id="firstName"
               onChange={onInputChange}
+              onBlur={onInputBlur}
               value={firstName}
-              className={fnError ? "error" : ""}
+              className={showFNError ? "error" : ""}
             />
           </div>
         </div>
         <div className="step__two__inputs__row">
           <div className="step__two__inputs__row__input">
-            {!emailError && <label htmlFor="email">Email</label>}
-            {emailError && (
+            {!showEmailError && <label htmlFor="email">Email</label>}
+            {showEmailError && (
               <label htmlFor="email" className="error">
-                {emailError}
+                {emailError.error}
               </label>
             )}
             <input
@@ -96,19 +110,20 @@ export default props => {
               id="email"
               autoComplete="email"
               onChange={onInputChange}
+              onBlur={onInputBlur}
               value={email}
-              className={emailError ? "error" : ""}
+              className={showEmailError ? "error" : ""}
             />
           </div>
         </div>
         <div className="step__two__inputs__row">
           <div className="step__two__inputs__row__input">
-            {!phoneError && (
+            {!showPhoneError && (
               <label htmlFor="phone">Telefon mobil {phoneTooltip}</label>
             )}
-            {phoneError && (
+            {showPhoneError && (
               <label htmlFor="phone" className="error">
-                {phoneError} {phoneTooltip}
+                {phoneError.error} {phoneTooltip}
               </label>
             )}
             <input
@@ -117,8 +132,9 @@ export default props => {
               id="phone"
               autoComplete="tel"
               onChange={onInputChange}
+              onBlur={onInputBlur}
               value={phone}
-              className={phoneError ? "error" : ""}
+              className={showPhoneError ? "error" : ""}
             />
           </div>
         </div>
