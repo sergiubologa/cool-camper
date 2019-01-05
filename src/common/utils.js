@@ -1,3 +1,5 @@
+import moment from "moment";
+
 export const refHasClassName = (ref, className) => {
   if (!ref || !ref.current || !ref.current.classList) return false;
   return ref.current.classList.contains(className);
@@ -38,4 +40,4 @@ export const isLastNameValid = lastName => lastName && lastName.length > 1;
 export const formatPhoneForDisplay = phone => phone;
 
 export const getNoOfDays = (startDate, endDate) =>
-  startDate && endDate ? endDate.diff(startDate, "days") : 0;
+  startDate && endDate ? moment(endDate).diff(moment(startDate), "days") : 0;

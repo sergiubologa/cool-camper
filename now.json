@@ -10,5 +10,9 @@
     { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "^/static/(.*)", "dest": "/static/$1" },
     { "src": "/(.*)", "dest": "/" }
-  ]
+  ],
+  "env": {
+    "AUTOMATION_EMAIL_ADDRESS": "@automation-email-address",
+    "AUTOMATION_EMAIL_PASSWORD": "@automation-email-password"
+  }
 }

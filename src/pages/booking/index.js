@@ -5,12 +5,14 @@ import "../../styles/booking.css";
 import StepOne, { Name as StepOneName } from "./components/step-one";
 import StepTwo, { Name as StepTwoName } from "./components/step-two";
 import StepThree, { Name as StepThreeName } from "./components/step-three";
+import SocialButton from "../../components/inputs/social-button";
 import {
   isEmailValid as validateEmail,
   isPhoneValid as validatePhone,
   isFirstNameValid as validateFirstName,
   isLastNameValid as validateLastName
 } from "../../common/utils";
+import SuperThankYou from "../../assets/img/super-thank-you.svg";
 
 export default class extends React.Component {
   constructor(props) {
@@ -29,13 +31,17 @@ export default class extends React.Component {
         lastName: { error: "", isTouched: false },
         email: { error: "", isTouched: false },
         phone: { error: "", isTouched: false }
-      }
+      },
+      isSubmitting: false,
+      submitError: "",
+      submitSuccessful: false
     };
     this.onStepChanged = this.onStepChanged.bind(this);
     this.onDatesChange = this.onDatesChange.bind(this);
     this.stepTwoInputChange = this.stepTwoInputChange.bind(this);
     this.stepTwoInputBlur = this.stepTwoInputBlur.bind(this);
     this.canChangeStep = this.canChangeStep.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
 
     this.stepTwoValidators = {
       firstName: firstName =>
@@ -111,6 +117,43 @@ export default class extends React.Component {
     });
   }
 
+  onSubmit() {
+    this.setState({ isSubmitting: true, submitError: "" });
+    // call api to send the emails
+    const {
+      startDate,
+      endDate,
+      firstName,
+      lastName,
+      email,
+      phone
+    } = this.state;
+    const data = { startDate, endDate, firstName, lastName, email, phone };
+    fetch("/api/booking", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        this.setState({
+          isSubmitting: false,
+          submitError: res.error,
+          submitSuccessful: true
+        });
+      })
+      .catch(error => {
+        console.log(error);
+        this.setState({
+          isSubmitting: false,
+          submitError: "S-a produs o eroare. Incearca din nou."
+        });
+      });
+  }
+
   canChangeStep(stepIndex) {
     switch (stepIndex) {
       case 0:
@@ -177,7 +220,10 @@ export default class extends React.Component {
       email,
       phone,
       stepOneError,
-      stepTwoErrors
+      stepTwoErrors,
+      isSubmitting,
+      submitError,
+      submitSuccessful
     } = this.state;
     const stepOneData = { startDate, endDate };
     const stepTwoData = { firstName, lastName, email, phone };
@@ -205,7 +251,15 @@ export default class extends React.Component {
       },
       {
         name: StepThreeName,
-        component: <StepThree {...stepOneData} {...stepTwoData} />
+        component: (
+          <StepThree
+            {...stepOneData}
+            {...stepTwoData}
+            isLoading={isSubmitting}
+            submitError={submitError}
+            onSubmit={this.onSubmit}
+          />
+        )
       }
     ];
     const noOfSteps = steps.length;
@@ -213,20 +267,47 @@ export default class extends React.Component {
     return (
       <SimpleLayout>
         <div className="booking">
-          <div className="booking__header">
-            <div className="container">
-              <h4>Rezervă o autorulotă</h4>
+          {!submitSuccessful && (
+            <React.Fragment>
+              <div className="booking__header">
+                <div className="container">
+                  <h4>Rezervă o autorulotă</h4>
+                  <p>
+                    pasul {currentStep + 1} din {noOfSteps} - {currentStepName}
+                  </p>
+                </div>
+              </div>
+              <Multisteps
+                showNavigation
+                steps={steps}
+                canChangeStep={this.canChangeStep}
+                onStepChanged={this.onStepChanged}
+              />
+            </React.Fragment>
+          )}
+          {submitSuccessful && (
+            <div className="booking__successful">
+              <img src={SuperThankYou} alt="Super multumim!" />
+              <h2>Îți super mulțumim!</h2>
               <p>
-                pasul {currentStep + 1} din {noOfSteps} - {currentStepName}
+                În cel mai scurt timp te vom contacta pentru a confirma
+                rezervarea și pentru a emite factura de avans.
               </p>
+              <p>Până atunci, spune-le și prietenilor tăi despre noi</p>
+              <div className="booking__successful--socialButtons">
+                <SocialButton
+                  type="facebook"
+                  text="Facebook"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.coolcamper.ro/"
+                />
+                <SocialButton
+                  type="twitter"
+                  text="Twitter"
+                  href="https://twitter.com/home?status=Tocmai%20am%20rezervat%20o%20autorulota%20de%20la%20CoolCamper%20cu%20care%20vrem%20sa%20mergem%20in%20vacanta!%20%F0%9F%8E%8A"
+                />
+              </div>
             </div>
-          </div>
-          <Multisteps
-            showNavigation
-            steps={steps}
-            canChangeStep={this.canChangeStep}
-            onStepChanged={this.onStepChanged}
-          />
+          )}
         </div>
       </SimpleLayout>
     );

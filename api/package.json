@@ -10,6 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "koa": "^2.6.2"
+    "koa": "^2.6.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-respond": "^2.1.0",
+    "koa-router": "^7.4.0",
+    "moment": "^2.23.0",
+    "nodemailer": "^5.0.0"
   }
 }

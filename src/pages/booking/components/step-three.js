@@ -7,10 +7,22 @@ import PriceDetails from "./price-details";
 import Button from "../../../components/inputs/button";
 import { Link } from "react-router-dom";
 import { getNoOfDays, formatPhoneForDisplay } from "../../../common/utils";
+import Loader from "../../../components/loader";
 
 export const Name = "Sumar";
 export default props => {
-  const { startDate, endDate, firstName, lastName, email, phone } = props;
+  const {
+    startDate,
+    endDate,
+    firstName,
+    lastName,
+    email,
+    phone,
+    isLoading,
+    submitError,
+    onSubmit
+  } = props;
+  console.log(submitError);
   const noOfDays = getNoOfDays(startDate, endDate);
   return (
     <div className="step__three">
@@ -144,7 +156,17 @@ export default props => {
                 Politica de Anulare
               </Link>
             </small>
-            <Button type="primary">Trimite rezervarea</Button>
+            <div className="step__three__card__sendReservation--submit">
+              <Button
+                type="primary"
+                onClick={onSubmit}
+                className={isLoading ? "loading" : ""}
+              >
+                Trimite rezervarea
+              </Button>
+              <Loader className={isLoading ? "loading" : ""} />
+            </div>
+            {submitError && <label className="error">{submitError}</label>}
           </div>
         )}
       />
