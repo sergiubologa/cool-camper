@@ -20,7 +20,7 @@ export default props => {
       break;
   }
   return (
-    <a href={href} className={classes.join(" ")}>
+    <a href={href} className={classes.join(" ")} target="_blank">
       <span class="sc-icon">
         <Icon />
       </span>
