@@ -13,6 +13,7 @@ import {
   isLastNameValid as validateLastName
 } from "../../common/utils";
 import SuperThankYou from "../../assets/img/super-thank-you.svg";
+import { Link } from "react-router-dom";
 
 export default class extends React.Component {
   constructor(props) {
@@ -85,8 +86,7 @@ export default class extends React.Component {
         ...stepTwoErrors,
         [fieldName]: {
           ...fieldErrorsProps,
-          error: fieldValidation.error,
-          isTouched: true
+          error: fieldValidation.error
         }
       }
     });
@@ -138,18 +138,16 @@ export default class extends React.Component {
     })
       .then(res => res.json())
       .then(res => {
-        console.log(res);
         this.setState({
           isSubmitting: false,
           submitError: res.error,
-          submitSuccessful: true
+          submitSuccessful: res.error ? false : true
         });
       })
       .catch(error => {
-        console.log(error);
         this.setState({
           isSubmitting: false,
-          submitError: "S-a produs o eroare. Incearca din nou."
+          submitError: "S-a produs o eroare. Încearcă din nou!"
         });
       });
   }
@@ -306,6 +304,8 @@ export default class extends React.Component {
                   href="https://twitter.com/home?status=Tocmai%20am%20rezervat%20o%20autorulota%20de%20la%20CoolCamper%20cu%20care%20vrem%20sa%20mergem%20in%20vacanta!%20%F0%9F%8E%8A"
                 />
               </div>
+              <small>sau</small>
+              <Link to="/">Mergi înapoi la pagina principală</Link>
             </div>
           )}
         </div>

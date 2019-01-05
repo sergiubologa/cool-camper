@@ -23,21 +23,27 @@ import CancelBooking from "./pages/cancel-booking";
 import NotFound from "./pages/not-found";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ScrollToTop from "./components/scroll-to-top";
 
 // Run polyfills
 smoothscroll.polyfill();
 
 ReactDOM.render(
   <Router>
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/rezervare-autorulota" component={Booking} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/anulare-rezervare" component={CancelBooking} />
-      <Route path="/termeni-si-conditii" component={TermsAndConditions} />
-      <Route path="/politica-de-confidentialitate" component={PrivacyPolicy} />
-      <Route component={NotFound} />
-    </Switch>
+    <ScrollToTop>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/rezervare-autorulota" component={Booking} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/anulare-rezervare" component={CancelBooking} />
+        <Route path="/termeni-si-conditii" component={TermsAndConditions} />
+        <Route
+          path="/politica-de-confidentialitate"
+          component={PrivacyPolicy}
+        />
+        <Route component={NotFound} />
+      </Switch>
+    </ScrollToTop>
   </Router>,
   document.getElementById("root")
 );

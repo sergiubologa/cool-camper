@@ -76,7 +76,7 @@
   text-align: center;
 }
 
-svg {
+.sc-icon svg {
   width: 1.8em;
   height: 1.8em;
   fill: #fff;

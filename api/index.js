@@ -51,7 +51,7 @@ router.post("/api/booking", async (ctx, next) => {
     if (emailSent) {
       ctx.ok({ error: null });
     } else {
-      ctx.ok({ error: "S-a produs o eroare. Incearca din nou!" });
+      ctx.ok({ error: "S-a produs o eroare. Încearcă din nou!" });
     }
   }
 });

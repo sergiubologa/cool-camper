@@ -311,6 +311,7 @@ ol.progtrckr li.progtrckr-done:hover:before {
   position: relative;
   height: 43px;
   width: 176px;
+  margin-bottom: 0.5em;
 }
 .step__three__card__sendReservation--submit .button,
 .step__three__card__sendReservation--submit .loader {
@@ -351,13 +352,16 @@ ol.progtrckr li.progtrckr-done:hover:before {
   max-width: 50%;
   max-width: 200px;
 }
-.booking__successful p {
+.booking__successful > p {
   max-width: 480px;
+}
+.booking__successful > a {
+  border-bottom: 1px dotted #7c7c7c;
 }
 .booking__successful--socialButtons {
   display: flex;
   justify-content: space-between;
-  margin-top: 1em;
+  margin: 1em 0;
 }
 .booking__successful--socialButtons a.sc-btn:first-child {
   margin-right: 1em;

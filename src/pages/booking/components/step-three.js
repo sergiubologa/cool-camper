@@ -144,15 +144,27 @@ export default props => {
             <h3>Total de plată: 980€</h3>
             <small>
               Prin plasarea comenzii, ești de acord cu{" "}
-              <Link to="/termeni-si-conditii" target="_blank">
+              <Link
+                to="/termeni-si-conditii"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Termenii și Condițiile
               </Link>
               , cu{" "}
-              <Link to="/politica-de-confidentialitate" target="_blank">
+              <Link
+                to="/politica-de-confidentialitate"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Politica de Confidențialitate și Utilizare a cookie-urilor
               </Link>{" "}
               și cu{" "}
-              <Link to="/anulare-rezervare" target="_blank">
+              <Link
+                to="/anulare-rezervare"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Politica de Anulare
               </Link>
             </small>
