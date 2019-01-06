@@ -80,7 +80,11 @@ export default class extends React.Component {
           </div>
         )}
         {noOfDays > 0 && (
-          <PriceDetails days={noOfDays} className="step__one__priceDetails" />
+          <PriceDetails
+            startDate={startDate}
+            endDate={endDate}
+            className="step__one__priceDetails"
+          />
         )}
       </div>
     );

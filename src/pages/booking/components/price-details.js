@@ -1,44 +1,79 @@
 import React from "react";
 import TooltipIcon from "../../../components/tooltip";
+import { calculatePrice } from "../../../common/utils";
 
 export default props => {
-  const { className, days } = props;
+  const { className, startDate, endDate } = props;
   const classes = ["price__details"];
   if (className) classes.push(className);
-
-  const pricePerDay = 140;
-  const totalPrice = days * pricePerDay;
+  const prices = calculatePrice(startDate, endDate);
 
   return (
     <div className={classes.join(" ")}>
       <div className="price__details__row">
         <span>
-          140€ x {days} {days > 1 ? "zile" : "zi"}
-          <TooltipIcon>
-            <div>
-              <div>Popover Content</div>
-              <div>Popover Content</div>
-              <div>Popover Content</div>
-            </div>
-          </TooltipIcon>
+          {prices.averagePricePerDay}€ x {prices.totalNoOfDays}{" "}
+          {prices.totalNoOfDays > 1 ? "zile" : "zi"}
+          {prices.highSeasonDays > 0 && prices.lowSeasonDays > 0 && (
+            <TooltipIcon>
+              <small>
+                <strong>
+                  Sezon: {prices.highSeasonStart.format("D MMMM")} &rarr;{" "}
+                  {prices.highSeasonEnd.format("D MMMM")}
+                </strong>
+              </small>
+              <div
+                className="price_details price__details__tooltip"
+                style={{ minWidth: 200 }}
+              >
+                <div className="price__details__row">
+                  <span>
+                    <small>
+                      {prices.lowSeasonPricePerDay}€ x {prices.lowSeasonDays}{" "}
+                      zile
+                    </small>
+                  </span>
+                  <span>
+                    <small>{prices.lowSeasonPrice.toLocaleString()}€</small>
+                  </span>
+                </div>
+                <div className="price__details__row">
+                  <span>
+                    <small>
+                      {prices.highSeasonPricePerDay}€ x {prices.highSeasonDays}{" "}
+                      zile
+                    </small>
+                  </span>
+                  <span>
+                    <small>{prices.highSeasonPrice.toLocaleString()}€</small>
+                  </span>
+                </div>
+                <div className="price__details__row">
+                  <small>pretul mediu pe zi de mai jos este rotunjit</small>
+                </div>
+              </div>
+            </TooltipIcon>
+          )}
         </span>
-        <span>{totalPrice.toLocaleString()}€</span>
+        <span>{prices.totalPrice.toLocaleString()}€</span>
       </div>
       <div className="price__details__row">
         <span>garanție</span>
-        <span>0€</span>
+        <span>{prices.deposit}€</span>
       </div>
-      <div className="price__details__row price__details__row__discount">
-        <span>10% discount</span>
-        <span>-100€</span>
-      </div>
+      {prices.discount.amount > 0 && (
+        <div className="price__details__row price__details__row__discount">
+          <span>{prices.discount.percent}% discount</span>
+          <span>-{prices.discount.amount.toLocaleString()}€</span>
+        </div>
+      )}
 
       <div className="price__details__row">
         <span>
           <strong>Total</strong>
         </span>
         <span>
-          <strong>{totalPrice.toLocaleString()}€</strong>
+          <strong>{prices.totalPriceWithDiscount.toLocaleString()}€</strong>
         </span>
       </div>
     </div>

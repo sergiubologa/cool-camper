@@ -115,6 +115,7 @@ export default class extends React.Component {
     this.setState({
       currentStep: newStepIndex
     });
+    window.scrollTo({ top: 0 });
   }
 
   onSubmit() {
@@ -143,6 +144,7 @@ export default class extends React.Component {
           submitError: res.error,
           submitSuccessful: res.error ? false : true
         });
+        if (!res.error) window.scrollTo({ top: 0 });
       })
       .catch(error => {
         this.setState({

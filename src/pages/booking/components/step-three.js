@@ -22,8 +22,8 @@ export default props => {
     submitError,
     onSubmit
   } = props;
-  console.log(submitError);
   const noOfDays = getNoOfDays(startDate, endDate);
+
   return (
     <div className="step__three">
       <Card
@@ -111,7 +111,7 @@ export default props => {
         renderHeader={() => <SummaryCardHeader title="Preț" />}
         renderBody={() => (
           <React.Fragment>
-            <PriceDetails days={noOfDays} />
+            <PriceDetails startDate={startDate} endDate={endDate} />
             <div className="step__three__card__paymentMethods">
               <div className="step__three__card__paymentMethods--left">
                 <p>
@@ -136,9 +136,6 @@ export default props => {
       />
       <Card
         className="step__three__card step__three__card--general"
-        // renderHeader={() => (
-        //   <SummaryCardHeader type="agreement" title="Conditii generale" />
-        // )}
         renderBody={() => (
           <div className="step__three__card__sendReservation">
             <h3>Total de plată: 980€</h3>
@@ -172,11 +169,11 @@ export default props => {
               <Button
                 type="primary"
                 onClick={onSubmit}
-                className={isLoading ? "loading" : ""}
+                className={!isLoading ? "loading" : ""}
               >
                 Trimite rezervarea
               </Button>
-              <Loader className={isLoading ? "loading" : ""} />
+              <Loader className={!isLoading ? "loading" : ""} />
             </div>
             {submitError && <label className="error">{submitError}</label>}
           </div>

@@ -151,10 +151,14 @@ ol.progtrckr li.progtrckr-done:hover:before {
 .price__details__row span .popover__button {
   cursor: pointer;
   margin-left: 10px;
+  padding: 1px;
 }
 .price__details__row span .popover__button:hover,
 .price__details__row span .popover__button:focus {
   color: #6c63ff;
+}
+.price__details__tooltip .price__details__row {
+  padding: 0;
 }
 
 .step__two {

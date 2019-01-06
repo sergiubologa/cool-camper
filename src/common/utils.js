@@ -1,4 +1,5 @@
 import moment from "moment";
+import prices from "../static-data/prices";
 
 export const refHasClassName = (ref, className) => {
   if (!ref || !ref.current || !ref.current.classList) return false;
@@ -79,3 +80,83 @@ export const formatPhoneForDisplay = phone => phone;
 
 export const getNoOfDays = (startDate, endDate) =>
   startDate && endDate ? moment(endDate).diff(moment(startDate), "days") : 0;
+
+export const roundNumber = (value, decimals) => {
+  return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
+};
+
+export const calculatePrice = (startDate, endDate) => {
+  const totalNoOfDays = getNoOfDays(startDate, endDate);
+  if (totalNoOfDays <= 0) return null;
+
+  // parse dates to moment objects
+  startDate = moment(startDate);
+  endDate = moment(endDate);
+
+  const highSeasonStart = moment(prices.highSeasonInterval[0]);
+  const highSeasonEnd = moment(prices.highSeasonInterval[1]);
+
+  // MAX(MIN(end1,end2)-MAX(start1,start2)+1,0)
+  const currentYear = moment().year();
+  const minEnd = moment.min(
+    highSeasonEnd.year(currentYear),
+    endDate.year(currentYear)
+  );
+  const maxStart = moment.max(
+    highSeasonStart.year(currentYear),
+    startDate.year(currentYear)
+  );
+  const shouldAddOneHighSeasonDay = endDate
+    .year(currentYear)
+    .isAfter(highSeasonEnd.year(currentYear));
+  const highSeasonDays = Math.max(
+    minEnd.diff(maxStart, "days") + (shouldAddOneHighSeasonDay ? 1 : 0),
+    0
+  );
+
+  const lowSeasonDays = totalNoOfDays - highSeasonDays;
+  const highSeasonPrice = prices.highSeasonPricePerDay * highSeasonDays;
+  const lowSeasonPrice = prices.lowSeasonPricePerDay * lowSeasonDays;
+  const totalPrice = highSeasonPrice + lowSeasonPrice;
+  let eligibleDiscount = {};
+  let discountAmount = 0;
+  let totalPriceWithDiscount = totalPrice;
+
+  const firstDiscount = prices.discounts[0];
+  if (firstDiscount.minDays <= totalNoOfDays) {
+    eligibleDiscount = firstDiscount;
+
+    for (let i = 1; i < prices.discounts.length; i++) {
+      const currDiscount = prices.discounts[i];
+      if (currDiscount.minDays <= totalNoOfDays)
+        eligibleDiscount = currDiscount;
+    }
+  }
+
+  if (eligibleDiscount && eligibleDiscount.percent) {
+    discountAmount = roundNumber(
+      (totalPrice * eligibleDiscount.percent) / 100,
+      2
+    );
+    totalPriceWithDiscount = totalPrice - discountAmount;
+  }
+
+  const averagePricePerDay = roundNumber(totalPrice / totalNoOfDays, 2);
+
+  return {
+    totalPrice,
+    totalPriceWithDiscount,
+    discount: { ...eligibleDiscount, amount: discountAmount },
+    deposit: prices.deposit,
+    highSeasonDays,
+    lowSeasonDays,
+    lowSeasonPrice,
+    highSeasonPrice,
+    totalNoOfDays,
+    highSeasonPricePerDay: prices.highSeasonPricePerDay,
+    lowSeasonPricePerDay: prices.lowSeasonPricePerDay,
+    averagePricePerDay,
+    highSeasonStart,
+    highSeasonEnd
+  };
+};

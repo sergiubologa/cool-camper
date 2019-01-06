@@ -49,9 +49,19 @@ module.exports.sendEmail = async emailTemplate => {
   // send mail with defined transport object
   try {
     await transporter.sendMail(mailOptions);
+    console.log(
+      `Email sent successfully to "${emailTemplate.to}" with the subject "${
+        emailTemplate.subject
+      }"`
+    );
     return true;
   } catch (error) {
-    console.log(error);
+    console.log(
+      `Error sending email to "${emailTemplate.to}" with the subject "${
+        emailTemplate.subject
+      }".
+      ${error}`
+    );
     return false;
   }
 };

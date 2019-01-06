@@ -15,7 +15,7 @@
   animation: sk-bounce 2s infinite ease-in-out;
 }
 
-.double-bounce2 {
+.loader .double-bounce2 {
   -webkit-animation-delay: -1s;
   animation-delay: -1s;
 }
