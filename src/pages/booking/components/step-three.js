@@ -6,7 +6,11 @@ import CheckmarkIcon from "../../../components/svg/checkmark";
 import PriceDetails from "./price-details";
 import Button from "../../../components/inputs/button";
 import { Link } from "react-router-dom";
-import { getNoOfDays, formatPhoneForDisplay } from "../../../common/utils";
+import {
+  getNoOfDays,
+  formatPhoneForDisplay,
+  calculatePrice
+} from "../../../common/utils";
 import Loader from "../../../components/loader";
 
 export const Name = "Sumar";
@@ -23,6 +27,7 @@ export default props => {
     onSubmit
   } = props;
   const noOfDays = getNoOfDays(startDate, endDate);
+  const prices = calculatePrice(startDate, endDate);
 
   return (
     <div className="step__three">
@@ -111,7 +116,11 @@ export default props => {
         renderHeader={() => <SummaryCardHeader title="Preț" />}
         renderBody={() => (
           <React.Fragment>
-            <PriceDetails startDate={startDate} endDate={endDate} />
+            <PriceDetails
+              startDate={startDate}
+              endDate={endDate}
+              prices={prices}
+            />
             <div className="step__three__card__paymentMethods">
               <div className="step__three__card__paymentMethods--left">
                 <p>
@@ -138,7 +147,7 @@ export default props => {
         className="step__three__card step__three__card--general"
         renderBody={() => (
           <div className="step__three__card__sendReservation">
-            <h3>Total de plată: 980€</h3>
+            <h3>Total de plată: {prices.totalPriceWithDiscount}€</h3>
             <small>
               Prin plasarea comenzii, ești de acord cu{" "}
               <Link
@@ -169,11 +178,11 @@ export default props => {
               <Button
                 type="primary"
                 onClick={onSubmit}
-                className={!isLoading ? "loading" : ""}
+                className={isLoading ? "loading" : ""}
               >
                 Trimite rezervarea
               </Button>
-              <Loader className={!isLoading ? "loading" : ""} />
+              <Loader className={isLoading ? "loading" : ""} />
             </div>
             {submitError && <label className="error">{submitError}</label>}
           </div>

@@ -3,10 +3,14 @@ import TooltipIcon from "../../../components/tooltip";
 import { calculatePrice } from "../../../common/utils";
 
 export default props => {
-  const { className, startDate, endDate } = props;
+  const {
+    className,
+    startDate,
+    endDate,
+    prices = calculatePrice(startDate, endDate)
+  } = props;
   const classes = ["price__details"];
   if (className) classes.push(className);
-  const prices = calculatePrice(startDate, endDate);
 
   return (
     <div className={classes.join(" ")}>
