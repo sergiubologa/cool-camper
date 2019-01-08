@@ -1,4 +1,11 @@
 const newAdminBookingTemplate = require("../email-templates/admin/new-booking");
+const {
+  getNoOfDays,
+  isFirstNameValid,
+  isLastNameValid,
+  isEmailValid,
+  isPhoneValid
+} = require("coolcamper-common");
 const utils = require("../utils");
 
 // POST request
@@ -14,13 +21,13 @@ module.exports = async (ctx, next) => {
   } = ctx.request.body;
 
   // validate params
-  const noOfDays = utils.getNoOfDays(startDate, endDate);
+  const noOfDays = getNoOfDays(startDate, endDate);
   const isBookingValid =
     noOfDays > 2 &&
-    utils.isFirstNameValid(firstName.trim()) &&
-    utils.isLastNameValid(lastName.trim()) &&
-    utils.isEmailValid(email.trim()) &&
-    utils.isPhoneValid(phone.trim());
+    isFirstNameValid(firstName.trim()) &&
+    isLastNameValid(lastName.trim()) &&
+    isEmailValid(email.trim()) &&
+    isPhoneValid(phone.trim());
 
   if (!isBookingValid) {
     ctx.ok({ error: "Datele selectate nu sunt valide!" });

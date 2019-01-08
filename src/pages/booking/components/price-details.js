@@ -1,13 +1,13 @@
 import React from "react";
 import TooltipIcon from "../../../components/tooltip";
-import { calculatePrice } from "../../../common/utils";
+import { getPrices } from "coolcamper-common";
 
 export default props => {
   const {
     className,
     startDate,
     endDate,
-    prices = calculatePrice(startDate, endDate)
+    prices = getPrices(startDate, endDate)
   } = props;
   const classes = ["price__details"];
   if (className) classes.push(className);

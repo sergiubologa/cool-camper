@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "coolcamper-common": "^0.0.1",
     "core-js": "^2.6.1",
     "flag-icon-css": "^3.2.1",
     "moment": "^2.23.0",

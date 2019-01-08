@@ -11,7 +11,7 @@ import {
   isPhoneValid as validatePhone,
   isFirstNameValid as validateFirstName,
   isLastNameValid as validateLastName
-} from "../../common/utils";
+} from "coolcamper-common";
 import SuperThankYou from "../../assets/img/super-thank-you.svg";
 import { Link } from "react-router-dom";
 

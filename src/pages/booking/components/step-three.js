@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 import {
   getNoOfDays,
   formatPhoneForDisplay,
-  calculatePrice
-} from "../../../common/utils";
+  getPrices
+} from "coolcamper-common";
 import Loader from "../../../components/loader";
 
 export const Name = "Sumar";
@@ -27,7 +27,7 @@ export default props => {
     onSubmit
   } = props;
   const noOfDays = getNoOfDays(startDate, endDate);
-  const prices = calculatePrice(startDate, endDate);
+  const prices = getPrices(startDate, endDate);
 
   return (
     <div className="step__three">
@@ -147,7 +147,9 @@ export default props => {
         className="step__three__card step__three__card--general"
         renderBody={() => (
           <div className="step__three__card__sendReservation">
-            <h3>Total de plată: {prices.totalPriceWithDiscount}€</h3>
+            <h3>
+              Total de plată: {prices.totalPriceWithDiscount.toLocaleString()}€
+            </h3>
             <small>
               Prin plasarea comenzii, ești de acord cu{" "}
               <Link

@@ -10,7 +10,7 @@ import {
 } from "react-dates/constants";
 import { DateRangePickerPhrases } from "react-dates/lib/defaultPhrases";
 import PriceDetails from "./price-details";
-import { getNoOfDays } from "../../../common/utils";
+import { getNoOfDays } from "coolcamper-common";
 
 // Initialize moment localization for RO
 moment.locale("ro", {

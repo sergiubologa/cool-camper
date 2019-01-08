@@ -2,17 +2,14 @@ const koa = require("koa");
 const Router = require("koa-router");
 const bodyParser = require("koa-bodyparser");
 const respond = require("koa-respond");
-const indexHandler = require("./routes-handlers");
-const bookingHandler = require("./routes-handlers/booking");
-const messageHandler = require("./routes-handlers/message");
 const app = new koa();
 const router = new Router();
 app.use(bodyParser());
 app.use(respond());
 
-router.get("/api", indexHandler);
-router.post("/api/booking", bookingHandler);
-router.post("/api/message", messageHandler);
+router.get("/api", require("./routes-handlers"));
+router.post("/api/booking", require("./routes-handlers/booking"));
+router.post("/api/message", require("./routes-handlers/message"));
 
 app.use(router.routes());
 
