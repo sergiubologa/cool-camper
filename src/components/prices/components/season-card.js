@@ -1,29 +1,44 @@
 import React from "react";
 import PriceCard from "./price-card";
 import Button from "../../inputs/button";
+import { prices } from "coolcamper-common";
+import moment from "moment";
 
-export default () => (
-  <PriceCard
-    title="În sezon"
-    subtitle="15 Iunie - 15 Octombrie"
-    renderContent={() => (
-      <h1>
-        140€ <small>pe zi</small>
-      </h1>
-    )}
-    renderFooter={() => (
-      <React.Fragment>
-        <div className="discounts">
-          <span>Se aplică discount-uri:</span>
-          <ul>
-            <li>între 7 și 13 zile - 10% reducere</li>
-            <li>peste 13 zile - 15% reducere</li>
-          </ul>
-        </div>
-        <Button type="accent" to="/rezervare-autorulota">
-          Rezervă acum
-        </Button>
-      </React.Fragment>
-    )}
-  />
-);
+export default () => {
+  const highSeasonStartDate = moment(
+    prices.highSeasonInterval[0],
+    prices.datesFormat
+  ).format("D MMMM");
+  const highSeasonEndDate = moment(
+    prices.highSeasonInterval[1],
+    prices.datesFormat
+  ).format("D MMMM");
+  return (
+    <PriceCard
+      title="În sezon"
+      subtitle={`${highSeasonStartDate} - ${highSeasonEndDate}`}
+      renderContent={() => (
+        <h1>
+          {prices.highSeasonPricePerDay}€ <small>pe zi</small>
+        </h1>
+      )}
+      renderFooter={() => (
+        <React.Fragment>
+          <div className="discounts">
+            <span>Se aplică discount-uri:</span>
+            <ul>
+              {prices.discounts.map(discount => (
+                <li key={discount.minDays}>
+                  peste {discount.minDays} zile - {discount.percent}% reducere
+                </li>
+              ))}
+            </ul>
+          </div>
+          <Button type="accent" to="/rezervare-autorulota">
+            Rezervă acum
+          </Button>
+        </React.Fragment>
+      )}
+    />
+  );
+};

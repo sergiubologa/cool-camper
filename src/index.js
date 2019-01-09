@@ -24,6 +24,7 @@ import NotFound from "./pages/not-found";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ScrollToTop from "./components/scroll-to-top";
+import "moment/locale/ro";
 
 // Run polyfills
 smoothscroll.polyfill();

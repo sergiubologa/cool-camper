@@ -1,6 +1,7 @@
 import React from "react";
 import TooltipIcon from "../../../components/tooltip";
-import { getPrices } from "coolcamper-common";
+import { getPrices, prices as pricesData } from "coolcamper-common";
+import moment from "moment";
 
 export default props => {
   const {
@@ -11,6 +12,15 @@ export default props => {
   } = props;
   const classes = ["price__details"];
   if (className) classes.push(className);
+  const highSeasonStart = moment(
+    prices.highSeasonStart,
+    pricesData.datesFormat
+  ).format("D MMM");
+
+  const highSeasonEnd = moment(
+    prices.highSeasonEnd,
+    pricesData.datesFormat
+  ).format("D MMM");
 
   return (
     <div className={classes.join(" ")}>
@@ -22,8 +32,7 @@ export default props => {
             <TooltipIcon>
               <small>
                 <strong>
-                  Sezon: {prices.highSeasonStart.format("D MMMM")} &rarr;{" "}
-                  {prices.highSeasonEnd.format("D MMMM")}
+                  Sezon: {highSeasonStart} &rarr; {highSeasonEnd}
                 </strong>
               </small>
               <div

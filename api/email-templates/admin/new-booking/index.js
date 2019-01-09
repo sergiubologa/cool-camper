@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const moment = require("moment");
+require("moment/locale/ro");
 const { getPrices } = require("coolcamper-common");
 const templatePath = path.join(__dirname, "template.html");
 

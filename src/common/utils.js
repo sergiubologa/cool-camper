@@ -18,9 +18,9 @@ export const smoothScrollToSelector = (selector, extraOffset = 0) => {
 export const openUrlInPopup = (url, title, w, h) => {
   // Fixes dual-screen position
   const dualScreenLeft =
-    window.screenLeft != undefined ? window.screenLeft : window.screenX;
+    window.screenLeft !== undefined ? window.screenLeft : window.screenX;
   const dualScreenTop =
-    window.screenTop != undefined ? window.screenTop : window.screenY;
+    window.screenTop !== undefined ? window.screenTop : window.screenY;
 
   const width = window.innerWidth
     ? window.innerWidth

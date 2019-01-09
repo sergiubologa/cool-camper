@@ -12,21 +12,7 @@ import { DateRangePickerPhrases } from "react-dates/lib/defaultPhrases";
 import PriceDetails from "./price-details";
 import { getNoOfDays } from "coolcamper-common";
 
-// Initialize moment localization for RO
-moment.locale("ro", {
-  months: "Ianuarie_Februarie_Martie_Aprilie_Mai_Iunie_Iulie_August_Septembrie_Octombrie_Noiembrie_Decembrie".split(
-    "_"
-  ),
-  monthsShort: "Ian_Feb_Mar_Apr_Mai_Iun_Iul_Aug_Sept_Oct_Noi_Dec".split("_"),
-  monthsParseExact: true,
-  weekdays: "Duminică_Luni_Marți_Miercuri_Joi_Vineri_Sâmbătă".split("_"),
-  weekdaysShort: "Dum_Lun_Mar_Mie_Joi_Vin_Sâm".split("_"),
-  weekdaysMin: "Du_Lu_Ma_Mi_Joi_Vi_Sâ".split("_"),
-  weekdaysParseExact: true
-});
-
 export const Name = "Alege perioada";
-
 export default class extends React.Component {
   constructor(props) {
     super(props);
