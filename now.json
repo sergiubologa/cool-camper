@@ -10,6 +10,10 @@
     { "src": "/api/(.*)", "dest": "/api" },
     { "src": "^/static/(.*)", "dest": "/static/$1" },
     { "src": "^/favicon.ico", "dest": "/favicon.ico" },
+    {
+      "src": "/googlee097d0a204b5af8e.html",
+      "dest": "/googlee097d0a204b5af8e.html"
+    },
     { "src": "^/asset-manifest.json", "dest": "/asset-manifest.json" },
     { "src": "^/manifest.json", "dest": "/manifest.json" },
     {
