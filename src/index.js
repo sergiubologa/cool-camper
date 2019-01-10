@@ -18,6 +18,7 @@ import Home from "./pages/home";
 import Booking from "./pages/booking";
 import Contact from "./pages/contact";
 import TermsAndConditions from "./pages/terms";
+import Cookies from "./pages/cookies";
 import PrivacyPolicy from "./pages/privacy";
 import CancelBooking from "./pages/cancel-booking";
 import NotFound from "./pages/not-found";
@@ -38,6 +39,7 @@ ReactDOM.render(
         <Route path="/contact" component={Contact} />
         <Route path="/anulare-rezervare" component={CancelBooking} />
         <Route path="/termeni-si-conditii" component={TermsAndConditions} />
+        <Route path="/politica-de-cookies" component={Cookies} />
         <Route
           path="/politica-de-confidentialitate"
           component={PrivacyPolicy}

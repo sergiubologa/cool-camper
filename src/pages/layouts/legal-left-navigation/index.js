@@ -9,6 +9,10 @@ const links = [
     name: "Politica de confidentialitate",
     url: "/politica-de-confidentialitate"
   },
+  {
+    name: "Politica de cookies",
+    url: "/politica-de-cookies"
+  },
   { name: "Termeni si conditii", url: "/termeni-si-conditii" },
   { name: "Anulare rezervare", url: "/anulare-rezervare" }
 ];
