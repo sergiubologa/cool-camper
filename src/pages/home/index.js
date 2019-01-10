@@ -35,6 +35,7 @@ import motorhomeImages from "../../static-data/motorhome-images";
 import Button from "../../components/inputs/button";
 import IconLabel from "../../components/icon-label";
 import SmartphoneIcon from "../../components/svg/smartphone";
+import ContactForm from "./components/contact-form";
 
 class Home extends Component {
   render() {
@@ -201,34 +202,7 @@ class Home extends Component {
 
             <Step>
               <h4>Scrie-ne un mesaj</h4>
-              <form
-                method="post"
-                action="/api/message"
-                autocompelete="on"
-                className="form"
-              >
-                <label htmlFor="name">Nume</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Numele complet..."
-                />
-                <label htmlFor="email">Email</label>
-                <input
-                  type="text"
-                  name="email"
-                  id="email"
-                  placeholder="you@example.com"
-                />
-                <label htmlFor="message">Mesaj</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Mesajul pe care vrei sa ni-l trimiti..."
-                />
-                <Button formType="submit">Trimite mesajul</Button>
-              </form>
+              <ContactForm />
             </Step>
           </Steps>
         </StepsContainer>
