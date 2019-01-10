@@ -4,6 +4,7 @@ import {
   isEmailValid as validateEmail,
   isFirstNameValid as validateFirstName
 } from "coolcamper-common";
+import Loader from "../../../components/loader";
 
 export default class extends React.Component {
   constructor(props) {
@@ -12,11 +13,15 @@ export default class extends React.Component {
     this.onChange = this.onChange.bind(this);
     this.onBlur = this.onBlur.bind(this);
     this.isFormValid = this.isFormValid.bind(this);
+    this.validateField = this.validateField.bind(this);
+    this.validateAllFields = this.validateAllFields.bind(this);
 
     this.state = {
       name: "",
       email: "",
       message: "",
+      isSubmitting: false,
+      submitError: "",
       errors: {
         name: { error: "", isTouched: false },
         email: { error: "", isTouched: false },
@@ -41,28 +46,83 @@ export default class extends React.Component {
   }
 
   onSubmit() {
-    if (this.isFormValid()) {
-      // do the call
-    }
-    const { errors } = this.state;
-    if (!errors.isFormTouched) {
-      this.setState({
-        errors: {
-          ...errors,
-          name: { ...errors.name, isTouched: true },
-          email: { ...errors.email, isTouched: true },
-          message: { ...errors.message, isTouched: true }
-        }
-      });
-    }
+    this.validateAllFields().then(() => {
+      if (this.isFormValid()) {
+        this.setState({ isSubmitting: true, submitError: "" });
+        // call api to send the message
+        const { name, email, message } = this.state;
+        const data = { name, email, message };
+        fetch("/api/message", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        })
+          .then(res => res.json())
+          .then(res => {
+            this.setState({
+              isSubmitting: false,
+              submitError: res.error,
+              submitSuccessful: res.error ? false : true,
+              name: "",
+              email: "",
+              message: ""
+            });
+            setTimeout(() => {
+              this.setState({ submitSuccessful: false });
+            }, 5000);
+          })
+          .catch(error => {
+            this.setState({
+              isSubmitting: false,
+              submitError: "S-a produs o eroare. Încearcă din nou!"
+            });
+          });
+      }
+    });
   }
 
   onChange(event) {
     const fieldName = event.target.name;
     const fieldValue = event.target.value;
-    const fieldValidation = this.validators[fieldName](fieldValue.trim());
+    this.validateField(fieldName, fieldValue);
+  }
+
+  onBlur(event) {
+    const fieldName = event.target.name;
+    const fieldValue = event.target.value;
+    this.validateField(fieldName, fieldValue);
+  }
+
+  isFormValid() {
+    const { errors } = this.state;
+    return Object.keys(errors).find(key => errors[key].error) === undefined;
+  }
+
+  validateAllFields() {
+    const { name, email, message } = this.state;
+    const nameError = this.validators["name"](name);
+    const emailError = this.validators["email"](email);
+    const msgError = this.validators["message"](message);
+    return new Promise(resolve =>
+      this.setState(
+        {
+          errors: {
+            name: { ...nameError, isTouched: true },
+            email: { ...emailError, isTouched: true },
+            message: { ...msgError, isTouched: true }
+          }
+        },
+        resolve
+      )
+    );
+  }
+
+  validateField(fieldName, fieldValue) {
     const { errors } = this.state;
     const fieldErrorsProps = errors[fieldName];
+    const validation = this.validators[fieldName](fieldValue.trim());
 
     this.setState({
       [fieldName]: fieldValue,
@@ -70,48 +130,31 @@ export default class extends React.Component {
         ...errors,
         [fieldName]: {
           ...fieldErrorsProps,
-          error: fieldValidation.error,
+          ...validation,
           isTouched: true
         }
       }
     });
-  }
-
-  onBlur(event) {
-    const fieldName = event.target.name;
-    const fieldValue = event.target.value;
-    const { errors } = this.state;
-    const fieldErrorsProps = errors[fieldName];
-    const validation = this.validators[fieldName](fieldValue.trim());
-
-    this.setState({
-      errors: {
-        ...errors,
-        [fieldName]: {
-          ...fieldErrorsProps,
-          error: validation.error,
-          isTouched: true
-        }
-      }
-    });
-  }
-
-  isFormValid() {
-    // call all validators
-    const { errors } = this.state;
-    return Object.keys(errors).find(key => errors[key].error) === undefined;
   }
 
   render() {
-    const { name, email, message, errors } = this.state;
+    const {
+      name,
+      email,
+      message,
+      errors,
+      isSubmitting,
+      submitError,
+      submitSuccessful
+    } = this.state;
     const {
       name: nameError,
       email: emailError,
       message: messageError
     } = errors;
-    const showNameError = nameError.error && nameError.isTouched;
-    const showEmailError = emailError.error && emailError.isTouched;
-    const showMessageError = messageError.error && messageError.isTouched;
+    const showNameError = !nameError.isValid && nameError.isTouched;
+    const showEmailError = !emailError.isValid && emailError.isTouched;
+    const showMessageError = !messageError.isValid && messageError.isTouched;
     return (
       <div>
         {!showNameError && <label htmlFor="name">Nume</label>}
@@ -163,7 +206,25 @@ export default class extends React.Component {
           onBlur={this.onBlur}
           className={showMessageError ? "error" : ""}
         />
-        <Button onClick={this.onSubmit}>Trimite mesajul</Button>
+        {!submitSuccessful && (
+          <div className="contact__form__submit">
+            <Button
+              onClick={this.onSubmit}
+              className={isSubmitting ? "loading" : ""}
+            >
+              Trimite mesajul
+            </Button>
+            <Loader className={isSubmitting ? "loading" : ""} />
+          </div>
+        )}
+        {submitError && (
+          <label className="error contact__form__error">{submitError}</label>
+        )}
+        {submitSuccessful && (
+          <label className="success contact__form__success">
+            Mesajul a fost trimis. Multumim!
+          </label>
+        )}
       </div>
     );
   }

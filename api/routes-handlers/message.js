@@ -1,5 +1,5 @@
 const newMessageAdminTemplate = require("../email-templates/admin/new-message");
-const { isEmailValid } = require("coolcamper-common");
+const { isEmailValid, isFirstNameValid } = require("coolcamper-common");
 const utils = require("../utils");
 
 // POST request

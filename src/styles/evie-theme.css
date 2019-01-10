@@ -594,6 +594,11 @@ textarea.error {
   border-color: #faa7bb;
   background-color: #fdf4f5;
 }
+small.success,
+label.success {
+  color: green;
+  padding: 0;
+}
 
 .landing__section {
   padding: 24pt 0;
@@ -1715,7 +1720,45 @@ textarea.error {
   }
 }
 
-.Popover-body {
+.contact__form__submit {
+  height: 43px;
+  width: 100%;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+.contact__form__submit button,
+.contact__form__submit .loader {
+  position: absolute;
+  transition: all 300ms, color 0s;
+}
+.contact__form__submit button {
+  position: relative;
+  margin: 0 auto;
+}
+.contact__form__submit .loader {
+  left: calc(50% - 20px);
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.contact__form__submit .loader.loading {
+  opacity: 1;
+  visibility: visible;
+}
+.contact__form__submit button.loading {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  left: calc(50% - 20px);
+  color: transparent;
+  opacity: 0;
+}
+.contact__form__error,
+.contact__form__success {
+  text-align: center;
+}
+
+.contact__form__submit .Popover-body {
   display: inline-flex;
   flex-direction: column;
   padding: 1rem 2rem;
