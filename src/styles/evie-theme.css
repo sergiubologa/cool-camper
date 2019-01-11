@@ -1177,8 +1177,8 @@ label.success {
 @media (min-width: 600px) {
   .footer__logo {
     margin-bottom: 0;
-    flex-basis: 30%;
-    margin-right: 7rem;
+    flex-basis: 60%;
+    margin-right: 4rem;
   }
 }
 
@@ -1205,13 +1205,11 @@ label.success {
 }
 
 .footer__data {
-  -js-display: flex;
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
   padding-top: 0.25rem;
   flex-wrap: wrap;
-  flex-direction: column;
   font-size: 0.9rem;
 }
 @media (min-width: 992px) {
@@ -1225,6 +1223,20 @@ label.success {
   padding-bottom: 0.5rem;
   display: inline-block;
   margin-bottom: 8pt;
+}
+
+.footer__pages {
+}
+.footer__social {
+  margin-right: 2.5em;
+}
+.footer__copyright {
+}
+@media (min-width: 992px) {
+  .footer__pages,
+  .footer__social {
+    margin-right: 4em;
+  }
 }
 
 .footer__link {
