@@ -39,7 +39,15 @@ export default () => {
               ))}
             </ul>
           </div>
-          <Button type="accent" to="/rezervare-autorulota">
+          <Button
+            type="accent"
+            to="/rezervare-autorulota"
+            ga-on="click"
+            ga-event-category="Button"
+            ga-event-action="click"
+            ga-event-label="extra-season card"
+            ga-event-value="Rezervă acum"
+          >
             Rezervă acum
           </Button>
         </React.Fragment>

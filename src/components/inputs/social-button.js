@@ -17,7 +17,7 @@ export default class extends React.Component {
   }
 
   render() {
-    const { text, href, type, className } = this.props;
+    const { text, href, type, className, ...rest } = this.props;
     const classes = [`sc-btn sc--${type}`];
     if (className) classes.push(className);
 
@@ -39,6 +39,7 @@ export default class extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
         onClick={this.onClick}
+        {...rest}
       >
         <span className="sc-icon">
           <Icon />

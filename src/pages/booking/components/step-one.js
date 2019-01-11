@@ -19,6 +19,11 @@ export default class extends React.Component {
     this.state = {
       focusedInput: null
     };
+    window.ga("send", "event", {
+      eventCategory: "New booking",
+      eventAction: "view",
+      eventValue: "step 1"
+    });
   }
 
   render() {

@@ -28,7 +28,14 @@ export default class extends React.Component {
     return (
       <div className="container steps__more__info">
         <div className={contentClasses.join(" ")}>{children}</div>
-        <Button onClick={this.handleMoreInfoClick}>
+        <Button
+          onClick={this.handleMoreInfoClick}
+          ga-on="click"
+          ga-event-category="Button"
+          ga-event-action="click"
+          ga-event-label="why us"
+          ga-event-value={text + (moreInfoExpanded ? " -" : " +")}
+        >
           <span>{moreInfoExpanded ? "-" : "+"}</span> {text}
         </Button>
       </div>

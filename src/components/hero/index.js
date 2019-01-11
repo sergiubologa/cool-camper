@@ -23,6 +23,11 @@ export default props => (
                     e.preventDefault();
                     smoothScrollToSelector("#motorhome-images");
                   }}
+                  ga-on="click"
+                  ga-event-category="Link"
+                  ga-event-action="click"
+                  ga-event-label="page header"
+                  ga-event-value="autorulotă modernă"
                 >
                   autorulotă modernă
                 </a>
@@ -33,6 +38,11 @@ export default props => (
                     e.preventDefault();
                     smoothScrollToSelector(".itinerary__header", 20);
                   }}
+                  ga-on="click"
+                  ga-event-category="Link"
+                  ga-event-action="click"
+                  ga-event-label="page header"
+                  ga-event-value="itinerariu complet"
                 >
                   itinerariu complet
                 </a>{" "}
@@ -46,17 +56,35 @@ export default props => (
                       .querySelector("#faq-insurance .faq__question")
                       .click();
                   }}
+                  ga-on="click"
+                  ga-event-category="Link"
+                  ga-event-action="click"
+                  ga-event-label="page header"
+                  ga-event-value="asigurările"
                 >
                   asigurările
                 </a>{" "}
                 de care ai putea să ai nevoie.
               </p>
-              <Button type="accent" to="/rezervare-autorulota">
+              <Button
+                type="accent"
+                to="/rezervare-autorulota"
+                ga-on="click"
+                ga-event-category="Button"
+                ga-event-action="click"
+                ga-event-label="page header"
+                ga-event-value="Rezervă acum"
+              >
                 Rezervă acum
               </Button>
               <Button
                 className="hero__button"
                 onClick={() => smoothScrollToSelector("#prices", 20)}
+                ga-on="click"
+                ga-event-category="Button"
+                ga-event-action="click"
+                ga-event-label="page header"
+                ga-event-value="Vezi prețuri"
               >
                 Vezi prețuri
               </Button>

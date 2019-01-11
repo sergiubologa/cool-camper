@@ -14,182 +14,199 @@ import {
 import Loader from "../../../components/loader";
 
 export const Name = "Sumar";
-export default props => {
-  const {
-    startDate,
-    endDate,
-    firstName,
-    lastName,
-    email,
-    phone,
-    isLoading,
-    submitError,
-    onSubmit
-  } = props;
-  const noOfDays = getNoOfDays(startDate, endDate);
-  const prices = getPrices(startDate, endDate);
+export default class extends React.Component {
+  constructor(props) {
+    super(props);
+    window.ga("send", "event", {
+      eventCategory: "New booking",
+      eventAction: "view",
+      eventValue: "step 3"
+    });
+  }
 
-  return (
-    <div className="step__three">
-      <Card
-        className="step__three__card step__three__card--type"
-        renderHeader={() => (
-          <SummaryCardHeader title="Tip autorulotă și perioada" />
-        )}
-        renderBody={() => (
-          <React.Fragment>
-            <p>Benimar 340 UP</p>
-            <p>5 locuri de dormit + 5 pe scaun</p>
-            <p>
-              <strong>
-                {noOfDays} zile - {startDate.format("D MMM YYYY")} &rarr;{" "}
-                {endDate.format("D MMM YYYY")}
-              </strong>
-            </p>
-          </React.Fragment>
-        )}
-      />
-      <Card
-        className="step__three__card step__three__card--contactData"
-        renderHeader={() => <SummaryCardHeader title="Date de contact" />}
-        renderBody={() => (
-          <React.Fragment>
-            <p>
-              {firstName} {lastName}
-            </p>
-            <p>{formatPhoneForDisplay(phone)}</p>
-            <p>{email}</p>
-          </React.Fragment>
-        )}
-      />
-      <Card
-        className="step__three__card step__three__card--benefits"
-        renderHeader={() => <SummaryCardHeader title="Beneficii incluse" />}
-        renderBody={() => (
-          <React.Fragment>
-            <IconLabel
-              text="Asigurare full CASCO"
-              icon={CheckmarkIcon}
-              iconWidth={16}
-            />
-            <IconLabel text="Rovignetă" icon={CheckmarkIcon} iconWidth={16} />
-            <IconLabel
-              text="Număr nelimitat de km"
-              icon={CheckmarkIcon}
-              iconWidth={16}
-            />
-            <IconLabel
-              text="Suport de biciclete"
-              icon={CheckmarkIcon}
-              iconWidth={16}
-            />
-            <IconLabel
-              text="Masă și scaune de camping"
-              icon={CheckmarkIcon}
-              iconWidth={16}
-            />
-            <IconLabel
-              text="Așternuturi, perne și lenjerii de pat"
-              icon={CheckmarkIcon}
-              iconWidth={16}
-            />
-            <IconLabel
-              text="Prosoape de baie"
-              icon={CheckmarkIcon}
-              iconWidth={16}
-            />
-            <IconLabel
-              text="Veselă, oale și tigăi pentru gătit"
-              icon={CheckmarkIcon}
-              iconWidth={16}
-            />
-            <IconLabel
-              text="Anularea rezervării este gratuită, oricând"
-              icon={CheckmarkIcon}
-              iconWidth={16}
-            />
-          </React.Fragment>
-        )}
-      />
-      <Card
-        className="step__three__card step__three__card--price"
-        renderHeader={() => <SummaryCardHeader title="Preț" />}
-        renderBody={() => (
-          <React.Fragment>
-            <PriceDetails
-              startDate={startDate}
-              endDate={endDate}
-              prices={prices}
-            />
-            <div className="step__three__card__paymentMethods">
-              <div className="step__three__card__paymentMethods--left">
-                <p>
-                  <strong>Modalitate de plată</strong>
-                </p>
-                <small>Prin transfer bancar</small>
-                <small>Avans: 30% în max. 2 zile după rezervare</small>
-                <small>Restul de 70%: cu 15 zile înainte de plecare</small>
+  render() {
+    const {
+      startDate,
+      endDate,
+      firstName,
+      lastName,
+      email,
+      phone,
+      isLoading,
+      submitError,
+      onSubmit
+    } = this.props;
+    const noOfDays = getNoOfDays(startDate, endDate);
+    const prices = getPrices(startDate, endDate);
+
+    return (
+      <div className="step__three">
+        <Card
+          className="step__three__card step__three__card--type"
+          renderHeader={() => (
+            <SummaryCardHeader title="Tip autorulotă și perioada" />
+          )}
+          renderBody={() => (
+            <React.Fragment>
+              <p>Benimar 340 UP</p>
+              <p>5 locuri de dormit + 5 pe scaun</p>
+              <p>
+                <strong>
+                  {noOfDays} zile - {startDate.format("D MMM YYYY")} &rarr;{" "}
+                  {endDate.format("D MMM YYYY")}
+                </strong>
+              </p>
+            </React.Fragment>
+          )}
+        />
+        <Card
+          className="step__three__card step__three__card--contactData"
+          renderHeader={() => <SummaryCardHeader title="Date de contact" />}
+          renderBody={() => (
+            <React.Fragment>
+              <p>
+                {firstName} {lastName}
+              </p>
+              <p>{formatPhoneForDisplay(phone)}</p>
+              <p>{email}</p>
+            </React.Fragment>
+          )}
+        />
+        <Card
+          className="step__three__card step__three__card--benefits"
+          renderHeader={() => <SummaryCardHeader title="Beneficii incluse" />}
+          renderBody={() => (
+            <React.Fragment>
+              <IconLabel
+                text="Asigurare full CASCO"
+                icon={CheckmarkIcon}
+                iconWidth={16}
+              />
+              <IconLabel text="Rovignetă" icon={CheckmarkIcon} iconWidth={16} />
+              <IconLabel
+                text="Număr nelimitat de km"
+                icon={CheckmarkIcon}
+                iconWidth={16}
+              />
+              <IconLabel
+                text="Suport de biciclete"
+                icon={CheckmarkIcon}
+                iconWidth={16}
+              />
+              <IconLabel
+                text="Masă și scaune de camping"
+                icon={CheckmarkIcon}
+                iconWidth={16}
+              />
+              <IconLabel
+                text="Așternuturi, perne și lenjerii de pat"
+                icon={CheckmarkIcon}
+                iconWidth={16}
+              />
+              <IconLabel
+                text="Prosoape de baie"
+                icon={CheckmarkIcon}
+                iconWidth={16}
+              />
+              <IconLabel
+                text="Veselă, oale și tigăi pentru gătit"
+                icon={CheckmarkIcon}
+                iconWidth={16}
+              />
+              <IconLabel
+                text="Anularea rezervării este gratuită, oricând"
+                icon={CheckmarkIcon}
+                iconWidth={16}
+              />
+            </React.Fragment>
+          )}
+        />
+        <Card
+          className="step__three__card step__three__card--price"
+          renderHeader={() => <SummaryCardHeader title="Preț" />}
+          renderBody={() => (
+            <React.Fragment>
+              <PriceDetails
+                startDate={startDate}
+                endDate={endDate}
+                prices={prices}
+              />
+              <div className="step__three__card__paymentMethods">
+                <div className="step__three__card__paymentMethods--left">
+                  <p>
+                    <strong>Modalitate de plată</strong>
+                  </p>
+                  <small>Prin transfer bancar</small>
+                  <small>Avans: 30% în max. 2 zile după rezervare</small>
+                  <small>Restul de 70%: cu 15 zile înainte de plecare</small>
+                </div>
+                <div className="step__three__card__paymentMethods--right">
+                  <p>
+                    <strong>Anulare gratuită</strong>
+                  </p>
+                  <small>
+                    În cazul anulării rezervării, suma plătită va fi returnată
+                    integral, în maximum 15 zile lucrătoare.
+                  </small>
+                </div>
               </div>
-              <div className="step__three__card__paymentMethods--right">
-                <p>
-                  <strong>Anulare gratuită</strong>
-                </p>
-                <small>
-                  În cazul anulării rezervării, suma plătită va fi returnată
-                  integral, în maximum 15 zile lucrătoare.
-                </small>
+            </React.Fragment>
+          )}
+        />
+        <Card
+          className="step__three__card step__three__card--general"
+          renderBody={() => (
+            <div className="step__three__card__sendReservation">
+              <h3>
+                Total de plată: {prices.totalPriceWithDiscount.toLocaleString()}
+                €
+              </h3>
+              <small>
+                Prin plasarea comenzii, ești de acord cu{" "}
+                <Link
+                  to="/termeni-si-conditii"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Termenii și Condițiile
+                </Link>
+                , cu{" "}
+                <Link
+                  to="/politica-de-confidentialitate"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Politica de Confidențialitate și Utilizare a cookie-urilor
+                </Link>{" "}
+                și cu{" "}
+                <Link
+                  to="/anulare-rezervare"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Politica de Anulare
+                </Link>
+              </small>
+              <div className="step__three__card__sendReservation--submit">
+                <Button
+                  type="primary"
+                  onClick={onSubmit}
+                  className={isLoading ? "loading" : ""}
+                  ga-on="click"
+                  ga-event-category="Button"
+                  ga-event-action="click"
+                  ga-event-label="booking step 3"
+                  ga-event-value="Trimite rezervarea"
+                >
+                  Trimite rezervarea
+                </Button>
+                <Loader className={isLoading ? "loading" : ""} />
               </div>
+              {submitError && <label className="error">{submitError}</label>}
             </div>
-          </React.Fragment>
-        )}
-      />
-      <Card
-        className="step__three__card step__three__card--general"
-        renderBody={() => (
-          <div className="step__three__card__sendReservation">
-            <h3>
-              Total de plată: {prices.totalPriceWithDiscount.toLocaleString()}€
-            </h3>
-            <small>
-              Prin plasarea comenzii, ești de acord cu{" "}
-              <Link
-                to="/termeni-si-conditii"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Termenii și Condițiile
-              </Link>
-              , cu{" "}
-              <Link
-                to="/politica-de-confidentialitate"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Politica de Confidențialitate și Utilizare a cookie-urilor
-              </Link>{" "}
-              și cu{" "}
-              <Link
-                to="/anulare-rezervare"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Politica de Anulare
-              </Link>
-            </small>
-            <div className="step__three__card__sendReservation--submit">
-              <Button
-                type="primary"
-                onClick={onSubmit}
-                className={isLoading ? "loading" : ""}
-              >
-                Trimite rezervarea
-              </Button>
-              <Loader className={isLoading ? "loading" : ""} />
-            </div>
-            {submitError && <label className="error">{submitError}</label>}
-          </div>
-        )}
-      />
-    </div>
-  );
-};
+          )}
+        />
+      </div>
+    );
+  }
+}

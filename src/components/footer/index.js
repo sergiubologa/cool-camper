@@ -42,6 +42,12 @@ export default () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer__link"
+                ga-on="click"
+                ga-hit-type="social"
+                ga-social-network="Facebook"
+                ga-social-action="click"
+                ga-social-target="https://www.facebook.com/CoolCamperCluj"
+                ga-event-label="footer"
               >
                 Facebook
               </a>
@@ -52,6 +58,12 @@ export default () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer__link"
+                ga-on="click"
+                ga-hit-type="social"
+                ga-social-network="Instagram"
+                ga-social-action="click"
+                ga-social-target="https://instagram.com"
+                ga-event-label="footer"
               >
                 Instagram
               </a>
@@ -62,6 +74,12 @@ export default () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer__link"
+                ga-on="click"
+                ga-hit-type="social"
+                ga-social-network="Twitter"
+                ga-social-action="click"
+                ga-social-target="https://twitter.com/CoolCamperCluj"
+                ga-event-label="footer"
               >
                 Twitter
               </a>

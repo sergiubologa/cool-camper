@@ -144,7 +144,14 @@ export default class extends React.Component {
           submitError: res.error,
           submitSuccessful: res.error ? false : true
         });
-        if (!res.error) window.scrollTo({ top: 0 });
+        if (!res.error) {
+          window.scrollTo({ top: 0 });
+          window.ga("send", "event", {
+            eventCategory: "New booking",
+            eventAction: "view",
+            eventValue: "step thank you"
+          });
+        }
       })
       .catch(error => {
         this.setState({
@@ -298,16 +305,37 @@ export default class extends React.Component {
                 <SocialButton
                   type="facebook"
                   text="Facebook"
-                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.coolcamper.ro/"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.coolcamper.ro"
+                  ga-on="click"
+                  ga-hit-type="social"
+                  ga-social-network="Facebook"
+                  ga-social-action="share"
+                  ga-social-target="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.coolcamper.ro"
+                  ga-event-label="after booking - thank you screen"
                 />
                 <SocialButton
                   type="twitter"
                   text="Twitter"
                   href="https://twitter.com/home?status=Tocmai%20am%20rezervat%20o%20autorulota%20de%20la%20CoolCamper%20cu%20care%20vrem%20sa%20mergem%20in%20vacanta!%20%F0%9F%8E%8A"
+                  ga-on="click"
+                  ga-hit-type="social"
+                  ga-social-network="Twitter"
+                  ga-social-action="tweet"
+                  ga-social-target="https://twitter.com/home?status=Tocmai%20am%20rezervat%20o%20autorulota%20de%20la%20CoolCamper%20cu%20care%20vrem%20sa%20mergem%20in%20vacanta!%20%F0%9F%8E%8A"
+                  ga-event-label="after booking - thank you screen"
                 />
               </div>
               <small>sau</small>
-              <Link to="/">Mergi înapoi la pagina principală</Link>
+              <Link
+                to="/"
+                ga-on="click"
+                ga-event-category="Link"
+                ga-event-action="click"
+                ga-event-label="step thank you"
+                ga-event-value="Mergi înapoi la pagina principală"
+              >
+                Mergi înapoi la pagina principală
+              </Link>
             </div>
           )}
         </div>

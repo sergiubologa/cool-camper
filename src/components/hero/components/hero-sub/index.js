@@ -32,7 +32,15 @@ export default class HeroSub extends React.Component {
     return (
       <ScrollListener onScroll={this.handleScroll}>
         <div className="hero__sub">
-          <span ref={this.heroSubRef} onClick={this.onSubClick}>
+          <span
+            ref={this.heroSubRef}
+            onClick={this.onSubClick}
+            ga-on="click"
+            ga-event-category="Icon"
+            ga-event-action="click"
+            ga-event-label="page header"
+            ga-event-value="Hero sub"
+          >
             <Caret className="hero__sub__down" />
           </span>
         </div>

@@ -176,6 +176,11 @@ class Home extends Component {
                 href="mailto:contact@coolcamper.ro"
                 title="Email CoolCamper.ro"
                 className="contact__email"
+                ga-on="click"
+                ga-event-category="Link"
+                ga-event-action="click"
+                ga-event-label="contact us"
+                ga-event-value="contact@coolcamper.ro"
               >
                 contact@coolcamper.ro
               </a>
@@ -191,6 +196,11 @@ class Home extends Component {
                 className="contact__phone"
                 onClick={() => window.open("tel:+40742291018", "_self")}
                 renderIcon={() => <SmartphoneIcon color="#fff" width="20" />}
+                ga-on="click"
+                ga-event-category="Button"
+                ga-event-action="click"
+                ga-event-label="contact us"
+                ga-event-value="0742-291.018"
               >
                 0742-291.018
               </Button>
@@ -212,7 +222,15 @@ class Home extends Component {
           <CTAMessage>
             Fă acum o rezervare și trăiește o experiență de neuitat!
           </CTAMessage>
-          <Button type="accent" to="/rezervare-autorulota">
+          <Button
+            type="accent"
+            to="/rezervare-autorulota"
+            ga-on="click"
+            ga-event-category="Button"
+            ga-event-action="click"
+            ga-event-label="bottom CTA section"
+            ga-event-value="Verifică disponibilitatea"
+          >
             Verifică disponibilitatea
           </Button>
         </CTAFullSection>
