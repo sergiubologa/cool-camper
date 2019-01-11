@@ -28,6 +28,7 @@ import ScrollToTop from "./components/scroll-to-top";
 import "moment/locale/ro";
 import "autotrack";
 
+// Disable GA for non-prod environments
 if (process.env.NODE_ENV !== "production") {
   window["ga-disable-UA-132033324-1"] = true;
 }
