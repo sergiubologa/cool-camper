@@ -8,7 +8,7 @@ export default props => {
     className,
     startDate,
     endDate,
-    prices = getPrices(startDate, endDate)
+    prices = getPrices(startDate.hours(0), endDate.hours(0))
   } = props;
   const classes = ["price__details"];
   if (className) classes.push(className);
@@ -24,52 +24,30 @@ export default props => {
 
   return (
     <div className={classes.join(" ")}>
-      <div className="price__details__row">
-        <span>
-          {prices.averagePricePerDay}€ x {prices.totalNoOfDays}{" "}
-          {prices.totalNoOfDays > 1 ? "zile" : "zi"}
-          {prices.highSeasonDays > 0 && prices.lowSeasonDays > 0 && (
+      {prices.lowSeasonDays > 0 && (
+        <div className="price__details__row">
+          <span>
+            {prices.lowSeasonPricePerDay}€ x {prices.lowSeasonDays} zile
+          </span>
+          <span>{prices.lowSeasonPrice.toLocaleString()}€</span>
+        </div>
+      )}
+      {prices.highSeasonDays > 0 && (
+        <div className="price__details__row">
+          <span>
+            {prices.highSeasonPricePerDay}€ x {prices.highSeasonDays} zile
             <TooltipIcon>
               <small>
-                <strong>
-                  Sezon: {highSeasonStart} &rarr; {highSeasonEnd}
-                </strong>
+                În intervalul {highSeasonStart} &rarr; {highSeasonEnd}
               </small>
-              <div
-                className="price_details price__details__tooltip"
-                style={{ minWidth: 200 }}
-              >
-                <div className="price__details__row">
-                  <span>
-                    <small>
-                      {prices.lowSeasonPricePerDay}€ x {prices.lowSeasonDays}{" "}
-                      zile
-                    </small>
-                  </span>
-                  <span>
-                    <small>{prices.lowSeasonPrice.toLocaleString()}€</small>
-                  </span>
-                </div>
-                <div className="price__details__row">
-                  <span>
-                    <small>
-                      {prices.highSeasonPricePerDay}€ x {prices.highSeasonDays}{" "}
-                      zile
-                    </small>
-                  </span>
-                  <span>
-                    <small>{prices.highSeasonPrice.toLocaleString()}€</small>
-                  </span>
-                </div>
-                <div className="price__details__row">
-                  <small>pretul mediu pe zi de mai jos este rotunjit</small>
-                </div>
-              </div>
+              <small>
+                prețul este de {prices.highSeasonPricePerDay}€ pe zi
+              </small>
             </TooltipIcon>
-          )}
-        </span>
-        <span>{prices.totalPrice.toLocaleString()}€</span>
-      </div>
+          </span>
+          <span>{prices.highSeasonPrice.toLocaleString()}€</span>
+        </div>
+      )}
       <div className="price__details__row">
         <span>garanție</span>
         <span>{prices.deposit}€</span>
