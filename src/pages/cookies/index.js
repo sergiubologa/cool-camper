@@ -1,8 +1,16 @@
 import React from "react";
 import LegalLeftNavLayout from "../layouts/legal-left-navigation";
+import Helmet from "react-helmet";
 
 export default () => (
   <LegalLeftNavLayout>
+    <Helmet>
+      <title>CoolCamper - Politica de folosire a cookies</title>
+      <meta
+        name="description"
+        content="Politica de folosire a cookie-urilor pe CoolCamper.ro!"
+      />
+    </Helmet>
     <h3 className="app__main__title">Politica de utilizare a cookie-urilor</h3>
     <p>
       Acest website foloseste fisiere de mici dimensiuni denumite “cookie”-uri

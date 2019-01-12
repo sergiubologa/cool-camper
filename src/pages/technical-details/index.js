@@ -1,8 +1,16 @@
 import React from "react";
 import LegalLeftNavLayout from "../layouts/legal-left-navigation";
+import Helmet from "react-helmet";
 
 export default () => (
   <LegalLeftNavLayout>
+    <Helmet>
+      <title>CoolCamper - Detalii tehnice autorulote</title>
+      <meta
+        name="description"
+        content="Autorulote noi, cu toate dotarile necesare pentru o vancata reusita!"
+      />
+    </Helmet>
     <h3 className="app__main__title">Detalii tehnice autorulote</h3>
     <h3 className="app__main__title">Benimar Sport 340UP</h3>
     <ul>

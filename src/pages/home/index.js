@@ -36,6 +36,7 @@ import Button from "../../components/inputs/button";
 import IconLabel from "../../components/icon-label";
 import SmartphoneIcon from "../../components/svg/smartphone";
 import ContactForm from "./components/contact-form";
+import Helmet from "react-helmet";
 
 class Home extends Component {
   componentDidMount() {
@@ -48,6 +49,13 @@ class Home extends Component {
   render() {
     return (
       <TransparentNavbarLayout>
+        <Helmet>
+          <title>CoolCamper - Autorulote de inchiriat in Cluj</title>
+          <meta
+            name="description"
+            content="Inchiriaza o autorulota din Cluj si i-ati familia sau prietenii in vacanta mult visata oriunde in Europa!"
+          />
+        </Helmet>
         <Hero withSub />
 
         <StepsContainer>

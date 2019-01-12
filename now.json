@@ -9,6 +9,8 @@
   "routes": [
     { "src": "/api/(.*)", "dest": "/api" },
     { "src": "^/static/(.*)", "dest": "/static/$1" },
+    { "src": "^/robots.txt", "dest": "/robots.txt" },
+    { "src": "^/sitemap.xml", "dest": "/sitemap.xml" },
     { "src": "^/favicon.ico", "dest": "/favicon.ico" },
     { "src": "^/apple-touch-icon.png", "dest": "/apple-touch-icon.png" },
     { "src": "^/favicon-32x32.png", "dest": "/favicon-32x32.png" },

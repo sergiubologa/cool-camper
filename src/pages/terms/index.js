@@ -1,8 +1,16 @@
 import React from "react";
 import LegalLeftNavLayout from "../layouts/legal-left-navigation";
+import Helmet from "react-helmet";
 
 export default () => (
   <LegalLeftNavLayout>
+    <Helmet>
+      <title>CoolCamper - Termeni si Conditii</title>
+      <meta
+        name="description"
+        content="Termeni si conditii de folosire a site-ului si a serviciilor CoolCamper!"
+      />
+    </Helmet>
     <h3 className="app__main__title">Termeni si conditii</h3>
     <p style={{ marginBottom: 0 }}>
       În înțelesul prezentului document de “Termen si conditii”, următorii

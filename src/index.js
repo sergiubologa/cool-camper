@@ -16,7 +16,6 @@ import "normalize.css";
 import "./styles/evie-theme.css";
 import Home from "./pages/home";
 import Booking from "./pages/booking";
-import Contact from "./pages/contact";
 import TermsAndConditions from "./pages/terms";
 import Cookies from "./pages/cookies";
 import PrivacyPolicy from "./pages/privacy";
@@ -43,7 +42,6 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/rezervare-autorulota" component={Booking} />
-        <Route path="/contact" component={Contact} />
         <Route path="/anulare-rezervare" component={CancelBooking} />
         <Route path="/termeni-si-conditii" component={TermsAndConditions} />
         <Route path="/politica-de-cookies" component={Cookies} />

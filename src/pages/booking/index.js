@@ -14,6 +14,7 @@ import {
 } from "coolcamper-common";
 import SuperThankYou from "../../assets/img/super-thank-you.svg";
 import { Link } from "react-router-dom";
+import Helmet from "react-helmet";
 
 export default class extends React.Component {
   constructor(props) {
@@ -273,6 +274,13 @@ export default class extends React.Component {
     const currentStepName = steps[currentStep].name;
     return (
       <SimpleLayout>
+        <Helmet>
+          <title>CoolCamper - Rezerva autorulote in Cluj</title>
+          <meta
+            name="description"
+            content="Fa acum o rezervare pentru o autorulota din Cluj-Napoca! Vei avea parte de o experienta unica!"
+          />
+        </Helmet>
         <div className="booking">
           {!submitSuccessful && (
             <React.Fragment>
