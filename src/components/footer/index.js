@@ -59,7 +59,7 @@ export default () => (
             </div>
             <div className="footer__row">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/coolcampercluj"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer__link"
@@ -67,7 +67,7 @@ export default () => (
                 ga-hit-type="social"
                 ga-social-network="Instagram"
                 ga-social-action="click"
-                ga-social-target="https://instagram.com"
+                ga-social-target="https://www.instagram.com/coolcampercluj"
                 ga-event-label="footer"
               >
                 Instagram
