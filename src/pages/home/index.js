@@ -38,6 +38,13 @@ import SmartphoneIcon from "../../components/svg/smartphone";
 import ContactForm from "./components/contact-form";
 
 class Home extends Component {
+  componentDidMount() {
+    if (window.Trustpilot !== undefined) {
+      var trustbox = document.getElementById("trustbox");
+      window.Trustpilot.loadFromElement(trustbox);
+    }
+  }
+
   render() {
     return (
       <TransparentNavbarLayout>
@@ -89,6 +96,7 @@ class Home extends Component {
 
         <FullSection>
           <div
+            id="trustbox"
             className="trustpilot-widget"
             data-locale="en-US"
             data-template-id="5419b6a8b0d04a076446a9ad"

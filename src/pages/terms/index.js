@@ -4,20 +4,20 @@ import LegalLeftNavLayout from "../layouts/legal-left-navigation";
 export default () => (
   <LegalLeftNavLayout>
     <h3 className="app__main__title">Termeni si conditii</h3>
-    <p>
+    <p style={{ marginBottom: 0 }}>
       În înțelesul prezentului document de “Termen si conditii”, următorii
       termeni se definesc astfel:
-      <ul>
-        a) utilizator / client - orice persoană fizică sau grup de persoane
-        fizice constituite în asociații, care cumpără, dobândește, utilizează
-        ori consumă produse sau servicii în afara activității profesionale,
-      </ul>
-      <ul>
-        b) prestator servicii - persoana fizică sau juridică autorizată să
-        desfășoare activități de comercializare a produselor și serviciilor de
-        piață.
-      </ul>
     </p>
+    <ul style={{ marginTop: 0, marginBottom: 0 }}>
+      a) utilizator / client - orice persoană fizică sau grup de persoane fizice
+      constituite în asociații, care cumpără, dobândește, utilizează ori consumă
+      produse sau servicii în afara activității profesionale,
+    </ul>
+    <ul style={{ marginTop: 0 }}>
+      b) prestator servicii - persoana fizică sau juridică autorizată să
+      desfășoare activități de comercializare a produselor și serviciilor de
+      piață.
+    </ul>
 
     <p>
       COOLCAMPER S.R.L. este o societate cu raspundere limitata a carui domeniu

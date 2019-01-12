@@ -22,8 +22,7 @@ export default class extends React.Component {
     this.state = {
       mobileMenuOpened: false,
       navLinks: [
-        { title: "T&C", url: "termeni-si-conditii" },
-        { title: "Privacy", url: "politica-de-confidentialitate" }
+        { title: "Autorulotele noastre", url: "/detalii-tehnice-autorulota" }
       ]
     };
   }

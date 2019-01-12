@@ -40,9 +40,8 @@ export default () => (
       pentru a putea fi utilizate si, in cele maimulte cazuri, nu identifica
       personal utilizatorii de internet.
     </p>
-    <p>
-      Exista 2 categorii mari de cookie-uri:
-      <br />
+    <p>Exista 2 categorii mari de cookie-uri:</p>
+    <ul>
       <li>
         Cookie-uri “de sesiune” - acestea sunt stocate temporar in dosarul de
         cookie-uri al browserului web pentru ca acesta sa le memoreze pana cand
@@ -60,7 +59,7 @@ export default () => (
         mod anonim pentru a memora interesele unui utilizator, astfel incat sa
         fie livrata publicitate cat mai relevanta pentru utilizatori.
       </li>
-    </p>
+    </ul>
     <p>
       Care sunt avantajele cookie-urilor?
       <br />
@@ -100,12 +99,14 @@ export default () => (
       Cum sunt folosite cookie-urile de catre acest site?
       <br />O vizita pe acest site poate plasa cookie-uri in scopuri de:{" "}
     </p>
-    <li>Cookie-uri de performanta a site-ului</li>
-    <li>Cookie-uri de analiza a vizitatorilor</li>
-    <li>Cookie-uri pentru geotargetting</li>
-    <li>Cookie-uri de inregistrare</li>
-    <li>Cookie-uri pentru publicitate</li>
-    <li>Cookie-uri de performanta</li>
+    <ul>
+      <li>Cookie-uri de performanta a site-ului</li>
+      <li>Cookie-uri de analiza a vizitatorilor</li>
+      <li>Cookie-uri pentru geotargetting</li>
+      <li>Cookie-uri de inregistrare</li>
+      <li>Cookie-uri pentru publicitate</li>
+      <li>Cookie-uri de performanta</li>
+    </ul>
     <p>
       Acest tip de cookie retine preferintele utilizatorului pe acest site, asa
       incat nu mai este nevoie de setarea lor la fiecare vizitare a site-ului.
@@ -300,7 +301,8 @@ export default () => (
     <p>
       Exemple de intrebuintari importante ale cookie-urilor (care nu necesita
       autentificarea unui utilizator prin intermediul unui cont):
-      <br />
+    </p>
+    <ul>
       <li>
         Continut si servicii adaptate preferintelor utilizatorului - categorii
         de stiri, vreme, sport, harti, servicii publice si guvernamentale,
@@ -328,7 +330,7 @@ export default () => (
         Website-urile deruleaza aceste analize a utilizarii lor pentru a
         imbunatati site-urile in beneficiul userilor.
       </li>
-    </p>
+    </ul>
     <p>
       Cum pot opri cookie-urile? <br />
       Dezactivarea si refuzul de a primi cookie-uri pot face anumite site-uri
@@ -358,14 +360,17 @@ export default () => (
     </p>
     <p>
       Pentru setarile cookie-urilor generate de terti, puteti consulta si
-      site-ul http://www.youronlinechoices.com/ro/
-      <p />
-      <p>
-        Daca doriti sa afli mai multe infromatii despre cookie-uri si la ce sunt
-        utilizate, recomandam urmatoarele linkuri:
-      </p>
+      site-ul{" "}
+      <a href="http://www.youronlinechoices.com/ro/" target="_blank">
+        http://www.youronlinechoices.com/ro/
+      </a>
+    </p>
+    <p>
+      Daca doriti sa afli mai multe infromatii despre cookie-uri si la ce sunt
+      utilizate, recomandam urmatoarele linkuri:
+      <br />
       <a
-        href="http://www.dreptonline.ro/legislatie/oug_13_2012_modificare_prelucrare_d..."
+        href="http://www.dreptonline.ro/legislatie/oug_13_2012_modificare_prelucrare_date_caracter_personal_protectia_vietii_private_comunicatii_electronice.php"
         target="_blank"
       >
         http://www.dreptonline.ro/legislatie/oug_13_2012_modificare
@@ -400,14 +405,14 @@ export default () => (
       >
         http://www.cms-cmck.com/PrivacyStatement/CookiePolicy
       </a>
-      <br />
-      <p>
-        Date de contact ale persoanei responsabile cu securitatea /protectia
-        datelor: ​<br />
-        Bianca Bologa bianca@coolcamper.ro <br />
-        Tel: +40742291018 <br />
-        Datele de identificare ale societatii: COOLCAMPER SRL ............
-      </p>
+    </p>
+
+    <p>
+      Date de contact ale persoanei responsabile cu securitatea /protectia
+      datelor: ​<br />
+      Bianca Bologa bianca@coolcamper.ro <br />
+      Tel: +40742291018 <br />
+      Datele de identificare ale societatii: COOLCAMPER SRL ............
     </p>
   </LegalLeftNavLayout>
 );
