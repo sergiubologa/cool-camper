@@ -11,17 +11,22 @@ export default () => (
           </Link>
           <small>
             CoolCamper este un serviciu de{" "}
-            <strong>închiriere autorulote</strong> cu care poți să călătorești
-            oriunde în Europa, în locuri în care nu poți să ajungi cu avionul.
-            Be cool, be a CoolCamper!
+            <strong>închiriere autorulote (motorhome)</strong> din Cluj-Napoca,
+            cu care poți să-ți petreci vacanța oriunde în Europa, în locuri în
+            care nu poți să ajungi cu avionul. Travel anywhere. Be a CoolCamper!
           </small>
         </div>
 
         <div className="footer__data">
           <div className="footer__data__item footer__pages">
             <div className="footer__row">
-              <Link to="contact" className="footer__link">
-                Contact
+              <Link to="detalii-tehnice-autorulota" className="footer__link">
+                Date tehnice autorulote
+              </Link>
+            </div>
+            <div className="footer__row">
+              <Link to="anulare-rezervare" className="footer__link">
+                Politica de anulare rezervare
               </Link>
             </div>
             <div className="footer__row">
@@ -88,19 +93,26 @@ export default () => (
           <div className="footer__data__item footer__copyright">
             <div className="footer__row">
               <small>
-                Site-ul nostru foloseste cookies pentru a imbunatati experienta
-                de navigare. Continuarea navigarii implica acceptarea{" "}
+                Site-ul nostru folosește cookies pentru a îmbunătăți experiența
+                de navigare. Continuarea navigării implică acceptarea{" "}
                 <Link
                   to="politica-de-confidentialitate"
                   className="footer__link"
                 >
-                  Politicii de Confidentialitate
+                  Politicii de Confidențialitate
                 </Link>{" "}
-                a CoolCamper.ro.
+                și a{" "}
+                <Link to="politica-de-cookies" className="footer__link">
+                  Cookie-urilor
+                </Link>{" "}
+                CoolCamper.ro.
               </small>{" "}
               <br />
               <br />
-              <small>Toate drepturile rezervate CoolCamper.ro ©2018</small>
+              <small>
+                Toate drepturile rezervate CoolCamper.ro ©
+                {new Date().getFullYear()}
+              </small>
             </div>
           </div>
         </div>

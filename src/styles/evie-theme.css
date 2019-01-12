@@ -1237,6 +1237,9 @@ label.success {
   .footer__social {
     margin-right: 4em;
   }
+  .footer__pages {
+    min-width: 180px;
+  }
 }
 
 .footer__link {
