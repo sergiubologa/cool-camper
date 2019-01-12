@@ -5,7 +5,7 @@ import MapLight from "../../assets/img/map_light.svg";
 import Support from "../../assets/img/support.svg";
 import MobilePhone from "../../assets/img/mobile-phone.svg";
 import Inbox from "../../assets/img/inbox.svg";
-
+import { Link } from "react-router-dom";
 import Hero from "../../components/hero";
 import TransparentNavbarLayout from "../layouts/transparent-navbar-layout";
 import StepsContainer, {
@@ -90,7 +90,7 @@ class Home extends Component {
             <StepsInfo text="Asigurare RCA și full CASCO în toată Europa" />
             <StepsInfo text="Parcare asigurată pentru mașina personală pe parcursul închirierii autorulotei" />
             <StepsInfo text="Fără limită de kilometri" />
-            <StepsInfo text="Suntem prietenoși, voiși și dornici să te ajutăm să trăiești cea mai tare aventură" />
+            <StepsInfo text="Suntem prietenoși, voioși și dornici să te ajutăm să trăiești cea mai tare aventură" />
           </StepsMoreInfo>
         </StepsContainer>
 
@@ -120,7 +120,22 @@ class Home extends Component {
             Autorulotele noastre
           </SectionTitle>
           <SectionText style={{ marginTop: 0 }}>
-            Avem autorulote noi, ultimul model!
+            Autorulotele noastre sunt modele noi, toate fiind din 2018 sau mai
+            noi. Știm cât de mult contează să te simți în siguranță când
+            călătorești, așa că am decis ca în fiecare an să ne reînoim flota
+            pentru a avea tot timpul autorulote noi. Vezi{" "}
+            <Link
+              to="/detalii-tehnice-autorulota"
+              className="link"
+              ga-on="click"
+              ga-event-category="Link"
+              ga-event-action="click"
+              ga-event-label="motorhome images section"
+              ga-event-value="aici"
+            >
+              aici
+            </Link>{" "}
+            mai multe detalii tehnice.
           </SectionText>
           <SectionMediaSlider
             images={motorhomeImages}
@@ -138,8 +153,9 @@ class Home extends Component {
               vacanță.
             </SectionText>
             <SectionText>
-              Vei primi pe email un document cu toate detaliile traseului pe
-              care l-ai ales, dar vei găsi și un pliant printat în rulotă.
+              Odată rezervată autorulota vei primi pe email un document cu toate
+              detaliile traseului pe care l-ai ales, dar vei găsi și un pliant
+              printat în rulotă.
             </SectionText>
             <h4>Ce conține un itinerariu?</h4>
             <div className="container itinerary__content">

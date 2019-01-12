@@ -30,7 +30,7 @@ export default () => {
       renderFooter={() => (
         <React.Fragment>
           <div className="discounts">
-            <span>Se aplică discount-uri:</span>
+            <span>Se aplică reduceri:</span>
             <ul>
               {prices.discounts.map(discount => (
                 <li key={discount.minDays}>

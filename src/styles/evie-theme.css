@@ -165,12 +165,13 @@ a {
 }
 
 .link {
-  color: #6c63ff;
-  text-decoration: underline;
+  /* color: #6c63ff;
+  text-decoration: underline; */
+  border-bottom: 1px dashed;
 }
 @media (min-width: 992px) {
   .link:hover {
-    color: #463aff;
+    /* color: #463aff; */
   }
 }
 

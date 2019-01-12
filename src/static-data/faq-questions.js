@@ -21,9 +21,9 @@ export default [
       Ma puteti ajuta cu informatii?`,
     answer: `Categoric. Incercam sa fim mai mult decat un serviciu de inchirieri de autorulote. Vrem sa fim prietenul tau de nadejede pe toata perioada calatoriei cu autorulota si de ce nu, poate chiar si dupa :)
       De aceea pe langa autorulota noi iti vom sugera diferite itinerarii.
-       Odata decisa perioada inchirierii si ruta pe care vrei sa o faci alaturi de cei prieteni sau de familie, noi iti vom trimite pe email toate detaliile calatoriei tale. 
+       Odata decisa perioada inchirierii si ruta pe care vrei sa o faci alaturi de prieteni sau de familie, noi iti vom trimite pe email toate detaliile calatoriei tale. 
       Vei avea timp suficient sa studiezi ceea ce noi iti propunem si daca consideri ca vrei sa modifici traseul, te putem ajuta.
-      Ne poti contacta cu incredere pe e-mail bianca@coolcamper.ro sau telefon 0742291018. Iti vom da toate detaliile de care ai nevoie.
+      Ne poti contacta cu incredere pe e-mail la bianca@coolcamper.ro sau la telefon 0742291018. Iti vom da toate detaliile de care ai nevoie.
       `
   },
   {
@@ -74,7 +74,7 @@ export default [
     Defectiuni ale sistemelor interioare/zonei de locuit
     In cazul defectiunilor autovehiculului:
     Avand modele noi de autorulote (2019) este putin probabil sa aveti probleme. Totusi, in cazul unei defectiuni, te rugam sa ne contactezi pe whatsapp sau telefonic cu descrierea problemei.
-    Daca autorulota nu poate fi deplasata, se te rugam sa apelezi nr. de asistenta rutiera europeana Fiat Camper Assistance (tel: 00800 34281111* sau alternativ 0039 024441 2160). Interventiile (remorcare, reparatie sub garantie europeana) sunt gratuite.
+    Daca autorulota nu poate fi deplasata, te rugam sa apelezi nr. de asistenta rutiera europeana Fiat Camper Assistance (tel: 00800 34281111* sau alternativ 0039 024441 2160). Interventiile (remorcare, reparatie sub garantie europeana) sunt gratuite.
     In caz de defectiuni ale spatiului de locuit/sistemelor interioare:
     Consulta manualul de bord. Intre timp contacteaza-ne pe whatsapp sau telefonic si noi o sa iti raspundem indiferent de ora. De cele mai multe ori putem identifica si rezolva problema impreuna in mai putin de 2 minute.`
   },
@@ -135,7 +135,7 @@ export default [
   },
   {
     question: "Am rezervat si se apropie data plecarii. Ce trebuie sa fac?",
-    answer: `Ora preluarii: zilnic incepand cu ora 10.00 (pentru ore diferite sau aranjamente speciale te rugam sa ne contactezi in avans)
+    answer: `Ora preluarii: zilnic incepand cu ora 08:00 (pentru ore diferite sau aranjamente speciale te rugam sa ne contactezi in avans)
     
     Ora predarii: zilnic pana in ora 20.00 (te rugam sa ne suni cu aprox. 2 ore inainte de predare)
     
