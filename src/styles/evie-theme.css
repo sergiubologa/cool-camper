@@ -1182,6 +1182,10 @@ label.success {
   }
 }
 
+.footer__logo > span {
+  font-size: 0.8rem;
+}
+
 .footer__textLogo {
   flex-shrink: 0;
   padding-right: 16pt;
@@ -1686,6 +1690,7 @@ label.success {
 
 .trustpilot-widget {
   margin: 0 auto;
+  flex: 1;
 }
 
 .contact__phone {
@@ -1773,7 +1778,7 @@ label.success {
   text-align: center;
 }
 
-.contact__form__submit .Popover-body {
+.Popover-body {
   display: inline-flex;
   flex-direction: column;
   padding: 1rem 2rem;

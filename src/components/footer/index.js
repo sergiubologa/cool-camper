@@ -9,12 +9,12 @@ export default () => (
           <Link to="/" className="footer__textLogo">
             CoolCamper
           </Link>
-          <small>
+          <span>
             CoolCamper este un serviciu de{" "}
             <strong>închiriere autorulote (motorhome)</strong> din Cluj-Napoca,
             cu care poți să-ți petreci vacanța oriunde în Europa, în locuri în
             care nu poți să ajungi cu avionul. Travel anywhere. Be a CoolCamper!
-          </small>
+          </span>
         </div>
 
         <div className="footer__data">
