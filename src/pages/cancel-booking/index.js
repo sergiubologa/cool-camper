@@ -1,8 +1,8 @@
 import React from "react";
-import SimpleLayout from "../layouts/legal-left-navigation";
+import LegalLeftNavLayout from "../layouts/legal-left-navigation";
 
 export default () => (
-  <SimpleLayout>
+  <LegalLeftNavLayout>
     <h3 className="app__main__title">Anulare rezervare</h3>
-  </SimpleLayout>
+  </LegalLeftNavLayout>
 );

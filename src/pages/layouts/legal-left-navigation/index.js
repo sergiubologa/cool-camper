@@ -6,15 +6,19 @@ import { NavLink } from "react-router-dom";
 
 const links = [
   {
+    name: "Detalii tehnice autorulota",
+    url: "/detalii-tehnice-autorulota"
+  },
+  { name: "Anulare rezervare", url: "/anulare-rezervare" },
+  { name: "Termeni si conditii", url: "/termeni-si-conditii" },
+  {
     name: "Politica de confidentialitate",
     url: "/politica-de-confidentialitate"
   },
   {
     name: "Politica de cookies",
     url: "/politica-de-cookies"
-  },
-  { name: "Termeni si conditii", url: "/termeni-si-conditii" },
-  { name: "Anulare rezervare", url: "/anulare-rezervare" }
+  }
 ];
 
 const SimpleLayout = props => (

@@ -21,6 +21,7 @@ import TermsAndConditions from "./pages/terms";
 import Cookies from "./pages/cookies";
 import PrivacyPolicy from "./pages/privacy";
 import CancelBooking from "./pages/cancel-booking";
+import TechDetails from "./pages/technical-details";
 import NotFound from "./pages/not-found";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -46,6 +47,7 @@ ReactDOM.render(
         <Route path="/anulare-rezervare" component={CancelBooking} />
         <Route path="/termeni-si-conditii" component={TermsAndConditions} />
         <Route path="/politica-de-cookies" component={Cookies} />
+        <Route path="/detalii-tehnice-autorulota" component={TechDetails} />
         <Route
           path="/politica-de-confidentialitate"
           component={PrivacyPolicy}

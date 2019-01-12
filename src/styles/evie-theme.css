@@ -1561,7 +1561,7 @@ label.success {
   color: #6c63ff;
 }
 .vMenu--active:before {
-  content: "\2014";
+  /* content: "\2014"; */
   margin-right: 0.333em;
 }
 @media (min-width: 992px) {
