@@ -2,9 +2,9 @@ const nodemailer = require("nodemailer");
 
 module.exports.sendEmail = async emailTemplate => {
   const transporter = nodemailer.createTransport({
-    host: "smtp.zoho.com",
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.AUTOMATION_EMAIL_ADDRESS,
       pass: process.env.AUTOMATION_EMAIL_PASSWORD
