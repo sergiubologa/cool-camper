@@ -65,9 +65,9 @@ export default class extends React.Component {
               isSubmitting: false,
               submitError: res.error,
               submitSuccessful: res.error ? false : true,
-              name: "",
-              email: "",
-              message: ""
+              name: res.error ? this.state.name : "",
+              email: res.error ? this.state.email : "",
+              message: res.error ? this.state.message : ""
             });
             setTimeout(() => {
               this.setState({ submitSuccessful: false });
