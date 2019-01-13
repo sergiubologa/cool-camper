@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
     "autotrack": "^2.4.1",
     "coolcamper-common": "^0.1.1",
-    "core-js": "^2.6.1",
     "flag-icon-css": "^3.2.1",
     "moment": "^2.23.0",
     "normalize.css": "^8.0.1",

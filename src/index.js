@@ -1,14 +1,9 @@
 /**
- * Polyfils
+ * Polyfills
  */
-import "core-js/fn/object/values";
-import "core-js/fn/object/entries";
-import "core-js/es6/map";
-import "core-js/es6/set";
-// Source: https://github.com/chrisdickinson/raf
-import "raf/polyfill";
-// Source: https://github.com/iamdustan/smoothscroll
-import smoothscroll from "smoothscroll-polyfill";
+import "@babel/polyfill";
+import "raf/polyfill"; // Source: https://github.com/chrisdickinson/raf
+import smoothscroll from "smoothscroll-polyfill"; // Source: https://github.com/iamdustan/smoothscroll
 
 import React from "react";
 import ReactDOM from "react-dom";
