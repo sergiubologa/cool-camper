@@ -18,7 +18,7 @@ export default class extends React.Component {
 
   render() {
     const { text, href, type, className, ...rest } = this.props;
-    const classes = [`sc-btn sc--${type}`];
+    const classes = [`sc-btn sc--flat sc--${type}`];
     if (className) classes.push(className);
 
     let Icon = FacebookIcon;

@@ -38,7 +38,7 @@ export default class Header extends React.Component {
     const { selectedBtn } = this.state;
     const itinerariesKeys = Object.keys(itineraries);
     return (
-      <div className="itinerary__header">
+      <div className="itinerary__header" id="itinerary-header">
         {itinerariesKeys.map(it => (
           <ItineraryButton
             key={it}

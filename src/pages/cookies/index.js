@@ -369,7 +369,11 @@ export default () => (
     <p>
       Pentru setarile cookie-urilor generate de terti, puteti consulta si
       site-ul{" "}
-      <a href="http://www.youronlinechoices.com/ro/" target="_blank">
+      <a
+        href="http://www.youronlinechoices.com/ro/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         http://www.youronlinechoices.com/ro/
       </a>
     </p>
@@ -380,6 +384,7 @@ export default () => (
       <a
         href="http://www.dreptonline.ro/legislatie/oug_13_2012_modificare_prelucrare_date_caracter_personal_protectia_vietii_private_comunicatii_electronice.php"
         target="_blank"
+        rel="noopener noreferrer"
       >
         http://www.dreptonline.ro/legislatie/oug_13_2012_modificare
       </a>
@@ -387,6 +392,7 @@ export default () => (
       <a
         href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm"
         target="_blank"
+        rel="noopener noreferrer"
       >
         http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm
       </a>
@@ -394,22 +400,32 @@ export default () => (
       <a
         href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32002L0058:EN:HTML"
         target="_blank"
+        rel="noopener noreferrer"
       >
         http://eur-lex.europa.eu/LexUriServ/LexUriServ.do
       </a>
       <br />
-      <a href="www.allaboutcookies.org" target="_blank">
+      <a
+        href="www.allaboutcookies.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {" "}
         www.allaboutcookies.org{" "}
       </a>
       <br />
-      <a href="http://www.youronlinechoices.com/ro/" target="_blank">
+      <a
+        href="http://www.youronlinechoices.com/ro/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         http://www.youronlinechoices.com/ro/
       </a>
       <br />
       <a
         href="http://www.cms-cmck.com/PrivacyStatement/CookiePolicy/pages/default.aspx"
         target="_blank"
+        rel="noopener noreferrer"
       >
         http://www.cms-cmck.com/PrivacyStatement/CookiePolicy
       </a>

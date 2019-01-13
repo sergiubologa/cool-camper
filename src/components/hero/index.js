@@ -18,7 +18,7 @@ export default props => (
                 și bucură-te de vacanța mult visată! Noi îți punem la dispoziție
                 o{" "}
                 <a
-                  href="javascript:void(0)"
+                  href="#motorhome-images"
                   onClick={e => {
                     e.preventDefault();
                     smoothScrollToSelector("#motorhome-images");
@@ -33,7 +33,7 @@ export default props => (
                 </a>
                 , un{" "}
                 <a
-                  href="javascript:void(0)"
+                  href="#itinerary-header"
                   onClick={e => {
                     e.preventDefault();
                     smoothScrollToSelector(".itinerary__header", 20);
@@ -48,7 +48,7 @@ export default props => (
                 </a>{" "}
                 și toate{" "}
                 <a
-                  href="javascript:void(0)"
+                  href="#faq-insurance"
                   onClick={e => {
                     e.preventDefault();
                     smoothScrollToSelector("#faq-insurance", 20);
