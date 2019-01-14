@@ -50,10 +50,10 @@ class Home extends Component {
     return (
       <TransparentNavbarLayout>
         <Helmet>
-          <title>CoolCamper - Autorulote de inchiriat in Cluj</title>
+          <title>CoolCamper - Autorulote de inchiriat in Cluj-Napoca</title>
           <meta
             name="description"
-            content="Inchiriaza o autorulota din Cluj si i-ati familia sau prietenii in vacanta mult visata oriunde in Europa!"
+            content="Autorulotele noastre sunt modele 2018+, cu 4 sau 5 locuri de dormit si cu toate dotarile necesare. Punctul de ridicare este orasul Cluj-Napoca. Intra acum si fa o rezervare!"
           />
         </Helmet>
         <Hero withSub />
@@ -252,7 +252,7 @@ class Home extends Component {
         <CTAFullSection>
           <CTATitle>Rezervă acum o autorulotă!</CTATitle>
           <CTAMessage>
-            Fă acum o rezervare și trăiește o experiență de neuitat!
+            Închiriază autorulota și trăiește o experiență de neuitat!
           </CTAMessage>
           <Button
             type="accent"

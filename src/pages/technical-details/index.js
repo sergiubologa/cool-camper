@@ -1,6 +1,7 @@
 import React from "react";
 import LegalLeftNavLayout from "../layouts/legal-left-navigation";
 import Helmet from "react-helmet";
+import { Link } from "react-router-dom";
 
 export default () => (
   <LegalLeftNavLayout>
@@ -8,7 +9,7 @@ export default () => (
       <title>CoolCamper - Detalii tehnice autorulote</title>
       <meta
         name="description"
-        content="Autorulote noi, cu toate dotarile necesare pentru o vancata reusita!"
+        content="Autorulote noastre sunt noi, cu toate dotarile necesare pentru o vancata reusita. Inchiriaza acum o autorulota de la CoolCamper!"
       />
     </Helmet>
     <h3 className="app__main__title">Detalii tehnice autorulote</h3>
@@ -113,5 +114,18 @@ export default () => (
 
     <h4>Fara taxa de igienizare si consumabile</h4>
     <h4 style={{ marginTop: 0 }}>Fara garantie</h4>
+
+    <br />
+    <Link
+      className="button button__primary"
+      to="/rezervare-autorulota"
+      ga-on="click"
+      ga-event-category="Button"
+      ga-event-action="click"
+      ga-event-label="technical details page"
+      ga-event-value="Închiriază acum o autorulotă"
+    >
+      Închiriază acum o autorulotă
+    </Link>
   </LegalLeftNavLayout>
 );

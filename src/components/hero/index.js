@@ -12,7 +12,9 @@ export default props => (
         <div className="container">
           <div className="hero__content">
             <div className="hero__content__inner" id="navConverter">
-              <h1 className="hero__title">Travel Anywhere. Be a CoolCamper!</h1>
+              <h1 className="hero__title">
+                Călătorește oriunde cu autorulota!
+              </h1>
               <p className="hero__text">
                 Închiriază o autorulotă modernă, adună-ți prietenii sau familia
                 și bucură-te de vacanța mult visată! Noi îți punem la dispoziție

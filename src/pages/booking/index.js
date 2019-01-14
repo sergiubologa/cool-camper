@@ -275,10 +275,10 @@ export default class extends React.Component {
     return (
       <SimpleLayout>
         <Helmet>
-          <title>CoolCamper - Rezerva autorulote in Cluj</title>
+          <title>CoolCamper - Rezerva autorulote in Cluj-Napoca</title>
           <meta
             name="description"
-            content="Fa acum o rezervare pentru o autorulota din Cluj-Napoca! Vei avea parte de o experienta unica!"
+            content="Rezerva acum o autorulota in Cluj-Napoca! Ti-am pregatit o autorulota moderna, toate dotarile necesare si itinerarii complete. Vei avea parte de o experienta unica!"
           />
         </Helmet>
         <div className="booking">
