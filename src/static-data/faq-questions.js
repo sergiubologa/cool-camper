@@ -28,7 +28,7 @@ export default [
   },
   {
     question: "Cati pasageri poate gazdui o autorulota?",
-    answer: `Capacitatea autorulotelor noastre este de 5locuri pe scaune, 5 locuri de dormit.
+    answer: `Capacitatea autorulotelor noastre este de 5 locuri pe scaune, 5 locuri de dormit.
     Paturile sunt localizate astfel:
     - pat dublu deasupra cabinei,
     - pat dublu in spate,
@@ -54,7 +54,7 @@ export default [
   },
   {
     question: "Putem conduce mai multe persoane autorulota?",
-    answer: `Da, autorulota poate fi condusa de orice persoana cu varsta minima 28 ani care detine permis de conducere cat. B de minim 5 ani (nu este o lege din Codul Rutier ci doar o cerinta CoolCamper).
+    answer: `Da, autorulota poate fi condusa de orice persoana cu varsta minima 25 ani care detine permis de conducere cat. B de minim 5 ani (nu este o lege din Codul Rutier ci doar o cerinta CoolCamper).
     Nu limitam numarul de soferi per inchiriere.
     Totusi trebuie sa te asiguri ca persoana care va conduce autorulota este suficient de responsabila si experimentata, fiind vorba de un vehicul de mari dimensiuni.`
   },
@@ -67,11 +67,27 @@ export default [
     - in majoritatea benzinariilor din afara tarii sunt locuri special amenajate pt autorulote , care permit alimentarea cu apa, deversarea apelor uzate si golirea casetei de toaleta, in mod gratuit; in Romania aceste facilitati inca nu sunt prezente si se obisnuieste alimentarea cu apa in benzinarii, golirea apelor uzate in reteaua de canalizare.`
   },
   {
+    question: "Unde pot campa cu autorulota?",
+    answer: `Asa cum am explicat in raspunsul anterior, poti campa in orice camping, te poti opri si in parcarile de pe sosele, sau poti opta pentru "wild camping", adica oriunde in natura atata timp cat tii cont de urmatoarele reguli:
+    – terenul pe care te-ai oprit sa nu fie proprietate privata;
+    – terenul nu interzice camparea (cum ar fi unele rezervatii naturale, de exemplu);
+    – nu deversezi apele uzate sau caseta de toaleta in natura;
+    – lasi locul de campare intact la plecare;
+    – te asiguri ca nu sunt animalelor salbatice in imediata apropiere a zonei aleasa de tine (ursul vine foarte frecvent datorita resturilor alimentare lasate afara noaptea);
+    – terenul nu este moale sau nisipos (te poti infunda cu autorulota).`
+  },
+  {
+    question: "Exista campinguri in Romania unde ma duce cu autorulota?",
+    answer: `Da, mai exact momentan sunt 57 de campinguri echipate cu toate utilitatile pentru autorulote.
+    Aici veti putea gasi lista completa: http://en.calameo.com/read/0046861041f071bd7fe9a
+    Pentru aceste informatii ii multumim domnului Dan Casandroiu.`
+  },
+  {
     question:
       "Am o problema, o defectiune sau nu stiu sa folosesc anumite dotarii ale autorulotei. Ce fac?",
     answer: `In cazul defectiunilor pot aparea, rareori urmatoarele cazuri:
-    Defectiuni ale autovehiculului
-    Defectiuni ale sistemelor interioare/zonei de locuit
+    - Defectiuni ale autovehiculului
+    - Defectiuni ale sistemelor interioare/zonei de locuit
     In cazul defectiunilor autovehiculului:
     Avand modele noi de autorulote (2019) este putin probabil sa aveti probleme. Totusi, in cazul unei defectiuni, te rugam sa ne contactezi pe whatsapp sau telefonic cu descrierea problemei.
     Daca autorulota nu poate fi deplasata, te rugam sa apelezi nr. de asistenta rutiera europeana Fiat Camper Assistance (tel: 00800 34281111* sau alternativ 0039 024441 2160). Interventiile (remorcare, reparatie sub garantie europeana) sunt gratuite.
@@ -93,7 +109,7 @@ export default [
     id: "faq-insurance",
     question: "Aveti asigurare?",
     answer: `Da. Avem asigurare RCA si Casco valabila peste tot in Europa.
-    Anumite tari nu sunt incluse in polita de asigurare RCA (gen Albania, Bosnia, etc), dar daca va alegeti alt intinerariu decat cele propuse de noi, va putem ajuta sa verificati daca polita de de asigurare acopera si tarile prin care doriti sa calatoriti.
+    Anumite tari nu sunt incluse in polita de asigurare RCA (gen Albania, Bosnia, etc), dar daca va alegeti alt intinerariu decat cele propuse de noi, va putem ajuta sa verificati daca polita de asigurare acopera si tarile prin care doriti sa calatoriti.
     Din pacate pentru tarile care nu sunt acoperite de RCA si Casco aveti obligativitatea sa incheiati o  polita separata la intrarea in tara respectiva.`
   },
   {
@@ -104,11 +120,8 @@ export default [
   },
   {
     question: "Care este garantia perceputa?",
-    answer: `Valoarea garantiei este de ..................  Garantia se va incasa doar prin card de credit/debit emis pe numele titularului de contract sau prin virament bancar efectuat de pe numele titularului de contract.
-    Garantia se va percepe cu minim 10 zile inainte de preluarea autovehiculului, prin link securizat de plata/virament, si se va returna in termen de 72 ore dupa returnarea in aceleasi conditii ale autovehiculului.
-    Garantia nu se va debita, ci se va bloca intr-un cont intermediar pe toata durata inchirierii.
-    CoolCamper nu solicita si nu stocheaza informatii cu privire la datele de identificare ale titularului cardului de debit/credit, acestea vor fi procesate de catre un procesator autorizat (mobilpay).
-    Nu se accepta garantii in numerar????????`
+    answer: `CoolCamper nu percepe nici o garantie. 
+    Totusi trebuie sa stii ca in caz de accident vom fi nevoiti sa iti refacturam costurile reparatiilor sau fransiza de 500 Eur.`
   },
   {
     question: "As dori sa vad autorulotele inainte de rezervare. Se poate?",
@@ -135,9 +148,9 @@ export default [
   },
   {
     question: "Am rezervat si se apropie data plecarii. Ce trebuie sa fac?",
-    answer: `Ora preluarii: zilnic incepand cu ora 08:00 (pentru ore diferite sau aranjamente speciale te rugam sa ne contactezi in avans)
+    answer: `Ora preluarii: zilnic incepand cu ora 14:00 (pentru ore diferite sau aranjamente speciale te rugam sa ne contactezi in avans)
     
-    Ora predarii: zilnic pana in ora 20.00 (te rugam sa ne suni cu aprox. 2 ore inainte de predare)
+    Ora predarii: zilnic pana in ora 12.00
     
     Autorulotele noastre vin echipate cu:
     - suport de biciclete (2-4 biciclete);
