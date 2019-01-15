@@ -129,15 +129,15 @@ export default () => (
       daune).
     </p>
     <p>
-      1.9. Toate autovehiculele COOLCAMPER SRL sunt echipate cu dispozitive de
-      monitorizare a pozitiei , a vitezei si a starii vehicului
+      1.9. Toate autovehiculele COOLCAMPER S.R.L. sunt echipate cu dispozitive
+      de monitorizare a pozitiei , a vitezei si a starii vehicului
       (oprit/pornit/stationare). Aceste dispozitive permit imobilizarea de la
       distanta a autovehiculului, in cazuri intemeiate (furt, etc). Datele cu
       privile la pozitia vehiculului sunt stocate timp de 3 ani pe server
       securizat (furnizor Evo GPS ).
     </p>
     <p>
-      2.0 Toate locatiile de preluare/predare COOLCAMPER SRL sunt echipate cu
+      2.0 Toate locatiile de preluare/predare COOLCAMPER S.R.L. sunt echipate cu
       sisteme avansate de Securitate si monitorizare anti efractie (colectare de
       imagini video zi/noapte de inalta definitie, inclusiv a placutelor de
       inmatriculare si imagini faciale, detector de miscare, bariere infrarosii
@@ -205,7 +205,7 @@ export default () => (
       </li>
     </p>
     <p>
-      In caz de conflicte intre client si prestator de servicii Cool Camper
+      In caz de conflicte intre client si prestator de servicii CoolCamper
       S.R.L., pentru solutionarea litigiilor va fi aplicata legea romaneasca.
       Litigiilor vor fi solutionate pe cale amiabila sau prin intermediul
       instantelor judecatoresti daca prima varianta nu da rezultate. Mai multe

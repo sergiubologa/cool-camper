@@ -53,7 +53,7 @@ class Home extends Component {
           <title>CoolCamper - Autorulote de inchiriat in Cluj-Napoca</title>
           <meta
             name="description"
-            content="Autorulotele noastre sunt modele 2018+, cu 4 sau 5 locuri de dormit si cu toate dotarile necesare. Punctul de ridicare este orasul Cluj-Napoca. Intra acum si fa o rezervare!"
+            content="Autorulotele noastre sunt modele 2019, cu 5 locuri de dormit si cu toate dotarile necesare. Punctul de ridicare este orasul Cluj-Napoca. Intra acum si fa o rezervare!"
           />
         </Helmet>
         <Hero withSub />
