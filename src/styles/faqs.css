@@ -1,5 +1,10 @@
 .faq__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   max-width: 70ch;
   margin-top: 60px;
@@ -12,7 +17,13 @@
 .faq__card {
   padding: 12px 10px 12px 0;
   border-bottom: 1px solid hsl(0, 0%, 90%);
+  -webkit-transition: background-color 250ms linear,
+    -webkit-box-shadow 250ms ease-out;
+  transition: background-color 250ms linear, -webkit-box-shadow 250ms ease-out;
+  -o-transition: background-color 250ms linear, box-shadow 250ms ease-out;
   transition: background-color 250ms linear, box-shadow 250ms ease-out;
+  transition: background-color 250ms linear, box-shadow 250ms ease-out,
+    -webkit-box-shadow 250ms ease-out;
 }
 .faq__card:first-child {
   border-top: 1px solid hsl(0, 0%, 90%);
@@ -25,6 +36,8 @@
   position: relative;
   margin: 0.2em 30px 0 0;
   cursor: pointer;
+  -webkit-transition: all 250ms linear;
+  -o-transition: all 250ms linear;
   transition: all 250ms linear;
   white-space: pre-line;
 }
@@ -42,6 +55,8 @@
   max-height: 0;
   margin: 0;
   overflow: hidden;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
   transition: all 200ms ease;
   white-space: pre-line;
 }

@@ -33,6 +33,8 @@
   color: #6c63ff;
 }
 .slick-dots li.slick-active {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
   transform: scale(1.3);
 }
 .slick-dots li.slick-active button:before {

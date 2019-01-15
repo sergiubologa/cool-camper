@@ -11,8 +11,11 @@
   background: #fdf6c6;
   border: 1px solid #fde850;
   border-radius: 50%;
+  -webkit-animation-duration: 1.6s;
   animation-duration: 1.6s;
+  -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
@@ -91,17 +94,25 @@
 }
 
 .forecast__cloudy__cloud--normal {
+  -webkit-animation-duration: 6s;
   animation-duration: 6s;
+  -webkit-animation-name: moveRight;
   animation-name: moveRight;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
 .forecast__cloudy__cloud--small {
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
   transform: scale(0.5);
   left: 50px;
   margin-top: -20px;
+  -webkit-animation-duration: 6s;
   animation-duration: 6s;
+  -webkit-animation-name: moveLeft;
   animation-name: moveLeft;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
@@ -117,17 +128,44 @@
   top: 10px;
   border: 0px;
   margin-left: 15px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#7f868d),
+    to(#466d98)
+  );
+  background: -webkit-linear-gradient(top, #7f868d, #466d98);
+  background: -o-linear-gradient(top, #7f868d, #466d98);
   background: linear-gradient(to bottom, #7f868d, #466d98);
 }
 
 .forecast__rainy__cloud--grey:after {
   border-top: 1px solid #7f868d;
   border-left: 1px solid #7f868d;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#7f868d),
+    to(#466d98)
+  );
+  background: -webkit-linear-gradient(top, #7f868d, #466d98);
+  background: -o-linear-gradient(top, #7f868d, #466d98);
   background: linear-gradient(to bottom, #7f868d, #466d98);
 }
 .forecast__rainy__cloud--grey:before {
   border-top: 1px solid #7f868d;
   border-right: 1px solid #7f868d;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#7f868d),
+    to(#466d98)
+  );
+  background: -webkit-linear-gradient(top, #7f868d, #466d98);
+  background: -o-linear-gradient(top, #7f868d, #466d98);
   background: linear-gradient(to bottom, #7f868d, #466d98);
 }
 
@@ -141,32 +179,47 @@
 .forecast__rainy__rain--one {
   left: 15px;
   height: 10px;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-name: raining;
   animation-name: raining;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 .forecast__rainy__rain--two {
   left: 25px;
   height: 10px;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-name: raining;
   animation-name: raining;
+  -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 .forecast__rainy__rain--three {
   left: 35px;
   height: 10px;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
+  -webkit-animation-name: raining;
   animation-name: raining;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 .forecast__rainy__rain--four {
   left: 45px;
   height: 10px;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-name: raining;
   animation-name: raining;
+  -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
@@ -174,17 +227,44 @@
   top: 10px;
   border: 0px;
   margin-left: 15px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#eceff2),
+    to(#cbd0d6)
+  );
+  background: -webkit-linear-gradient(top, #eceff2, #cbd0d6);
+  background: -o-linear-gradient(top, #eceff2, #cbd0d6);
   background: linear-gradient(to bottom, #eceff2, #cbd0d6);
 }
 
 .forecast__snow__cloud--grey:after {
   border-top: 1px solid #eceff2;
   border-left: 1px solid #eceff2;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#eceff2),
+    to(#cbd0d6)
+  );
+  background: -webkit-linear-gradient(top, #eceff2, #cbd0d6);
+  background: -o-linear-gradient(top, #eceff2, #cbd0d6);
   background: linear-gradient(to bottom, #eceff2, #cbd0d6);
 }
 .forecast__snow__cloud--grey:before {
   border-top: 1px solid #eceff2;
   border-right: 1px solid #eceff2;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#eceff2),
+    to(#cbd0d6)
+  );
+  background: -webkit-linear-gradient(top, #eceff2, #cbd0d6);
+  background: -o-linear-gradient(top, #eceff2, #cbd0d6);
   background: linear-gradient(to bottom, #eceff2, #cbd0d6);
 }
 
@@ -209,37 +289,66 @@
 
 .forecast__snow__snow--first {
   left: 15px;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-name: raining;
   animation-name: raining;
+  -webkit-animation-delay: 0s;
   animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
 .forecast__snow__snow--second {
   left: 25px;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-name: raining;
   animation-name: raining;
+  -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
 .forecast__snow__snow--third {
   left: 35px;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-name: raining;
   animation-name: raining;
+  -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
 .forecast__snow__snow--fourth {
   left: 45px;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-name: raining;
   animation-name: raining;
+  -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
 /* animations */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 1;
@@ -251,6 +360,20 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes moveRight {
+  0% {
+    left: 10px;
+  }
+
+  50% {
+    left: 45px;
+  }
+
+  100% {
+    left: 10px;
   }
 }
 
@@ -268,6 +391,20 @@
   }
 }
 
+@-webkit-keyframes moveLeft {
+  0% {
+    left: 50px;
+  }
+
+  50% {
+    left: 10px;
+  }
+
+  100% {
+    left: 50px;
+  }
+}
+
 @keyframes moveLeft {
   0% {
     left: 50px;
@@ -279,6 +416,15 @@
 
   100% {
     left: 50px;
+  }
+}
+
+@-webkit-keyframes raining {
+  0% {
+    top: 15px;
+  }
+  100% {
+    top: 50px;
   }
 }
 

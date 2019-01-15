@@ -16,15 +16,23 @@
 }
 
 ol.progtrckr {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
   padding: 0 0 2.2rem;
   list-style-type: none;
 }
 ol.progtrckr li {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   line-height: 3.5rem;
   padding: 0 0.7rem;
@@ -58,7 +66,11 @@ ol.progtrckr li.progtrckr-done {
 }
 ol.progtrckr li:before {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 1.2em;
   line-height: 1.2em;
@@ -95,7 +107,11 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 
 .progtrckr__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 3em;
 }
@@ -106,14 +122,27 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 
 .step__one {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .step__one__labels {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .step__one__labels label {
@@ -134,14 +163,22 @@ ol.progtrckr li.progtrckr-done:hover:before {
 .price__details__row {
   padding: 8px 0;
   border-bottom: 1px solid hsl(0, 0%, 90%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .price__details__row:last-child {
   border-bottom: 0 none;
 }
 .price__details__row span:first-child {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .price__details__row__discount {
@@ -162,6 +199,8 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 
 .step__two {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .step__two__inputs,
@@ -170,9 +209,18 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 .step__two__details {
   margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .step__two__details > img {
@@ -180,16 +228,24 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 
 .step__two__inputs__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 .step__two__inputs__row__input {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 .step__two__inputs__row__input:nth-child(even) {
   margin-left: 10px;
 }
 .step__two__inputs__row__input label[for="phone"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .step__two__inputs__row__input label[for="phone"] button {
@@ -205,6 +261,9 @@ ol.progtrckr li.progtrckr-done:hover:before {
 
 @media (max-width: 800px) {
   .step__two {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .step__two__inputs,
@@ -218,6 +277,9 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 @media (max-width: 500px) {
   .step__two__inputs__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .step__two__inputs__row__input:nth-child(even) {
@@ -226,12 +288,19 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 
 .step__three {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .step__three__card {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   margin-top: 1.2em;
 }
@@ -239,7 +308,11 @@ ol.progtrckr li.progtrckr-done:hover:before {
   margin-top: 0;
 }
 .step__three__card__summaryHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .step__three__card__summaryHeader h4 {
@@ -261,7 +334,12 @@ ol.progtrckr li.progtrckr-done:hover:before {
 
 .step__three__card__paymentMethods {
   margin: 1em 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 .step__three__card__paymentMethods p {
@@ -274,6 +352,9 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 @media (min-width: 600px) {
   .step__three__card__paymentMethods {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
   .step__three__card__paymentMethods--left,
@@ -288,6 +369,8 @@ ol.progtrckr li.progtrckr-done:hover:before {
   .step__three__card--benefits,
   .step__three__card--price {
     width: 48%;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
     flex-grow: 0;
   }
   .step__three__card--type,
@@ -297,9 +380,18 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 
 .step__three__card__sendReservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .step__three__card__sendReservation > small {
@@ -320,6 +412,8 @@ ol.progtrckr li.progtrckr-done:hover:before {
 .step__three__card__sendReservation--submit .button,
 .step__three__card__sendReservation--submit .loader {
   position: absolute;
+  -webkit-transition: all 300ms, color 0s;
+  -o-transition: all 300ms, color 0s;
   transition: all 300ms, color 0s;
 }
 .step__three__card__sendReservation--submit .loader {
@@ -341,14 +435,24 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 
 .step__one__error {
+  -ms-flex-item-align: start;
   align-self: flex-start;
   margin: 10px 0 0 0;
 }
 
 .booking__successful {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 3em 2em;
 }
@@ -363,7 +467,11 @@ ol.progtrckr li.progtrckr-done:hover:before {
   border-bottom: 1px dotted #7c7c7c;
 }
 .booking__successful--socialButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 1em 0;
 }

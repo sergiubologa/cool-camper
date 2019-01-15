@@ -13,6 +13,8 @@
 .DateInput,
 .step__one__labels label {
   width: 128px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 input.DateInput_input {
@@ -23,8 +25,14 @@ input.DateInput_input {
 
 .DateRangePickerInput {
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -54,6 +62,8 @@ input.DateInput_input {
   .DateInput,
   .step__one__labels label {
     width: 210px;
+    -webkit-box-flex: unset;
+    -ms-flex-positive: unset;
     flex-grow: unset;
   }
   .step__one__labels label:first-child {
