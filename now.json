@@ -12,6 +12,7 @@
     { "src": "^/robots.txt", "dest": "/robots.txt" },
     { "src": "^/sitemap.xml", "dest": "/sitemap.xml" },
     { "src": "^/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "^/og-image.jpg", "dest": "/og-image.jpg" },
     { "src": "^/apple-touch-icon.png", "dest": "/apple-touch-icon.png" },
     { "src": "^/favicon-32x32.png", "dest": "/favicon-32x32.png" },
     { "src": "^/favicon-16x16.png", "dest": "/favicon-16x16.png" },
