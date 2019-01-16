@@ -7,7 +7,6 @@ export default props => (
   <React.Fragment>
     <div className="hero">
       <div className="hero__overlay hero__overlay--gradientVertical" />
-      <div className="hero__mask" />
       <div className="hero__inner">
         <div className="container">
           <div className="hero__content">
