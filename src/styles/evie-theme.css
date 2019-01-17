@@ -187,14 +187,7 @@ a {
 }
 
 .link {
-  /* color: #6c63ff;
-  text-decoration: underline; */
   border-bottom: 1px dashed;
-}
-@media (min-width: 992px) {
-  .link:hover {
-    /* color: #463aff; */
-  }
 }
 
 .button {
@@ -572,9 +565,6 @@ select::-ms-expand {
   visibility: hidden;
 }
 
-[type="checkbox"] {
-  /* checkbox aspect */
-}
 [type="checkbox"] + label {
   position: relative;
   padding-left: 2em;
@@ -1468,12 +1458,8 @@ label.success {
   margin-bottom: 8pt;
 }
 
-.footer__pages {
-}
 .footer__social {
   margin-right: 2.5em;
-}
-.footer__copyright {
 }
 @media (min-width: 992px) {
   .footer__pages,
