@@ -872,7 +872,7 @@ label.success {
 
 .hero__inner {
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
 .hero__overlay {
@@ -885,13 +885,6 @@ label.success {
 }
 
 .hero__overlay--gradient {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(rgba(108, 99, 255, 0.5)),
-    to(rgba(108, 99, 255, 0.6))
-  );
   background: -webkit-linear-gradient(
     left,
     rgba(108, 99, 255, 0.5),
@@ -917,13 +910,6 @@ label.success {
 }
 
 .hero__overlay--gradientVertical {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 0.6)),
-    to(rgba(0, 0, 0, 0.8))
-  );
   background: -webkit-linear-gradient(
     top,
     rgba(0, 0, 0, 0.6),
@@ -937,25 +923,11 @@ label.success {
     from(rgba(0, 0, 0, 0.6)),
     to(rgba(0, 0, 0, 0.8))
   );
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.8)
   );
-}
-
-.hero__mask {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080"><defs><linearGradient id="06714b97-aec8-4b7e-bf3d-1e20f95f612e" y1="809.5" x2="958" y2="809.5" gradientTransform="matrix(1, 0, 0, -1, 0, 1082)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="%23fff" stop-opacity="0"/><stop offset="1" stop-color="%23fff" stop-opacity="0.05"/></linearGradient></defs><title>hero</title><rect id="0567095b-2cf7-4407-b8ab-ec2abe52d830" data-name="<Path>" y="545" width="1920" height="535" fill="%23fff" opacity="0.05" style="isolation:isolate"/><polygon id="82ca9a61-a0a1-49cc-9805-a3533c693bad" data-name="<Path>" points="958 545 0 545 0 0 770.96 0 958 545" fill="url(%2306714b97-aec8-4b7e-bf3d-1e20f95f612e)"/></svg>');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  opacity: 0.66;
-  z-index: 2;
-  display: none;
 }
 
 .hero__content {
