@@ -48,8 +48,8 @@ export default class extends React.Component {
           )}
           renderBody={() => (
             <React.Fragment>
-              <p>Benimar 340 UP</p>
-              <p>5 locuri de dormit + 5 pe scaun</p>
+              <p>Benimar Tessoro 496</p>
+              <p>5 locuri de dormit + 5 pe scaune</p>
               <p>
                 <strong>
                   {noOfDays} zile - {startDate.format("D MMM YYYY")} &rarr;{" "}

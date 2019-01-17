@@ -13,7 +13,7 @@ export default () => (
       />
     </Helmet>
     <h3 className="app__main__title">Detalii tehnice autorulote</h3>
-    <h3 className="app__main__title">Benimar Sport 340UP</h3>
+    <h3 className="app__main__title">Benimar Tessoro 496</h3>
     <ul>
       <li>Locuri pe scaun: 5</li>
       <li>Locuri de dormit: 5</li>
@@ -21,9 +21,10 @@ export default () => (
       <li>Nr. viteze 6</li>
       <li>Combustibil Diesel</li>
       <li>Consum 11 l/100 km</li>
-      <li>Lungime 676 cm</li>
-      <li>Latime 308 cm</li>
-      <li>Putere motor (cp) 170 cp</li>
+      <li>Lungime 743 cm</li>
+      <li>Latime 230 cm</li>
+      <li>Inaltime 289 cm</li>
+      <li>Putere motor (cp) 130 cp</li>
     </ul>
 
     <h4 style={{ marginBottom: 0 }}>Siguranta si specificatii tehnice</h4>
