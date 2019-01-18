@@ -9,7 +9,7 @@ export default () => (
       <title>CoolCamper - Detalii tehnice autorulote</title>
       <meta
         name="description"
-        content="Autorulote noastre sunt noi, cu toate dotarile necesare pentru o vancata reusita. Inchiriaza acum o autorulota de la CoolCamper!"
+        content="Autorulote noastre sunt noi, cu toate dotarile necesare pentru o vacanta reusita. Inchiriaza acum o autorulota de la CoolCamper!"
       />
     </Helmet>
     <h3 className="app__main__title">Detalii tehnice autorulote</h3>

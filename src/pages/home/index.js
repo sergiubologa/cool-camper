@@ -72,7 +72,7 @@ class Home extends Component {
               <h4>Autorulote noi</h4>
               <StepText>
                 Autorulotele noastre sunt modele 2018+ cu toate dotările
-                necesare pentru o vancanță de neuitat!
+                necesare pentru o vacanță de neuitat!
               </StepText>
             </Step>
             <Step>
