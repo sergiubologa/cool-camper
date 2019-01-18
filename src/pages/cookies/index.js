@@ -406,12 +406,12 @@ export default () => (
       </a>
       <br />
       <a
-        href="www.allaboutcookies.org"
+        href="https://www.allaboutcookies.org"
         target="_blank"
         rel="noopener noreferrer"
       >
         {" "}
-        www.allaboutcookies.org{" "}
+        https://www.allaboutcookies.org{" "}
       </a>
       <br />
       <a
