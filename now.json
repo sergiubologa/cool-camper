@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "cool-camper",
-  "alias": ["coolcamper.ro", "www.coolcamper.ro"],
+  "alias": ["coolcamper.ro"],
   "builds": [
     { "src": "api/index.js", "use": "@now/node-server" },
     { "src": "package.json", "use": "@now/static-build" }
