@@ -1,7 +1,7 @@
 import React from "react";
 import PriceCard from "./price-card";
-import Button from "../../inputs/button";
 import { prices } from "coolcamper-common";
+import { Link } from "react-router-dom";
 import moment from "moment";
 
 export default () => {
@@ -34,8 +34,8 @@ export default () => {
               ))}
             </ul>
           </div>
-          <Button
-            type="accent"
+          <Link
+            className="button button__accent"
             to="/rezervare-autorulota"
             ga-on="click"
             ga-event-category="Button"
@@ -44,7 +44,7 @@ export default () => {
             ga-event-value="Rezervă acum"
           >
             Rezervă acum
-          </Button>
+          </Link>
         </React.Fragment>
       )}
     />

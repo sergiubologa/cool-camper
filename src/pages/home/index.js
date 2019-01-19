@@ -253,8 +253,8 @@ class Home extends Component {
           <CTAMessage>
             Închiriază autorulota și trăiește o experiență de neuitat!
           </CTAMessage>
-          <Button
-            type="accent"
+          <Link
+            className="button button__accent"
             to="/rezervare-autorulota"
             ga-on="click"
             ga-event-category="Button"
@@ -263,7 +263,7 @@ class Home extends Component {
             ga-event-value="Verifică disponibilitatea"
           >
             Verifică disponibilitatea
-          </Button>
+          </Link>
         </CTAFullSection>
       </TransparentNavbarLayout>
     );

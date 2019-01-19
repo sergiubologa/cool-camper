@@ -91,7 +91,13 @@ export default class extends React.Component {
 
         <div className="container">
           <div className="navbar__inner">
-            <Link to="/" className="navbar__logo">
+            <Link
+              to="/"
+              className="navbar__logo"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
               CoolCamper
             </Link>
             <nav className="navbar__menu">{this.renderLinks()}</nav>

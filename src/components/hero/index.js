@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSub from "./components/hero-sub";
 import Button from "../inputs/button";
+import { Link } from "react-router-dom";
 import { smoothScrollToSelector } from "../../common/utils";
 
 export default props => (
@@ -67,9 +68,9 @@ export default props => (
                 </a>{" "}
                 de care ai putea să ai nevoie.
               </p>
-              <Button
-                type="accent"
+              <Link
                 to="/rezervare-autorulota"
+                className="button button__accent"
                 ga-on="click"
                 ga-event-category="Button"
                 ga-event-action="click"
@@ -77,7 +78,7 @@ export default props => (
                 ga-event-value="Rezervă acum"
               >
                 Rezervă acum
-              </Button>
+              </Link>
               <Button
                 className="hero__button"
                 onClick={() => smoothScrollToSelector("#prices", 20)}
