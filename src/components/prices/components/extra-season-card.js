@@ -29,16 +29,18 @@ export default () => {
       )}
       renderFooter={() => (
         <React.Fragment>
-          <div className="discounts">
-            <span>Se aplică reduceri:</span>
-            <ul>
-              {prices.discounts.map(discount => (
-                <li key={discount.minDays}>
-                  peste {discount.minDays} zile - {discount.percent}% reducere
-                </li>
-              ))}
-            </ul>
-          </div>
+          {prices.discounts && prices.discounts.length > 0 && (
+            <div className="discounts">
+              <span>Se aplică reduceri:</span>
+              <ul>
+                {prices.discounts.map(discount => (
+                  <li key={discount.minDays}>
+                    peste {discount.minDays} zile - {discount.percent}% reducere
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           <Link
             className="button button__accent"
             to="/rezervare-autorulota"
