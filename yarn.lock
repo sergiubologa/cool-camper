@@ -2609,10 +2609,10 @@ cookie@0.3.1:
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
   integrity sha1-5+Ch+e9DtMi6klxcWpboBtFoc7s=
 
-coolcamper-common@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/coolcamper-common/-/coolcamper-common-0.1.2.tgz#f26eafd014c9c27d0d848a7bf4fcac234212d138"
-  integrity sha512-ztC7JPtd0laoWT9xUnZyE6fNIPnFT+lN0yjICj/Mk/2/Cuu7eiZe6GZkEmN3OCD6vDlyuLGFWaC0PPamAqr5Zg==
+coolcamper-common@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/coolcamper-common/-/coolcamper-common-0.1.3.tgz#db50fcd2c33234cb34a140ff7d0758fa1c83e432"
+  integrity sha512-DHuBNhas9ca4t0MNvGmvmOtSE6EuwikJTcC12HkXtgwR+Zcp7jJxO5zGlH/UaL+hB47ZIxDYgI9wEfqaPmbHqg==
 
 copy-concurrently@^1.0.0:
   version "1.0.5"
