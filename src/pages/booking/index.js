@@ -314,7 +314,7 @@ export default class extends React.Component {
                   type="facebook"
                   text="Facebook"
                   href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.coolcamper.ro"
-                  ga-on="click"
+                  ga-on="click,auxclick,contextmenu"
                   ga-hit-type="social"
                   ga-social-network="Facebook"
                   ga-social-action="share"
@@ -325,7 +325,7 @@ export default class extends React.Component {
                   type="twitter"
                   text="Twitter"
                   href="https://twitter.com/home?status=Tocmai%20am%20rezervat%20o%20autorulota%20de%20la%20CoolCamper%20cu%20care%20vrem%20sa%20mergem%20in%20vacanta!%20%F0%9F%8E%8A"
-                  ga-on="click"
+                  ga-on="click,auxclick,contextmenu"
                   ga-hit-type="social"
                   ga-social-network="Twitter"
                   ga-social-action="tweet"
@@ -336,7 +336,7 @@ export default class extends React.Component {
               <small>sau</small>
               <Link
                 to="/"
-                ga-on="click"
+                ga-on="click,auxclick,contextmenu"
                 ga-event-category="Link"
                 ga-event-action="click"
                 ga-event-label="step thank you"

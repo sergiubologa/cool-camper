@@ -25,7 +25,7 @@ export default props => (
                     e.preventDefault();
                     smoothScrollToSelector("#motorhome-images");
                   }}
-                  ga-on="click"
+                  ga-on="click,auxclick,contextmenu"
                   ga-event-category="Link"
                   ga-event-action="click"
                   ga-event-label="page header"
@@ -40,7 +40,7 @@ export default props => (
                     e.preventDefault();
                     smoothScrollToSelector(".itinerary__header", 20);
                   }}
-                  ga-on="click"
+                  ga-on="click,auxclick,contextmenu"
                   ga-event-category="Link"
                   ga-event-action="click"
                   ga-event-label="page header"
@@ -58,7 +58,7 @@ export default props => (
                       .querySelector("#faq-insurance .faq__question")
                       .click();
                   }}
-                  ga-on="click"
+                  ga-on="click,auxclick,contextmenu"
                   ga-event-category="Link"
                   ga-event-action="click"
                   ga-event-label="page header"
@@ -71,7 +71,7 @@ export default props => (
               <Link
                 to="/rezervare-autorulota"
                 className="button button__accent"
-                ga-on="click"
+                ga-on="click,auxclick,contextmenu"
                 ga-event-category="Button"
                 ga-event-action="click"
                 ga-event-label="page header"
@@ -82,7 +82,7 @@ export default props => (
               <Button
                 className="hero__button"
                 onClick={() => smoothScrollToSelector("#prices", 20)}
-                ga-on="click"
+                ga-on="click,auxclick,contextmenu"
                 ga-event-category="Button"
                 ga-event-action="click"
                 ga-event-label="page header"

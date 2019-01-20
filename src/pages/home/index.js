@@ -134,7 +134,7 @@ class Home extends Component {
             <Link
               to="/detalii-tehnice-autorulota"
               className="link"
-              ga-on="click"
+              ga-on="click,auxclick,contextmenu"
               ga-event-category="Link"
               ga-event-action="click"
               ga-event-label="motorhome images section"
@@ -207,7 +207,7 @@ class Home extends Component {
                 href="mailto:contact@coolcamper.ro"
                 title="Email CoolCamper.ro"
                 className="contact__email"
-                ga-on="click"
+                ga-on="click,auxclick,contextmenu"
                 ga-event-category="Link"
                 ga-event-action="click"
                 ga-event-label="contact us"
@@ -227,7 +227,7 @@ class Home extends Component {
                 className="contact__phone"
                 onClick={() => window.open("tel:+40742291018", "_self")}
                 renderIcon={() => <SmartphoneIcon color="#fff" width="20" />}
-                ga-on="click"
+                ga-on="click,auxclick,contextmenu"
                 ga-event-category="Button"
                 ga-event-action="click"
                 ga-event-label="contact us"
@@ -256,7 +256,7 @@ class Home extends Component {
           <Link
             className="button button__accent"
             to="/rezervare-autorulota"
-            ga-on="click"
+            ga-on="click,auxclick,contextmenu"
             ga-event-category="Button"
             ga-event-action="click"
             ga-event-label="bottom CTA section"

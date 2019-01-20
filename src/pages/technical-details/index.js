@@ -120,7 +120,7 @@ export default () => (
     <Link
       className="button button__primary"
       to="/rezervare-autorulota"
-      ga-on="click"
+      ga-on="click,auxclick,contextmenu"
       ga-event-category="Button"
       ga-event-action="click"
       ga-event-label="technical details page"
