@@ -136,9 +136,8 @@ class Home extends Component {
               className="link"
               ga-on="click,auxclick,contextmenu"
               ga-event-category="Link"
-              ga-event-action="click"
+              ga-event-action="aici"
               ga-event-label="motorhome images section"
-              ga-event-value="aici"
             >
               aici
             </Link>{" "}
@@ -209,9 +208,8 @@ class Home extends Component {
                 className="contact__email"
                 ga-on="click,auxclick,contextmenu"
                 ga-event-category="Link"
-                ga-event-action="click"
+                ga-event-action="contact@coolcamper.ro"
                 ga-event-label="contact us"
-                ga-event-value="contact@coolcamper.ro"
               >
                 contact@coolcamper.ro
               </a>
@@ -229,9 +227,8 @@ class Home extends Component {
                 renderIcon={() => <SmartphoneIcon color="#fff" width="20" />}
                 ga-on="click,auxclick,contextmenu"
                 ga-event-category="Button"
-                ga-event-action="click"
+                ga-event-action="0742-291.018"
                 ga-event-label="contact us"
-                ga-event-value="0742-291.018"
               >
                 0742-291.018
               </Button>
@@ -258,9 +255,8 @@ class Home extends Component {
             to="/rezervare-autorulota"
             ga-on="click,auxclick,contextmenu"
             ga-event-category="Button"
-            ga-event-action="click"
+            ga-event-action="Verifică disponibilitatea"
             ga-event-label="bottom CTA section"
-            ga-event-value="Verifică disponibilitatea"
           >
             Verifică disponibilitatea
           </Link>

@@ -122,9 +122,8 @@ export default () => (
       to="/rezervare-autorulota"
       ga-on="click,auxclick,contextmenu"
       ga-event-category="Button"
-      ga-event-action="click"
+      ga-event-action="Închiriază acum o autorulotă"
       ga-event-label="technical details page"
-      ga-event-value="Închiriază acum o autorulotă"
     >
       Închiriază acum o autorulotă
     </Link>

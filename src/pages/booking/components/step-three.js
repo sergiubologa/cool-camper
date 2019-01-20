@@ -194,9 +194,8 @@ export default class extends React.Component {
                   className={isLoading ? "loading" : ""}
                   ga-on="click"
                   ga-event-category="Button"
-                  ga-event-action="click"
+                  ga-event-action="Trimite rezervarea"
                   ga-event-label="booking step 3"
-                  ga-event-value="Trimite rezervarea"
                 >
                   Trimite rezervarea
                 </Button>

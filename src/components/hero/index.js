@@ -27,9 +27,8 @@ export default props => (
                   }}
                   ga-on="click,auxclick,contextmenu"
                   ga-event-category="Link"
-                  ga-event-action="click"
+                  ga-event-action="autorulotă modernă"
                   ga-event-label="page header"
-                  ga-event-value="autorulotă modernă"
                 >
                   autorulotă modernă
                 </a>
@@ -42,9 +41,8 @@ export default props => (
                   }}
                   ga-on="click,auxclick,contextmenu"
                   ga-event-category="Link"
-                  ga-event-action="click"
+                  ga-event-action="itinerariu complet"
                   ga-event-label="page header"
-                  ga-event-value="itinerariu complet"
                 >
                   itinerariu complet
                 </a>{" "}
@@ -60,9 +58,8 @@ export default props => (
                   }}
                   ga-on="click,auxclick,contextmenu"
                   ga-event-category="Link"
-                  ga-event-action="click"
+                  ga-event-action="asigurările"
                   ga-event-label="page header"
-                  ga-event-value="asigurările"
                 >
                   asigurările
                 </a>{" "}
@@ -73,9 +70,8 @@ export default props => (
                 className="button button__accent"
                 ga-on="click,auxclick,contextmenu"
                 ga-event-category="Button"
-                ga-event-action="click"
+                ga-event-action="Rezervă acum"
                 ga-event-label="page header"
-                ga-event-value="Rezervă acum"
               >
                 Rezervă acum
               </Link>
@@ -84,9 +80,8 @@ export default props => (
                 onClick={() => smoothScrollToSelector("#prices", 20)}
                 ga-on="click,auxclick,contextmenu"
                 ga-event-category="Button"
-                ga-event-action="click"
+                ga-event-action="Vezi prețuri"
                 ga-event-label="page header"
-                ga-event-value="Vezi prețuri"
               >
                 Vezi prețuri
               </Button>

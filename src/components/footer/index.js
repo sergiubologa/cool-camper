@@ -50,7 +50,7 @@ export default () => (
                 ga-on="click,auxclick,contextmenu"
                 ga-hit-type="social"
                 ga-social-network="Facebook"
-                ga-social-action="click"
+                ga-social-action="Go to Facebook Page"
                 ga-social-target="https://www.facebook.com/CoolCamperCluj"
                 ga-event-label="footer"
               >
@@ -66,7 +66,7 @@ export default () => (
                 ga-on="click,auxclick,contextmenu"
                 ga-hit-type="social"
                 ga-social-network="Instagram"
-                ga-social-action="click"
+                ga-social-action="Go to Insta page"
                 ga-social-target="https://www.instagram.com/coolcampercluj"
                 ga-event-label="footer"
               >
@@ -82,7 +82,7 @@ export default () => (
                 ga-on="click,auxclick,contextmenu"
                 ga-hit-type="social"
                 ga-social-network="Twitter"
-                ga-social-action="click"
+                ga-social-action="Go to Twitter page"
                 ga-social-target="https://twitter.com/CoolCamperCluj"
                 ga-event-label="footer"
               >

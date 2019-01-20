@@ -37,9 +37,8 @@ export default class HeroSub extends React.Component {
             onClick={this.onSubClick}
             ga-on="click"
             ga-event-category="Icon"
-            ga-event-action="click"
-            ga-event-label="page header"
-            ga-event-value="Hero sub"
+            ga-event-action="scoll to de ce CoolCamper"
+            ga-event-label="Page header - Hero sub"
           >
             <Caret className="hero__sub__down" />
           </span>

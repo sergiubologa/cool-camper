@@ -32,9 +32,8 @@ export default class extends React.Component {
           onClick={this.handleMoreInfoClick}
           ga-on="click"
           ga-event-category="Button"
-          ga-event-action="click"
+          ga-event-action={text + (moreInfoExpanded ? " -" : " +")}
           ga-event-label="why us"
-          ga-event-value={text + (moreInfoExpanded ? " -" : " +")}
         >
           <span>{moreInfoExpanded ? "-" : "+"}</span> {text}
         </Button>

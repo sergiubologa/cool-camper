@@ -317,7 +317,7 @@ export default class extends React.Component {
                   ga-on="click,auxclick,contextmenu"
                   ga-hit-type="social"
                   ga-social-network="Facebook"
-                  ga-social-action="share"
+                  ga-social-action="share on Facebook"
                   ga-social-target="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.coolcamper.ro"
                   ga-event-label="after booking - thank you screen"
                 />
@@ -338,9 +338,8 @@ export default class extends React.Component {
                 to="/"
                 ga-on="click,auxclick,contextmenu"
                 ga-event-category="Link"
-                ga-event-action="click"
+                ga-event-action="Mergi înapoi la pagina principală"
                 ga-event-label="step thank you"
-                ga-event-value="Mergi înapoi la pagina principală"
               >
                 Mergi înapoi la pagina principală
               </Link>

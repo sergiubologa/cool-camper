@@ -46,9 +46,8 @@ export default () => {
             to="/rezervare-autorulota"
             ga-on="click,auxclick,contextmenu"
             ga-event-category="Button"
-            ga-event-action="click"
+            ga-event-action="Rezervă acum"
             ga-event-label="extra-season card"
-            ga-event-value="Rezervă acum"
           >
             Rezervă acum
           </Link>
