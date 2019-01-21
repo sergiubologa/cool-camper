@@ -149,8 +149,8 @@ export default class extends React.Component {
           window.scrollTo({ top: 0 });
           window.ga("send", "event", {
             eventCategory: "New booking",
-            eventAction: "view",
-            eventValue: "step thank you"
+            eventAction: "view booking step",
+            eventLabel: "step thank you"
           });
         }
       })

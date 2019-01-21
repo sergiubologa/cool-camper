@@ -19,8 +19,8 @@ export default class extends React.Component {
     super(props);
     window.ga("send", "event", {
       eventCategory: "New booking",
-      eventAction: "view",
-      eventValue: "step 3"
+      eventAction: "view booking step",
+      eventLabel: "step 3"
     });
   }
 
