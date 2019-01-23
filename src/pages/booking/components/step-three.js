@@ -190,12 +190,13 @@ export default class extends React.Component {
               <div className="step__three__card__sendReservation--submit">
                 <Button
                   type="primary"
-                  onClick={onSubmit}
+                  onClick={() => onSubmit(prices)}
                   className={isLoading ? "loading" : ""}
                   ga-on="click"
                   ga-event-category="Button"
                   ga-event-action="Trimite rezervarea"
                   ga-event-label="booking step 3"
+                  ga-event-value={prices.totalPriceWithDiscount}
                 >
                   Trimite rezervarea
                 </Button>

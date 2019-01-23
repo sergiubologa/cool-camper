@@ -119,7 +119,7 @@ export default class extends React.Component {
     window.scrollTo({ top: 0 });
   }
 
-  onSubmit() {
+  onSubmit(prices) {
     this.setState({ isSubmitting: true, submitError: "" });
     // call api to send the emails
     const {
@@ -150,7 +150,8 @@ export default class extends React.Component {
           window.ga("send", "event", {
             eventCategory: "New booking",
             eventAction: "view booking step",
-            eventLabel: "step thank you"
+            eventLabel: "step thank you",
+            eventValue: prices.totalPriceWithDiscount
           });
         }
       })
