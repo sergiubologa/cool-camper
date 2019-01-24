@@ -3,6 +3,8 @@ import PriceCard from "./price-card";
 import { Link } from "react-router-dom";
 import { prices } from "coolcamper-common";
 import moment from "moment";
+import Price from "./price";
+import PriceDetails from "./price-details";
 
 export default () => {
   const lowSeasonStartDate = moment(
@@ -23,24 +25,15 @@ export default () => {
       subtitle={`${lowSeasonStartDate} - ${lowSeasonEndDate}`}
       type="extra-season"
       renderContent={() => (
-        <h1>
-          {prices.lowSeasonPricePerDay}€ <small>pe zi</small>
-        </h1>
+        <Price
+          price={prices.lowSeasonPricePerDay}
+          discounts={prices.discounts}
+        />
       )}
       renderFooter={() => (
         <React.Fragment>
-          {prices.discounts && prices.discounts.length > 0 && (
-            <div className="discounts">
-              <span>Se aplică reduceri:</span>
-              <ul>
-                {prices.discounts.map(discount => (
-                  <li key={discount.minDays}>
-                    peste {discount.minDays} zile - {discount.percent}% reducere
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          <PriceDetails />
+
           <Link
             className="button button__accent"
             to="/rezervare-autorulota"

@@ -2,6 +2,8 @@ import React from "react";
 import PriceCard from "./price-card";
 import { prices } from "coolcamper-common";
 import { Link } from "react-router-dom";
+import Price from "./price";
+import PriceDetails from "./price-details";
 import moment from "moment";
 
 export default () => {
@@ -18,24 +20,14 @@ export default () => {
       title="În sezon"
       subtitle={`${highSeasonStartDate} - ${highSeasonEndDate}`}
       renderContent={() => (
-        <h1>
-          {prices.highSeasonPricePerDay}€ <small>pe zi</small>
-        </h1>
+        <Price
+          price={prices.highSeasonPricePerDay}
+          discounts={prices.discounts}
+        />
       )}
       renderFooter={() => (
         <React.Fragment>
-          {prices.discounts && prices.discounts.length > 0 && (
-            <div className="discounts">
-              <span>Se aplică reduceri:</span>
-              <ul>
-                {prices.discounts.map(discount => (
-                  <li key={discount.minDays}>
-                    peste {discount.minDays} zile - {discount.percent}% reducere
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          <PriceDetails />
 
           <Link
             className="button button__accent"
