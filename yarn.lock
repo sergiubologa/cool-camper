@@ -2609,10 +2609,10 @@ cookie@0.3.1:
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
   integrity sha1-5+Ch+e9DtMi6klxcWpboBtFoc7s=
 
-coolcamper-common@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/coolcamper-common/-/coolcamper-common-0.1.3.tgz#db50fcd2c33234cb34a140ff7d0758fa1c83e432"
-  integrity sha512-DHuBNhas9ca4t0MNvGmvmOtSE6EuwikJTcC12HkXtgwR+Zcp7jJxO5zGlH/UaL+hB47ZIxDYgI9wEfqaPmbHqg==
+coolcamper-common@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/coolcamper-common/-/coolcamper-common-0.1.4.tgz#ee5c84a6bda88599e3329ae90ca867f7543f5130"
+  integrity sha512-1WK4zRLWcabg/K2nM2qnextEwxlXqBfLi+nJvaPm4DwgiJxAEspGlNV2dWfrUHTVHceOtLIHC3epmDLPgnFijg==
 
 copy-concurrently@^1.0.0:
   version "1.0.5"
@@ -3487,10 +3487,10 @@ escodegen@^1.11.0, escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-3.5.0.tgz#fb29575c5be7ed79c1637c5a0c58985833290805"
-  integrity sha512-LcZEoAY5lL3/H2NTFSeUl/z8X8oMea1IxLEIb5uDbRxPTdQeeT7oGpRWT6UwHXGcoRbYH0TZmfRsh8iXbpyW7A==
+eslint-config-prettier@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-3.6.0.tgz#8ca3ffac4bd6eeef623a0651f9d754900e3ec217"
+  integrity sha512-ixJ4U3uTLXwJts4rmSVW/lMXjlGwCijhBJHk8iVqKKSifeI0qgFEfWl8L63isfc8Od7EiBALF6BX3jKLluf/jQ==
   dependencies:
     get-stdin "^6.0.0"
 
@@ -6834,10 +6834,15 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
   dependencies:
     minimist "0.0.8"
 
-moment@>=1.6.0, moment@^2.23.0:
+moment@>=1.6.0:
   version "2.23.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.23.0.tgz#759ea491ac97d54bac5ad776996e2a58cc1bc225"
   integrity sha512-3IE39bHVqFbWWaPOMHZF98Q9c3LDKGTmypMiTM2QygGXXElkFWIH7GxfmlwmY2vwa+wmNsoYZmG2iusf1ZjJoA==
+
+moment@^2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -8314,10 +8319,15 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^1.14.2, prettier@^1.14.3, prettier@^1.15.3:
+prettier@^1.14.2, prettier@^1.14.3:
   version "1.15.3"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.15.3.tgz#1feaac5bdd181237b54dbe65d874e02a1472786a"
   integrity sha512-gAU9AGAPMaKb3NNSUUuhhFAS7SCO4ALTN4nRIn6PJ075Qd28Yn2Ig2ahEJWdJwJmlEBTUfC7mMUSFy8MwsOCfg==
+
+prettier@^1.16.1:
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.16.1.tgz#534c2c9d7853f8845e5e078384e71973bd74089f"
+  integrity sha512-XXUITwIkGb3CPJ2hforHah/zTINRyie5006Jd2HKy2qz7snEJXl0KLfsJZW/wst9g6R2rFvqba3VpNYdu1hDcA==
 
 pretty-bytes@^4.0.2:
   version "4.0.2"
@@ -8598,10 +8608,10 @@ react-app-polyfill@^0.2.0:
     raf "3.4.0"
     whatwg-fetch "3.0.0"
 
-react-dates@^18.4.0:
-  version "18.4.0"
-  resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-18.4.0.tgz#c74da8b6f7eb3e70ea640b3a4b0d4f152fc8d602"
-  integrity sha512-EcGS8MH2eclD4838yme4g46e1mjN7Wh4doYJn2aYT6/IKGgz1YOR4Oxd2LlEVH34CfN4DiuqYPjmwPNgvFrKWQ==
+react-dates@^18.4.1:
+  version "18.4.1"
+  resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-18.4.1.tgz#82aa0bb4faaa9cdb9547d61c791af2180beda20e"
+  integrity sha512-ew6HiORfbJkEGlJ+5SMC5GtgI87zj2BqNv8tRsdnPtgLMt5fY2Z9dUFxc+XATeRHs+wOm4ku0dlKWpuqBzYapQ==
   dependencies:
     airbnb-prop-types "^2.10.0"
     consolidated-events "^1.1.1 || ^2.0.0"

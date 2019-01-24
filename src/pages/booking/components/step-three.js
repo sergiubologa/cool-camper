@@ -196,7 +196,7 @@ export default class extends React.Component {
                   ga-event-category="Button"
                   ga-event-action="Trimite rezervarea"
                   ga-event-label="booking step 3"
-                  ga-event-value={prices.totalPriceWithDiscount}
+                  ga-event-value={Math.floor(prices.totalPriceWithDiscount)}
                 >
                   Trimite rezervarea
                 </Button>

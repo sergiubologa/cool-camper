@@ -1,6 +1,7 @@
 import React from "react";
 import TooltipIcon from "../../../components/tooltip";
 import { getPrices, prices as pricesData } from "coolcamper-common";
+import { dayOrDays } from "../../../common/utils";
 import moment from "moment";
 
 export default props => {
@@ -27,7 +28,8 @@ export default props => {
       {prices.lowSeasonDays > 0 && (
         <div className="price__details__row">
           <span>
-            {prices.lowSeasonPricePerDay}€ x {prices.lowSeasonDays} zile
+            {prices.lowSeasonPricePerDay}€ x {prices.lowSeasonDays}{" "}
+            {dayOrDays(prices.lowSeasonDays)}
           </span>
           <span>{prices.lowSeasonPrice.toLocaleString()}€</span>
         </div>
@@ -35,7 +37,8 @@ export default props => {
       {prices.highSeasonDays > 0 && (
         <div className="price__details__row">
           <span>
-            {prices.highSeasonPricePerDay}€ x {prices.highSeasonDays} zile
+            {prices.highSeasonPricePerDay}€ x {prices.highSeasonDays}{" "}
+            {dayOrDays(prices.highSeasonDays)}
             <TooltipIcon>
               <small>
                 În intervalul {highSeasonStart} &rarr; {highSeasonEnd}

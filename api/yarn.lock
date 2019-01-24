@@ -63,10 +63,10 @@ cookies@~0.7.1:
     depd "~1.1.2"
     keygrip "~1.0.3"
 
-coolcamper-common@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/coolcamper-common/-/coolcamper-common-0.1.3.tgz#db50fcd2c33234cb34a140ff7d0758fa1c83e432"
-  integrity sha512-DHuBNhas9ca4t0MNvGmvmOtSE6EuwikJTcC12HkXtgwR+Zcp7jJxO5zGlH/UaL+hB47ZIxDYgI9wEfqaPmbHqg==
+coolcamper-common@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/coolcamper-common/-/coolcamper-common-0.1.4.tgz#ee5c84a6bda88599e3329ae90ca867f7543f5130"
+  integrity sha512-1WK4zRLWcabg/K2nM2qnextEwxlXqBfLi+nJvaPm4DwgiJxAEspGlNV2dWfrUHTVHceOtLIHC3epmDLPgnFijg==
 
 copy-to@^2.0.1:
   version "2.0.1"
@@ -297,10 +297,10 @@ mime-types@^2.1.18, mime-types@~2.1.18:
   dependencies:
     mime-db "~1.37.0"
 
-moment@^2.23.0:
-  version "2.23.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.23.0.tgz#759ea491ac97d54bac5ad776996e2a58cc1bc225"
-  integrity sha512-3IE39bHVqFbWWaPOMHZF98Q9c3LDKGTmypMiTM2QygGXXElkFWIH7GxfmlwmY2vwa+wmNsoYZmG2iusf1ZjJoA==
+moment@^2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
 ms@2.0.0:
   version "2.0.0"

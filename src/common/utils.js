@@ -52,3 +52,5 @@ export const openUrlInPopup = (url, title, w, h) => {
   // Puts focus on the newWindow
   if (window.focus) newWindow.focus();
 };
+
+export const dayOrDays = number => (number === 1 ? "zi" : "zile");
