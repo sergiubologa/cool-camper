@@ -148,9 +148,9 @@ export default [
   },
   {
     question: "Am rezervat si se apropie data plecarii. Ce trebuie sa fac?",
-    answer: `Ora preluarii: zilnic incepand cu ora 14:00 (pentru ore diferite sau aranjamente speciale te rugam sa ne contactezi in avans)
+    answer: `Ora preluarii: zilnic incepand cu ora 8:00 (pentru ore diferite sau aranjamente speciale te rugam sa ne contactezi in avans)
     
-    Ora predarii: zilnic pana in ora 12.00
+    Ora predarii: zilnic pana in ora 14.00
     
     Autorulotele noastre vin echipate cu:
     - suport de biciclete (2-4 biciclete);
