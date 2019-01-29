@@ -121,6 +121,7 @@ export default class extends React.Component {
 
   onSubmit(prices) {
     this.setState({ isSubmitting: true, submitError: "" });
+    const dateFormat = "YYYY-MM-DDD";
     // call api to send the emails
     const {
       startDate,
@@ -130,7 +131,14 @@ export default class extends React.Component {
       email,
       phone
     } = this.state;
-    const data = { startDate, endDate, firstName, lastName, email, phone };
+    const data = {
+      startDate: startDate.utc(dateFormat),
+      endDate: endDate.utc(dateFormat),
+      firstName,
+      lastName,
+      email,
+      phone
+    };
     fetch("/api/booking", {
       method: "POST",
       headers: {
