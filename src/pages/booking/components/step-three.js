@@ -48,7 +48,7 @@ export default class extends React.Component {
           )}
           renderBody={() => (
             <React.Fragment>
-              <p>Benimar Tessoro 496</p>
+              <p>Benimar Tessoro 495</p>
               <p>5 locuri de dormit + 5 pe scaune</p>
               <p>
                 <strong>

@@ -13,7 +13,7 @@ export default () => (
       />
     </Helmet>
     <h3 className="app__main__title">Detalii tehnice autorulote</h3>
-    <h3 className="app__main__title">Benimar Tessoro 496</h3>
+    <h3 className="app__main__title">Benimar Tessoro 495</h3>
     <ul>
       <li>Locuri pe scaun: 5</li>
       <li>Locuri de dormit: 5</li>
@@ -21,10 +21,10 @@ export default () => (
       <li>Nr. viteze 6</li>
       <li>Combustibil Diesel</li>
       <li>Consum 11 l/100 km</li>
-      <li>Lungime 743 cm</li>
+      <li>Lungime 699 cm</li>
       <li>Latime 230 cm</li>
       <li>Inaltime 289 cm</li>
-      <li>Putere motor (cp) 130 cp</li>
+      <li>Putere motor (cp) 170 cp</li>
     </ul>
 
     <h4 style={{ marginBottom: 0 }}>Siguranta si specificatii tehnice</h4>
@@ -95,7 +95,7 @@ export default () => (
       <li>Așternuturi, perne și lenjerii de pat</li>
       <li>Prosoape de baie</li>
       <li>
-        Consumabile (hartie igienica solubila, subs chimice pentru WC-ul
+        Consumabile (hartie igienica solubila, substante chimice pentru WC-ul
         ecologic)
       </li>
       <li>Veselă, oale și tigăi pentru gătit</li>

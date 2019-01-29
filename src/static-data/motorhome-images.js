@@ -10,14 +10,14 @@ import Kitchen2 from "../assets/img/motorhome/kitchen_2.jpg";
 import Shower1 from "../assets/img/motorhome/shower_1.jpg";
 
 export default [
-  { src: Inside1, alt: "Alt text" },
-  { src: Inside2, alt: "Alt text" },
-  { src: Inside3, alt: "Alt text" },
-  { src: Inside4, alt: "Alt text" },
-  { src: Bedroom1, alt: "Alt text" },
-  { src: Bedroom2, alt: "Alt text" },
-  { src: Kitchen1, alt: "Alt text" },
-  { src: Kitchen2, alt: "Alt text" },
-  { src: Shower1, alt: "Alt text" },
-  { src: Outside, alt: "Alt text" }
+  { src: Inside1, alt: "CoolCamper - Autorulota noastra" },
+  { src: Inside2, alt: "CoolCamper - Autorulota noastra" },
+  { src: Inside3, alt: "CoolCamper - Autorulota noastra" },
+  { src: Inside4, alt: "CoolCamper - Autorulota noastra" },
+  { src: Bedroom1, alt: "CoolCamper - Autorulota noastra" },
+  { src: Bedroom2, alt: "CoolCamper - Autorulota noastra" },
+  { src: Kitchen1, alt: "CoolCamper - Autorulota noastra" },
+  { src: Kitchen2, alt: "CoolCamper - Autorulota noastra" },
+  { src: Shower1, alt: "CoolCamper - Autorulota noastra" },
+  { src: Outside, alt: "CoolCamper - Autorulota noastra" }
 ];

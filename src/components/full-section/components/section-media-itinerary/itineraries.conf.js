@@ -47,14 +47,14 @@ export default {
     flags: [Sweden, Danemark, Norway],
     ref: React.createRef(),
     images: [
-      { src: Nordics1 },
-      { src: Nordics2 },
-      { src: Nordics3 },
-      { src: Nordics4 },
-      { src: Nordics5 },
-      { src: Nordics6 },
-      { src: Nordics7 },
-      { src: Nordics8 }
+      { src: Nordics1, alt: "Itinerariu Tarile Nordice" },
+      { src: Nordics2, alt: "Itinerariu Tarile Nordice" },
+      { src: Nordics3, alt: "Itinerariu Tarile Nordice" },
+      { src: Nordics4, alt: "Itinerariu Tarile Nordice" },
+      { src: Nordics5, alt: "Itinerariu Tarile Nordice" },
+      { src: Nordics6, alt: "Itinerariu Tarile Nordice" },
+      { src: Nordics7, alt: "Itinerariu Tarile Nordice" },
+      { src: Nordics8, alt: "Itinerariu Tarile Nordice" }
     ]
   },
   Balkans: {
@@ -63,16 +63,16 @@ export default {
     flags: [Serbia, Bosnia, Croatia],
     ref: React.createRef(),
     images: [
-      { src: Balkans1 },
-      { src: Balkans2 },
-      { src: Balkans3 },
-      { src: Balkans4 },
-      { src: Balkans5 },
-      { src: Balkans6 },
-      { src: Balkans7 },
-      { src: Balkans8 },
-      { src: Balkans9 },
-      { src: Balkans10 }
+      { src: Balkans1, alt: "Itinerariu Balcani" },
+      { src: Balkans2, alt: "Itinerariu Balcani" },
+      { src: Balkans3, alt: "Itinerariu Balcani" },
+      { src: Balkans4, alt: "Itinerariu Balcani" },
+      { src: Balkans5, alt: "Itinerariu Balcani" },
+      { src: Balkans6, alt: "Itinerariu Balcani" },
+      { src: Balkans7, alt: "Itinerariu Balcani" },
+      { src: Balkans8, alt: "Itinerariu Balcani" },
+      { src: Balkans9, alt: "Itinerariu Balcani" },
+      { src: Balkans10, alt: "Itinerariu Balcani" }
     ]
   },
   WesternEurope: {
@@ -81,14 +81,14 @@ export default {
     flags: [Slovenia, Italy, France, Austria, Hungary],
     ref: React.createRef(),
     images: [
-      { src: West1 },
-      { src: West2 },
-      { src: West3 },
-      { src: West4 },
-      { src: West5 },
-      { src: West6 },
-      { src: West7 },
-      { src: West8 }
+      { src: West1, alt: "Itinerariu Vestul Europei" },
+      { src: West2, alt: "Itinerariu Vestul Europei" },
+      { src: West3, alt: "Itinerariu Vestul Europei" },
+      { src: West4, alt: "Itinerariu Vestul Europei" },
+      { src: West5, alt: "Itinerariu Vestul Europei" },
+      { src: West6, alt: "Itinerariu Vestul Europei" },
+      { src: West7, alt: "Itinerariu Vestul Europei" },
+      { src: West8, alt: "Itinerariu Vestul Europei" }
     ]
   }
 };
