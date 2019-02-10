@@ -1,12 +1,10 @@
 /**
  * Polyfills
  */
-import "@babel/polyfill";
-import "raf/polyfill"; // Source: https://github.com/chrisdickinson/raf
-import smoothscroll from "smoothscroll-polyfill"; // Source: https://github.com/iamdustan/smoothscroll
+import { smoothscroll } from "./polyfills";
 
 import React from "react";
-import ReactDOM from "react-dom";
+import { hydrate, render } from "react-dom";
 import "normalize.css";
 import "./styles/evie-theme.css";
 import Home from "./pages/home";
@@ -31,7 +29,7 @@ if (process.env.NODE_ENV !== "production") {
 // Run polyfills
 smoothscroll.polyfill();
 
-ReactDOM.render(
+const App = () => (
   <Router>
     <ScrollToTop>
       <Switch>
@@ -48,9 +46,15 @@ ReactDOM.render(
         <Route component={NotFound} />
       </Switch>
     </ScrollToTop>
-  </Router>,
-  document.getElementById("root")
+  </Router>
 );
+
+const rootElement = document.getElementById("root");
+if (rootElement.hasChildNodes()) {
+  hydrate(<App />, rootElement);
+} else {
+  render(<App />, rootElement);
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

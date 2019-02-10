@@ -26,7 +26,7 @@
   "scripts": {
     "start": "react-scripts start",
     "start-dev": "concurrently \"yarn start\" \"cd api && cross-env PORT=3001 yarn start\"",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-snap",
     "now-build": "npm run build && mv build dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -48,7 +48,8 @@
     "husky": "^1.3.1",
     "lint-staged": "^8.1.0",
     "prettier": "^1.16.1",
-    "pretty-quick": "^1.10.0"
+    "pretty-quick": "^1.10.0",
+    "react-snap": "^1.23.0"
   },
   "husky": {
     "hooks": {

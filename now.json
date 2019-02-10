@@ -31,6 +31,10 @@
       "dest": "/service-worker.js"
     },
     { "src": "^/precache-manifest.(.*)", "dest": "/precache-manifest.$1" },
+    {
+      "src": "^/(rezervare-autorulota|detalii-tehnice-autorulota|anulare-rezervare|politica-de-confidentialitate|termeni-si-conditii|politica-de-cookies)$",
+      "dest": "/$1/index.html"
+    },
     { "src": "^/(.*)", "dest": "/index.html" }
   ],
   "env": {
