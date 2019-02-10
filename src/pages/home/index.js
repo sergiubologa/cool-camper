@@ -85,7 +85,7 @@ class Home extends Component {
             </Step>
             <Step>
               <StepMedia src={Support} />
-              <h4>Suport 24/7</h4>
+              <h4>Asistență 24/7</h4>
               <StepText>
                 Ne poți contacta 24/7 pentru a ne cere ajutorul cu absolut orice
                 problemă întâmpini. Prin telefon, email sau videoconferință.
@@ -128,9 +128,9 @@ class Home extends Component {
             Autorulotele noastre
           </SectionTitle>
           <SectionText style={{ marginTop: 0 }}>
-            Autorulotele noastre sunt modele noi din anul 2019. Știm cât de mult
-            contează să te simți în siguranță, astfel în fiecare an ne reînoim
-            flota pentru a avea mereu autorulote moderne. Vezi{" "}
+            Autorulotele noastre sunt modele noi din anul 2018 sau mai noi. Știm
+            cât de mult contează să te simți în siguranță, astfel în fiecare an
+            ne reînoim flota pentru a avea mereu autorulote moderne. Vezi{" "}
             <Link
               to="/detalii-tehnice-autorulota"
               className="link"

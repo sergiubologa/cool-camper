@@ -63,7 +63,7 @@ export default props => (
                 >
                   asigurările
                 </a>{" "}
-                de care ai putea să ai nevoie.
+                de care ai nevoie.
               </p>
               <Link
                 to="/rezervare-autorulota"
