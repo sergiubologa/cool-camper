@@ -4,38 +4,38 @@
   "alias": ["coolcamper.ro"],
   "builds": [
     { "src": "api/index.js", "use": "@now/node-server" },
-    { "src": "build/**/*", "use": "@now/static" }
+    { "src": "./build/**", "use": "@now/static" }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api" },
-    { "src": "^/static/(.*)", "dest": "/static/$1" },
-    { "src": "^/robots.txt", "dest": "/robots.txt" },
-    { "src": "^/sitemap.xml", "dest": "/sitemap.xml" },
-    { "src": "^/favicon.ico", "dest": "/favicon.ico" },
-    { "src": "^/og-image.jpg", "dest": "/og-image.jpg" },
-    { "src": "^/apple-touch-icon.png", "dest": "/apple-touch-icon.png" },
-    { "src": "^/favicon-32x32.png", "dest": "/favicon-32x32.png" },
-    { "src": "^/favicon-16x16.png", "dest": "/favicon-16x16.png" },
-    { "src": "^/site.webmanifest", "dest": "/site.webmanifest" },
-    { "src": "^/safari-pinned-tab.svg", "dest": "/safari-pinned-tab.svg" },
-    { "src": "^/manifest.json", "dest": "/manifest.json" },
+    { "src": "^/static/(.*)", "dest": "build/static/$1" },
+    { "src": "^/robots.txt", "dest": "build/robots.txt" },
+    { "src": "^/sitemap.xml", "dest": "build/sitemap.xml" },
+    { "src": "^/favicon.ico", "dest": "build/favicon.ico" },
+    { "src": "^/og-image.jpg", "dest": "build/og-image.jpg" },
+    { "src": "^/apple-touch-icon.png", "dest": "build/apple-touch-icon.png" },
+    { "src": "^/favicon-32x32.png", "dest": "build/favicon-32x32.png" },
+    { "src": "^/favicon-16x16.png", "dest": "build/favicon-16x16.png" },
+    { "src": "^/site.webmanifest", "dest": "build/site.webmanifest" },
+    { "src": "^/safari-pinned-tab.svg", "dest": "build/safari-pinned-tab.svg" },
+    { "src": "^/manifest.json", "dest": "build/manifest.json" },
     {
       "src": "/googlee097d0a204b5af8e.html",
-      "dest": "/googlee097d0a204b5af8e.html"
+      "dest": "build/googlee097d0a204b5af8e.html"
     },
-    { "src": "^/asset-manifest.json", "dest": "/asset-manifest.json" },
-    { "src": "^/manifest.json", "dest": "/manifest.json" },
+    { "src": "^/asset-manifest.json", "dest": "build/asset-manifest.json" },
+    { "src": "^/manifest.json", "dest": "build/manifest.json" },
     {
       "src": "^/service-worker.js",
       "headers": { "cache-control": "s-maxage=0" },
-      "dest": "/service-worker.js"
+      "dest": "build/service-worker.js"
     },
-    { "src": "^/precache-manifest.(.*)", "dest": "/precache-manifest.$1" },
+    { "src": "^/precache-manifest.(.*)", "dest": "build/precache-manifest.$1" },
     {
       "src": "^/(rezervare-autorulota|detalii-tehnice-autorulota|anulare-rezervare|politica-de-confidentialitate|termeni-si-conditii|politica-de-cookies)$",
-      "dest": "/$1/index.html"
+      "dest": "build/$1/index.html"
     },
-    { "src": "^/(.*)", "dest": "/index.html" }
+    { "src": "^/(.*)", "dest": "build/index.html" }
   ],
   "env": {
     "AUTOMATION_EMAIL_ADDRESS": "@automation-email-address",
