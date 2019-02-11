@@ -1,4 +1,4 @@
-/node_modules
+**/node_modules
 /public
 /src
 /out
@@ -10,7 +10,7 @@
 .git
 .cache
 .eslintrc
-./package.json
-./yarn.lock
+/package.json
+/yarn.lock
 package-lock.json
 README.md
