@@ -10,7 +10,6 @@
 .git
 .cache
 .eslintrc
-package.json
 yarn.lock
 package-lock.json
 README.md
