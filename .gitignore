@@ -8,8 +8,8 @@
 # testing
 /coverage
 
-# production
-/build
+# production - build folder needs to be tracked for the deploy to Now
+# /build
 
 # misc
 .DS_Store
