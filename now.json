@@ -11,7 +11,11 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api" },
-    { "src": "^/static/(.*)", "dest": "build/static/$1" },
+    {
+      "src": "^/static/(.*)",
+      "dest": "build/static/$1",
+      "headers": { "cache-control": "max-age=31536000" }
+    },
     { "src": "^/robots.txt", "dest": "build/robots.txt" },
     { "src": "^/sitemap.xml", "dest": "build/sitemap.xml" },
     { "src": "^/favicon.ico", "dest": "build/favicon.ico" },
@@ -38,7 +42,7 @@
       "src": "^/(rezervare-autorulota|detalii-tehnice-autorulota|anulare-rezervare|politica-de-confidentialitate|termeni-si-conditii|politica-de-cookies)$",
       "dest": "build/$1/index.html"
     },
-    { "src": "^/", "dest": "build/index.html" },
+    { "src": "^/$", "dest": "build/index.html" },
     { "src": "^/(.*)", "dest": "build/404.html" }
   ],
   "env": {
