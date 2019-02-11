@@ -1,11 +1,16 @@
 /node_modules
+/public
+/src
 /out
 /dist
 /coverage
 .gitignore
+.nowignore
+.prettierignore
 .git
 .cache
 .eslintrc
+package.json
 yarn.lock
 package-lock.json
 README.md
