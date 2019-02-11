@@ -14,7 +14,9 @@
     {
       "src": "^/static/(.*)",
       "dest": "build/static/$1",
-      "headers": { "cache-control": "s-maxage=31536000, maxage=31536000" }
+      "headers": {
+        "cache-control": "s-maxage=31536000,maxage=31536000,immutable"
+      }
     },
     { "src": "^/robots.txt", "dest": "build/robots.txt" },
     { "src": "^/sitemap.xml", "dest": "build/sitemap.xml" },
