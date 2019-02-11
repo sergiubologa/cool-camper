@@ -38,7 +38,8 @@
       "src": "^/(rezervare-autorulota|detalii-tehnice-autorulota|anulare-rezervare|politica-de-confidentialitate|termeni-si-conditii|politica-de-cookies)$",
       "dest": "build/$1/index.html"
     },
-    { "src": "^/(.*)", "dest": "build/index.html" }
+    { "src": "^/", "dest": "build/index.html" },
+    { "src": "^/(.*)", "dest": "build/404.html" }
   ],
   "env": {
     "AUTOMATION_EMAIL_ADDRESS": "@automation-email-address",
