@@ -199,8 +199,8 @@ a {
   align-items: center;
   padding: 6pt 20pt;
   line-height: 1.9;
-  border: 1px solid #6c63ff;
-  color: #6c63ff;
+  border: 1px solid #631ce9;
+  color: #631ce9;
   font-weight: 400;
   white-space: nowrap;
   cursor: pointer;
@@ -231,8 +231,8 @@ button:focus,
 }
 
 .button__primary {
-  background-color: #6c63ff;
-  border-color: #6c63ff;
+  background-color: #631ce9;
+  border-color: #631ce9;
   color: #fff;
 }
 @media (min-width: 992px) {
@@ -1953,7 +1953,7 @@ label.success {
 }
 .itinerary__button.selected,
 .itinerary__button:hover {
-  background-color: #6c63ff;
+  background-color: #631ce9;
   color: #fff;
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);

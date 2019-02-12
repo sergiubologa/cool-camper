@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/Kotor_Muntenegru_1.1b3ec5b0.jpg"
   },
   {
-    "revision": "52937bdc4d735d24f369",
-    "url": "/static/css/main.9104a52f.chunk.css"
+    "revision": "56509cd0147e3a4307b9",
+    "url": "/static/css/main.c0af456f.chunk.css"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
@@ -132,8 +132,8 @@ self.__precacheManifest = [
     "url": "/static/media/Dubrovnik_Crotia_6.0e8916c4.jpg"
   },
   {
-    "revision": "52937bdc4d735d24f369",
-    "url": "/static/js/main.52937bdc.chunk.js"
+    "revision": "56509cd0147e3a4307b9",
+    "url": "/static/js/main.56509cd0.chunk.js"
   },
   {
     "revision": "986514ff587a4c4a73b8b84adcb7564e",
@@ -260,7 +260,7 @@ self.__precacheManifest = [
     "url": "/static/css/2.c95f5f44.chunk.css"
   },
   {
-    "revision": "ba80db9d1325d667c13d3835ceec18f9",
+    "revision": "3ed1835735bf8475e90b06b74e9915bc",
     "url": "/index.html"
   }
 ];
