@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/Kotor_Muntenegru_1.1b3ec5b0.jpg"
   },
   {
-    "revision": "56509cd0147e3a4307b9",
+    "revision": "4208df983b4fa5ddc30c",
     "url": "/static/css/main.c0af456f.chunk.css"
   },
   {
@@ -132,8 +132,8 @@ self.__precacheManifest = [
     "url": "/static/media/Dubrovnik_Crotia_6.0e8916c4.jpg"
   },
   {
-    "revision": "56509cd0147e3a4307b9",
-    "url": "/static/js/main.56509cd0.chunk.js"
+    "revision": "4208df983b4fa5ddc30c",
+    "url": "/static/js/main.4208df98.chunk.js"
   },
   {
     "revision": "986514ff587a4c4a73b8b84adcb7564e",
@@ -248,19 +248,19 @@ self.__precacheManifest = [
     "url": "/static/media/slick.ced611da.eot"
   },
   {
-    "revision": "d41f55a78e6f49a5512878df1737e58a",
-    "url": "/static/media/slick.d41f55a7.ttf"
-  },
-  {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
     "url": "/static/media/slick.b7c9e1e4.woff"
+  },
+  {
+    "revision": "d41f55a78e6f49a5512878df1737e58a",
+    "url": "/static/media/slick.d41f55a7.ttf"
   },
   {
     "revision": "d4b55a95037afd625073",
     "url": "/static/css/2.c95f5f44.chunk.css"
   },
   {
-    "revision": "3ed1835735bf8475e90b06b74e9915bc",
+    "revision": "ee7d55f9bf15bfda88d80b47a55bad94",
     "url": "/index.html"
   }
 ];
