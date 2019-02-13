@@ -10,6 +10,7 @@ import {
 import { DateRangePickerPhrases } from "react-dates/lib/defaultPhrases";
 import PriceDetails from "./price-details";
 import { getNoOfDays } from "coolcamper-common";
+import { isSSR } from "../../../common/utils";
 
 export const Name = "Alege perioada";
 export default class extends React.Component {
@@ -40,30 +41,34 @@ export default class extends React.Component {
           <label htmlFor="your_unique_start_date_id">De la</label>
           <label htmlFor="your_unique_end_date_id">Până la</label>
         </div>
-        <DateRangePicker
-          startDate={startDate}
-          startDateId="your_unique_start_date_id"
-          endDate={endDate}
-          endDateId="your_unique_end_date_id"
-          startDatePlaceholderText="mm/dd/yyyy"
-          endDatePlaceholderText="mm/dd/yyyy"
-          readOnly
-          required
-          showClearDates={!isMobile}
-          noBorder
-          withFullScreenPortal={isMobile}
-          disableScroll={isMobile}
-          firstDayOfWeek={1}
-          minimumNights={3}
-          displayFormat={dateFormat}
-          orientation={datePickerOrientation}
-          onDatesChange={onDatesChange}
-          focusedInput={this.state.focusedInput}
-          onFocusChange={focusedInput => this.setState({ focusedInput })}
-          phrases={{
-            ...DateRangePickerPhrases
-          }}
-        />
+
+        {!isSSR() && (
+          <DateRangePicker
+            startDate={startDate}
+            startDateId="your_unique_start_date_id"
+            endDate={endDate}
+            endDateId="your_unique_end_date_id"
+            startDatePlaceholderText="mm/dd/yyyy"
+            endDatePlaceholderText="mm/dd/yyyy"
+            readOnly
+            required
+            showClearDates={!isMobile}
+            noBorder
+            withFullScreenPortal={isMobile}
+            disableScroll={isMobile}
+            firstDayOfWeek={1}
+            minimumNights={3}
+            displayFormat={dateFormat}
+            orientation={datePickerOrientation}
+            onDatesChange={onDatesChange}
+            focusedInput={this.state.focusedInput}
+            onFocusChange={focusedInput => this.setState({ focusedInput })}
+            phrases={{
+              ...DateRangePickerPhrases
+            }}
+          />
+        )}
+
         {error && noOfDays <= 0 && (
           <div className="step__one__labels">
             <small className="error step__one__error">{error}</small>

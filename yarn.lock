@@ -8763,10 +8763,10 @@ react-app-polyfill@^0.2.1:
     raf "3.4.1"
     whatwg-fetch "3.0.0"
 
-react-dates@^18.4.1:
-  version "18.5.0"
-  resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-18.5.0.tgz#31cc8ab01b2cc546b938e198fd8d4316878f5717"
-  integrity sha512-5zWR3+ekkRzf740omDkO+N0JifsGGOeyvWwQ/7dFxSb2CqHUsOfKgvpXOiwd3hBm4yr+lelESI3b458BEOU5og==
+react-dates@^19.0.3:
+  version "19.0.3"
+  resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-19.0.3.tgz#5435e1148f03068aa9b9c2eeeace9b6f3b71fb86"
+  integrity sha512-JMaUfsM42UH2BScMpJ7eCeuKw47VOxv4IZuJj2gWdaSGRJYnDhjLyD3eUIDcDGAkSY/VeE+0Emjyq6MdGnMzng==
   dependencies:
     airbnb-prop-types "^2.10.0"
     consolidated-events "^1.1.1 || ^2.0.0"

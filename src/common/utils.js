@@ -54,3 +54,5 @@ export const openUrlInPopup = (url, title, w, h) => {
 };
 
 export const dayOrDays = number => (number === 1 ? "zi" : "zile");
+
+export const isSSR = () => !navigator || navigator.userAgent === "ReactSnap";
