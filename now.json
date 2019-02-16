@@ -15,7 +15,7 @@
       "src": "^/static/(.*)",
       "dest": "build/static/$1",
       "headers": {
-        "cache-control": "s-maxage=31536000,maxage=31536000,immutable"
+        "cache-control": "max-age=315360000"
       }
     },
     { "src": "^/robots.txt", "dest": "build/robots.txt" },
