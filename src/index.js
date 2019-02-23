@@ -5,16 +5,9 @@ import { smoothscroll } from "./polyfills";
 
 import React from "react";
 import { hydrate, render } from "react-dom";
+import Loadable from "react-loadable";
 import "normalize.css";
 import "./styles/evie-theme.css";
-import Home from "./pages/home";
-import Booking from "./pages/booking";
-import TermsAndConditions from "./pages/terms";
-import Cookies from "./pages/cookies";
-import PrivacyPolicy from "./pages/privacy";
-import CancelBooking from "./pages/cancel-booking";
-import TechDetails from "./pages/technical-details";
-import NotFound from "./pages/not-found";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ScrollToTop from "./components/scroll-to-top";
@@ -29,21 +22,37 @@ if (process.env.NODE_ENV !== "production") {
 // Run polyfills
 smoothscroll.polyfill();
 
+const loadable = loader =>
+  Loadable({
+    loader,
+    loading: () => <div>loading...</div>
+  });
+const AsyncHome = loadable(() => import("./pages/home"));
+const AsyncBooking = loadable(() => import("./pages/booking"));
+const AsyncTerms = loadable(() => import("./pages/terms"));
+const AsyncCookies = loadable(() => import("./pages/cookies"));
+const AsyncPrivacy = loadable(() => import("./pages/privacy"));
+const AsyncCancelBooking = loadable(() => import("./pages/cancel-booking"));
+const AsyncTechnicalDetails = loadable(() =>
+  import("./pages/technical-details")
+);
+const AsyncNotFound = loadable(() => import("./pages/not-found"));
+
 const App = () => (
   <Router>
     <ScrollToTop>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/rezervare-autorulota" component={Booking} />
-        <Route path="/anulare-rezervare" component={CancelBooking} />
-        <Route path="/termeni-si-conditii" component={TermsAndConditions} />
-        <Route path="/politica-de-cookies" component={Cookies} />
-        <Route path="/detalii-tehnice-autorulota" component={TechDetails} />
+        <Route exact path="/" component={AsyncHome} />
+        <Route path="/rezervare-autorulota" component={AsyncBooking} />
+        <Route path="/anulare-rezervare" component={AsyncCancelBooking} />
+        <Route path="/termeni-si-conditii" component={AsyncTerms} />
+        <Route path="/politica-de-cookies" component={AsyncCookies} />
         <Route
-          path="/politica-de-confidentialitate"
-          component={PrivacyPolicy}
+          path="/detalii-tehnice-autorulota"
+          component={AsyncTechnicalDetails}
         />
-        <Route component={NotFound} />
+        <Route path="/politica-de-confidentialitate" component={AsyncPrivacy} />
+        <Route component={AsyncNotFound} />
       </Switch>
     </ScrollToTop>
   </Router>
@@ -51,7 +60,9 @@ const App = () => (
 
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-  hydrate(<App />, rootElement);
+  Loadable.preloadReady().then(() => {
+    hydrate(<App />, rootElement);
+  });
 } else {
   render(<App />, rootElement);
 }
