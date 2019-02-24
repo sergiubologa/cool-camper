@@ -633,6 +633,9 @@ select::-ms-expand {
   align-items: flex-start;
   line-height: 1.8;
 }
+.icon__label.small {
+  line-height: 1;
+}
 .icon__label > div:first-child,
 .icon__label > svg:first-child {
   margin-right: 10px;

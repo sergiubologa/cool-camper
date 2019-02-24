@@ -122,6 +122,11 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 
 .step__one {
+  display: flex;
+}
+
+.step__one__left {
+  margin: 30px 40px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,7 +139,7 @@ ol.progtrckr li.progtrckr-done:hover:before {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .step__one__labels {
   width: 100%;
@@ -148,6 +153,29 @@ ol.progtrckr li.progtrckr-done:hover:before {
 .step__one__labels label {
   padding: 0;
   font-size: 1.1em;
+}
+.step__one__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.step__one__right img {
+  max-width: 20%;
+}
+.step__one__benefits_labels {
+  display: flex;
+  margin-left: 50px;
+}
+@media (max-width: 1024px) {
+  .step__one {
+    flex-direction: column;
+  }
+  .step__one__left {
+    margin-right: 0;
+  }
+  .step__one__right {
+    display: none;
+  }
 }
 
 .price__details {
@@ -196,6 +224,10 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 .price__details__tooltip .price__details__row {
   padding: 0;
+}
+.price__details__notes {
+  display: flex;
+  margin-bottom: 10px;
 }
 
 .step__two {
