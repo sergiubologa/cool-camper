@@ -4,20 +4,20 @@ self.__precacheManifest = [
     "url": "/static/media/Kotor_Muntenegru_1.1b3ec5b0.jpg"
   },
   {
-    "revision": "94dd53c28ae0fb7b65c0",
-    "url": "/static/css/main.c0af456f.chunk.css"
+    "revision": "b211d2447056b60d4096",
+    "url": "/static/css/main.1d4b6c08.chunk.css"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
     "url": "/static/js/runtime~main.fdfcfda2.js"
   },
   {
-    "revision": "f97e3bbf73254b0112091d0192f17aec",
-    "url": "/static/media/slick.f97e3bbf.svg"
+    "revision": "d41f55a78e6f49a5512878df1737e58a",
+    "url": "/static/media/slick.d41f55a7.ttf"
   },
   {
-    "revision": "4328f0856d8accf3970c",
-    "url": "/static/js/2.4328f085.chunk.js"
+    "revision": "26fb4d76bb0c12b28091",
+    "url": "/static/js/2.26fb4d76.chunk.js"
   },
   {
     "revision": "9c36d4bbffa563d817ff574aed8f41a2",
@@ -132,8 +132,8 @@ self.__precacheManifest = [
     "url": "/static/media/Dubrovnik_Crotia_6.0e8916c4.jpg"
   },
   {
-    "revision": "94dd53c28ae0fb7b65c0",
-    "url": "/static/js/main.94dd53c2.chunk.js"
+    "revision": "b211d2447056b60d4096",
+    "url": "/static/js/main.b211d244.chunk.js"
   },
   {
     "revision": "986514ff587a4c4a73b8b84adcb7564e",
@@ -228,6 +228,10 @@ self.__precacheManifest = [
     "url": "/static/media/shower_1.a37fce5e.jpg"
   },
   {
+    "revision": "c32552a8a4a6fed9e3fbf24948985dd3",
+    "url": "/static/media/gift.c32552a8.svg"
+  },
+  {
     "revision": "194939399bc0f3bfb15d47288c3c2855",
     "url": "/static/media/secure-data.19493939.svg"
   },
@@ -244,23 +248,23 @@ self.__precacheManifest = [
     "url": "/static/media/motorhome-background-big.144c7469.jpg"
   },
   {
-    "revision": "ced611daf7709cc778da928fec876475",
-    "url": "/static/media/slick.ced611da.eot"
-  },
-  {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
     "url": "/static/media/slick.b7c9e1e4.woff"
   },
   {
-    "revision": "d41f55a78e6f49a5512878df1737e58a",
-    "url": "/static/media/slick.d41f55a7.ttf"
+    "revision": "ced611daf7709cc778da928fec876475",
+    "url": "/static/media/slick.ced611da.eot"
   },
   {
-    "revision": "4328f0856d8accf3970c",
-    "url": "/static/css/2.c95f5f44.chunk.css"
+    "revision": "f97e3bbf73254b0112091d0192f17aec",
+    "url": "/static/media/slick.f97e3bbf.svg"
   },
   {
-    "revision": "aa801962e71e04bb0e2d685227c64a5a",
+    "revision": "26fb4d76bb0c12b28091",
+    "url": "/static/css/2.71f47c28.chunk.css"
+  },
+  {
+    "revision": "a2029a6b56366cbf7d6f738544439c6d",
     "url": "/index.html"
   }
 ];
