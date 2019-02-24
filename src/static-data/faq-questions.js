@@ -1,3 +1,5 @@
+import { prices } from "coolcamper-common";
+
 export default [
   {
     question: "Pot conduce autorulotele CoolCamper cu permis cat. B?",
@@ -120,8 +122,10 @@ export default [
   },
   {
     question: "Care este garantia perceputa?",
-    answer: `CoolCamper nu percepe nici o garantie. 
-    Totusi trebuie sa stii ca in caz de accident vom fi nevoiti sa iti refacturam costurile reparatiilor sau fransiza de 500 Eur.`
+    answer: `CoolCamper percepe o garanție de ${
+      prices.deposit
+    } de euro la preluarea autorulotei, sumă ce va fi înapoiată integral la predarea acesteia în aceași stare în care a fost preluată. 
+    Trebuie să știi că în caz de accident sau alte pagube vom fi nevoiți să îți reținem costurile reparațiilor sau fransiza CASCO de 500 de euro.`
   },
   {
     question: "As dori sa vad autorulotele inainte de rezervare. Se poate?",

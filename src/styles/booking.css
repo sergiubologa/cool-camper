@@ -197,6 +197,10 @@ ol.progtrckr li.progtrckr-done:hover:before {
 .price__details__tooltip .price__details__row {
   padding: 0;
 }
+.price__details__notes {
+  display: flex;
+  margin-bottom: 10px;
+}
 
 .step__two {
   display: -webkit-box;

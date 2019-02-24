@@ -136,11 +136,20 @@ export default class extends React.Component {
                   <p>
                     <strong>Modalitate de plată</strong>
                   </p>
-                  <small>Prin transfer bancar</small>
+                  <small>
+                    Prin transfer bancar, la cursul BNR din ziua facturării
+                  </small>
                   <small>Avans: 30% în max. 2 zile după rezervare</small>
                   <small>Restul de 70%: cu 15 zile înainte de plecare</small>
                 </div>
                 <div className="step__three__card__paymentMethods--right">
+                  <p>
+                    <strong>Garanție</strong>
+                  </p>
+                  <small>
+                    Garanția returnabilă de {prices.deposit} de euro se plătește
+                    în numerar (cash) la preluarea autorulotei.
+                  </small>
                   <p>
                     <strong>Anulare gratuită</strong>
                   </p>

@@ -63,10 +63,10 @@ cookies@~0.7.1:
     depd "~1.1.2"
     keygrip "~1.0.3"
 
-coolcamper-common@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/coolcamper-common/-/coolcamper-common-0.1.4.tgz#ee5c84a6bda88599e3329ae90ca867f7543f5130"
-  integrity sha512-1WK4zRLWcabg/K2nM2qnextEwxlXqBfLi+nJvaPm4DwgiJxAEspGlNV2dWfrUHTVHceOtLIHC3epmDLPgnFijg==
+coolcamper-common@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/coolcamper-common/-/coolcamper-common-0.2.0.tgz#09452533297ac486ad384ae24b9f8b19b7f5d8ec"
+  integrity sha512-ZSwXyM3M1Ms9NB9PVejMaYXrKjipe7Mrtc8APKsxQw/Opto8xGXWN45wQdKfgZ9+xxtlN6SQT9aXhxApUBbYHQ==
 
 copy-to@^2.0.1:
   version "2.0.1"
@@ -245,7 +245,7 @@ koa-router@^7.4.0:
     path-to-regexp "^1.1.1"
     urijs "^1.19.0"
 
-koa@^2.6.2:
+koa@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/koa/-/koa-2.7.0.tgz#7e00843506942b9d82c6cc33749f657c6e5e7adf"
   integrity sha512-7ojD05s2Q+hFudF8tDLZ1CpCdVZw8JQELWSkcfG9bdtoTDzMmkRF6BQBU7JzIzCCOY3xd3tftiy/loHBUYaY2Q==

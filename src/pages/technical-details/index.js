@@ -2,6 +2,7 @@ import React from "react";
 import LegalLeftNavLayout from "../layouts/legal-left-navigation";
 import Helmet from "react-helmet";
 import { Link } from "react-router-dom";
+import { prices } from "coolcamper-common";
 
 export default () => (
   <LegalLeftNavLayout>
@@ -114,7 +115,9 @@ export default () => (
     </ul>
 
     <h4>Fara taxa de igienizare si consumabile</h4>
-    <h4 style={{ marginTop: 0 }}>Fara garantie</h4>
+    <h4 style={{ marginTop: 0 }}>
+      Garantie returnabila de {prices.deposit} de euro
+    </h4>
 
     <br />
     <Link
