@@ -60,7 +60,7 @@ export default class extends React.Component {
               withFullScreenPortal={isMobile}
               disableScroll={isMobile}
               firstDayOfWeek={1}
-              minimumNights={3}
+              minimumNights={2}
               displayFormat={dateFormat}
               orientation={datePickerOrientation}
               onDatesChange={onDatesChange}

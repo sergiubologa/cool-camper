@@ -27,10 +27,10 @@ export default props => (
                   }}
                   ga-on="click,auxclick,contextmenu"
                   ga-event-category="Link"
-                  ga-event-action="autorulotă modernă"
+                  ga-event-action="autorulotă nouă"
                   ga-event-label="page header"
                 >
-                  autorulotă modernă
+                  autorulotă nouă
                 </a>
                 , un{" "}
                 <a
