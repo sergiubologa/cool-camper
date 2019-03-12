@@ -1,32 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./itinerary-header";
 import SectionMediaSlider from "../section-media-slider";
 import itineraries from "./itineraries.conf";
 
-export default class extends React.Component {
-  constructor(props) {
-    super(props);
-    this.onItineraryClick = this.onItineraryClick.bind(this);
-    this.state = {
-      selectedItinerary: itineraries.Nordics.name
-    };
-  }
+export default () => {
+  const [itinerary, setItinerary] = useState(itineraries.Nordics.name);
+  const images = Object.values(itineraries).find(it => it.name === itinerary)
+    .images;
 
-  onItineraryClick(itineraryName) {
-    this.setState({
-      selectedItinerary: itineraryName
-    });
-  }
-
-  render() {
-    const { selectedItinerary: itinerary } = this.state;
-    const images = Object.values(itineraries).find(it => it.name === itinerary)
-      .images;
-    return (
-      <SectionMediaSlider
-        images={images}
-        header={<Header onItineraryClick={this.onItineraryClick} />}
-      />
-    );
-  }
-}
+  return (
+    <SectionMediaSlider
+      images={images}
+      header={<Header onItineraryClick={name => setItinerary(name)} />}
+    />
+  );
+};

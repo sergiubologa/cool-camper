@@ -1,43 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../../inputs/button";
 
-export default class extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleMoreInfoClick = this.handleMoreInfoClick.bind(this);
-
-    this.state = {
-      moreInfoExpanded: false
-    };
+export default props => {
+  const [moreInfoExpanded, setMoreInfoState] = useState(false);
+  const { text, children } = props;
+  const contentClasses = ["steps__more__info__content"];
+  if (moreInfoExpanded) {
+    contentClasses.push("content__expanded");
   }
 
-  handleMoreInfoClick() {
-    this.setState({
-      moreInfoExpanded: !this.state.moreInfoExpanded
-    });
-  }
-
-  render() {
-    const { text, children } = this.props;
-    const { moreInfoExpanded } = this.state;
-    const contentClasses = ["steps__more__info__content"];
-    if (moreInfoExpanded) {
-      contentClasses.push("content__expanded");
-    }
-
-    return (
-      <div className="container steps__more__info">
-        <div className={contentClasses.join(" ")}>{children}</div>
-        <Button
-          onClick={this.handleMoreInfoClick}
-          ga-on="click"
-          ga-event-category="Button"
-          ga-event-action={text + (moreInfoExpanded ? " -" : " +")}
-          ga-event-label="why us"
-        >
-          <span>{moreInfoExpanded ? "-" : "+"}</span> {text}
-        </Button>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="container steps__more__info">
+      <div className={contentClasses.join(" ")}>{children}</div>
+      <Button
+        onClick={() => setMoreInfoState(!moreInfoExpanded)}
+        ga-on="click"
+        ga-event-category="Button"
+        ga-event-action={text + (moreInfoExpanded ? " -" : " +")}
+        ga-event-label="why us"
+      >
+        <span>{moreInfoExpanded ? "-" : "+"}</span> {text}
+      </Button>
+    </div>
+  );
+};

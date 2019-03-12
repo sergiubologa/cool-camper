@@ -50,10 +50,13 @@ class Home extends Component {
     return (
       <TransparentNavbarLayout>
         <Helmet>
-          <title>CoolCamper - Autorulote de inchiriat in Cluj-Napoca</title>
+          <title>
+            {"🌟"} CoolCamper - Inchirieri Autorulote, Autorulote de Inchiriat{" "}
+            {"🚐"} | Cluj-Napoca
+          </title>
           <meta
             name="description"
-            content="Autorulotele noastre sunt modele 2019, cu 5 locuri de dormit si cu toate dotarile necesare. Punctul de ridicare este Cluj-Napoca. Intra acum!"
+            content="Autorulotele CoolCamper sunt modele 2019, cu 5 locuri de dormit si cu toate dotarile necesare. Inchiriere din Cluj-Napoca. Intra acum!"
           />
         </Helmet>
         <Hero withSub />
