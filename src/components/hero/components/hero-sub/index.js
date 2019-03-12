@@ -6,44 +6,37 @@ import {
   smoothScrollToSelector
 } from "../../../../common/utils";
 
-export default class HeroSub extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleScroll = this.handleScroll.bind(this);
-    this.onSubClick = this.onSubClick.bind(this);
-    this.heroSubRef = React.createRef();
-  }
+export default props => {
+  const heroSubRef = React.createRef();
 
-  handleScroll() {
+  const handleScroll = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > 20) {
-      this.heroSubRef.current.classList.add("invisible");
-    } else if (refHasClassName(this.heroSubRef, "invisible")) {
-      this.heroSubRef.current.classList.remove("invisible");
+      heroSubRef.current.classList.add("invisible");
+    } else if (refHasClassName(heroSubRef, "invisible")) {
+      heroSubRef.current.classList.remove("invisible");
     }
-  }
+  };
 
-  onSubClick() {
-    const { scrollTo } = this.props;
+  const onSubClick = () => {
+    const { scrollTo } = props;
     if (scrollTo) smoothScrollToSelector(scrollTo, 20);
-  }
+  };
 
-  render() {
-    return (
-      <ScrollListener onScroll={this.handleScroll}>
-        <div className="hero__sub">
-          <span
-            ref={this.heroSubRef}
-            onClick={this.onSubClick}
-            ga-on="click"
-            ga-event-category="Icon"
-            ga-event-action="scoll to de ce CoolCamper"
-            ga-event-label="Page header - Hero sub"
-          >
-            <Caret className="hero__sub__down" />
-          </span>
-        </div>
-      </ScrollListener>
-    );
-  }
-}
+  return (
+    <ScrollListener onScroll={handleScroll}>
+      <div className="hero__sub">
+        <span
+          ref={heroSubRef}
+          onClick={onSubClick}
+          ga-on="click"
+          ga-event-category="Icon"
+          ga-event-action="scoll to de ce CoolCamper"
+          ga-event-label="Page header - Hero sub"
+        >
+          <Caret className="hero__sub__down" />
+        </span>
+      </div>
+    </ScrollListener>
+  );
+};

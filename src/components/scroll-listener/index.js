@@ -1,15 +1,10 @@
-import React from "react";
+import { useEffect } from "react";
 
-export default class ScrollListener extends React.Component {
-  componentDidMount() {
-    window.addEventListener("scroll", this.props.onScroll);
-  }
+export default props => {
+  useEffect(() => {
+    window.addEventListener("scroll", props.onScroll);
+    return () => window.removeEventListener("scroll", props.onScroll);
+  });
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.props.onScroll);
-  }
-
-  render() {
-    return this.props.children;
-  }
-}
+  return props.children;
+};
