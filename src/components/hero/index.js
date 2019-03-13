@@ -13,7 +13,8 @@ export default props => (
           <div className="hero__content">
             <div className="hero__content__inner" id="navConverter">
               <h1 className="hero__title">
-                Călătorește oriunde cu autorulota!
+                Închirieri autorulote. Itinerarii complete. Experiențe de
+                neuitat!
               </h1>
               <p className="hero__text">
                 Închiriază o autorulotă modernă, adună-ți prietenii sau familia

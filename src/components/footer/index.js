@@ -11,9 +11,11 @@ export default () => (
           </Link>
           <span>
             CoolCamper este un serviciu de{" "}
-            <strong>închiriere autorulote (motorhome)</strong> din Cluj-Napoca,
-            cu care poți să-ți petreci vacanța oriunde în Europa, în locuri în
-            care nu poți să ajungi cu avionul. Travel anywhere. Be a CoolCamper!
+            <strong>închiriere autorulote</strong> din România, cu punct de
+            lucru în Cluj-Napoca. Autorulotele noastre se pot închiria pe tot
+            parcursul anului, din județele Cluj și Mureș, dar se pot închiria și
+            de către persoane din județele limitrofe: Sibiu, Bistrița, Alba,
+            Oradea, Zalău.
           </span>
         </div>
 

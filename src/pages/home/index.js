@@ -56,7 +56,7 @@ class Home extends Component {
           </title>
           <meta
             name="description"
-            content="Autorulotele CoolCamper sunt modele 2019, cu 5 locuri de dormit si cu toate dotarile necesare. Inchiriere din Cluj-Napoca. Intra acum!"
+            content="Inchiriere autorulote Romania 🇹🇩, autorulote de inchiriat din Cluj-Napoca. | Modele noi 2019 ✨ | Asigurare full CASCO 🛡 | Inchiriarza acum o autorulota CoolCamper!"
           />
         </Helmet>
         <Hero withSub />
@@ -74,16 +74,17 @@ class Home extends Component {
               <StepMedia src={Motorhome} />
               <h4>Autorulote noi</h4>
               <StepText>
-                Autorulotele noastre sunt modele 2018+ cu toate dotările
-                necesare pentru o vacanță de neuitat!
+                Autorulotele noastre sunt modele 2019 cu toate dotările necesare
+                pentru o vacanță de neuitat!
               </StepText>
             </Step>
             <Step>
               <StepMedia src={MapLight} />
               <h4>Itinerarii pe rute populare</h4>
               <StepText>
-                Ca să îți facem viața mai ușoară ți-am pregătit si itinerarii pe
-                cele mai populare rute. Ca să te bucuri cu adevărat de vacanță.
+                Ca să îți facem viața mai ușoară ți-am pregătit și itinerarii pe
+                cele mai populare rute pentru autorulote. Ca să te bucuri cu
+                adevărat de vacanță.
               </StepText>
             </Step>
             <Step>
@@ -131,9 +132,9 @@ class Home extends Component {
             Autorulotele noastre
           </SectionTitle>
           <SectionText style={{ marginTop: 0 }}>
-            Autorulotele noastre sunt modele noi din anul 2018 sau mai noi. Știm
-            cât de mult contează să te simți în siguranță, astfel în fiecare an
-            ne reînoim flota pentru a avea mereu autorulote moderne. Vezi{" "}
+            Autorulotele noastre sunt modele noi din anul 2019. Știm cât de mult
+            contează să te simți în siguranță, astfel în fiecare an ne reînoim
+            flota pentru a avea mereu autorulote moderne de închiriat. Vezi{" "}
             <Link
               to="/detalii-tehnice-autorulota"
               className="link"
@@ -155,11 +156,11 @@ class Home extends Component {
 
         <FullSection>
           <SectionContent>
-            <SectionTitle>Itinerarii</SectionTitle>
+            <SectionTitle>Itinerarii pentru autorulote</SectionTitle>
             <SectionText>
               Ți-am pregătit itinerarii complete cu cele mai populare rute alese
-              de clienții noștri pentru a te putea bucura cu adevărat de
-              vacanță.
+              de clienții noștri pentru a te putea bucura cu adevărat de vacanța
+              cu autorulota.
             </SectionText>
             <SectionText>
               Odată rezervată autorulota vei primi pe email un document cu toate
@@ -249,9 +250,9 @@ class Home extends Component {
         </StepsContainer>
 
         <CTAFullSection>
-          <CTATitle>Rezervă acum o autorulotă!</CTATitle>
+          <CTATitle>Închiriază acum o autorulotă!</CTATitle>
           <CTAMessage>
-            Închiriază autorulota și trăiește o experiență de neuitat!
+            Rezervă o autorulotă și trăiește o experiență de neuitat!
           </CTAMessage>
           <Link
             className="button button__accent"
