@@ -7,15 +7,17 @@ const templatePath = path.join(__dirname, "template.html");
 
 module.exports = props => {
   const prices = getPrices(props.startDate, props.endDate);
+  const startDate = moment(props.startDate).format("LL");
+  const endDate = moment(props.endDate).format("LL");
   return {
-    to: "rezervari@coolcamper.ro, sergiu@coolcamper.ro, bianca@coolcamper.ro",
+    to: "rezervari@coolcamper.ro, bianca@coolcamper.ro",
     from: `"CoolCamper 👻" <no-reply@coolcamper.ro>`,
     subject: `Yey!!! Rezervare noua! 🎊`,
     body: fs
       .readFileSync(templatePath)
       .toString()
-      .replace("${startDate}", moment(props.startDate).format("LL"))
-      .replace("${endDate}", moment(props.endDate).format("LL"))
+      .replace("${startDate}", startDate)
+      .replace("${endDate}", endDate)
       .replace("${noOfDays}", props.noOfDays)
       .replace("${firstName}", props.firstName)
       .replace("${lastName}", props.lastName)

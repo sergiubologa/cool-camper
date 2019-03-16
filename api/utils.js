@@ -30,10 +30,11 @@ module.exports.sendEmail = async emailTemplate => {
     return true;
   } catch (error) {
     console.log(
-      `Error sending email to "${emailTemplate.to}" with the subject "${
+      `${error}
+      Error sending email to "${emailTemplate.to}" with the subject "${
         emailTemplate.subject
       }".
-      ${error}`
+      ${emailTemplate.body}`
     );
     return false;
   }

@@ -4,7 +4,7 @@ const templatePath = path.join(__dirname, "template.html");
 
 module.exports = props => {
   return {
-    to: "contact@coolcamper.ro, sergiu@coolcamper.ro, bianca@coolcamper.ro",
+    to: "contact@coolcamper.ro, bianca@coolcamper.ro",
     from: `"CoolCamper 🖐" <no-reply@coolcamper.ro>`,
     subject: `Mesaj nou`,
     body: fs
