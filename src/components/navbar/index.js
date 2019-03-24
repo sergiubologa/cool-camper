@@ -4,6 +4,7 @@ import BurgerMenuSVG from "../svg/burger-menu";
 import ScrollListener from "../scroll-listener";
 import { Link } from "react-router-dom";
 import IconButton from "../inputs/icon-button";
+import FacebookIcon from "../svg/facebook-icon";
 
 // Height in px for navbar
 const navbarHeight = 60;
@@ -22,7 +23,15 @@ export default class extends React.Component {
     this.state = {
       mobileMenuOpened: false,
       navLinks: [
-        { title: "Autorulotele noastre", url: "/detalii-tehnice-autorulota" }
+        { title: "Rezervă", url: "/rezervare-autorulota" },
+        { title: "Autorulotele noastre", url: "/detalii-tehnice-autorulota" },
+        { title: "Blog", url: "https://blog.coolcamper.ro/", external: true },
+        {
+          title: "Grup de Facebook",
+          url: "https://www.facebook.com/groups/CalatoriCuAutorulota/",
+          external: true,
+          icon: FacebookIcon
+        }
       ]
     };
   }
@@ -64,7 +73,12 @@ export default class extends React.Component {
       <ul>
         {this.state.navLinks.map((link, index) => (
           <li key={index}>
-            <Link to={link.url}>{link.title}</Link>
+            {link.external && (
+              <a href={link.url} rel="noopener" target="_blank">
+                {link.icon && <link.icon />} {link.title}
+              </a>
+            )}
+            {!link.external && <Link to={link.url}>{link.title}</Link>}
           </li>
         ))}
       </ul>
@@ -75,7 +89,7 @@ export default class extends React.Component {
     const { withTransparentBackground = true } = this.props;
     const { mobileMenuOpened } = this.state;
     const mobileMenuStyle = {
-      maxHeight: mobileMenuOpened ? 136 : 0
+      maxHeight: mobileMenuOpened ? 240 : 0
     };
 
     const navbarClasses = ["navbar"];

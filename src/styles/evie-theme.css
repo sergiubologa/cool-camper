@@ -738,6 +738,12 @@ label.success {
 .navbar__menu a {
   color: #fff;
 }
+.navbar__menu a svg,
+.nav__mobile a svg {
+  fill: #fff;
+  width: 12px;
+  height: 12px;
+}
 @media (min-width: 992px) {
   .navbar__menu a {
     opacity: 0.75;
