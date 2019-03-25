@@ -23,7 +23,7 @@ export default class extends React.Component {
     this.state = {
       mobileMenuOpened: false,
       navLinks: [
-        { title: "Rezervă", url: "/rezervare-autorulota" },
+        { title: "Rezervări & Tarife", url: "/rezervare-autorulota" },
         { title: "Autorulotele noastre", url: "/detalii-tehnice-autorulota" },
         { title: "Blog", url: "https://blog.coolcamper.ro/", external: true },
         {

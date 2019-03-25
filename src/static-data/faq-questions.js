@@ -6,7 +6,7 @@ export default [
     answer: `Toate autorulotele CoolCamper se conduc cu permis cat. B (sunt sub 3.5 tone).`
   },
   {
-    question: "Ce e autorulota?",
+    question: "Ce este autorulota?",
     answer: `Autorulota este un vehicul ce serveste atat ca mijloc de transport cat si ca spatiu de locuit, o casa pe roti, construita in jurul unui autosasiu.
     Autorulotele  noastre sunt echipate cu 5 locuri pe scaune, 5 locuri de dormit, bucatarie (dotata cu aragaz, frigider , congelator la anumite modele, chiuveta, blat de lucru), baie (cabina de dus cu apa calda/rece, WC, chiuveta), spatii mari de depozitare, apa calda si caldura, sistem de conectare la retea electrica, aer conditionat, spatiu depozitare si transport biciclete, TV LCD, espressor de cafea.
     Panouri solare 140 W
@@ -79,22 +79,22 @@ export default [
     – terenul nu este moale sau nisipos (te poti infunda cu autorulota).`
   },
   {
-    question: "Exista campinguri in Romania unde ma duce cu autorulota?",
+    question: "Exista campinguri in Romania unde ma pot duce cu autorulota?",
     answer: `Da, mai exact momentan sunt 57 de campinguri echipate cu toate utilitatile pentru autorulote.
     Aici veti putea gasi lista completa: http://en.calameo.com/read/0046861041f071bd7fe9a
     Pentru aceste informatii ii multumim domnului Dan Casandroiu.`
   },
   {
     question:
-      "Am o problema, o defectiune sau nu stiu sa folosesc anumite dotarii ale autorulotei. Ce fac?",
+      "Am o problema, o defectiune sau nu stiu sa folosesc anumite dotari ale autorulotei. Ce fac?",
     answer: `In cazul defectiunilor pot aparea, rareori urmatoarele cazuri:
     - Defectiuni ale autovehiculului
-    - Defectiuni ale sistemelor interioare/zonei de locuit
+    - Defectiuni ale sistemelor interioare sau a zonei de locuit
     In cazul defectiunilor autovehiculului:
-    Avand modele noi de autorulote (2019) este putin probabil sa aveti probleme. Totusi, in cazul unei defectiuni, te rugam sa ne contactezi pe whatsapp sau telefonic cu descrierea problemei.
+    Avand modele noi de autorulote (2019) este putin probabil sa aveti probleme. Totusi, in cazul unei defectiuni, te rugam sa ne contactezi pe WhatsApp sau telefonic cu descrierea problemei.
     Daca autorulota nu poate fi deplasata, te rugam sa apelezi nr. de asistenta rutiera europeana Fiat Camper Assistance (tel: 00800 34281111* sau alternativ 0039 024441 2160). Interventiile (remorcare, reparatie sub garantie europeana) sunt gratuite.
     In caz de defectiuni ale spatiului de locuit/sistemelor interioare:
-    Consulta manualul de bord. Intre timp contacteaza-ne pe whatsapp sau telefonic si noi o sa iti raspundem indiferent de ora. De cele mai multe ori putem identifica si rezolva problema impreuna in mai putin de 2 minute.`
+    Consulta manualul de bord. Intre timp contacteaza-ne pe WhatsApp sau telefonic si noi o sa iti raspundem indiferent de ora. De cele mai multe ori putem identifica si rezolva problema impreuna in mai putin de 2 minute.`
   },
   {
     question: "Am avut un accident. Ce trebuie sa fac?",
@@ -135,11 +135,11 @@ export default [
   },
   {
     question:
-      "Imi place o autorulota CoolCamper si vreau sa o rezerv. Ce trebuie sa fac?",
+      "Imi place o autorulota CoolCamper si vreau sa o inchiriez. Ce trebuie sa fac?",
     answer: `Daca doresti sa rezervi o autorulota, te rugam sa completezi formularul de rezervare sau sa ne trimiti un mail la bianca@coolcamper.ro, pentru a parcurge urmatoarele etape:
     - verificarea disponibilitatii pentru perioada dorita,
     - vom avea nevoie de copia permisului tau de conducere si a unui act de identitate pe e-mail,
-    - vom intocmi un contract de inchiriere si iti vom trimite factura pentru avansul de 30% (diferenta te vom ruga sa o achiti cu 30 zile inainte de preluare).
+    - vom intocmi un contract de inchiriere si iti vom trimite factura pentru avans (diferenta te vom ruga sa o achiti cu 30 zile inainte de preluare).
     
     Plata se va putea efectua prin virament bancar sau online, cu cardul, prin link securizat. Din pacate nu acceptam plata in numerar.
     `
@@ -152,9 +152,9 @@ export default [
   },
   {
     question: "Am rezervat si se apropie data plecarii. Ce trebuie sa fac?",
-    answer: `Ora preluarii: zilnic incepand cu ora 10:00 (pentru ore diferite sau aranjamente speciale te rugam sa ne contactezi in avans)
+    answer: `Ora preluarii: zilnic incepand cu ora 08:00 (pentru ore diferite sau aranjamente speciale te rugam sa ne contactezi in avans)
     
-    Ora predarii: zilnic pana in ora 16.00
+    Ora predarii: zilnic pana in ora 22:00
     
     Autorulotele noastre vin echipate cu:
     - suport de biciclete (2-4 biciclete);
