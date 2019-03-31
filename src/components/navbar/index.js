@@ -5,6 +5,7 @@ import ScrollListener from "../scroll-listener";
 import { Link } from "react-router-dom";
 import IconButton from "../inputs/icon-button";
 import FacebookIcon from "../svg/facebook-icon";
+import TimeAwareLogo from "../svg/logo/time-aware";
 
 // Height in px for navbar
 const navbarHeight = 60;
@@ -34,6 +35,10 @@ export default class extends React.Component {
         }
       ]
     };
+  }
+
+  componentDidMount() {
+    this.toggleNavbarBackgroundColor();
   }
 
   handleScroll() {
@@ -112,7 +117,7 @@ export default class extends React.Component {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             >
-              CoolCamper
+              <TimeAwareLogo />
             </Link>
             <nav className="navbar__menu">{this.renderLinks()}</nav>
             <div className="navbar__menu-mob">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import TimeAwareLogo from "../svg/logo/time-aware";
 
 export default () => (
   <div className="footer footer--dark">
@@ -7,7 +8,7 @@ export default () => (
       <div className="footer__inner">
         <div className="footer__logo">
           <Link to="/" className="footer__textLogo">
-            CoolCamper
+            <TimeAwareLogo />
           </Link>
           <span>
             CoolCamper este un serviciu de{" "}

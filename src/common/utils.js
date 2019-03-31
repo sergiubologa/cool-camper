@@ -56,3 +56,24 @@ export const openUrlInPopup = (url, title, w, h) => {
 export const dayOrDays = number => (number === 1 ? "zi" : "zile");
 
 export const isSSR = () => !navigator || navigator.userAgent === "ReactSnap";
+
+export const getTimeOfDayString = () => {
+  let result;
+
+  const intervals = [
+      [0, 4, "night"],
+      [4, 11, "morning"],
+      [11, 19, "afternoon"],
+      [19, 24, "night"]
+    ],
+    hrs = new Date().getHours();
+
+  for (var i = 0; i < intervals.length; i++) {
+    if (hrs >= intervals[i][0] && hrs <= intervals[i][1]) {
+      result = intervals[i][2];
+      break;
+    }
+  }
+
+  return result;
+};
