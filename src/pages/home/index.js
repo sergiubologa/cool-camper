@@ -51,12 +51,12 @@ class Home extends Component {
       <TransparentNavbarLayout>
         <Helmet>
           <title>
-            {"🌟"} CoolCamper - Inchirieri Autorulote, Autorulote de Inchiriat{" "}
-            {"🚐"} | Cluj-Napoca
+            CoolCamper - Inchirieri Autorulote, Autorulote de Inchiriat {"🚐"} |
+            Cluj-Napoca
           </title>
           <meta
             name="description"
-            content="Inchiriere autorulote Romania 🇹🇩, autorulote de inchiriat din Cluj-Napoca. | Modele noi 2019 ✨ | Asigurare full CASCO 🛡 | Inchiriarza acum o autorulota CoolCamper!"
+            content="Inchiriere autorulote Romania 🇹🇩, autorulote de inchiriat din Cluj-Napoca. | Modele noi 2019 ✨ | Asigurare full CASCO 🛡 | Vacante in Romania si in Europa cu autorulotele CoolCamper!"
           />
         </Helmet>
         <Hero withSub />
