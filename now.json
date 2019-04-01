@@ -22,12 +22,15 @@
     { "src": "^/sitemap.xml", "dest": "build/sitemap.xml" },
     { "src": "^/favicon.ico", "dest": "build/favicon.ico" },
     { "src": "^/og-image.jpg", "dest": "build/og-image.jpg" },
-    { "src": "^/apple-touch-icon.png", "dest": "build/apple-touch-icon.png" },
+    { "src": "^/apple-touch-icon(.*)", "dest": "build/apple-touch-icon$1" },
+    { "src": "^/android-chrome(.*)", "dest": "build/android-chrome$1" },
+    { "src": "^/mstile-(.*)", "dest": "build/mstile-$1" },
     { "src": "^/favicon-32x32.png", "dest": "build/favicon-32x32.png" },
     { "src": "^/favicon-16x16.png", "dest": "build/favicon-16x16.png" },
     { "src": "^/site.webmanifest", "dest": "build/site.webmanifest" },
     { "src": "^/safari-pinned-tab.svg", "dest": "build/safari-pinned-tab.svg" },
     { "src": "^/manifest.json", "dest": "build/manifest.json" },
+    { "src": "/browserconfig.xml", "dest": "build/browserconfig.xml" },
     {
       "src": "/googlee097d0a204b5af8e.html",
       "dest": "build/googlee097d0a204b5af8e.html"
