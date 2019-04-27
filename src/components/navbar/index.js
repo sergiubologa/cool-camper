@@ -79,7 +79,7 @@ export default class extends React.Component {
         {this.state.navLinks.map((link, index) => (
           <li key={index}>
             {link.external && (
-              <a href={link.url} rel="noopener" target="_blank">
+              <a href={link.url} rel="noopener noreferrer" target="_blank">
                 {link.icon && <link.icon />} {link.title}
               </a>
             )}
