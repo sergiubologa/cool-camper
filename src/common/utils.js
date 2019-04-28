@@ -62,8 +62,8 @@ export const getTimeOfDayString = () => {
 
   const intervals = [
       [0, 4, "night"],
-      [4, 11, "morning"],
-      [11, 19, "afternoon"],
+      [4, 10, "morning"],
+      [10, 19, "afternoon"],
       [19, 24, "night"]
     ],
     hrs = new Date().getHours();

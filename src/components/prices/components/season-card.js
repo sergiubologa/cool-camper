@@ -1,6 +1,6 @@
 import React from "react";
 import PriceCard from "./price-card";
-import { prices } from "coolcamper-common";
+import { pricesData } from "coolcamper-common";
 import { Link } from "react-router-dom";
 import Price from "./price";
 import PriceDetails from "./price-details";
@@ -8,12 +8,12 @@ import moment from "moment";
 
 export default () => {
   const highSeasonStartDate = moment(
-    prices.highSeasonInterval[0],
-    prices.datesFormat
+    pricesData.highSeasonInterval[0],
+    pricesData.datesFormat
   ).format("D MMMM");
   const highSeasonEndDate = moment(
-    prices.highSeasonInterval[1],
-    prices.datesFormat
+    pricesData.highSeasonInterval[1],
+    pricesData.datesFormat
   ).format("D MMMM");
   return (
     <PriceCard
@@ -21,8 +21,8 @@ export default () => {
       subtitle={`${highSeasonStartDate} - ${highSeasonEndDate}`}
       renderContent={() => (
         <Price
-          price={prices.highSeasonPricePerDay}
-          discounts={prices.discounts}
+          price={pricesData.highSeasonPricePerDay}
+          discounts={pricesData.discounts}
         />
       )}
       renderFooter={() => (
@@ -34,10 +34,10 @@ export default () => {
             to="/rezervare-autorulota"
             ga-on="click,auxclick,contextmenu"
             ga-event-category="Button"
-            ga-event-action="Rezervă acum"
+            ga-event-action="Fă o cerere"
             ga-event-label="season card"
           >
-            Rezervă acum
+            Fă o cerere
           </Link>
         </React.Fragment>
       )}

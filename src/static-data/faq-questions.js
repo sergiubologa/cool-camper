@@ -1,4 +1,4 @@
-import { prices } from "coolcamper-common";
+import { pricesData } from "coolcamper-common";
 
 export default [
   {
@@ -123,7 +123,7 @@ export default [
   {
     question: "Care este garantia perceputa?",
     answer: `CoolCamper percepe o garanție de ${
-      prices.deposit
+      pricesData.deposit
     } de euro la preluarea autorulotei, sumă ce va fi înapoiată integral la predarea acesteia în aceași stare în care a fost preluată. 
     Trebuie să știi că în caz de accident sau alte pagube vom fi nevoiți să îți reținem costurile reparațiilor sau fransiza CASCO de 500 de euro.`
   },

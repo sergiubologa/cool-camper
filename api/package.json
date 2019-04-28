@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "coolcamper-common": "^0.3.0",
+    "coolcamper-common": "^1.0.0",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-respond": "^2.1.0",

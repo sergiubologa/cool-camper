@@ -16,6 +16,7 @@ export default class extends React.Component {
     this.navBarRef = React.createRef();
     this.renderLinks = this.renderLinks.bind(this);
     this.toggleBurgerMenu = this.toggleBurgerMenu.bind(this);
+    this.closeBurgerMenu = this.closeBurgerMenu.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
     this.toggleNavbarBackgroundColor = this.toggleNavbarBackgroundColor.bind(
       this
@@ -24,7 +25,8 @@ export default class extends React.Component {
     this.state = {
       mobileMenuOpened: false,
       navLinks: [
-        { title: "Rezervări & Tarife", url: "/rezervare-autorulota" },
+        { title: "Prețuri", url: "/#preturi" },
+        { title: "Verifică Disponibilitatea", url: "/rezervare-autorulota" },
         { title: "Autorulotele noastre", url: "/detalii-tehnice-autorulota" },
         { title: "Blog", url: "https://blog.coolcamper.ro/", external: true },
         {
@@ -32,6 +34,10 @@ export default class extends React.Component {
           url: "https://www.facebook.com/groups/CalatoriCuAutorulota/",
           external: true,
           icon: FacebookIcon
+        },
+        {
+          title: "Contact",
+          url: "/#contact"
         }
       ]
     };
@@ -52,6 +58,12 @@ export default class extends React.Component {
       },
       this.toggleNavbarBackgroundColor
     );
+  }
+
+  closeBurgerMenu() {
+    if (this.state.mobileMenuOpened) {
+      this.toggleBurgerMenu();
+    }
   }
 
   toggleNavbarBackgroundColor() {
@@ -83,7 +95,11 @@ export default class extends React.Component {
                 {link.icon && <link.icon />} {link.title}
               </a>
             )}
-            {!link.external && <Link to={link.url}>{link.title}</Link>}
+            {!link.external && (
+              <Link to={link.url} onClick={this.closeBurgerMenu}>
+                {link.title}
+              </Link>
+            )}
           </li>
         ))}
       </ul>
@@ -94,7 +110,7 @@ export default class extends React.Component {
     const { withTransparentBackground = true } = this.props;
     const { mobileMenuOpened } = this.state;
     const mobileMenuStyle = {
-      maxHeight: mobileMenuOpened ? 240 : 0
+      maxHeight: mobileMenuOpened ? 300 : 0
     };
 
     const navbarClasses = ["navbar"];

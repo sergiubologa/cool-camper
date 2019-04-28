@@ -37,14 +37,29 @@ import IconLabel from "../../components/icon-label";
 import SmartphoneIcon from "../../components/svg/smartphone";
 import ContactForm from "./components/contact-form";
 import Helmet from "react-helmet";
+import { smoothScrollToSelector, isSSR } from "../../common/utils";
 
 class Home extends Component {
   componentDidMount() {
+    this.jumpToHash();
     if (window.Trustpilot !== undefined) {
       var trustbox = document.getElementById("trustbox");
       window.Trustpilot.loadFromElement(trustbox);
     }
   }
+
+  componentDidUpdate() {
+    this.jumpToHash();
+  }
+
+  jumpToHash = () => {
+    if (!isSSR()) {
+      const hash = window.location.hash;
+      if (hash) {
+        smoothScrollToSelector(hash, 20);
+      }
+    }
+  };
 
   render() {
     return (
@@ -179,7 +194,7 @@ class Home extends Component {
         </FullSection>
 
         <FullSection oneCol={true}>
-          <SectionTitle id="prices">Prețuri</SectionTitle>
+          <SectionTitle id="preturi">Prețuri</SectionTitle>
           <Prices />
         </FullSection>
 
@@ -190,7 +205,7 @@ class Home extends Component {
 
         <StepsContainer>
           <StepsHeader>
-            <h2>Contactează-ne!</h2>
+            <h2 id="contact">Contactează-ne!</h2>
             <p>
               Nu ezita să ne contactezi pentru orice problemă sau nelămurire
               întâmpini. Suntem aici ca să te ajutăm!

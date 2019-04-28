@@ -295,7 +295,7 @@ export default class extends React.Component {
             <React.Fragment>
               <div className="booking__header">
                 <div className="container">
-                  <h4>Rezervă o autorulotă</h4>
+                  <h4>Verifică disponibilitatea autorulotelor</h4>
                   <p>
                     pasul {currentStep + 1} din {noOfSteps} - {currentStepName}
                   </p>
@@ -315,7 +315,8 @@ export default class extends React.Component {
               <h2>Îți super mulțumim!</h2>
               <p>
                 În cel mai scurt timp te vom contacta pentru a confirma
-                rezervarea și pentru a emite factura de avans.
+                disponibilitatea autorulotei și pentru a stabili toate detaliile
+                rezervării.
               </p>
               <p>Până atunci, spune-le și prietenilor tăi despre noi</p>
               <div className="booking__successful--socialButtons">

@@ -6,11 +6,12 @@ export default props => (
       {props.price}€ <small>pe zi</small>
     </h1>
     {props.discounts &&
-      props.discounts.length > 0 &&
-      props.discounts.map((discount, index) => (
+      props.discounts.minBookingDays &&
+      props.discounts.minBookingDays.length > 0 &&
+      props.discounts.minBookingDays.map((discount, index) => (
         <small key={index}>
           la peste {discount.minDays - 1} zile închiriate -{" "}
-          <i>{discount.percent}% reducere</i>
+          <strong>{discount.percent}% reducere</strong>
         </small>
       ))}
   </React.Fragment>

@@ -147,8 +147,8 @@ export default class extends React.Component {
                     <strong>Garanție</strong>
                   </p>
                   <small>
-                    Garanția returnabilă de {prices.deposit} de euro se plătește
-                    în numerar (cash) la preluarea autorulotei.
+                    Garanția returnabilă de {prices.deposit}€ se plătește în
+                    numerar (cash) la preluarea autorulotei.
                   </small>
                   <p>
                     <strong>Anulare gratuită</strong>
@@ -203,11 +203,11 @@ export default class extends React.Component {
                   className={isLoading ? "loading" : ""}
                   ga-on="click"
                   ga-event-category="Button"
-                  ga-event-action="Trimite rezervarea"
+                  ga-event-action="Trimite cererea"
                   ga-event-label="booking step 3"
                   ga-event-value={Math.floor(prices.totalPriceWithDiscount)}
                 >
-                  Trimite rezervarea
+                  Trimite cererea
                 </Button>
                 <Loader className={isLoading ? "loading" : ""} />
               </div>

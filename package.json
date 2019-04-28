@@ -5,7 +5,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "autotrack": "^2.4.1",
-    "coolcamper-common": "^0.3.0",
+    "coolcamper-common": "^1.0.0",
     "flag-icon-css": "^3.3.0",
     "moment": "^2.24.0",
     "normalize.css": "^8.0.1",

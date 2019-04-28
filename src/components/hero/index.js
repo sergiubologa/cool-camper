@@ -71,14 +71,14 @@ export default props => (
                 className="button button__accent"
                 ga-on="click,auxclick,contextmenu"
                 ga-event-category="Button"
-                ga-event-action="Rezervă acum"
+                ga-event-action="Verifică disponibilitatea"
                 ga-event-label="page header"
               >
-                Rezervă acum
+                Verifică disponibilitatea
               </Link>
               <Button
                 className="hero__button"
-                onClick={() => smoothScrollToSelector("#prices", 20)}
+                onClick={() => smoothScrollToSelector("#preturi", 20)}
                 ga-on="click,auxclick,contextmenu"
                 ga-event-category="Button"
                 ga-event-action="Vezi prețuri"

@@ -1,6 +1,6 @@
 import React from "react";
 import TooltipIcon from "../../../components/tooltip";
-import { getPrices, prices as pricesData } from "coolcamper-common";
+import { getPrices, pricesData } from "coolcamper-common";
 import { dayOrDays } from "../../../common/utils";
 import moment from "moment";
 
@@ -11,15 +11,16 @@ export default props => {
     endDate,
     prices = getPrices(startDate.hours(0), endDate.hours(0))
   } = props;
+
   const classes = ["price__details"];
   if (className) classes.push(className);
   const highSeasonStart = moment(
-    prices.highSeasonStart,
+    pricesData.highSeasonInterval[0],
     pricesData.datesFormat
   ).format("D MMM");
 
   const highSeasonEnd = moment(
-    prices.highSeasonEnd,
+    pricesData.highSeasonInterval[1],
     pricesData.datesFormat
   ).format("D MMM");
 
@@ -56,12 +57,22 @@ export default props => {
           <span>{prices.highSeasonPrice.toLocaleString()}€</span>
         </div>
       )}
-      {prices.discount.amount > 0 && (
-        <div className="price__details__row price__details__row__discount">
-          <span>{prices.discount.percent}% discount</span>
-          <span>-{prices.discount.amount.toLocaleString()}€</span>
-        </div>
-      )}
+      {prices.discounts.length > 0 &&
+        prices.discounts.map((discount, index) => (
+          <div
+            className="price__details__row price__details__row__discount"
+            key={index}
+          >
+            <span>{discount.message}</span>
+            <span>
+              -
+              {(
+                discount.lowSeasonAmount + discount.highSeasonAmount
+              ).toLocaleString()}
+              €
+            </span>
+          </div>
+        ))}
 
       <div className="price__details__row">
         <span>
