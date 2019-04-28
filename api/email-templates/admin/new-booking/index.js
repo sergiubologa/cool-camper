@@ -7,8 +7,8 @@ const templatePath = path.join(__dirname, "template.html");
 
 module.exports = props => {
   const prices = getPrices(props.startDate, props.endDate);
-  const startDate = moment(props.startDate).format("LL");
-  const endDate = moment(props.endDate).format("LL");
+  const startDate = moment.utc(props.startDate).format("LL");
+  const endDate = moment.utc(props.endDate).format("LL");
   return {
     to: "rezervari@coolcamper.ro, bianca@coolcamper.ro",
     from: `"CoolCamper 👻" <no-reply@coolcamper.ro>`,
