@@ -5,7 +5,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "autotrack": "^2.4.1",
-    "coolcamper-common": "^1.0.1",
+    "coolcamper-common": "^1.1.1",
     "flag-icon-css": "^3.3.0",
     "moment": "^2.24.0",
     "normalize.css": "^8.0.1",
@@ -13,7 +13,7 @@
     "react": "^16.8.6",
     "react-dates": "^20.1.0",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0",
+    "react-helmet": "^5.2.1",
     "react-popover": "^0.5.10",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0",

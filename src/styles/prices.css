@@ -24,6 +24,7 @@
 
 .price__card {
   margin-top: 40px;
+  position: relative;
 }
 @media (min-width: 600px) {
   .price__card {
@@ -72,9 +73,44 @@
   padding: 20px 0;
 }
 
+.price__card__content h1 span.old-price {
+  position: relative;
+  margin-right: 10px;
+  font-size: 0.8em;
+}
+.price__card__content h1 span.old-price:before,
+.price__card__content h1 span.old-price:after {
+  content: "";
+  border-top: 1px solid #c02031;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  right: 0;
+}
+.price__card__content h1 span.old-price:before {
+  transform: rotate(-19deg);
+}
+.price__card__content h1 span.old-price:after {
+  transform: rotate(19deg);
+}
+
+.price__card__content h1 span.old-price,
 .price__card__content h1 small {
   color: hsl(0, 0%, 40%);
+}
+
+.price__card__content h1 small {
   font-size: 0.5em;
+}
+
+.price__card__content > small {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .price__card__content > small {
+    max-width: 70%;
+  }
 }
 
 .price__card__footer {

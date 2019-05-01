@@ -24,6 +24,28 @@ export default props => {
     pricesData.datesFormat
   ).format("D MMM");
 
+  const highSeasonDiscounts =
+    prices.discounts.length === 0
+      ? []
+      : prices.discounts.filter(
+          discount =>
+            discount.highSeasonAmount > 0 && discount.lowSeasonAmount === 0
+        );
+  const lowSeasonDiscounts =
+    prices.discounts.length === 0
+      ? []
+      : prices.discounts.filter(
+          discount =>
+            discount.lowSeasonAmount > 0 && discount.highSeasonAmount === 0
+        );
+  const remainingDiscounts =
+    prices.discounts.length === 0
+      ? []
+      : prices.discounts.filter(
+          discount =>
+            discount.lowSeasonAmount > 0 && discount.highSeasonAmount > 0
+        );
+
   return (
     <div className={classes.join(" ")}>
       <div className="price__details__notes">
@@ -40,6 +62,7 @@ export default props => {
           <span>{prices.lowSeasonPrice.toLocaleString()}€</span>
         </div>
       )}
+      {lowSeasonDiscounts && renderDiscounts(lowSeasonDiscounts, true, false)}
       {prices.highSeasonDays > 0 && (
         <div className="price__details__row">
           <span>
@@ -57,22 +80,8 @@ export default props => {
           <span>{prices.highSeasonPrice.toLocaleString()}€</span>
         </div>
       )}
-      {prices.discounts.length > 0 &&
-        prices.discounts.map((discount, index) => (
-          <div
-            className="price__details__row price__details__row__discount"
-            key={index}
-          >
-            <span>{discount.message}</span>
-            <span>
-              -
-              {(
-                discount.lowSeasonAmount + discount.highSeasonAmount
-              ).toLocaleString()}
-              €
-            </span>
-          </div>
-        ))}
+      {highSeasonDiscounts && renderDiscounts(highSeasonDiscounts, false, true)}
+      {remainingDiscounts && renderDiscounts(remainingDiscounts, true, true)}
 
       <div className="price__details__row">
         <span>
@@ -85,3 +94,21 @@ export default props => {
     </div>
   );
 };
+
+const renderDiscounts = (discounts, isLowSeason, isHighSeason) =>
+  discounts.map((discount, index) => (
+    <div
+      className="price__details__row price__details__row__discount"
+      key={index}
+    >
+      <span>{discount.message}</span>
+      <span>
+        -
+        {(
+          (isLowSeason ? discount.lowSeasonAmount : 0) +
+          (isHighSeason ? discount.highSeasonAmount : 0)
+        ).toLocaleString()}
+        €
+      </span>
+    </div>
+  ));

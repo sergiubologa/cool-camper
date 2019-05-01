@@ -5,20 +5,20 @@ import { pricesData } from "coolcamper-common";
 import moment from "moment";
 import Price from "./price";
 import PriceDetails from "./price-details";
+import RibbonCorner from "../../ribbon-corner";
 
 export default () => {
-  const lowSeasonStartDate = moment(
-    pricesData.highSeasonInterval[1],
-    pricesData.datesFormat
-  )
+  const lowSeasonStartDate = moment
+    .utc(pricesData.highSeasonInterval[1], pricesData.datesFormat)
     .add(1, "d")
     .format("D MMMM");
-  const lowSeasonEndDate = moment(
-    pricesData.highSeasonInterval[0],
-    pricesData.datesFormat
-  )
+  const lowSeasonEndDate = moment
+    .utc(pricesData.highSeasonInterval[0], pricesData.datesFormat)
     .add(-1, "d")
     .format("D MMMM");
+  const hasLowSeasonDiscount =
+    pricesData.discounts.temporary &&
+    pricesData.discounts.temporary.lowSeasonPercent > 0;
   return (
     <PriceCard
       title="În extra sezon"
@@ -27,7 +27,12 @@ export default () => {
       renderContent={() => (
         <Price
           price={pricesData.lowSeasonPricePerDay}
-          discounts={pricesData.discounts}
+          minBookingDaysDiscounts={pricesData.discounts.minBookingDays}
+          temporaryDiscountPercent={
+            hasLowSeasonDiscount
+              ? pricesData.discounts.temporary.lowSeasonPercent
+              : null
+          }
         />
       )}
       renderFooter={() => (
@@ -46,6 +51,13 @@ export default () => {
           </Link>
         </React.Fragment>
       )}
+      renderRibbons={() =>
+        hasLowSeasonDiscount && (
+          <RibbonCorner
+            text={"-" + pricesData.discounts.temporary.lowSeasonPercent + "%"}
+          />
+        )
+      }
     />
   );
 };

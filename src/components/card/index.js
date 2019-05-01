@@ -1,7 +1,14 @@
 import React from "react";
 
 export default props => {
-  const { className, renderHeader, renderBody, renderFooter, ...rest } = props;
+  const {
+    className,
+    renderHeader,
+    renderBody,
+    renderFooter,
+    renderRibbons,
+    ...rest
+  } = props;
   const classes = ["card"];
   if (className) classes.push(className);
   return (
@@ -9,6 +16,7 @@ export default props => {
       {renderHeader && renderHeader()}
       {renderBody && renderBody()}
       {renderFooter && renderFooter()}
+      {renderRibbons && renderRibbons()}
     </div>
   );
 };

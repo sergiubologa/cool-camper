@@ -494,6 +494,7 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 .booking__successful > p {
   max-width: 480px;
+  text-align: center;
 }
 .booking__successful > a {
   border-bottom: 1px dotted #7c7c7c;

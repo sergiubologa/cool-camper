@@ -3,7 +3,14 @@ import { Sunny, Cloudy } from "../../svg/forecasts";
 import Card from "../../card";
 
 export default props => {
-  const { type, title, subtitle, renderContent, renderFooter } = props;
+  const {
+    type,
+    title,
+    subtitle,
+    renderContent,
+    renderFooter,
+    renderRibbons
+  } = props;
   let IconComponent = Sunny;
   if (type === "extra-season") IconComponent = Cloudy;
 
@@ -25,6 +32,7 @@ export default props => {
       renderFooter={() => (
         <div className="price__card__footer">{renderFooter()}</div>
       )}
+      renderRibbons={renderRibbons}
     />
   );
 };

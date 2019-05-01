@@ -3140,10 +3140,10 @@ cookie@0.3.1:
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
   integrity sha1-5+Ch+e9DtMi6klxcWpboBtFoc7s=
 
-coolcamper-common@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/coolcamper-common/-/coolcamper-common-1.0.1.tgz#50f17ad341051841ea47ca2c8d08e359d295ecc3"
-  integrity sha512-sYHHmZFEnch/8ZdGmildoH0TliWr5F9YWeNY0dy0z9pdXQgEtkt2t5UnnB50DH39KASziC0LH5Pq5PUiv92guw==
+coolcamper-common@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/coolcamper-common/-/coolcamper-common-1.1.1.tgz#1fb8eaeaa44c4b680b088f1c133c6b3158d34dc4"
+  integrity sha512-W7l5RV8gRCAkV16UjkWy3Ry+ngXnJVwJUjypamMw8+tf42lEOJ6poad9Z2yi/gu9xh1qWXHnFfuoKXs3JyhOfA==
 
 copy-concurrently@^1.0.0:
   version "1.0.5"
@@ -9228,14 +9228,19 @@ react-error-overlay@^5.1.5:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.5.tgz#884530fd055476c764eaa8ab13b8ecf1f57bbf2c"
   integrity sha512-O9JRum1Zq/qCPFH5qVEvDDrVun8Jv9vbHtZXCR1EuRj9sKg1xJTlHxBzU6AkCzpvxRLuiY4OKImy3cDLQ+UTdg==
 
-react-helmet@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-5.2.0.tgz#a81811df21313a6d55c5f058c4aeba5d6f3d97a7"
-  integrity sha1-qBgR3yExOm1VxfBYxK66XW89l6c=
+react-fast-compare@^2.0.2:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
+  integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
+
+react-helmet@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-5.2.1.tgz#16a7192fdd09951f8e0fe22ffccbf9bb3e591ffa"
+  integrity sha512-CnwD822LU8NDBnjCpZ4ySh8L6HYyngViTZLfBBb3NjtrpN8m49clH8hidHouq20I51Y6TpCTISCBbqiY5GamwA==
   dependencies:
-    deep-equal "^1.0.1"
     object-assign "^4.1.1"
     prop-types "^15.5.4"
+    react-fast-compare "^2.0.2"
     react-side-effect "^1.1.0"
 
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.4:
