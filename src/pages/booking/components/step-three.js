@@ -114,6 +114,16 @@ export default class extends React.Component {
                 iconWidth={16}
               />
               <IconLabel
+                text="Preluare începând cu ora 08:00"
+                icon={CheckmarkIcon}
+                iconWidth={16}
+              />
+              <IconLabel
+                text="Predare până la ora 22:00"
+                icon={CheckmarkIcon}
+                iconWidth={16}
+              />
+              <IconLabel
                 text="Anularea rezervării este gratuită, oricând"
                 icon={CheckmarkIcon}
                 iconWidth={16}
@@ -203,11 +213,11 @@ export default class extends React.Component {
                   className={isLoading ? "loading" : ""}
                   ga-on="click"
                   ga-event-category="Button"
-                  ga-event-action="Trimite cererea"
+                  ga-event-action="Verifică disponibilitatea"
                   ga-event-label="booking step 3"
                   ga-event-value={Math.floor(prices.totalPriceWithDiscount)}
                 >
-                  Trimite cererea
+                  Verifică disponibilitatea
                 </Button>
                 <Loader className={isLoading ? "loading" : ""} />
               </div>

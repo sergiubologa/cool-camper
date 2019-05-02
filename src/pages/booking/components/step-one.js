@@ -10,7 +10,7 @@ import {
 import { DateRangePickerPhrases } from "react-dates/lib/defaultPhrases";
 import PriceDetails from "./price-details";
 import { getNoOfDays } from "coolcamper-common";
-import { isSSR } from "../../../common/utils";
+import { isSSR, isPhone } from "../../../common/utils";
 import Gift from "../../../assets/img/gift.svg";
 import IconLabel from "../../../components/icon-label";
 
@@ -30,11 +30,10 @@ export default class extends React.Component {
 
   render() {
     const { startDate, endDate, onDatesChange, error } = this.props;
-    const isMobile = window.matchMedia("(max-width: 699px)").matches;
-    const datePickerOrientation = isMobile
+    const datePickerOrientation = isPhone()
       ? VERTICAL_ORIENTATION
       : HORIZONTAL_ORIENTATION;
-    const dateFormat = isMobile ? "dd, D MMM" : "dddd, D MMM";
+    const dateFormat = isPhone() ? "dd, D MMM" : "dddd, D MMM";
     const noOfDays = getNoOfDays(startDate, endDate);
 
     return (
@@ -55,10 +54,10 @@ export default class extends React.Component {
               endDatePlaceholderText="mm/dd/yyyy"
               readOnly
               required
-              showClearDates={!isMobile}
+              showClearDates={!isPhone()}
               noBorder
-              withFullScreenPortal={isMobile}
-              disableScroll={isMobile}
+              withFullScreenPortal={isPhone()}
+              disableScroll={isPhone()}
               firstDayOfWeek={1}
               minimumNights={2}
               displayFormat={dateFormat}

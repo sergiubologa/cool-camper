@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import SeaSideLogo from "./sea-side";
 import HillsLogo from "./hills";
 import NightLogo from "./night";
+import { isPhoneOrTablet } from "../../../common/utils";
 
 export default props => {
   const {
     timeOfDay,
-    textColor = "#D4DAE1",
+    textColor = isPhoneOrTablet() ? "#fff" : "#D4DAE1",
     hoverTextColor = "#fff",
     ...rest
   } = props;

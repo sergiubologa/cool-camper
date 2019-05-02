@@ -49,9 +49,9 @@ export default props => {
   return (
     <div className={classes.join(" ")}>
       <div className="price__details__notes">
-        <small>Preluare incepand cu ora 08:00</small>
+        <small>Preluare începând cu ora 08:00</small>
         <small style={{ flexGrow: 1 }} />
-        <small style={{ textAlign: "right" }}>Predare pana la ora 22:00</small>
+        <small style={{ textAlign: "right" }}>Predare până la ora 22:00</small>
       </div>
       {prices.lowSeasonDays > 0 && (
         <div className="price__details__row">

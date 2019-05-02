@@ -44,10 +44,10 @@ export default () => {
             to="/rezervare-autorulota"
             ga-on="click,auxclick,contextmenu"
             ga-event-category="Button"
-            ga-event-action="Fă o cerere"
+            ga-event-action="Disponibilitate"
             ga-event-label="extra-season card"
           >
-            Fă o cerere
+            Disponibilitate
           </Link>
         </React.Fragment>
       )}

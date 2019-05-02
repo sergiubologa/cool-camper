@@ -1,6 +1,7 @@
 import React from "react";
 import SimpleLayout from "../layouts/simple-layout";
 import Helmet from "react-helmet";
+import NotFound from "../../assets/img/404.svg";
 
 export default () => (
   <SimpleLayout>
@@ -11,6 +12,8 @@ export default () => (
         content="404 - Pagina dorita nu a putut fi gasita."
       />
     </Helmet>
-    <h1>Not Found</h1>
+    <div className="not-found-container">
+      <img src={NotFound} alt="Datele sunt în siguranță" />
+    </div>
   </SimpleLayout>
 );

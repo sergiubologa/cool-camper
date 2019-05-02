@@ -55,8 +55,6 @@ export const openUrlInPopup = (url, title, w, h) => {
 
 export const dayOrDays = number => (number === 1 ? "zi" : "zile");
 
-export const isSSR = () => !navigator || navigator.userAgent === "ReactSnap";
-
 export const getTimeOfDayString = () => {
   let result;
 
@@ -77,3 +75,8 @@ export const getTimeOfDayString = () => {
 
   return result;
 };
+
+export const isSSR = () => !navigator || navigator.userAgent === "ReactSnap";
+export const isPhone = () => window.matchMedia("(max-width: 699px)").matches;
+export const isPhoneOrTablet = () =>
+  window.matchMedia("(max-width: 992px)").matches;

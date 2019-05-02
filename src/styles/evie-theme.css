@@ -2131,3 +2131,18 @@ label.success {
 .Popover-tipShape {
   fill: hsl(0, 0%, 90%);
 }
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.not-found-container > img {
+  margin: 2em 0;
+  max-width: 60%;
+}
+@media (min-width: 992px) {
+  .not-found-container > img {
+    max-width: 40%;
+  }
+}
