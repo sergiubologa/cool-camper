@@ -312,11 +312,11 @@ export default class extends React.Component {
           {submitSuccessful && (
             <div className="booking__successful">
               <img src={SuperThankYou} alt="Super multumim!" />
-              <h2>Îți super mulțumim!</h2>
+              <h2>Îți mulțumim!</h2>
               <p>
                 În cel mai scurt timp te vom contacta pentru a confirma
-                disponibilitatea autorulotei și pentru a stabili toate detaliile
-                rezervării.
+                disponibilitatea autorulotei și pentru a stabili detaliile unei
+                posibile rezervări.
               </p>
               <p>Până atunci, spune-le și prietenilor tăi despre noi</p>
               <div className="booking__successful--socialButtons">

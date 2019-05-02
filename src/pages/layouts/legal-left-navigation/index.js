@@ -6,13 +6,13 @@ import { NavLink } from "react-router-dom";
 
 const links = [
   {
-    name: "Detalii tehnice autorulota",
+    name: "Detalii tehnice autorulotă",
     url: "/detalii-tehnice-autorulota"
   },
   { name: "Anulare rezervare", url: "/anulare-rezervare" },
-  { name: "Termeni si conditii", url: "/termeni-si-conditii" },
+  { name: "Termeni și condiții", url: "/termeni-si-conditii" },
   {
-    name: "Politica de confidentialitate",
+    name: "Politica de confidențialitate",
     url: "/politica-de-confidentialitate"
   },
   {
@@ -36,7 +36,7 @@ const SimpleLayout = props => (
             <ul className="vMenu">
               <li>
                 <NavLink to="/" activeClassName="vMenu--active" exact>
-                  Pagina principala
+                  Pagina principală
                 </NavLink>
               </li>
               {links.map((link, index) => (
