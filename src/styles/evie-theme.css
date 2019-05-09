@@ -681,6 +681,10 @@ label.success {
   -webkit-transition: 0.7s;
   -o-transition: 0.7s;
   transition: 0.7s;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07),
+    0 1px 5px 0 rgba(0, 0, 0, 0.11), 0 3px 1px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.11),
+    0 3px 1px -2px rgba(0, 0, 0, 0.1);
 }
 .navbar--nofixed {
   position: relative;
@@ -783,6 +787,7 @@ label.success {
 /*--- Extended and transparent version ---*/
 .navbar--extended {
   background-color: transparent;
+  box-shadow: none;
 }
 .navbar--extended .navbar__inner {
   height: 60px;
@@ -1741,7 +1746,7 @@ label.success {
 @media (min-width: 992px) {
   .app__menu {
     display: block;
-    width: 300px;
+    width: 250px;
     -ms-flex-negative: 0;
     flex-shrink: 0;
   }

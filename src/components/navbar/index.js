@@ -110,7 +110,7 @@ export default class extends React.Component {
     const { withTransparentBackground = true } = this.props;
     const { mobileMenuOpened } = this.state;
     const mobileMenuStyle = {
-      maxHeight: mobileMenuOpened ? 300 : 0
+      maxHeight: mobileMenuOpened ? 360 : 0
     };
 
     const navbarClasses = ["navbar"];
