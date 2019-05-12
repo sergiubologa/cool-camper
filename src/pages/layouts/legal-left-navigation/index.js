@@ -5,10 +5,6 @@ import withTopProgressBar from "../withTopProgressBar";
 import { NavLink } from "react-router-dom";
 
 const links = [
-  {
-    name: "Detalii tehnice autorulotă",
-    url: "/detalii-tehnice-autorulota"
-  },
   { name: "Anulare rezervare", url: "/anulare-rezervare" },
   { name: "Termeni și condiții", url: "/termeni-si-conditii" },
   {
