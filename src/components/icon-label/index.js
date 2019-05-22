@@ -7,7 +7,8 @@ export default props => {
     className,
     icon: IconComponent = Check,
     iconColor = "#6c63ff",
-    size = "normal"
+    size = "normal",
+    ...rest
   } = props;
   let { iconWidth } = props;
   const classes = ["icon__label"];
@@ -23,7 +24,7 @@ export default props => {
 
   return (
     <div className={classes.join(" ")}>
-      <IconComponent color={iconColor} width={iconWidth} />
+      <IconComponent color={iconColor} width={iconWidth} {...rest} />
       {size === "small" ? <small>{text}</small> : <span>{text}</span>}
     </div>
   );

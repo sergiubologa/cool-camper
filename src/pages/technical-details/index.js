@@ -10,10 +10,12 @@ import CheckmarkIcon from "../../components/svg/checkmark";
 import EngineIcon from "../../components/svg/engine";
 import IconDashboard from "../../components/svg/icon-dashboard";
 import IconStar from "../../components/svg/icon-star";
+import IconRec from "../../components/svg/rec";
 import "../../styles/our-cars.css";
 import SimpleLayout from "../layouts/simple-layout";
 import MainAsset from "./components/main-asset";
 import OtherAsset from "./components/other-asset";
+import { pricesData } from "coolcamper-common";
 
 const getVideoUrl = () => {
   const videoId = "8X-hB3X2Db0";
@@ -46,19 +48,20 @@ export default () => (
       />
     </Helmet>
     <div className="our-cars container">
+      <div className="title">
+        <h2>Benimar Tessoro 495</h2>
+        <img
+          src={PremiumBadge}
+          alt="Autorulota Premium"
+          className="premium-badge"
+        />
+        <div className="model">
+          <IconStar width="24" palette="green" /> model 2019
+        </div>
+      </div>
       <header>
         <div className="details">
-          <div className="title">
-            <h2>Benimar Tessoro 495</h2>
-            <img
-              src={PremiumBadge}
-              alt="Autorulota Premium"
-              className="premium-badge"
-            />
-            <div className="model">
-              <IconStar width="24" palette="green" /> model 2019
-            </div>
-          </div>
+          <h3>Principalele caracteristici</h3>
           <div className="main-assets">
             <MainAsset
               icon={CarSeatIcon}
@@ -116,38 +119,253 @@ export default () => (
       </header>
 
       <section>
-        <div className="title">Dotari</div>
+        <div className="title">Siguranta</div>
         <div className="info">
-          <IconLabel text="ABS" icon={CheckmarkIcon} iconWidth={16} />
-          <IconLabel text="Full CASCO" icon={CheckmarkIcon} iconWidth={16} />
+          <IconLabel
+            text="Camera video marsarier"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Sistem ABS de franare"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Senzori de parcare"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Inchidere centralizata"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Sistem cruise control (controlul vitezei de deplasare)"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Sistem de control electronic al stabilitatii"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Servodirectie"
+            icon={CheckmarkIcon}
+            className="label"
+          />
         </div>
       </section>
 
-      {/* <h3 className="app__main__title">Detalii tehnice autorulote</h3>
-      <h3 className="app__main__title">Benimar Tessoro 495</h3>
-      <ul>
-        <li>Locuri pe scaun: 5</li>
-        <li>Locuri de dormit: 5</li>
-        <li>Transmisie Manuala</li>
-        <li>Nr. viteze 6</li>
-        <li>Combustibil Diesel</li>
-        <li>Consum 11 l/100 km</li>
-        <li>Lungime 699 cm</li>
-        <li>Latime 230 cm</li>
-        <li>Inaltime 289 cm</li>
-        <li>Putere motor (cp) 170 cp</li>
-      </ul>
+      <section>
+        <div className="title">Utilitati</div>
+        <div className="info">
+          <IconLabel
+            text="Apa calda si caldura"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Panouri solare 140 W"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Cablu de alimentare 220W"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Rezervor de apa reziduala (100l)"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Rezervor apa curata (120l)"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Sistem de conectare la retea electrica"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Aer conditionat"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Acumulator stationar"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Furtun de apa"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+        </div>
+      </section>
 
-      <h4 style={{ marginBottom: 0 }}>Siguranta si specificatii tehnice</h4>
-      <ul>
-        <li>Camera video marsarier</li>
-        <li>Sistem ABS de franare</li>
-        <li>Inchidere centralizata</li>
-        <li>Sistem cruise control (controlul vitezei de deplasare)</li>
-        <li>Servodirectie</li>
-        <li>Sistem de control electronic al stabilitatii</li>
-        <li>Senzori de parcare</li>
-      </ul>
+      <section>
+        <div className="title">Bucatarie</div>
+        <div className="info two-cols">
+          <IconLabel
+            text="Blat de lucru"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel text="Aragaz" icon={CheckmarkIcon} className="label" />
+          <IconLabel text="Chiuveta" icon={CheckmarkIcon} className="label" />
+          <IconLabel text="Frigider" icon={CheckmarkIcon} className="label" />
+          <IconLabel text="Congelator" icon={CheckmarkIcon} className="label" />
+          <IconLabel
+            text="Masa extensibila"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Zona generoasa de luat masa"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Veselă, oale și tigăi pentru gătit"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+        </div>
+      </section>
+
+      <section>
+        <div className="title">Baie</div>
+        <div className="info two-cols">
+          <IconLabel text="Dus" icon={CheckmarkIcon} className="label" />
+          <IconLabel text="Chiuveta" icon={CheckmarkIcon} className="label" />
+          <IconLabel text="WC" icon={CheckmarkIcon} className="label" />
+          <IconLabel text="Prosoape" icon={CheckmarkIcon} className="label" />
+        </div>
+      </section>
+
+      <section>
+        <div className="title">Altele</div>
+        <div className="info">
+          <IconLabel
+            text="Veranda Fiamma extensibila (3m)"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Suport de 4 biciclete"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Cale de echilibrare"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Masă și scaune de camping"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Spatiu de depozitare generos"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+        </div>
+      </section>
+
+      <section>
+        <div className="title">Beneficii incluse in pret</div>
+        <div className="info">
+          <IconLabel
+            text="Asigurare full CASCO (fransiza de 250euro / eveniment)"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Asistenta rutiera Ford 24/24"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel text="Rovigneta" icon={CheckmarkIcon} className="label" />
+          <IconLabel
+            text="Numar nelimitat de km"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Consumabile (hartie igienica solubila, substante chimice pentru WC-ul
+          ecologic)"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Nu percepem taxa de igienizare si consumabile"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Anularea rezervarii este gratuita, oricand"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+        </div>
+      </section>
+
+      <section>
+        <div className="title">NU sunt incluse in pret</div>
+        <div className="info">
+          <IconLabel
+            text="Combustibilul"
+            icon={IconRec}
+            palette="red"
+            className="label"
+          />
+          <IconLabel
+            text="Taxele de drum in afara tarii"
+            icon={IconRec}
+            palette="red"
+            className="label"
+          />
+          <IconLabel
+            text="Taxele de camping"
+            icon={IconRec}
+            palette="red"
+            className="label"
+          />
+        </div>
+      </section>
+
+      <section>
+        <div className="title">Conditii de inchiriere</div>
+        <div className="info">
+          <IconLabel
+            text="Permis de conducere categoria B cu cel putin 5 ani vechime"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text="Varsta minima: 25 ani"
+            icon={CheckmarkIcon}
+            className="label"
+          />
+          <IconLabel
+            text={`Percepem o garantie de ${pricesData.deposit} de euro`}
+            icon={CheckmarkIcon}
+            className="label"
+          />
+        </div>
+      </section>
+
+      {/* 
+        <li>Transmisie Manuala</li>
 
       <h4 style={{ marginBottom: 0 }}>In cabina soferului</h4>
       <ul>
@@ -155,79 +373,6 @@ export default () => (
         <li>USB</li>
         <li>Bluetooth</li>
       </ul>
-
-      <h4 style={{ marginBottom: 0 }}>Incalzire, Apa, Electricitate</h4>
-      <ul>
-        <li>Apa calda si caldura</li>
-        <li>Panouri solare 140 W</li>
-        <li>Cablu de alimentare 220W</li>
-        <li>Rezervor de apa reziduala (100l)</li>
-        <li>Rezervor apa curata (120l)</li>
-        <li>Sistem de conectare la retea electrica</li>
-        <li>Aer conditionat</li>
-        <li>Acumulator stationar</li>
-        <li>Furtun de apa</li>
-      </ul>
-
-      <h4 style={{ marginBottom: 0 }}>Bucatarie</h4>
-      <ul>
-        <li>Blat de lucru</li>
-        <li>Aragaz</li>
-        <li>Chiuveta</li>
-        <li>Frigider</li>
-        <li>Congelator</li>
-        <li>Zona generoasa de living cu masa</li>
-        <li>Masa extensibila</li>
-      </ul>
-
-      <h4 style={{ marginBottom: 0 }}> Baie</h4>
-      <ul>
-        <li>Dus</li>
-        <li>Chiuveta</li>
-        <li>WC</li>
-      </ul>
-
-      <h4 style={{ marginBottom: 0 }}>Altele</h4>
-      <ul>
-        <li>Spatiu depozitare si transport biciclete</li>
-        <li>Veranda Fiamma extensibila (3m)</li>
-        <li>Spatiu depozitare generos</li>
-        <li>Cale de echilibrare</li>
-        <li>TV LCD+DVD + antena DVB</li>
-      </ul>
-
-      <h4 style={{ marginBottom: 0 }}>Tarifele includ</h4>
-      <ul>
-        <li>Asigurare full CASCO</li>
-        <li>Rovignetă</li>
-        <li>Număr nelimitat de km</li>
-        <li>Suport de biciclete</li>
-        <li>Masă și scaune de camping</li>
-        <li>Așternuturi, perne și lenjerii de pat</li>
-        <li>Prosoape de baie</li>
-        <li>
-          Consumabile (hartie igienica solubila, substante chimice pentru WC-ul
-          ecologic)
-        </li>
-        <li>Veselă, oale și tigăi pentru gătit</li>
-        <li>Anularea rezervării este gratuită, oricând</li>
-      </ul>
-
-      <h4 style={{ marginBottom: 0 }}>Tarifele nu includ</h4>
-      <ul>
-        <li>Vignete sau alte taxe in afara Romaniei</li>
-      </ul>
-
-      <h4 style={{ marginBottom: 0 }}>Conditii de inchiriere</h4>
-      <ul>
-        <li>Permis de conducere categoria B cu cel putin 5 ani vechime</li>
-        <li>Varsta minima: 25 ani</li>
-      </ul>
-
-      <h4>Fara taxa de igienizare si consumabile</h4>
-      <h4 style={{ marginTop: 0 }}>
-        Garantie returnabila de {pricesData.deposit} de euro
-      </h4>
 
       <br />
       <Link
