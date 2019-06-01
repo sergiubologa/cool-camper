@@ -12,6 +12,7 @@ module.exports = props => {
       .toString()
       .replace("${name}", props.name)
       .replace("${email}", props.email)
+      .replace("${phone}", props.phone)
       .replace("${message}", props.message)
   };
 };

@@ -16,6 +16,9 @@ import SimpleLayout from "../layouts/simple-layout";
 import MainAsset from "./components/main-asset";
 import OtherAsset from "./components/other-asset";
 import { pricesData } from "coolcamper-common";
+import { Link } from "react-router-dom";
+
+// TODO - add photos and call to action
 
 const getVideoUrl = () => {
   const videoId = "8X-hB3X2Db0";
@@ -61,7 +64,6 @@ export default () => (
       </div>
       <header>
         <div className="details">
-          <h3>Principalele caracteristici</h3>
           <div className="main-assets">
             <MainAsset
               icon={CarSeatIcon}
@@ -101,6 +103,18 @@ export default () => (
             <OtherAsset title="Latime" text="2,30m" />
             <OtherAsset title="Inaltime" text="2,89m" />
             <OtherAsset title="Viteze" text="6" />
+          </div>
+          <div className="top-cta">
+            <Link
+              className="button button__primary"
+              to="/rezervare-autorulota"
+              ga-on="click,auxclick,contextmenu"
+              ga-event-category="Button"
+              ga-event-action="Verifică disponibilitatea"
+              ga-event-label="technical details page - header"
+            >
+              Verifică disponibilitatea
+            </Link>
           </div>
         </div>
         <div className="media">
@@ -361,6 +375,18 @@ export default () => (
             icon={CheckmarkIcon}
             className="label"
           />
+          <div className="other">
+            <Link
+              className="button button__primary"
+              to="/rezervare-autorulota"
+              ga-on="click,auxclick,contextmenu"
+              ga-event-category="Button"
+              ga-event-action="Verifică disponibilitatea"
+              ga-event-label="technical details page - bottom"
+            >
+              Verifică disponibilitatea
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -373,18 +399,7 @@ export default () => (
         <li>USB</li>
         <li>Bluetooth</li>
       </ul>
-
-      <br />
-      <Link
-        className="button button__primary"
-        to="/rezervare-autorulota"
-        ga-on="click,auxclick,contextmenu"
-        ga-event-category="Button"
-        ga-event-action="Închiriază acum o autorulotă"
-        ga-event-label="technical details page"
-      >
-        Închiriază acum o autorulotă
-      </Link> */}
+       */}
     </div>
   </SimpleLayout>
 );

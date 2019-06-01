@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../../../components/inputs/button";
 import {
   isEmailValid as validateEmail,
+  isPhoneValid as validatePhone,
   isFirstNameValid as validateFirstName
 } from "coolcamper-common";
 import Loader from "../../../components/loader";
@@ -19,12 +20,14 @@ export default class extends React.Component {
     this.state = {
       name: "",
       email: "",
+      phone: "",
       message: "",
       isSubmitting: false,
       submitError: "",
       errors: {
         name: { error: "", isTouched: false },
         email: { error: "", isTouched: false },
+        phone: { error: "", isTouched: false },
         message: { error: "", isTouched: false }
       }
     };
@@ -38,6 +41,10 @@ export default class extends React.Component {
         validateEmail(email)
           ? { isValid: true, error: "" }
           : { isValid: false, error: "Adresa de email nu este corecta" },
+      phone: phone =>
+        validatePhone(phone)
+          ? { isValid: true, error: "" }
+          : { isValid: false, error: "Telefonul nu este corect" },
       message: message =>
         validateFirstName(message)
           ? { isValid: true, error: "" }
@@ -50,8 +57,8 @@ export default class extends React.Component {
       if (this.isFormValid()) {
         this.setState({ isSubmitting: true, submitError: "" });
         // call api to send the message
-        const { name, email, message } = this.state;
-        const data = { name, email, message };
+        const { name, email, phone, message } = this.state;
+        const data = { name, email, phone, message };
         fetch("/api/message", {
           method: "POST",
           headers: {
@@ -67,6 +74,7 @@ export default class extends React.Component {
               submitSuccessful: res.error ? false : true,
               name: res.error ? this.state.name : "",
               email: res.error ? this.state.email : "",
+              phone: res.error ? this.state.phone : "",
               message: res.error ? this.state.message : ""
             });
             setTimeout(() => {
@@ -101,9 +109,10 @@ export default class extends React.Component {
   }
 
   validateAllFields() {
-    const { name, email, message } = this.state;
+    const { name, email, phone, message } = this.state;
     const nameError = this.validators["name"](name);
     const emailError = this.validators["email"](email);
+    const phoneError = this.validators["phone"](phone);
     const msgError = this.validators["message"](message);
     return new Promise(resolve =>
       this.setState(
@@ -111,6 +120,7 @@ export default class extends React.Component {
           errors: {
             name: { ...nameError, isTouched: true },
             email: { ...emailError, isTouched: true },
+            phone: { ...phoneError, isTouched: true },
             message: { ...msgError, isTouched: true }
           }
         },
@@ -141,6 +151,7 @@ export default class extends React.Component {
     const {
       name,
       email,
+      phone,
       message,
       errors,
       isSubmitting,
@@ -150,10 +161,12 @@ export default class extends React.Component {
     const {
       name: nameError,
       email: emailError,
+      phone: phoneError,
       message: messageError
     } = errors;
     const showNameError = !nameError.isValid && nameError.isTouched;
     const showEmailError = !emailError.isValid && emailError.isTouched;
+    const showPhoneError = !phoneError.isValid && phoneError.isTouched;
     const showMessageError = !messageError.isValid && messageError.isTouched;
     return (
       <div>
@@ -189,6 +202,23 @@ export default class extends React.Component {
           value={email}
           className={showEmailError ? "error" : ""}
           placeholder="you@example.com"
+        />
+
+        {!showPhoneError && <label htmlFor="phone">Telefon</label>}
+        {showPhoneError && (
+          <label htmlFor="phone" className="error">
+            {phoneError.error}
+          </label>
+        )}
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          onChange={this.onChange}
+          onBlur={this.onBlur}
+          value={phone}
+          className={showPhoneError ? "error" : ""}
+          placeholder="0740 000 000"
         />
 
         {!showMessageError && <label htmlFor="message">Mesaj</label>}

@@ -89,6 +89,12 @@
   font-weight: bold;
 }
 
+.our-cars > header .details .top-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
 .our-cars > header .media {
   margin-top: 1em;
   flex-grow: 1;
@@ -140,6 +146,12 @@
 }
 .our-cars > section .info.two-cols > .label {
   width: 50%;
+}
+.our-cars > section .info .other {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  width: 100%;
 }
 @media (min-width: 992px) {
   .our-cars > section {

@@ -392,7 +392,7 @@ textarea {
   margin-bottom: 1.4em;
   display: block;
   resize: none;
-  min-height: 8em;
+  min-height: 6em;
   outline: 0;
 }
 textarea:focus {
@@ -1130,7 +1130,7 @@ label.success {
 }
 
 .step {
-  padding: 16pt 0;
+  padding: 0 0 16pt 0;
   text-align: center;
   width: 100%;
   border-top: 1px solid #eee;

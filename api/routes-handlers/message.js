@@ -1,16 +1,21 @@
 const newMessageAdminTemplate = require("../email-templates/admin/new-message");
-const { isEmailValid, isFirstNameValid } = require("coolcamper-common");
+const {
+  isEmailValid,
+  isFirstNameValid,
+  isPhoneValid
+} = require("coolcamper-common");
 const utils = require("../utils");
 
 // POST request
 module.exports = async (ctx, next) => {
   // get params
-  const { name = "", email = "", message = "" } = ctx.request.body;
+  const { name = "", email = "", phone = "", message = "" } = ctx.request.body;
 
   // validate params
   const isFormValid =
     isFirstNameValid(name.trim()) &&
     isEmailValid(email.trim()) &&
+    isPhoneValid(phone.trim()) &&
     isFirstNameValid(message.trim());
 
   if (!isFormValid) {
@@ -20,6 +25,7 @@ module.exports = async (ctx, next) => {
     const emailTemplate = newMessageAdminTemplate({
       name,
       email,
+      phone,
       message
     });
     const emailSent = await utils.sendEmail(emailTemplate);

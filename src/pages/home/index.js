@@ -38,6 +38,7 @@ import SmartphoneIcon from "../../components/svg/smartphone";
 import ContactForm from "./components/contact-form";
 import Helmet from "react-helmet";
 import { smoothScrollToSelector, isSSR } from "../../common/utils";
+import PinIcon from "../../components/svg/pin";
 
 class Home extends Component {
   componentDidMount() {
@@ -209,6 +210,12 @@ class Home extends Component {
             <p>
               Nu ezita să ne contactezi pentru orice problemă sau nelămurire
               întâmpini. Suntem aici ca să te ajutăm!
+            </p>
+            <p>
+              <PinIcon width="26" height="26" palette="purple" />
+              Puncte de ridicare si predare: <strong>
+                Cluj-Napoca
+              </strong> si <strong>Targu Mures</strong>
             </p>
           </StepsHeader>
 
