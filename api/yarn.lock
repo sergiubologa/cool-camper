@@ -63,10 +63,10 @@ cookies@~0.7.1:
     depd "~1.1.2"
     keygrip "~1.0.3"
 
-coolcamper-common@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/coolcamper-common/-/coolcamper-common-1.1.1.tgz#1fb8eaeaa44c4b680b088f1c133c6b3158d34dc4"
-  integrity sha512-W7l5RV8gRCAkV16UjkWy3Ry+ngXnJVwJUjypamMw8+tf42lEOJ6poad9Z2yi/gu9xh1qWXHnFfuoKXs3JyhOfA==
+coolcamper-common@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/coolcamper-common/-/coolcamper-common-1.1.2.tgz#9514ef11cf9486ac4d9897a835710a6416e53faa"
+  integrity sha512-5FxHbk4xB/l72goY5GXbP0Z2g6A35LKSDmK1QmP+yB/j/oxBY/ZhGflIICel66MnIlTNZic6sLFG89T3J+DZwQ==
 
 copy-to@^2.0.1:
   version "2.0.1"
@@ -317,10 +317,10 @@ negotiator@0.6.1:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
   integrity sha1-KzJxhOiZIQEXeyhWP7XnECrNDKk=
 
-nodemailer@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.1.1.tgz#09e88ef4b3646f01089c5d84d007b872141fb575"
-  integrity sha512-/x5MRIh56VyuuhLfcz+DL2SlBARpZpgQIf2A4Ao4hMb69MHSgDIMPwYmFwesGT1lkRDZ0eBSoym5+JoIZ3N+cQ==
+nodemailer@^6.2.1:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.2.1.tgz#20d773925eb8f7a06166a0b62c751dc8290429f3"
+  integrity sha512-TagB7iuIi9uyNgHExo8lUDq3VK5/B0BpbkcjIgNvxbtVrjNqq0DwAOTuzALPVkK76kMhTSzIgHqg8X1uklVs6g==
 
 on-finished@^2.3.0:
   version "2.3.0"
