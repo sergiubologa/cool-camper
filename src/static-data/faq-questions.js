@@ -22,10 +22,8 @@ export default [
     question: `Vreau sa fac un circuit european, insa nu stiu de unde sa o iau.
       Ma puteti ajuta cu informatii?`,
     answer: `Categoric. Incercam sa fim mai mult decat un serviciu de inchirieri de autorulote. Vrem sa fim prietenul tau de nadejede pe toata perioada calatoriei cu autorulota si de ce nu, poate chiar si dupa :)
-      De aceea pe langa autorulota noi iti vom sugera diferite itinerarii.
-       Odata decisa perioada inchirierii si ruta pe care vrei sa o faci alaturi de prieteni sau de familie, noi iti vom trimite pe email toate detaliile calatoriei tale. 
-      Vei avea timp suficient sa studiezi ceea ce noi iti propunem si daca consideri ca vrei sa modifici traseul, te putem ajuta.
-      Ne poti contacta cu incredere pe e-mail la bianca@coolcamper.ro sau la telefon 0742291018. Iti vom da toate detaliile de care ai nevoie.
+    De aceea daca doresti putem sa te ajutam cu cateva sugestii.
+    Ne poti contacta cu incredere pe e-mail la bianca@coolcamper.ro sau la telefon 0742.291-018. 
       `
   },
   {
@@ -122,9 +120,7 @@ export default [
   },
   {
     question: "Care este garantia perceputa?",
-    answer: `CoolCamper percepe o garanție de ${
-      pricesData.deposit
-    } de euro la preluarea autorulotei, sumă ce va fi înapoiată integral la predarea acesteia în aceași stare în care a fost preluată. 
+    answer: `CoolCamper percepe o garanție de ${pricesData.deposit} de euro la preluarea autorulotei, sumă ce va fi înapoiată integral la predarea acesteia în aceași stare în care a fost preluată. 
     Trebuie să știi că în caz de accident sau alte pagube vom fi nevoiți să îți reținem costurile reparațiilor sau fransiza CASCO de 500 de euro.`
   },
   {
@@ -160,10 +156,8 @@ export default [
     - suport de biciclete (2-4 biciclete);
     - veranda retractabila (marchiza);
     - set de camping (masa + 4-7 scaune de exterior);
-    - un set de consumabile (gaz - 1 butelie conectata, una de rezerva; hartie igienica solubila in apa, etc.)
-    - lenjerii de pat, inclusiv perne si paturi (daca este cazul);
-    - set de bucatarie (vesela de unica folosinta, etc)  - datorita miscarii produc zgomot in mers si din acest motiv ceea ce iti punem la dispozitie e doar vesela de baza
-    - prosoape si obiecte de igiena personala.
+    - un set de consumabile (gaz - 1 butelie conectata, hartie igienica solubila in apa, pastile pentru toaleta)
+    - set de bucatarie (vesela de unica folosinta, etc)  - datorita miscarii produc zgomot in mers si din acest motiv ceea ce iti punem la dispozitie e doar vesela de baza.
     `
   }
 ];

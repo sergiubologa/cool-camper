@@ -90,24 +90,19 @@ export default class extends React.Component {
           <div className="step__one__benefits_labels">
             <div style={{ width: "60%" }}>
               <IconLabel size="small" text="Asigurare full CASCO" />
-              <IconLabel size="small" text="Rovignetă" />
               <IconLabel size="small" text="Număr nelimitat de km" />
               <IconLabel size="small" text="Suport de biciclete" />
               <IconLabel size="small" text="Masă și scaune de camping" />
             </div>
             <div>
-              <IconLabel
-                size="small"
-                text="Așternuturi, perne și lenjerii de pat"
-              />
-              <IconLabel size="small" text="Prosoape de baie" />
+              <IconLabel size="small" text="Rovignetă" />
               <IconLabel
                 size="small"
                 text="Veselă, oale și tigăi pentru gătit"
               />
               <IconLabel
                 size="small"
-                text="Anularea rezervării este gratuită, oricând"
+                text="Anularea rezervării este gratuită, cu minimum 30 de zile înainte de preluare"
               />
             </div>
           </div>

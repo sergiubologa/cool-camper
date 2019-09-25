@@ -99,16 +99,6 @@ export default class extends React.Component {
                 iconWidth={16}
               />
               <IconLabel
-                text="Așternuturi, perne și lenjerii de pat"
-                icon={CheckmarkIcon}
-                iconWidth={16}
-              />
-              <IconLabel
-                text="Prosoape de baie"
-                icon={CheckmarkIcon}
-                iconWidth={16}
-              />
-              <IconLabel
                 text="Veselă, oale și tigăi pentru gătit"
                 icon={CheckmarkIcon}
                 iconWidth={16}
@@ -124,7 +114,7 @@ export default class extends React.Component {
                 iconWidth={16}
               />
               <IconLabel
-                text="Anularea rezervării este gratuită, oricând"
+                text="Anularea rezervării este gratuită, cu minimum 30 de zile înainte de preluare"
                 icon={CheckmarkIcon}
                 iconWidth={16}
               />
@@ -164,8 +154,8 @@ export default class extends React.Component {
                     <strong>Anulare gratuită</strong>
                   </p>
                   <small>
-                    În cazul anulării rezervării, suma plătită va fi returnată
-                    integral, în maximum 15 zile lucrătoare.
+                    În cazul anulării rezervării cu minimum 30 de zile înainte
+                    de preluare, suma plătită va fi returnată integral.
                   </small>
                 </div>
               </div>

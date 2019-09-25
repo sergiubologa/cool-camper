@@ -149,8 +149,8 @@ class Home extends Component {
           </SectionTitle>
           <SectionText style={{ marginTop: 0 }}>
             Autorulotele noastre sunt modele noi din anul 2019. Știm cât de mult
-            contează să te simți în siguranță, astfel în fiecare an ne reînoim
-            flota pentru a avea mereu autorulote moderne de închiriat. Vezi{" "}
+            contează să te simți în siguranță, iar pentru asta vom avea mereu
+            autorulote moderne de închiriat. Vezi{" "}
             <Link
               to="/detalii-tehnice-autorulota"
               className="link"
@@ -161,7 +161,7 @@ class Home extends Component {
             >
               aici
             </Link>{" "}
-            mai multe detalii tehnice.
+            mai multe detalii.
           </SectionText>
           <SectionMediaSlider
             images={motorhomeImages}

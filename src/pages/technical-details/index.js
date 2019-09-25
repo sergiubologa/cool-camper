@@ -260,7 +260,6 @@ export default () => (
           <IconLabel text="Dus" icon={CheckmarkIcon} className="label" />
           <IconLabel text="Chiuveta" icon={CheckmarkIcon} className="label" />
           <IconLabel text="WC" icon={CheckmarkIcon} className="label" />
-          <IconLabel text="Prosoape" icon={CheckmarkIcon} className="label" />
         </div>
       </section>
 
@@ -299,7 +298,7 @@ export default () => (
         <div className="title">Beneficii incluse in pret</div>
         <div className="info">
           <IconLabel
-            text="Asigurare full CASCO (fransiza de 250euro / eveniment)"
+            text="Asigurare full CASCO"
             icon={CheckmarkIcon}
             className="label"
           />
@@ -326,7 +325,7 @@ export default () => (
             className="label"
           />
           <IconLabel
-            text="Anularea rezervarii este gratuita, oricand"
+            text="Anulare gratuita, cu minimum 30 de zile inaintea preluarii"
             icon={CheckmarkIcon}
             className="label"
           />
