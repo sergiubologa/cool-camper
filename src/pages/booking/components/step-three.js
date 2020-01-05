@@ -166,10 +166,7 @@ export default class extends React.Component {
           className="step__three__card step__three__card--general"
           renderBody={() => (
             <div className="step__three__card__sendReservation">
-              <h3>
-                Total de plată: {prices.totalPriceWithDiscount.toLocaleString()}
-                €
-              </h3>
+              <h3>Total: {prices.totalPriceWithDiscount.toLocaleString()}€</h3>
               <small>
                 Prin plasarea comenzii, ești de acord cu{" "}
                 <Link

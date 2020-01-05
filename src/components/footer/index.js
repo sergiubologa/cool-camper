@@ -16,7 +16,7 @@ export default () => (
             lucru în Cluj-Napoca. Autorulotele noastre se pot închiria pe tot
             parcursul anului, din județele Cluj și Mureș, dar se pot închiria și
             de către persoane din județele limitrofe: Sibiu, Bistrița, Alba,
-            Oradea, Zalău.
+            Bihor, Zalău.
           </span>
         </div>
 

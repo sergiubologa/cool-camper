@@ -213,9 +213,7 @@ class Home extends Component {
             </p>
             <p>
               <PinIcon width="26" height="26" palette="purple" />
-              Puncte de ridicare si predare: <strong>
-                Cluj-Napoca
-              </strong> si <strong>Targu Mures</strong>
+              Ridicare si predare din <strong>Cluj-Napoca</strong>
             </p>
           </StepsHeader>
 
