@@ -25,6 +25,7 @@ export default class extends React.Component {
     this.state = {
       mobileMenuOpened: false,
       navLinks: [
+        { title: "🦠 Covid-19", url: "/covid-19" },
         { title: "Prețuri", url: "/#preturi" },
         { title: "Verifică Disponibilitatea", url: "/rezervare-autorulota" },
         { title: "Autorulotele noastre", url: "/detalii-tehnice-autorulota" },
