@@ -108,13 +108,13 @@ export default class extends React.Component {
   }
 
   render() {
-    const { withTransparentBackground = true } = this.props;
+    const { withTransparentBackground = true, className = "" } = this.props;
     const { mobileMenuOpened } = this.state;
     const mobileMenuStyle = {
       maxHeight: mobileMenuOpened ? 360 : 0
     };
 
-    const navbarClasses = ["navbar"];
+    const navbarClasses = ["navbar", className];
     if (withTransparentBackground === true) {
       navbarClasses.push("navbar--extended");
     }

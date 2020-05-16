@@ -5,7 +5,7 @@ import withTopProgressBar from "../withTopProgressBar";
 
 const SimpleLayout = props => (
   <React.Fragment>
-    <Navbar withTransparentBackground={false} />
+    <Navbar withTransparentBackground={false} className={props.className} />
     <div
       style={{
         paddingTop: 60,
