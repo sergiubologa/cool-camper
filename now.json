@@ -44,7 +44,7 @@
     },
     { "src": "^/precache-manifest.(.*)", "dest": "build/precache-manifest.$1" },
     {
-      "src": "^/(rezervare-autorulota|detalii-tehnice-autorulota|anulare-rezervare|politica-de-confidentialitate|termeni-si-conditii|politica-de-cookies)$",
+      "src": "^/(covid-19|rezervare-autorulota|detalii-tehnice-autorulota|anulare-rezervare|politica-de-confidentialitate|termeni-si-conditii|politica-de-cookies)$",
       "dest": "build/$1/index.html"
     },
     { "src": "^/$", "dest": "build/index.html" },
