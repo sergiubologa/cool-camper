@@ -139,7 +139,12 @@ export default class extends React.Component {
             <nav className="navbar__menu">{this.renderLinks()}</nav>
             <div className="navbar__menu-mob">
               <div className="covid-19">
-                <Link to="/covid-19">🦠 Covid-19</Link>
+                <Link to="/covid-19">
+                  <span role="img" aria-label="Virus">
+                    🦠
+                  </span>{" "}
+                  Covid-19
+                </Link>
               </div>
               <IconButton onClick={this.toggleBurgerMenu} aria-label="Meniu">
                 <BurgerMenuSVG color="currentColor" width="1.2em" />
