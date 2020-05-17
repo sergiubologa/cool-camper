@@ -18,6 +18,12 @@
   position: relative;
 }
 
+@media (max-width: 992px) {
+  .covid-19 .banner {
+    width: 115%;
+  }
+}
+
 .covid-19 .banner .alert {
   position: absolute;
   top: 25%;
@@ -33,12 +39,24 @@
 .covid-19 .how-to-section {
   padding: 0 20%;
 }
+@media (max-width: 992px) {
+  .covid-19 .question,
+  .covid-19 .answer,
+  .covid-19 .how-to-section {
+    padding: 0;
+  }
+}
 
 .covid-19 .question {
   width: 100%;
   text-align: center;
   font-size: 44px;
   font-weight: bold;
+}
+@media (max-width: 992px) {
+  .covid-19 .question {
+    font-size: 40px;
+  }
 }
 
 .covid-19 .question p {
@@ -78,6 +96,12 @@
   font-size: 34px;
   font-weight: bold;
 }
+@media (max-width: 992px) {
+  .covid-19 .answer {
+    font-size: 20px;
+    margin-top: 2em;
+  }
+}
 
 .covid-19 .answer .yes {
   color: white;
@@ -103,12 +127,24 @@
   margin-bottom: 0;
   text-align: justify;
 }
+@media (max-width: 992px) {
+  .covid-19 .answer .quote {
+    margin-top: -0.5em;
+    padding: 0 5px;
+  }
+}
 
 .covid-19 .answer .source {
   font-size: 14px;
   opacity: 0.7;
   margin-top: 0;
   text-align: right;
+}
+@media (max-width: 992px) {
+  .covid-19 .answer .source {
+    margin-top: 5px;
+    font-size: 12px;
+  }
 }
 
 .covid-19 .answer .source a {
@@ -128,12 +164,26 @@
   font-weight: bold;
   margin-bottom: 0;
 }
+@media (max-width: 992px) {
+  .covid-19 .how-to-section .title {
+    font-size: 26px;
+  }
+}
 
 .covid-19 .how-to-section .icon__label > span:nth-child(2) {
   color: #013250;
   font-weight: bold;
 }
+@media (max-width: 992px) {
+  .covid-19 .how-to-section .icon__label > span:nth-child(2) {
+    font-weight: normal;
+  }
+}
+
+.covid-19 .cta-section {
+  margin-top: 3em;
+}
 
 .covid-19 .last {
-  height: 5em;
+  height: 3em;
 }

@@ -709,7 +709,7 @@ label.success {
 }
 
 .navbar__logo {
-  min-width: 180px;
+  width: 180px;
   display: flex;
   flex-direction: column;
 }

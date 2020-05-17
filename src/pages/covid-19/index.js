@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import SimpleLayout from "../layouts/simple-layout";
 import "../../styles/covid-19.css";
 import IconLabel from "../../components/icon-label";
+import { Link } from "react-router-dom";
 
 export default () => (
   <SimpleLayout className="covid-19-navbar">
@@ -17,7 +18,12 @@ export default () => (
     </Helmet>
     <div className="covid-19 container">
       <div className="banner">
-        <div className="alert">🦠 &nbsp;&nbsp; Stare de alerta</div>
+        <div className="alert">
+          <span role="img" aria-label="virus icon">
+            🦠
+          </span>{" "}
+          &nbsp;&nbsp; Stare de alerta
+        </div>
       </div>
       <div className="question">
         <p className="first">Se poate calatori</p>
@@ -37,7 +43,6 @@ export default () => (
         <p className="source">
           — masura nr. 17, lit. i, anexa 1, din hotararea nr. 24/14.05.2020
           <br />
-          sursa:{" "}
           <a
             href="http://legislatie.just.ro/Public/DetaliiDocument/225602"
             target="_blank"
@@ -70,6 +75,18 @@ export default () => (
         />
         <IconLabel size="normal" text="..." />
         <IconLabel size="normal" text="..." />
+      </div>
+      <div className="cta-section">
+        <Link
+          className="button button__primary"
+          to="/rezervare-autorulota"
+          ga-on="click,auxclick,contextmenu"
+          ga-event-category="Button"
+          ga-event-action="Verifică disponibilitatea"
+          ga-event-label="Covid-19 page - bottom"
+        >
+          Verifică disponibilitatea
+        </Link>
       </div>
       <div className="last"></div>
     </div>

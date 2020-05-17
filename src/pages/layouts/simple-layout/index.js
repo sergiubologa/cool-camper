@@ -9,7 +9,8 @@ const SimpleLayout = props => (
     <div
       style={{
         paddingTop: 60,
-        flexGrow: 1
+        flexGrow: 1,
+        overflow: "hidden"
       }}
     >
       {props.children}
