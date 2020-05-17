@@ -709,9 +709,19 @@ label.success {
 }
 
 .navbar__logo {
-  min-width: 180px;
+  width: 180px;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 320px) {
+  .navbar__logo {
+    width: 140px;
+  }
+}
+@media (min-width: 321px) and (max-width: 400px) {
+  .navbar__logo {
+    width: 160px;
+  }
 }
 
 .navbar__menu {
@@ -773,7 +783,17 @@ label.success {
 }
 
 .navbar__menu-mob {
-  display: block;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+.navbar__menu-mob > .covid-19 {
+  flex-grow: 1;
+  text-align: center;
+  color: inherit;
+}
+.navbar__menu-mob > .icon-button {
+  margin-left: 10px;
 }
 .navbar__menu-mob--noMob {
   display: none;

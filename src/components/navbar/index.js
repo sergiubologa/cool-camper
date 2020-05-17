@@ -25,6 +25,7 @@ export default class extends React.Component {
     this.state = {
       mobileMenuOpened: false,
       navLinks: [
+        { title: "🦠 Covid-19", url: "/covid-19" },
         { title: "Prețuri", url: "/#preturi" },
         { title: "Verifică Disponibilitatea", url: "/rezervare-autorulota" },
         { title: "Autorulotele noastre", url: "/detalii-tehnice-autorulota" },
@@ -107,13 +108,13 @@ export default class extends React.Component {
   }
 
   render() {
-    const { withTransparentBackground = true } = this.props;
+    const { withTransparentBackground = true, className = "" } = this.props;
     const { mobileMenuOpened } = this.state;
     const mobileMenuStyle = {
       maxHeight: mobileMenuOpened ? 360 : 0
     };
 
-    const navbarClasses = ["navbar"];
+    const navbarClasses = ["navbar", className];
     if (withTransparentBackground === true) {
       navbarClasses.push("navbar--extended");
     }
@@ -137,6 +138,14 @@ export default class extends React.Component {
             </Link>
             <nav className="navbar__menu">{this.renderLinks()}</nav>
             <div className="navbar__menu-mob">
+              <div className="covid-19">
+                <Link to="/covid-19">
+                  <span role="img" aria-label="Virus">
+                    🦠
+                  </span>{" "}
+                  Covid-19
+                </Link>
+              </div>
               <IconButton onClick={this.toggleBurgerMenu} aria-label="Meniu">
                 <BurgerMenuSVG color="currentColor" width="1.2em" />
               </IconButton>

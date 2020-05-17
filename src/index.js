@@ -18,6 +18,7 @@ if (process.env.NODE_ENV !== "production") {
 smoothscroll.polyfill();
 
 const AsyncHome = React.lazy(() => import("./pages/home"));
+const AsyncCovid19 = React.lazy(() => import("./pages/covid-19"));
 const AsyncBooking = React.lazy(() => import("./pages/booking"));
 const AsyncTermsAndConditions = React.lazy(() => import("./pages/terms"));
 const AsyncCookies = React.lazy(() => import("./pages/cookies"));
@@ -31,6 +32,7 @@ const App = () => (
     <ScrollToTop>
       <Switch>
         <Route exact path="/" component={AsyncHome} />
+        <Route path="/covid-19" component={AsyncCovid19} />
         <Route path="/rezervare-autorulota" component={AsyncBooking} />
         <Route path="/anulare-rezervare" component={AsyncCancelBooking} />
         <Route
