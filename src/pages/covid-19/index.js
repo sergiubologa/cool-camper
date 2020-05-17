@@ -9,11 +9,11 @@ export default () => (
   <SimpleLayout className="covid-19-navbar">
     <Helmet>
       <title>
-        CoolCamper - Ghid calatorie cu autorulota in timp de SARS-Covid-19
+        CoolCamper - Ghid de călătorie cu autorulota în timp de SARS-CoV-2
       </title>
       <meta
         name="description"
-        content="Ghidul CoolCamper pentru calatoria cu autorulota, pe timp de pandemie!"
+        content="Ghidul CoolCamper pentru călătoria cu autorulota, pe timp de pandemie!"
       />
     </Helmet>
     <div className="covid-19 container">
@@ -22,18 +22,18 @@ export default () => (
           <span role="img" aria-label="virus icon">
             🦠
           </span>{" "}
-          &nbsp;&nbsp; Stare de alerta
+          &nbsp;&nbsp; Stare de alertă
         </div>
       </div>
       <div className="question">
-        <p className="first">Se poate calatori</p>
+        <p className="first">Se poate călători</p>
         <p className="second">
           cu <span className="autorulota">autorulota</span>?
         </p>
       </div>
       <div className="answer">
         <div className="yes">DA</div>
-        <p className="text">se poate pe teritoriul Romaniei</p>
+        <p className="text">se poate pe teritoriul României</p>
         <p className="quote">
           “deplasarea pentru activităţi recreativ-sportive individuale
           desfăşurate în aer liber (ciclism, drumeţie, alergare, canotaj,
@@ -41,7 +41,7 @@ export default () => (
           persoane„
         </p>
         <p className="source">
-          — masura nr. 17, lit. i, anexa 1, din hotararea nr. 24/14.05.2020
+          — măsura nr. 17, lit. i, anexa 1, din hotărârea nr. 24/14.05.2020
           <br />
           <a
             href="http://legislatie.just.ro/Public/DetaliiDocument/225602"
@@ -53,28 +53,34 @@ export default () => (
         </p>
       </div>
       <div className="how-to-section">
-        <p className="title">Cum sa te pregatesti tu:</p>
+        <p className="title">Cum să te pregătești tu:</p>
         <IconLabel
           size="normal"
-          text="Fa-ti un traseu prin tara cu locurile in care vei campa"
+          text="Fă-ți un traseu prin țară cu locurile în care vei campa"
         />
         <IconLabel
           size="normal"
-          text="Bifeaza cifra 8 in declaratia pe propria raspundere"
+          text="Bifează cifra 8 în declarația pe propria răspundere"
         />
         <IconLabel
           size="normal"
-          text="Ia-ti toate masurile de precautie: masti de protectie, dezinfectant, distantare sociala (minimum 2m)"
+          text="Ia-ți toate măsurile de precauție: măști de protecție, dezinfectant, distanțare socială (minimum 2m)"
         />
       </div>
       <div className="how-to-section">
-        <p className="title">Cum ne pregatim noi:</p>
+        <p className="title">Cum ne pregătim noi:</p>
         <IconLabel
           size="normal"
-          text="Lasam 2 zile libere intre rezervari ca sa igienizam si sa aerisim autorulota"
+          text="Dezinfectăm și igienizăm autorulota după fiecare preluare"
         />
-        <IconLabel size="normal" text="..." />
-        <IconLabel size="normal" text="..." />
+        <IconLabel
+          size="normal"
+          text="Lăsăm cel puțin 2 zile libere între rezervări ca să igienizăm și să aerisim autorulota"
+        />
+        <IconLabel
+          size="normal"
+          text="Impunem purtarea măștilor de protecție la preluare și la predare, atât nouă cât și clienților noștri"
+        />
       </div>
       <div className="cta-section">
         <Link
