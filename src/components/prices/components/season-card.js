@@ -1,6 +1,6 @@
 import React from "react";
 import PriceCard from "./price-card";
-import { pricesData } from "coolcamper-common";
+import { pricesData, roundNumber } from "coolcamper-common";
 import { Link } from "react-router-dom";
 import Price from "./price";
 import PriceDetails from "./price-details";
@@ -52,7 +52,8 @@ export default () => {
         hasHighSeasonDiscount && (
           <RibbonCorner
             text={
-              pricesData.discounts.temporary.highSeasonPercent + "% discount"
+              roundNumber(pricesData.discounts.temporary.highSeasonPercent, 2) +
+              "% discount"
             }
           />
         )

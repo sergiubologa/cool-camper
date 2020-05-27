@@ -2,7 +2,12 @@ import React from "react";
 import { roundNumber } from "coolcamper-common";
 
 export default props => {
-  const { price, minBookingDaysDiscounts, temporaryDiscountPercent } = props;
+  const {
+    price,
+    minBookingDaysDiscounts,
+    temporaryDiscountPercent,
+    isExtraSeason
+  } = props;
   const hasTemporaryDiscount = !!temporaryDiscountPercent;
   const discountedPrice = hasTemporaryDiscount
     ? price - roundNumber((price * temporaryDiscountPercent) / 100, 2)
@@ -18,8 +23,8 @@ export default props => {
       {hasTemporaryDiscount && (
         <small>
           Beneficiază de oferta limitată de{" "}
-          <strong>{temporaryDiscountPercent}% reducere</strong> la orice
-          rezervare făcută pentru extra-sezon
+          <strong>{roundNumber(temporaryDiscountPercent, 2)}% reducere</strong>{" "}
+          la orice rezervare făcută în {isExtraSeason ? "extra-sezon" : "sezon"}
         </small>
       )}
       {!hasTemporaryDiscount &&

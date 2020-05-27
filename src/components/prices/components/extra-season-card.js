@@ -26,6 +26,7 @@ export default () => {
       type="extra-season"
       renderContent={() => (
         <Price
+          isExtraSeason={true}
           price={pricesData.lowSeasonPricePerDay}
           minBookingDaysDiscounts={pricesData.discounts.minBookingDays}
           temporaryDiscountPercent={
