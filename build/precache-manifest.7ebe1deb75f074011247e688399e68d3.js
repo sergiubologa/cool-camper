@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "43afe034005b5ea0a85d4d0384c40737",
+    "revision": "71195e6513e344769920d842475108be",
     "url": "/index.html"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/9.8ada02ad.chunk.css"
   },
   {
-    "revision": "0c3b2c0ed804a4b564b9",
-    "url": "/static/css/main.677e71a6.chunk.css"
+    "revision": "5639e6f7172279b3aad6",
+    "url": "/static/css/main.10b2f600.chunk.css"
   },
   {
     "revision": "180a12f0653d7ef3c0ad",
@@ -108,7 +108,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/9.2ccd6e42.chunk.js"
   },
   {
-    "revision": "0c3b2c0ed804a4b564b9",
+    "revision": "5639e6f7172279b3aad6",
     "url": "/static/js/main.2e0a26e5.chunk.js"
   },
   {
@@ -244,6 +244,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/hallstatt-3609863_1920.76c530e3.jpg"
   },
   {
+    "revision": "bc3837bd8a6ff27db9756cb6504a01bf",
+    "url": "/static/media/hero-big.bc3837bd.jpg"
+  },
+  {
+    "revision": "bfb57bcec07c8cd6109522fd6e17e9a8",
+    "url": "/static/media/hero-big@x2.bfb57bce.jpg"
+  },
+  {
+    "revision": "344e0efd55b5d3ee3635fd7b16c9cf75",
+    "url": "/static/media/hero-small.344e0efd.jpg"
+  },
+  {
+    "revision": "fcc205a167f7a558232e6cf5a32a2619",
+    "url": "/static/media/hero-small@x2.fcc205a1.jpg"
+  },
+  {
     "revision": "4680d6323b39f2d7bd88116f757d8838",
     "url": "/static/media/hr.4680d632.svg"
   },
@@ -290,10 +306,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "da1dbd957c21cb4ad02683e93a5ddd90",
     "url": "/static/media/mobile-phone.da1dbd95.svg"
-  },
-  {
-    "revision": "74cc987acd9c1650e738c7d5fd69027b",
-    "url": "/static/media/motorhome-background-big.74cc987a.jpg"
   },
   {
     "revision": "fefa5aa9a32bfe3e47570d806a52ea21",
