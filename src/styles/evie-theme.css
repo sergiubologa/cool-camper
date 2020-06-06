@@ -875,22 +875,40 @@ label.success {
 .hero {
   position: relative;
   width: 100%;
-  background-image: url("../assets/img/motorhome-background-small.jpg");
+  background-image: url("../assets/img/hero-small.jpg");
   -webkit-box-shadow: 0 4px 11px rgba(124, 146, 169, 0.5);
   box-shadow: 0 4px 11px rgba(124, 146, 169, 0.5);
   background-size: cover;
-  background-position: right center;
+  background-position: right top;
   background-repeat: no-repeat;
   color: #ffffff;
 }
 @media (min-width: 768px) {
   .hero {
-    background-image: url("../assets/img/motorhome-background-big.jpg");
+    background-image: url("../assets/img/hero-big.jpg");
+    background-position: top center;
   }
 }
 @media (min-width: 1200px) {
   .hero {
-    background-position: bottom center;
+    background-position: center center;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
+  .hero {
+    background-image: url("../assets/img/hero-small@x2.jpg");
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      background-image: url("../assets/img/hero-big@x2.jpg");
+    }
   }
 }
 
@@ -905,52 +923,52 @@ label.success {
   width: 100%;
   opacity: 0.36;
   z-index: 1;
-  background-color: rgba(108, 99, 255, 0.5);
+  background-color: rgba(108, 99, 255, 0.7);
 }
 
 .hero__overlay--gradient {
   background: -webkit-linear-gradient(
     left,
-    rgba(108, 99, 255, 0.5),
-    rgba(108, 99, 255, 0.6)
+    rgba(108, 99, 255, 0.7),
+    rgba(108, 99, 255, 0.1)
   );
   background: -o-linear-gradient(
     left,
-    rgba(108, 99, 255, 0.5),
-    rgba(108, 99, 255, 0.6)
+    rgba(108, 99, 255, 0.7),
+    rgba(108, 99, 255, 0.1)
   );
   background: -webkit-gradient(
     linear,
     left top,
     right top,
-    from(rgba(108, 99, 255, 0.5)),
-    to(rgba(108, 99, 255, 0.6))
+    from(rgba(108, 99, 255, 0.7)),
+    to(rgba(108, 99, 255, 0.1))
   );
   background: linear-gradient(
     to right,
-    rgba(108, 99, 255, 0.5),
-    rgba(108, 99, 255, 0.6)
+    rgba(108, 99, 255, 0.7),
+    rgba(108, 99, 255, 0.1)
   );
 }
 
 .hero__overlay--gradientVertical {
   background: -webkit-linear-gradient(
     top,
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.6)
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.4)
   );
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
   background: -webkit-gradient(
     linear,
     left top,
     left bottom,
-    from(rgba(0, 0, 0, 0.4)),
-    to(rgba(0, 0, 0, 0.6))
+    from(rgba(0, 0, 0, 0.7)),
+    to(rgba(0, 0, 0, 0.4))
   );
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.6)
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.4)
   );
 }
 
