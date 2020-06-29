@@ -33,7 +33,7 @@ export default () => (
       </div>
       <div className="answer">
         <div className="yes">DA</div>
-        <p className="text">se poate pe teritoriul României</p>
+        <p className="text">se poate în România și UE</p>
         <p className="quote">
           “deplasarea pentru activităţi recreativ-sportive individuale
           desfăşurate în aer liber (ciclism, drumeţie, alergare, canotaj,
@@ -56,11 +56,33 @@ export default () => (
         <p className="title">Cum să te pregătești tu:</p>
         <IconLabel
           size="normal"
-          text="Fă-ți un traseu prin țară cu locurile în care vei campa"
+          text={
+            <React.Fragment>
+              Fă-ți un traseu cu locurile în care vei campa cu ajutorul
+              aplicației{" "}
+              <a
+                href="https://park4night.com/"
+                style={{ textDecoration: "underline" }}
+              >
+                Park4Night
+              </a>
+            </React.Fragment>
+          }
         />
         <IconLabel
           size="normal"
-          text="Bifează cifra 8 în declarația pe propria răspundere"
+          text={
+            <React.Fragment>
+              Verifică pe site-ul&nbsp;
+              <a
+                href="https://reopen.europa.eu/en"
+                style={{ textDecoration: "underline" }}
+              >
+                Reopen EU
+              </a>
+              &nbsp; măsurile impuse în țările în care vrei să călătorești
+            </React.Fragment>
+          }
         />
         <IconLabel
           size="normal"
