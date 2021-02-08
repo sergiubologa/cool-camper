@@ -63,10 +63,10 @@ cookies@~0.8.0:
     depd "~2.0.0"
     keygrip "~1.1.0"
 
-coolcamper-common@^1.1.8:
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/coolcamper-common/-/coolcamper-common-1.1.8.tgz#9840c96d8b21f9f2b7d6b243aa1352f936dee0e6"
-  integrity sha512-susZTUo0GkaR2TYx1FGdYUAve4oFS9SHQMdTYHSa8qYkZfhbfR3eSs1W/C8A0OS6w/pzdaUFO2iBV1Z/rXklyw==
+coolcamper-common@^1.1.9:
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/coolcamper-common/-/coolcamper-common-1.1.9.tgz#3890204642f04f00d19deab387c84c39b13a15e7"
+  integrity sha512-29tOtYAbBpQfY9uvZHopHXQSRZrJ2feWs3uwG/i7pkax4RiE8pTA7sg3x35tidSDOt6c+/fgn9RmXujeH97Kdg==
 
 copy-to@^2.0.1:
   version "2.0.1"

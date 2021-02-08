@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "autotrack": "^2.4.1",
-    "coolcamper-common": "^1.1.8",
+    "coolcamper-common": "^1.1.9",
     "core-js": "^3.6.1",
     "flag-icon-css": "^3.4.5",
     "moment": "^2.24.0",
